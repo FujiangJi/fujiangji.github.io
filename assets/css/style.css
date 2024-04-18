@@ -1335,8 +1335,20 @@ figcaption {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
+  filter: grayscale(0);
 }
+
+.videobox {
+  margin-top: 40px;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  border: 1px solid var(--jet);
+}
+
 
 .contact-form {
   margin-bottom: 10px;

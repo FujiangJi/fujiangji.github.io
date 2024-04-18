@@ -23,6 +23,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .video {
+      width: 1000px;
+      max-width: 100%;
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      padding: 80px;
+      color: hsl(0, 0%, 100%);
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 2.2vw;
+    }
+  </style>
 </head>
 
 <body>
@@ -205,10 +231,19 @@
 
       <article class="about  active" data-page="about">
 
+        <!-- <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+        src="./assets/images/PLSR_paper/0_scatter_plots.png" alt="fields"> -->
+        <section class="videobox">
+          <div class="text-overlay">
+            <h2 style="text-align: center;">Welcome to Fujiang Ji's Webpage</h2>
+          </div>
+          <video class="video" style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+            src="./assets/images/Startpage_video.mov" autoplay="autoplay" loop="loop"></video>
+        </section>
+
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
-
         <section class="about-text">
           <ul class="skills-list content-card">
             <p>
@@ -1061,6 +1096,15 @@
           <h2 class="h2 article-title">Blog</h2>
         </header>
 
+        <section class="mapbox" data-mapbox style="height: 400px;">
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=10q202LWWyNufEiU3LX7FoEezv41a7K0&ehbc=2E312F&noprof=1&ll=35,5&z=2"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+
         <section class="blog-posts">
 
           <ul class="blog-posts-list">
@@ -1253,10 +1297,23 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://maps.google.com/maps?width=400&amp;height=300&amp;hl=en&amp;q=Russell%20Labs%201630%20Linden%20Drive%20Madison%20Madison+()&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=400&amp;height=300&amp;hl=en&amp;q=Russell%20Labs%201630%20Linden%20Drive%20Madison%20Madison+()&amp;t=k&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="400" height="300" loading="lazy"></iframe>
+
           </figure>
         </section>
+
+
+
+        <h3 class="h3 form-title">Welcome to Fujiang Ji's Webpage</h3>
+
+        <script type='text/javascript' id='clustrmaps'
+          src='//cdn.clustrmaps.com/map_v2.js?cl=fcd86f&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=1e1e20&cmo=ff0404&ct=ffffff'></script>
+
+
+
+
+
 
         <section class="contact-form">
 
