@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fujiang Ji's Personal Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/about_page/UW_madison.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .video {
+      width: 1000px;
+      max-width: 100%;
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      padding: 80px;
+      color: hsl(0, 0%, 100%);
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 2.2vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+
+          <p class="title">Ph.D. Candidate</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>1630 Linden Drive, Madison WI, U.S.</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
+              <i class="ai ai-google-scholar ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
+              <i class="ai ai-researchgate ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
+              <i class="ai ai-orcid ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
+              <i class="ai ai-publons ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://docs.google.com/document/d/1BBY4qI-FqFn16TjQzWgxYVWC1iNVHSKt/edit?usp=drive_link&ouid=118400714828936230873&rtpof=true&sd=true"
+              target="_blank" class="social-link">
+              <i class="ai ai-cv ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Research</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Tutorials</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blogs</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <section class="videobox">
+          <div class="text-overlay">
+            <h2 style="text-align: center;">Welcome to Fujiang Ji's Webpage</h2>
+          </div>
+          <video class="video" style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+            src="./assets/images/about_page/Startpage_video.mov" autoplay="autoplay" loop="loop" muted
+            playsinline></video>
+        </section>
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <ul class="skills-list content-card">
+            <p>
+              I'm Fujiang Ji, currently a Ph.D. student at the Department of Forest and Wildlife Ecology,
+              University of Wisconsin-Madison. My current research focuses on leaf functional traits estimation,
+              hyperspectral remote sensing, radiative transfer modeling and machine learning.
+            </p>
+
+            <p>
+              Before joining UW-Madison, I earned a Master's degree in Cartography and Geographic Information System
+              from
+              Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China. My master's
+              research
+              integrated process-based modeling, remote sensing and data assimilation to estimate crop yield, soil
+              available nutrients, etc. Besides, I received a bachelor's degree in Remote Sensing Science and Technology
+              from Chengdu University of Technology, Chengdu, China.
+            </p>
+          </ul>
+        </section>
+
+        <!--
+          - Education
+        -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University of Wisconsin-Madison, WI, U.S.</h4>
+              <span>2021 — Present</span>
+              <p class="timeline-text">
+                <i>&#8226; Forestry, Ph.D.</i>
+              </p>
+              <p class="timeline-text">
+                <i>&#8226; Department of Forest and Wildlife Ecology.</i>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Chinese Academy of Sciences, Beijing, China.</h4>
+              <span>2018 — 2021</span>
+              <p class="timeline-text">
+                <i>&#8226; Cartography and Geographic Information System, MSc.</i>
+              </p>
+              <p class="timeline-text">
+                <i>&#8226; Aerospace Information Research Institute.</i>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Chengdu University of Technology, Chengdu, China</h4>
+              <span>2014 — 2018</span>
+              <p class="timeline-text">
+                <i>&#8226; Remote sensing science and technology, BEng.</i>
+              </p>
+              <p class="timeline-text">
+                <i>&#8226; College of Earth Science</i>
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <!--
+          - Research interests
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Research Interests</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/plant_traits.png
+                " alt="plant traits" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Leaf functional traits</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Predicting leaf traits by integrating hyperspectral RS and various modeling methods
+                  at canopy and leaf scales.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/remote_sensing.png" alt="remote sensing" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">hyperspectral RS</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Leaf spectroscopy: ASD, SVC, PSR, etc. Imaging spectroscopy: PRISMA, SBG, EnMap, DESIS, AVIRIS, etc.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/RTM.png" alt="RTM" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Radiative transfer modeling</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  PROSPECT, PROSAIL, Leaf-Canopy SIP models,etc.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/functional_diversity.png" alt="Functional diversity" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Forest Functional Diversity</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Forest functional diversity (richness, divergence and evenness).
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/CLM.png" alt="CLM" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Land surface model</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Learn land surface processes and the interactions between the land surface and the atmosphere.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/ML.jpeg" alt="ML" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Machine Learning</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Utilize advanced ML algorithms to estimate leaf traits, predict wildfire, etc.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/Crop_yield.png" alt="Crop yield" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Crop yield estimation</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  Regional scales crop yield estimation based on crop growth models and data assimilation methods.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/about_page/WOFOST.jpeg" alt="WOFOST" width="130">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" style="font-size: 16px;">Crop growth modeling</h4>
+
+                <p class="service-item-text" style="font-size: 13px;">
+                  integrate various factors (weather, soil, etc) to predict crop growth, yield, and response to
+                  environmental factors.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - Research Projects
+        -->
+
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Research Projects</h3>
+          <ul class="skills-list content-card" style="color:hsl(0, 0%, 84%);font-size: 14px; line-height: 1.5;">
+            <li style="margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2021-present:</b> Monitoring and
+              understanding seasonal variations of forest functional traits and functional diversity by integrating
+              observations from hyperspectral, spaceborne lidar and fluorescence. <br><i>-Using satellite hyperspectral
+                data (PRISMA, DESIS), NEON AOP data, in-situ leaf spectra and traits as well as different modeling
+                methods (empirical, physical, hybrid) to investigate how does functional traits and functional diversity
+                vary over the growing season and across different forest ecosystems (different NEON sites).</i></li>
+            <li style="margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2020:</b> “Big Earth Data” Science
+              Engineering Project of Chinese Academy of Sciences (CASEarth) --- Big Earth Data Supports the U.N.
+              Sustainable Development Goals(SDGs).<br><i>-Produced the 2000-2019 farmland productivity dataset in
+                Northeast Eurasia by using the crop growth model through the JavaScript API interface of the Google
+                Earth Engine platform.</i></li>
+            <li style=" margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2019 - 2020:</b> The STS (Science and
+              Technology Service Network Initiative) Program of Chinese Academy of Sciences. <br><i>-Research on the
+                crop
+                growth monitoring, including crop physiological/ biochemical parameters retrieval, crop conditions,
+                biomass, soil nutrient status, yield monitoring, etc.</i></li>
+            <li style="margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2018 - 2019:</b> The Sub-Project of
+              China High-resolution Earth Observation System ---- Quantitative Retrieval Technology of Vegetation
+              Parameters from GF-6 WFV Satellite Image.</li>
+            <li style=" margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2018 - 2019:</b> Precision Insurance
+              of Wheat Based on Spatial Big Data.</li>
+            <li style="margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2018 - 2019:</b> Crop Condition Remote
+              Sensing Monitoring System Development and Capacity Building.</li>
+            <li style=" margin-bottom: 10px; text-indent: -10px;">&#8226; <b>2017-2018:</b> Inversion and
+              Detection of Parameter of the Growing Status of Rice based on Hyperspectral Data” (PI), National College
+              Students' innovation and entrepreneurship training program (Grant No.201710616032).</li>
+            <li style="text-indent: -10px;">&#8226; <b>10-11/2016:</b> Research on Technologies Used to Demarcate
+              Red-line Areas of Ecology in Major Districts and Counties of Sichuan Province.</li>
+          </ul>
+
+        </section>
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+        <!--
+          - Orgnizations
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Organizations</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.wisc.edu/" target="_blank">
+                <img src="./assets/images/about_page/UWlogo.png" alt="UW logo" style="height:120px; width:170px">
+              </a>
+            </li>
+
+
+            <li class="clients-item">
+              <a href="https://www.nasa.gov/" target="_blank">
+                <img src="./assets/images/about_page/NASA.png" alt="NASA logo" style="height:130px; width:auto">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="http://english.aircas.ac.cn/" target="_blank">
+                <img src="./assets/images/about_page/AIR_logo.png" alt="AIR logo" style="height:130px; width:auto">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="http://www.cdut.edu.cn/en/" target="_blank">
+                <img src="./assets/images/about_page/CDUT_logo.png" alt="CDUT logo" style="height:130px; width:auto">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - Skills
+        -->
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">1. Python, IDL, Google Earth Engine</h5>
+                <data value="80">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">2. Arcgis, ENVI, EARDAS, SNAP, etc.</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">3. Instruments: LAI 2200, SPAD 502, TDR 300, etc.</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">4. Remote sensing data processing, algorithm design and system development. </h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+      </article>
+
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="research" data-page="research">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <!--######-->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Selected researches</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!--Research one-->
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Unveiling the transferability of PLSR models for leaf trait estimation:
+                lessons from a comprehensive analysis with a novel global dataset (<a href="" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link, coming soon</a>, <a
+                  href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">data and code availability</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Leaf traits are essential for understanding many physiological and
+                  ecological processes. Partial least-squares regression (PLSR) models with leaf spectroscopy are widely
+                  applied for trait estimation, but their transferability across space, time and plant functional types
+                  (PFTs) remains unclear.</p>
+
+
+                <ol class="order-list" style="font-size: 14px;">
+                  <li style="margin-bottom: 8px;">Research Questions:</li>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">How well do the PLSR models transfer to new domains (new sites, PFTs
+                      and time)?</li>
+                    <li style="margin-bottom: 8px;">What are the potential factors influencing the transferability of
+                      PLSR?</li>
+                  </ol>
+                  <li style="margin-bottom: 8px;">Hypotheses:</li>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">Predictive models can expect accurate trait predictions for new
+                      measurements falling within the range of the data used during model training and the model
+                      performance will decline when extrapolating to new domains;</li>
+                    <li style="margin-bottom: 8px;">Greater spectral diversity in model training means better
+                      predictability of the PLSR models in new domains.</li>
+                  </ol>
+                </ol>
+
+                <p style="margin-bottom: 8px;">We compiled a novel dataset of paired leaf traits and spectra, with
+                  47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
+                  seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
+                  transferability of PLSR models in estimating leaf traits.</p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="./assets/images/PLSR_paper/0_data_flowchart.png" alt="Flowchart">
+                  <figcaption style="margin-bottom: 10px;">Left: The distribution of leaf samples in (a) climate zones
+                    (Whittaker, 1970) and (b) geographic locations. <br>Right: The framework of this study for testing
+                    the transferability of PLSR modeling across sites, PFTs and time. </figcaption>
+                </figure>
+                <ol class="order-list" style="font-size: 13px;">
+                  <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
+                  <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.
+                  </li>
+                  <li style="margin-bottom: 3px;">Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples.
+                  </li>
+                  <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water
+                    content): 3,581 samples.</li>
+                  <li style="margin-bottom: 3px;">Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.</li>
+                  <li style="margin-bottom: 15px;">Evergreen needleleaf forests (ENF, n = 891); Evergreen broadleaf
+                    forests (EBF, n = 1,382); Deciduous needleleaf forests (DNF, n = 77); Deciduous broadleaf forests
+                    (DBF, n = 26,944); Shrublands (SHR, n = 1,599); Grasslands (GRA, n = 11,833); Croplands (CRP, n =
+                    3,409); Vine (n = 637).</li>
+                </ol>
+
+                <p style="margin-bottom: 8px;"> While PLSR models demonstrate commendable performance in predicting
+                  chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training
+                  data space, their efficacy diminishes when extrapolating to new contexts. Specifically, extrapolating
+                  to locations, seasons, and PFTs beyond the training data leads to reduced <i>R<sup>2</sup></i>
+                  (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased <i>NRMSE</i> (3.58-18.24%, 6.27-11.55% and
+                  7.0-33.12%) compared to nonspatial random cross-validation (NRCV). These findings highlight potential
+                  errors in estimating leaf traits across large spatial domains, diverse PFTs and time due to biased
+                  validation schemes and provide guidance for future field sampling strategies and remote sensing
+                  applications.</p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="./assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
+                  <figcaption style="margin-bottom: 10px;">The relationship between predicted and
+                    observed leaf traits. <br>Left: random 10-fold CV (cross-validation) compared to spatial 10-fold CV.
+                    <br>Upper Right: cross-PFTs validation.<br>Bottom Right: random 5-fold CV compared to temporal
+                    5-fold CV.
+                  </figcaption>
+                </figure>
+
+                <p style="margin-bottom: 8px;"> Alpha and beta spectral diversity exhibited positive relationships in
+                  which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A higher
+                  similarity of spectral diversity among sites or PFTs is associated with the higher transferability of
+                  PLSR across geographic sites and PFTs.</p>
+                <figure">
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="./assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
+                    alt="Spectral diversity">
+                  <figcaption style="margin-bottom: 10px;">Alpha and beta spectral diversity to
+                    explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
+                    diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
+                    relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
+                    transferability across sites and PFTs, respectively.</figcaption>
+                  </figure>
+
+
+
+
+              </ul>
+            </li>
+
+            <!--Research two-->
+            <li class=" timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Regional Crop Yield Estimation by Assimilating Time Series of
+                Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model (<a
+                  href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Rapidly and accurately estimating yields at field scales are
+                  very significant. Each type of currently yield estimation model has been well studied, yet all of
+                  them have certain limitations. Based on a coupled Carnegie-Ames-Stanford approach (CASA)-World Food
+                  Studies (WOFOST) model and time series Sentinel-2 imagery, we achieved daily crop simulations and
+                  crop yield estimations at two adjacent farms in China.
+                </p>
+
+                <figure>
+                  <img style="max-width:100%;overflow:hidden;" src="./assets/images/TGRS/0_fields.png" alt="Fields">
+                  <figcaption style="margin-bottom: 10px;">Left: Location of the study areas and the crop type
+                    distribution map. <br>Right: Distribution of sampling points during the growing season.
+                  </figcaption>
+                  <img style="max-width:100%;overflow:hidden;" src="./assets/images/TGRS/0_results.png" alt="Results">
+                  <figcaption style="margin-bottom: 10px;">Left: Spatial distribution map of yield simulations
+                    by different models and the corresponding performance. <br>Right: Representative fields with
+                    sampling quadrats that show the relationship between the yield distribution and DEM.</figcaption>
+                </figure>
+                <ol class="order-list">
+                  <li>Compared with the WOFOST model, the coupled CASA-WOFOST model provided a much faster
+                    running speed
+                    in yield simulations and a similar accuracy;</li>
+                  <li>Compared with the CASA model, the coupled model provided higher simulation accuracy in
+                    mountainous areas and regions of uneven terrain.</li>
+                </ol>
+              </ul>
+            </li>
+
+            <!--Research three-->
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Comparison of Machine Learning Regression Algorithms for
+                Cotton Leaf
+                Area Index Retrieval Using Sentinel-2 Spectral Bands (<a href="https://doi.org/10.3390/app9071459"
+                  target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Leaf area index (LAI) is a crucial crop biophysical parameter
+                  that has
+                  been widely used in a variety of fields. Five learning regression algorithms (MLRAs),
+                  artificial
+                  neural network (ANN), support vector regression (SVR), Gaussian process regression (GPR),
+                  random
+                  forest (RF) and gradient boosting regression tree (GBRT), have been used in the retrieval of
+                  cotton
+                  LAI with Sentinel-2 spectral bands. The performances of the five machine learning models are
+                  compared
+                  for better applications of MLRAs in remote sensing. We conducted the comparison of five
+                  MLRAs in an
+                  agricultural area of Northwest China over three cotton seasons with the corresponding field
+                  campaigns
+                  for modeling and validation. Results show that the GBRT model outperforms the other models
+                  with
+                  respect to model accuracy in average.
+                </p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden;" src="./assets/images/LAI_paper/0_study_area_LAI_Maps.png"
+                    alt="LAI maps">
+                  <figcaption style="margin-bottom: 10px;">Upper: Location of study area and in-situ leaf area
+                    index(LAI) quadrats from three field campaigns. <br>Bottom: Final cotton LAI map obtained
+                    using GBRT
+                    model and masked by the cotton fields.</figcaption>
+                  <img style="max-width:100%;overflow:hidden;" src="./assets/images/LAI_paper/0_Accuracy.png"
+                    alt="Accuracy">
+                  <figcaption style="margin-bottom: 10px;">Upper: Sensitivity of the ML models to the training
+                    sample
+                    size. <br>Bottom: The performance of different ML models for estimating LAI.</figcaption>
+                </figure>
+              </ul>
+            </li>
+
+
+
+          </ol>
+
+
+        </section>
+
+      </article>
+
+      <!--
+        - #Publications
+      -->
+
+      <article class="publications" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!--######-->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h4">Peer-reviewed Journal Articles </h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">In REVIEW/PREPARATION</h4>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li>Ji, F.; Li, F.; Dashti, H.; Hao, D.; Zheng, T.; You H.; Chen, M. Multi-domain adaptable transfer
+                  learning approach for large-scale leaf trait prediction with leaf spectroscopy, 2024. (under
+                  preparation)</li>
+                <li>Ji, F.; Zheng, T.; Yang, R.; Kovach, K. R.; Townsend, P. A.; Dashti, H.; Shiklomanov, A. N.;
+                  Tagliabue, G.; Li, F.; Hao, D.; Chen, M. Intra- and inter-annual variations of plant traits from
+                  PRISMA hyperspectral imagery over multiple ecological functional areas, 2024. (under preparation)</li>
+              </ol>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">PEER-REVIEWED PAPERS</h4>
+              <p style="font-size: 13px;line-height: 1.5; color:hsl(0, 0%, 84%); margin-bottom: 8px;"><em>Access
+                  by clicking the titles</em></p>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li><strong
+                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,F.<sup>*</sup>;</strong>
+                  Li, F.; Hao, D.; Shiklomanov, A. N.; Yang, X.; Townsend, P. A.; Dashti, H.; Nakaji, T.; Kovach, K. R.;
+                  Liu, H.; Luo, M.; Chen, M. <a href="" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Unveiling the transferability of PLSR models for
+                    leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset</a>,
+                  <em>New Phytologist</em>, 2024. (Accepted).
+                </li>
+                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Meng, J.; Cheng Z.; Fang H.; Wang Y. <a
+                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Yield Estimation at field scales by
+                    Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model</a> [J].
+                  <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 2021, PP (99): 1-14.
+                </li>
+                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Meng, J.; Fang H. <a href="http://www.rsta.ac.cn/CN/Y2020/V35/I2/406" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Study on Soybean Yield Estimation Using the
+                    Coupled CASA and WOFOST Model</a> [J]. <em>Remote Sensing Technology and Application</em>, 2020,
+                  35(2): 406-415. (In Chinese with English Abstract).</li>
+                <li>Zeng, Y.; Hao, D.; Park, T.; Zhu, P.; Huete, A.; Myneni, R.; Knyazikhin, Y.; Qi, J.; Nemani, R. R.;
+                  Li, F.; Huang, J.; Gao, Y.; Li, B.; <strong
+                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</strong>
+                  Köhler, P.; Frankenberg, C.; Berry, J. A.; & Chen, M. <a
+                    href="https://doi.org/10.1038/s41559-023-02187-6" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Structural complexity biases vegetation
+                    greenness measures</a>. <em>Nature Ecology & Evolution</em>, 2023.</li>
+                <li>Zhang, S.; Dai, X.; Li, J.; Gao, X.; Zhang, F.; Gong, F.; Lu, H.; Wang, M.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang,
+                  Z.; & Peng, P. <a href="https://doi.org/10.1080/10106049.2022.2032387" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Classification for UAV Visible Imagery
+                    Using Deep Semantic Segmentation Methods</a> [J]. <em>Geocarto International</em>, 2022 1–23.</li>
+                <li>Dai, X.; He, X.; Guo, S.; Liu, S.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Ruan,
+                  H. <a href="https://doi.org/10.1007/s11042-021-10735-0" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Research on hyper-spectral remote sensing image
+                    classification by applying stacked de-noising auto-encoders neural network</a> [J]. <em>Multimed
+                    Tools Appl</em>, 2021(5).</li>
+                <li>Cheng Z.; Meng, J.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang
+                  Y.; Fang, H.; Yu L. <a href="http://dx.doi.org/10.11834/jrs.20200069" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Aboveground biomass estimation of late-stage
+                    maize based on the WOFOST model and UAV observations</a> [J]. <em>Journal of Remote Sensing</em>,
+                  2020, 24(11):1403-1418. (In Chinese with English Abstract).</li>
+                <li>Mao, H.; Meng, J.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Zhang,
+                  Q.; Fang, H. <a href="https://doi.org/10.3390/app9071459" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Comparison of Machine Learning Regression
+                    Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands</a> [J]. <em>Appl.
+                    Sci</em>, 2019, 9, 1459.2. </li>
+              </ol>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">CONFERENCE PRESENTATIONS</h4>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Li, F.; Hao, D.; Chen, M., et al. <a
+                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Estimating Leaf Functional Traits with Leaf
+                    Spectroscopy and Physics-guided Transfer Learning Based Physical Model Across Biomes</a> (2022),
+                  <em>AGU Fall Meeting 2022</em>.
+                </li>
+                <li>Chen, M.; <strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Hao, D.; Zeng, Y.; et al. <a
+                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Fast estimation of leaf biochemical properties
+                    by inverting a simple leaf spectra model</a> (2022), <em>AGU Fall Meeting 2022</em>.</li>
+              </ol>
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #Tutorials
+      -->
+
+      <article class="tutorials" data-page="tutorials">
+
+        <header>
+          <h2 class="h2 article-title">Tutorials</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>High Throughput Computing</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Data Visualization</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Version Control System</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>High Throughput Computing</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Data Visualization</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Version Control System</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="high throughput computing">
+              <a href="./assets/tutorial_pages/hpc.html">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/tutorial_page/HPC_image.jpeg" alt="HPC" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Command line basics & HPC</h3>
+
+                <p class="project-category">High Throughput Computing</p>
+              </a>
+
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="data visualization">
+              <a href="#" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/tutorial_page/data_vis.jpeg" alt="Data Visualization" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Python for data visualization</h3>
+
+                <p class="project-category">Data Visualization</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="version control system">
+              <a href="#" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/tutorial_page/VCS.jpeg" alt="VCS" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Git & Github</h3>
+
+                <p class="project-category">Version Control System</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blogs" data-page="blogs">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox style="height: 400px;">
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=10q202LWWyNufEiU3LX7FoEezv41a7K0&ehbc=2E312F&noprof=1&ll=35,5&z=2"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?width=400&amp;height=300&amp;hl=en&amp;q=Russell%20Labs%201630%20Linden%20Drive%20Madison%20Madison+()&amp;t=k&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="400" height="300" loading="lazy"></iframe>
+
+          </figure>
+        </section>
+
+
+
+        <h3 class="h3 form-title">Welcome to Fujiang Ji's Webpage</h3>
+
+        <script type='text/javascript' id='clustrmaps'
+          src='//cdn.clustrmaps.com/map_v2.js?cl=fcd86f&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=1e1e20&cmo=ff0404&ct=ffffff'></script>
+
+
+
+
+
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

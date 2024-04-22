@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fujiang Ji's Personal Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .video {
+      width: 1000px;
+      max-width: 100%;
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      padding: 80px;
+      color: hsl(0, 0%, 100%);
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 2.2vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+
+          <p class="title">Ph.D. Candidate</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>1630 Linden Drive, Madison WI, U.S.</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
+              <i class="ai ai-google-scholar ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
+              <i class="ai ai-researchgate ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
+              <i class="ai ai-orcid ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
+              <i class="ai ai-publons ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://docs.google.com/document/d/1BBY4qI-FqFn16TjQzWgxYVWC1iNVHSKt/edit?usp=drive_link&ouid=118400714828936230873&rtpof=true&sd=true"
+              target="_blank" class="social-link">
+              <i class="ai ai-cv ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='research.html';">Research</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='blogs.html';">blogs</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #Publications
+      -->
+
+      <article class="publications active" data-page="publications">
+
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+
+        <!--######-->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h4">Peer-reviewed Journal Articles </h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">In REVIEW/PREPARATION</h4>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li>Ji, F.; Li, F.; Dashti, H.; Hao, D.; Zheng, T.; You H.; Chen, M. Multi-domain adaptable transfer
+                  learning approach for large-scale leaf trait prediction with leaf spectroscopy, 2024. (under
+                  preparation)</li>
+                <li>Ji, F.; Zheng, T.; Yang, R.; Kovach, K. R.; Townsend, P. A.; Dashti, H.; Shiklomanov, A. N.;
+                  Tagliabue, G.; Li, F.; Hao, D.; Chen, M. Intra- and inter-annual variations of plant traits from
+                  PRISMA hyperspectral imagery over multiple ecological functional areas, 2024. (under preparation)</li>
+              </ol>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">PEER-REVIEWED PAPERS</h4>
+              <p style="font-size: 13px;line-height: 1.5; color:hsl(0, 0%, 84%); margin-bottom: 8px;"><em>Access
+                  by clicking the titles</em></p>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li><strong
+                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,F.<sup>*</sup>;</strong>
+                  Li, F.; Hao, D.; Shiklomanov, A. N.; Yang, X.; Townsend, P. A.; Dashti, H.; Nakaji, T.; Kovach, K. R.;
+                  Liu, H.; Luo, M.; Chen, M. <a href="" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Unveiling the transferability of PLSR models for
+                    leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset</a>,
+                  <em>New Phytologist</em>, 2024. (Accepted).
+                </li>
+                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Meng, J.; Cheng Z.; Fang H.; Wang Y. <a
+                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Yield Estimation at field scales by
+                    Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model</a> [J].
+                  <em>IEEE Transactions on Geoscience and Remote Sensing</em>, 2021, PP (99): 1-14.
+                </li>
+                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Meng, J.; Fang H. <a href="http://www.rsta.ac.cn/CN/Y2020/V35/I2/406" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Study on Soybean Yield Estimation Using the
+                    Coupled CASA and WOFOST Model</a> [J]. <em>Remote Sensing Technology and Application</em>, 2020,
+                  35(2): 406-415. (In Chinese with English Abstract).</li>
+                <li>Zeng, Y.; Hao, D.; Park, T.; Zhu, P.; Huete, A.; Myneni, R.; Knyazikhin, Y.; Qi, J.; Nemani, R. R.;
+                  Li, F.; Huang, J.; Gao, Y.; Li, B.; <strong
+                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</strong>
+                  Köhler, P.; Frankenberg, C.; Berry, J. A.; & Chen, M. <a
+                    href="https://doi.org/10.1038/s41559-023-02187-6" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Structural complexity biases vegetation
+                    greenness measures</a>. <em>Nature Ecology & Evolution</em>, 2023.</li>
+                <li>Zhang, S.; Dai, X.; Li, J.; Gao, X.; Zhang, F.; Gong, F.; Lu, H.; Wang, M.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang,
+                  Z.; & Peng, P. <a href="https://doi.org/10.1080/10106049.2022.2032387" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Classification for UAV Visible Imagery
+                    Using Deep Semantic Segmentation Methods</a> [J]. <em>Geocarto International</em>, 2022 1–23.</li>
+                <li>Dai, X.; He, X.; Guo, S.; Liu, S.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Ruan,
+                  H. <a href="https://doi.org/10.1007/s11042-021-10735-0" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Research on hyper-spectral remote sensing image
+                    classification by applying stacked de-noising auto-encoders neural network</a> [J]. <em>Multimed
+                    Tools Appl</em>, 2021(5).</li>
+                <li>Cheng Z.; Meng, J.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang
+                  Y.; Fang, H.; Yu L. <a href="http://dx.doi.org/10.11834/jrs.20200069" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Aboveground biomass estimation of late-stage
+                    maize based on the WOFOST model and UAV observations</a> [J]. <em>Journal of Remote Sensing</em>,
+                  2020, 24(11):1403-1418. (In Chinese with English Abstract).</li>
+                <li>Mao, H.; Meng, J.; <strong
+                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Zhang,
+                  Q.; Fang, H. <a href="https://doi.org/10.3390/app9071459" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Comparison of Machine Learning Regression
+                    Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands</a> [J]. <em>Appl.
+                    Sci</em>, 2019, 9, 1459.2. </li>
+              </ol>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">CONFERENCE PRESENTATIONS</h4>
+              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
+                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Li, F.; Hao, D.; Chen, M., et al. <a
+                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Estimating Leaf Functional Traits with Leaf
+                    Spectroscopy and Physics-guided Transfer Learning Based Physical Model Across Biomes</a> (2022),
+                  <em>AGU Fall Meeting 2022</em>.
+                </li>
+                <li>Chen, M.; <strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
+                    F.;</strong> Hao, D.; Zeng, Y.; et al. <a
+                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Fast estimation of leaf biochemical properties
+                    by inverting a simple leaf spectra model</a> (2022), <em>AGU Fall Meeting 2022</em>.</li>
+              </ol>
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

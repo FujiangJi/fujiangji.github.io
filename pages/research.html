@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fujiang Ji's Personal Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .video {
+      width: 1000px;
+      max-width: 100%;
+    }
+
+    .text-overlay {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      padding: 80px;
+      color: hsl(0, 0%, 100%);
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 2.2vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+
+          <p class="title">Ph.D. Candidate</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>1630 Linden Drive, Madison WI, U.S.</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
+              <i class="ai ai-google-scholar ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
+              <i class="ai ai-researchgate ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
+              <i class="ai ai-orcid ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
+              <i class="ai ai-publons ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://docs.google.com/document/d/1BBY4qI-FqFn16TjQzWgxYVWC1iNVHSKt/edit?usp=drive_link&ouid=118400714828936230873&rtpof=true&sd=true"
+              target="_blank" class="social-link">
+              <i class="ai ai-cv ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>Research</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='publications.html';">Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='blogs.html';">blogs</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="research active" data-page="research">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <!--######-->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Selected researches</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!--Research one-->
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Unveiling the transferability of PLSR models for leaf trait estimation:
+                lessons from a comprehensive analysis with a novel global dataset (<a href="" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link, coming soon</a>, <a
+                  href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">data and code availability</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Leaf traits are essential for understanding many physiological and
+                  ecological processes. Partial least-squares regression (PLSR) models with leaf spectroscopy are widely
+                  applied for trait estimation, but their transferability across space, time and plant functional types
+                  (PFTs) remains unclear.</p>
+
+
+                <ol class="order-list" style="font-size: 14px;">
+                  <li style="margin-bottom: 8px;">Research Questions:</li>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">How well do the PLSR models transfer to new domains (new sites, PFTs
+                      and time)?</li>
+                    <li style="margin-bottom: 8px;">What are the potential factors influencing the transferability of
+                      PLSR?</li>
+                  </ol>
+                  <li style="margin-bottom: 8px;">Hypotheses:</li>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">Predictive models can expect accurate trait predictions for new
+                      measurements falling within the range of the data used during model training and the model
+                      performance will decline when extrapolating to new domains;</li>
+                    <li style="margin-bottom: 8px;">Greater spectral diversity in model training means better
+                      predictability of the PLSR models in new domains.</li>
+                  </ol>
+                </ol>
+
+                <p style="margin-bottom: 8px;">We compiled a novel dataset of paired leaf traits and spectra, with
+                  47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
+                  seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
+                  transferability of PLSR models in estimating leaf traits.</p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="../assets/images/PLSR_paper/0_data_flowchart.png" alt="Flowchart">
+                  <figcaption style="margin-bottom: 10px;">Left: The distribution of leaf samples in (a) climate zones
+                    (Whittaker, 1970) and (b) geographic locations. <br>Right: The framework of this study for testing
+                    the transferability of PLSR modeling across sites, PFTs and time. </figcaption>
+                </figure>
+                <ol class="order-list" style="font-size: 13px;">
+                  <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
+                  <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.
+                  </li>
+                  <li style="margin-bottom: 3px;">Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples.
+                  </li>
+                  <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water
+                    content): 3,581 samples.</li>
+                  <li style="margin-bottom: 3px;">Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.</li>
+                  <li style="margin-bottom: 15px;">Evergreen needleleaf forests (ENF, n = 891); Evergreen broadleaf
+                    forests (EBF, n = 1,382); Deciduous needleleaf forests (DNF, n = 77); Deciduous broadleaf forests
+                    (DBF, n = 26,944); Shrublands (SHR, n = 1,599); Grasslands (GRA, n = 11,833); Croplands (CRP, n =
+                    3,409); Vine (n = 637).</li>
+                </ol>
+
+                <p style="margin-bottom: 8px;"> While PLSR models demonstrate commendable performance in predicting
+                  chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training
+                  data space, their efficacy diminishes when extrapolating to new contexts. Specifically, extrapolating
+                  to locations, seasons, and PFTs beyond the training data leads to reduced <i>R<sup>2</sup></i>
+                  (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased <i>NRMSE</i> (3.58-18.24%, 6.27-11.55% and
+                  7.0-33.12%) compared to nonspatial random cross-validation (NRCV). These findings highlight potential
+                  errors in estimating leaf traits across large spatial domains, diverse PFTs and time due to biased
+                  validation schemes and provide guidance for future field sampling strategies and remote sensing
+                  applications.</p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
+                  <figcaption style="margin-bottom: 10px;">The relationship between predicted and
+                    observed leaf traits. <br>Left: random 10-fold CV (cross-validation) compared to spatial 10-fold CV.
+                    <br>Upper Right: cross-PFTs validation.<br>Bottom Right: random 5-fold CV compared to temporal
+                    5-fold CV.
+                  </figcaption>
+                </figure>
+
+                <p style="margin-bottom: 8px;"> Alpha and beta spectral diversity exhibited positive relationships in
+                  which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A higher
+                  similarity of spectral diversity among sites or PFTs is associated with the higher transferability of
+                  PLSR across geographic sites and PFTs.</p>
+                <figure">
+                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                    src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
+                    alt="Spectral diversity">
+                  <figcaption style="margin-bottom: 10px;">Alpha and beta spectral diversity to
+                    explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
+                    diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
+                    relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
+                    transferability across sites and PFTs, respectively.</figcaption>
+                  </figure>
+
+
+
+
+              </ul>
+            </li>
+
+            <!--Research two-->
+            <li class=" timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Regional Crop Yield Estimation by Assimilating Time Series of
+                Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model (<a
+                  href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Rapidly and accurately estimating yields at field scales are
+                  very significant. Each type of currently yield estimation model has been well studied, yet all of
+                  them have certain limitations. Based on a coupled Carnegie-Ames-Stanford approach (CASA)-World Food
+                  Studies (WOFOST) model and time series Sentinel-2 imagery, we achieved daily crop simulations and
+                  crop yield estimations at two adjacent farms in China.
+                </p>
+
+                <figure>
+                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_fields.png" alt="Fields">
+                  <figcaption style="margin-bottom: 10px;">Left: Location of the study areas and the crop type
+                    distribution map. <br>Right: Distribution of sampling points during the growing season.
+                  </figcaption>
+                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_results.png" alt="Results">
+                  <figcaption style="margin-bottom: 10px;">Left: Spatial distribution map of yield simulations
+                    by different models and the corresponding performance. <br>Right: Representative fields with
+                    sampling quadrats that show the relationship between the yield distribution and DEM.</figcaption>
+                </figure>
+                <ol class="order-list">
+                  <li>Compared with the WOFOST model, the coupled CASA-WOFOST model provided a much faster
+                    running speed
+                    in yield simulations and a similar accuracy;</li>
+                  <li>Compared with the CASA model, the coupled model provided higher simulation accuracy in
+                    mountainous areas and regions of uneven terrain.</li>
+                </ol>
+              </ul>
+            </li>
+
+            <!--Research three-->
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Comparison of Machine Learning Regression Algorithms for
+                Cotton Leaf
+                Area Index Retrieval Using Sentinel-2 Spectral Bands (<a href="https://doi.org/10.3390/app9071459"
+                  target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Leaf area index (LAI) is a crucial crop biophysical parameter
+                  that has
+                  been widely used in a variety of fields. Five learning regression algorithms (MLRAs),
+                  artificial
+                  neural network (ANN), support vector regression (SVR), Gaussian process regression (GPR),
+                  random
+                  forest (RF) and gradient boosting regression tree (GBRT), have been used in the retrieval of
+                  cotton
+                  LAI with Sentinel-2 spectral bands. The performances of the five machine learning models are
+                  compared
+                  for better applications of MLRAs in remote sensing. We conducted the comparison of five
+                  MLRAs in an
+                  agricultural area of Northwest China over three cotton seasons with the corresponding field
+                  campaigns
+                  for modeling and validation. Results show that the GBRT model outperforms the other models
+                  with
+                  respect to model accuracy in average.
+                </p>
+                <figure>
+                  <img style="max-width:100%;overflow:hidden;"
+                    src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="LAI maps">
+                  <figcaption style="margin-bottom: 10px;">Upper: Location of study area and in-situ leaf area
+                    index(LAI) quadrats from three field campaigns. <br>Bottom: Final cotton LAI map obtained
+                    using GBRT
+                    model and masked by the cotton fields.</figcaption>
+                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/LAI_paper/0_Accuracy.png"
+                    alt="Accuracy">
+                  <figcaption style="margin-bottom: 10px;">Upper: Sensitivity of the ML models to the training
+                    sample
+                    size. <br>Bottom: The performance of different ML models for estimating LAI.</figcaption>
+                </figure>
+              </ul>
+            </li>
+
+
+
+          </ol>
+
+
+        </section>
+
+      </article>
+
+
+
+    </div>
+
+  </main>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
