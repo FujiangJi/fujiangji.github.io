@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version Control System</title>
+  <style>
+    pre {
+      position: relative;
+      margin-top: 10px;
+      max-width: 100%;
+      width: 100%;
+      padding: 10px;
+      overflow-x: auto;
+      display: block;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      border: 1px solid var(--jet);
+      white-space: pre;
+      word-wrap: break-word;
+      font-family: 'Consolas', Courier, monospace;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px 10px;
+      background: hsl(240, 1%, 17%);
+      color: hsl(0, 0%, 98%);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      opacity: 1;
+    }
+
+    code {
+      display: inline-block;
+      max-width: 100%;
+      word-break: break-all;
+      overflow-wrap: break-word;
+      white-space: normal;
+      padding: 3px;
+      color: hsl(45, 35%, 76%);
+      font-size: 13px
+    }
+
+    code2 {
+      display: block;
+      max-width: 100%;
+      color: hsl(45, 35%, 76%);
+      font-size: 13px
+    }
+  </style>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../../assets/images/about_page/UW_madison.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">FUJIANG JI</h1>
+
+          <p class="title">Ph.D. Candidate</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>1630 Linden Drive, Madison WI, U.S.</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
+              <i class="ai ai-google-scholar ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
+              <i class="ai ai-researchgate ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
+              <i class="ai ai-orcid ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
+              <i class="ai ai-publons ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://docs.google.com/document/d/1BBY4qI-FqFn16TjQzWgxYVWC1iNVHSKt/edit?usp=drive_link&ouid=118400714828936230873&rtpof=true&sd=true"
+              target="_blank" class="social-link">
+              <i class="ai ai-cv ai-1x"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../../index.html';">About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../research.html';">Research</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../publications.html';">Publications</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link active" onclick="window.location.href='../tutorials.html';">Tutorials</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../blogs.html';">blogs</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" onclick="window.location.href='../contact.html';">Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <article class="tutorial active" data-page="tutorial">
+        <header>
+          <h2 class="h2 article-title">Tutorials</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Instructions on Version Control System (Git & Github)</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">GitHub setup (<a href="https://www.jianshu.com/p/899a2d4de88f"
+                  target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>):</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+
+                <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
+                  <li><strong>Step 1:</strong> Open the terminal → Check if SSH exists on your Mac by entering the
+                    command <code>cd ~/.ssh</code> → If it doesn't exist, create an SSH key by running
+                    <code>ssh-keygen -t rsa -C xxxxx@163.com</code> (replace xxxxx@163.com with the email you used when
+                    registering on GitHub) → It will prompt you to choose the storage location for the SSH key. Press
+                    Enter to use the default location and follow the prompts to complete the process by entering 'y'
+                    when prompted for confirmation. → Finally, set a password for the SSH key. Enter a password, confirm
+                    it, and the SSH key creation process will be completed.
+                  </li>
+                  <li><strong>Step 2:</strong> <code>ssh -T git@github.com</code> is used to test the SSH connection
+                    between your local machine and GitHub. It verifies if your SSH key is associated with your GitHub
+                    account.</li>
+                  <li><strong>Step 3:</strong> Upload files from local to Github.
+                    <ol class=" order-list2" style="font-size: 13px;">
+                      <li><code>git clone https://github.com/xxx.git</code> (address of repository in your own Github).
+                      </li>
+                      <li>Navigate to the local folder: Open the terminal and use the <code>cd</code> command to
+                        navigate to the local folder where you want to upload the files (Or create a new file that you
+                        want to upload using <code>touch README.md</code>).</li>
+                      <li><code>git add filename.txt</code> (add a specific file) Or <code>git add .</code> (add all the
+                        files in the folder).</li>
+                      <li><code>git commit -m “first version(Description of the commit)”</code></li>
+                      <li><code>git remote add origin git@github.com:username/xxx.git</code></li>
+                      <li><code>git push origin HEAD:main</code> Or <code>git push origin</code></li>
+                    </ol>
+                  </li>
+                  <li><strong>Step 4:</strong> Create a new branch.
+                    <ol class=" order-list2" style="font-size: 13px;">
+                      <li><code>git branch bname</code>, create a branch named bname.</li>
+                      <li><code>git checkout bname</code>, switch the HEAD in git to the created new branch, bname.</li>
+                      <li><code>git add filename.txt (add a specific file)<code> Or </code>git add .</code> (add all the
+                        file in the folder).</li>
+                      <li><code>git commit -m “first version(Description of the commit)”</code></li>
+                      <li><code>git remote add origin git@github.com:username/xxx.git</code></li>
+                      <li><code>git push origin HEAD:bename</code>
+                        <ol class=" order-list2" style="font-size: 13px;">
+                          <li><code>git checkout bname</code>, switch HEAD to bname.</li>
+                          <li><code>git checkout c1</code>, move HEAD to the c1 commit.</li>
+                          <li><code>git merge bname</code>, merge changes on the bname branch into the current branch.
+                          </li>
+                          <li><code>git branch -D bname</code>, delete the branch named bname.</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </ul>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Large files uploading to github:</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
+                  <li><strong>Step 1: Navigate to the Directory:</strong> Open your terminal or command prompt and
+                    navigate to the directory containing the large file you want to upload.</li>
+                  <li><strong>Step 2: Initialize Git LFS:</strong> If you haven't already initialized Git LFS for your
+                    repository, you can do so by running:
+                    <pre
+                      id="codeBlock"><code2 id="bashScript">git lfs install</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                  </li>
+                  <li><strong>Step 3: Track Large File:</strong> Track the large file using Git LFS. You need to specify
+                    the relative path to the file from the root directory of your repository. For example, if the large
+                    file is located in a subdirectory named "data" and its filename is "large _file.zip", you can run:
+                    <pre
+                      id="codeBlock"><code2 id="bashScript">git lfs track data/large _file.zip</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                  </li>
+                  <li><strong>Step 4: Add and Commit Large File:</strong> Add the large file to the staging area and
+                    commit it to your local repository as you normally would:
+                    <pre
+                      id="codeBlock"><code2 id="bashScript">git add data/large _file.zip
+git commit -m "Add large file using Git LFS" </code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                  </li>
+                  <li><strong>Step 5: Push Changes to GitHub:</strong> Once you've committed the changes locally, you
+                    can
+                    push them to your GitHub repository:
+                    <pre
+                      id="codeBlock"><code2 id="bashScript">git push origin main</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                  </li>
+                  <li><strong>Step 6: Verify Large File in GitHub:</strong> After pushing the changes, verify that the
+                    large file is properly stored using Git LFS in your GitHub repository.</li>
+                  <li><strong>Step 7: Download Large File from Github:</strong> Clone this repository to your local PC
+                    and
+                    navigate to the directory and download the data from github LFS:
+                    <pre id="codeBlock"><code2 id="bashScript">git clone https://github.com/xxx.git
+git lfs ls-files git lfs pull </code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                  </li>
+                </ol>
+              </ul>
+            </li>
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Version Control Git (CLM as an example):</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
+                  <li><strong>Step 1:</strong> In the Arctic Carbon Cycle Updates Request of CLM, we can see the first
+                    commit is <code style="color:rgb(247, 138, 4);">64aa4d9</code>, the last commit is <code
+                      style="color:rgb(247, 138, 4);">dd0cbec</code>. Therefore, the commits of dd0cbec is the abz
+                    version of CLM, and the commit <code style="color:rgb(247, 138, 4);">before 64aa4d9</code> is the
+                    version without abz updates.
+                    <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                        src="vcs_image/github_update_requests.png" alt="requests">
+                      <figcaption style="margin-bottom: 10px;">Arctic Carbon Cycle Updates Request of CLM in github
+                        repository.</figcaption>
+                    </figure>
+                  </li>
+                  <li><strong>Step 2:</strong> <code>git clone ****</code>, download the CLM to the location you want.
+                    Then, <code>cd CTSM</code> and use <code>git branch</code>, we can see this version is pointing to
+                    the master branch.
+                    <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                        src="vcs_image/git_clone.png" alt="git_clone">
+                      <figcaption style="margin-bottom: 10px;">clone repository.</figcaption>
+                    </figure>
+                  </li>
+                  <li><strong>Step 3:</strong> Now, to get the arctic carbon cycle updates version of CLM, using command
+                    line <code>git checkout dd0cbec</code>. Then, <code>git checkout -b abz_version</code> (build a new
+                    branch named abz_version). And <code>git log --oneline</code>, you can see the last commit is
+                    pointing at <code style="color:rgb(247, 138, 4);">dd0cbec</code>, which is the last commit of abz.
+                    <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                        src="vcs_image/git_checkout.png" alt="git_checkout">
+                      <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                        src="vcs_image/git_log.png" alt="git-log">
+                      <figcaption style="margin-bottom: 10px;">Get the updated version of CLM.</figcaption>
+                    </figure>
+                  </li>
+                  <li><strong>Step 4:</strong> The first commit of abz updates is <code
+                      style="color:rgb(247, 138, 4);">64aa4d9</code>, which means the commit before <code
+                      style="color:rgb(247, 138, 4);">64aa4d9</code> is the version without abz updates, namely <code
+                      style="color:rgb(247, 138, 4);">384c726</code>. So, we can <code>git checkout 384c726</code> to
+                    transfer the current version before abz updates. Then <code>git branch -b no_abz</code> (build a
+                    branch before abz updates).</li>
+                  <li><strong>Step 5:</strong> Finally, <code>git branch</code>, we can see there are three branches
+                    <code style="color:rgb(247, 138, 4);">(master, abz_updates, no_abz)</code>.
+                    <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                        src="vcs_image/final.png" alt="final">
+                      <figcaption style="margin-bottom: 10px;">Finalize the extracted branches with different versions
+                        of CLM.</figcaption>
+                    </figure>
+                  </li>
+                </ol>
+              </ul>
+            </li>
+
+
+
+
+          </ol>
+        </section>
+
+      </article>
+
+
+
+    </div>
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="../../assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script>
+    function copyText() {
+      const textArea = document.createElement('textarea');
+      const code = document.getElementById('bashScript');
+      let text = code.innerText.replace(/(\r\n|\n|\r)/gm, "\n").replace(/^\s*\n/gm, "");
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      const button = document.getElementById('copyButton');
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy', 4000);
+    }
+  </script>
+
+</body>
+
+</html>
