@@ -6,16 +6,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High Throughput Computing</title>
+  <style>
+    pre {
+      position: relative;
+      margin-top: 10px;
+      max-width: 100%;
+      width: 100%;
+      padding: 10px;
+      overflow-x: auto;
+      display: block;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      border: 1px solid var(--jet);
+      white-space: pre;
+      word-wrap: break-word;
+      font-family: 'Consolas', Courier, monospace;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px 10px;
+      background: hsl(240, 1%, 17%);
+      color: hsl(0, 0%, 98%);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    code {
+      display: inline-block;
+      max-width: 100%;
+      word-break: break-all;
+      overflow-wrap: break-word;
+      white-space: normal;
+      padding: 3px;
+      color: hsl(45, 35%, 76%);
+      font-size: 13px
+    }
+
+    code2 {
+      display: block;
+      max-width: 100%;
+      color: hsl(45, 35%, 76%);
+      font-size: 13px
+    }
+  </style>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../images/about_page/UW_madison.png" type="image/x-icon">
 
   <!--
     - custom css link
   -->
   <link rel="stylesheet" href="../css/style.css">
+
 
   <!--
     - google font link
@@ -23,6 +71,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -41,7 +91,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../images/Fujiang_Ji_image.png" alt="Richard hanrick" width="80">
+          <img src="../images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
         </figure>
 
         <div class="info-content">
@@ -163,25 +213,241 @@
 
     <div class="main-content">
 
-
       <article class="tutorial active" data-page="tutorial">
-
         <header>
           <h2 class="h2 article-title">Tutorials (<a href="../../index.html"
               style="color: hsl(0, 0%, 98%); display: inline;">Go back</a>)</h2>
         </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Instructions on How to use HPC and CHTC at UW-Madison</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Command Lines Basics:</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;"">
+                <ol class=" order-list" style="font-size: 13px;">
+                <li><a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">HPC at UW-Madison:</a> It runs for a maximum of
+                  7 days, equivalent to a large computer.</li>
+                <li><a href="https://chtc.cs.wisc.edu/" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">HTC at UW-Madison:</a> It runs for a maximum of
+                  3 days and can run multiple jobs in parallel, then combine the results together.</li>
+                <li>How to determine if a task is suitable for running on HPC (a large computer where tasks can interact
+                  but also perform parallel computing) or HTC (multiple computers running together without task
+                  interaction).</li>
+                <li>Terminal (Mac) &amp; Ubuntu (Win) connect to HPC: <code>ssh NetID@hpclogin3.chtc.wisc.edu</code>
+                </li>
+                <li>Terminal (Mac) &amp; Ubuntu (Win) connect to HTC: <code>ssh NetID@submit3.chtc.wisc.edu</code> </li>
+                <li>Abtain the path of files: <code>readlink -f file.txt</code> (Linux);
+                  <code>bash-3.2$ pwd file.txt</code> (bash) (<a href="https://juejin.cn/post/6844903481728303112"
+                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).
+                </li>
+                <li>Navigating directories: <code>cd</code> (<a href="https://linuxize.com/post/linux-cd-command/"
+                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                <li>Display a list of files: <code>ls</code> (<a
+                    href="https://www.atatus.com/blog/ls-command-in-linux-with-example/" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                <li>Display the contents of one or more files: <code>cat</code> (short for: concatenate) is used to
+                  concatenate files and display their contents on the standard output device (<a
+                    href="https://phoenixnap.com/kb/linux-cat-command" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                <li><code>echo “A B B A C C” &gt; example.txt</code> is used to write the string "A B B A C C" to a new
+                  file called "example.txt".</li>
+                <li><code>python3 wc.py example.txt</code> is to run the Python script <code>wc.py</code> with the
+                  example.txt file as input data in the terminal.</li>
+                <li><strong>Transfer files</strong>:
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li>Local desktop % <code>scp NetID@hpclogin3.chtc.wisc.edu:/home/sample.zip .</code>transfer data
+                      from
+                      HPC/HTC to local PC. </li>
+                    <li><code>scp test.zip NetID@hpclogin3.chtc.wisc.edu:/home/</code> transfer data from local PC to
+                      HPC.
+                    </li>
+                    <li>Local desktop %
+                      <code>scp -r NetID@hpclogin3.chtc.wisc.edu:/home/temp /Volumes/data</code>
+                      transfer the whole directory data from HPC/HTC to local PC.
+                    </li>
+                  </ol>
+                </li>
+                <li><strong>Compressing files:</strong>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li><code>zip -r example.zip example</code> Compressing files.</li>
+                    <li><code>unzip -l name.zip</code> is used to list the files and directories inside a ZIP archive
+                      without actually extracting them.</li>
+                    <li><code>unzip example.zip</code> To unzip the file "exaplem.zip" and extract its contents into
+                      the
+                      current folder.</li>
+                    <li><code>tar -cvf data_folder/data.tar data_folder/</code> compress data.</li>
+                    <li><code>tar -xzf data_folder/data.tar.gz -C data_folder/</code> uzip data.</li>
+                    <li><code>tar -xvf data_folder/data.tar -C data_folder/</code> unzip data.</li>
+                  </ol>
+                </li>
+                <li><code>g++ xtem423e4.cpp -o temmodel</code> Compile terrestrial ecosystem model, we have the g++
+                  compiler installed and that the source code file xtem423e4.cpp is in the current directory. It
+                  compiles the source code and generates an executable named temmodel using the -o flag.</li>
+                <li><code>./temmodel tem4.para tem4.log</code> run TEM, temmodel executable file in the current
+                  directory, and you want to run it with the input parameters file tem4.para and output log file
+                  tem4.log.</li>
+                <li><code>wc -l filename</code> is used to count the number of lines in a file.</li>
+                <li>HTC: <code>condor_q</code> is used to query and manage jobs in the HTCondor system. It provides
+                  information about the status of submitted jobs, such as their ID, current status (queued, running,
+                  completed, etc.), and resource usage; <code>condor_status</code> is used to monitor and view the
+                  status
+                  of
+                  computers (also referred to as resources or execution hosts) within the HTCondor system. It provides
+                  information about the availability, load, and other attributes of the computers registered with
+                  HTCondor.
+                </li>
+                <li><code>grep mkclds *</code> is used to search for the pattern "mkclds" in all files in the current
+                  directory.</li>
+                <li><code>:q!</code> Quit vi without saving changes. <code>:wq!</code> Save changes and exit vi
+                  forcefully.
+                </li>
+                <li><code>module avail</code> is to view the available modules on your system</li>
+                <li><code>make</code> using gfortran compile, navigate to the directory containing the Makefile and
+                  the
+                  Fortran source files and run the make command. This will execute the build rule specified in the
+                  Makefile,
+                  compiling the program using gfortran and generating the executable.</li>
 
-        <section class="about-text">
-          <ul class="skills-list content-card">
-            <p>
-              Coming Soon!!!
-            </p>
 
+                <li><strong>How to create alias on local PC and HPC</strong>.
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li><strong>HPC and HTC:</strong>
+                      <ol class="order-list" style="font-size: 13px;">
+                        <li><code>vi ~/.bashrc</code> setting alias.</li>
+                        <li><code>source ~/.bashrc</code> update alias after setting it.<figure><img
+                              style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                              src="hpc_image/alias.png" alt="alias">
+                            <figcaption style="margin-bottom: 10px;">Examples of Alias. </figcaption>
+                          </figure>
+                        </li>
+                      </ol>
+                    </li>
+
+                    <li><strong>Login to HPC without password:</strong>
+                      <ol class="order-list" style="font-size: 13px;">
+                        <li>Step 1: passwordless login: <a
+                            href="https://originalix.github.io/2018/04/26/%E5%9C%A8Mac%E4%B8%8A%E4%BD%BF%E7%94%A8ssh-key%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+                            target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>.</li>
+                        <li>Step 2:
+                          <code>scp ~/.ssh/id_rsa.pub ssh NetID@hpclogin3.chtc.wisc.edu:/home/NetID/.ssh/</code>
+                        </li>
+                        <li>Step 3:
+                          <code>scp ~/.ssh/id_rsa.pub ssh NetID@submit3.chtc.wisc.edu:/home/NetID/.ssh/</code>
+                        </li>
+                        <li>Step 4: <code>nano ~/.zshrc</code> setting alias (Mac, local).</li>
+                        <li>Step 5: <code>source ~/.zshrc</code> update alias (Mac, local).</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li>Connect VS code and HPC: <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial"
+                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>.</li>
+              </ul>
+
+
+            </li>
+
+
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title">Run Python Programs on HPC:</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;"">
+
+              <ol class=" order-list" style="font-size: 13px;">
+                <li>Install Miniconda on software directory (<a
+                    href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Link</a>):
+                  <ol class=" order-list2" style="font-size: 13px;">
+                    <li><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
+                    <li><code>sh Miniconda3-latest-Linux-x86_64.sh</code> install Miniconda on the software
+                      directory.
+                      <figure><img
+                          style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                          src="hpc_image/miniconda_installation.png" alt="miniconda">
+                        <figcaption style="margin-bottom: 10px;">Miniconda installation. </figcaption>
+                      </figure>
+
+                    </li>
+                    <li>After installation, active base environment:
+                      <code>eval "$(/software/fji7/miniconda3/bin/conda shell.bash hook)"</code> (<a
+                        href="https://stackoverflow.com/questions/55507519/python-activate-conda-env-through-shell-script"
+                        target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).
+                    </li>
+                  </ol>
+                </li>
+                <li>View how many environments are already built: <code>conda env list</code></li>
+                <li>Build or delete an environment for conda:
+                  <code>conda create -n envs_name python=x.x</code>,<code>conda env remove --name envs_name</code>
+                </li>
+                <li>Activate/ deactivate the
+                  environment:<code>conda activate envs_name</code>,<code>conda deactivate</code>
+                </li>
+                <li>Install packages you need: <code>conda install packages</code>; <code>pip install packages</code>
+                </li>
+                <li>Before submitting jobs, we can apply a small compute resource to debug on
+                  HPC:<code>srun -n4 -N1 -p int --pty bash</code> (<a
+                    href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Link1</a>, <a
+                    href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview.html" target="_blank"
+                    style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>).</li>
+                <li>Terminal run python file: <code>python name.py</code> or <code>runipy name.ipynb</code></li>
+                <li>Submit jobs: (<a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html"
+                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link1</a>,
+                  <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview#high-performance-computing-at-chtc"
+                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>):
+                  <code>sbatch tasks_upload.sh</code> (below shows the template script
+                  of <code>tasks_upload.sh</code>).
+                  <pre id="codeBlock">
+                    <code2>#!/bin/bash
+<a style="color:rgb(193, 190, 190)"># Sets the name of the job. This is typically used for identification purposes.</a><strong>SBATCH --job-name=PLSR_modeling</strong>
+<a style="color:rgb(193, 190, 190)"># Requests one compute node for the job</a><strong>SBATCH --nodes=1</strong>
+<a style="color:rgb(193, 190, 190)"># 10 tasks (or processes) running per node. This parameter is relevant for parallel computing.</a><strong>SBATCH --ntasks-per-node=1</strong>
+<a style="color:rgb(193, 190, 190)"># Define the number of CPUs allocated per task</a><strong>SBATCH --cpus-per-task=1</strong>
+<a style="color:rgb(193, 190, 190)"># maximum memory for the whole job is 128GB</a><strong>SBATCH --mem=128gb</strong>
+<a style="color:rgb(193, 190, 190)"># specifies the maximum runtime for the job as 24 hours</a><strong>SBATCH --time=24:00:00</strong>
+<a style="color:rgb(193, 190, 190)"># the log file</a><strong>SBATCH --output=PLSR_modeling.out</strong>
+<a style="color:rgb(193, 190, 190)"># Activate the conda environment</a><strong>source /software/fji7/miniconda3/bin/activate /software/fji7/miniconda3/envs/Fujiang_envs</strong>
+<a style="color:rgb(193, 190, 190)"># Run the script</a><strong>python /home/fji7/HPC_test/Spatial_PFTs.py</strong></code2><button class="copy-btn" onclick="copyCode()">Copy</button>
+</pre>
+                </li>
+                <li>In a typical computing system, there is a hierarchical relationship between nodes, cores, and CPUs:
+                  <ol class=" order-list2" style="font-size: 13px;">
+                    <li><strong>Node:</strong> A node refers to a physical computing unit or a server in a distributed
+                      computing system. It can consist of one or more CPUs.</li>
+                    <li><strong>Core:</strong> A core is an individual processing unit within a CPU. Modern CPUs often
+                      have multiple cores, which allows for parallel processing. Each core can execute instructions
+                      independently.</li>
+                    <li><strong>CPU:</strong> The Central Processing Unit (CPU) is the main processing unit of a
+                      computer. It consists of one or more cores. Each CPU can handle multiple tasks concurrently by
+                      utilizing its cores.</li>
+                  </ol>
+                </li>
+                <li>It's important to note that while a CPU can have multiple cores, each core can execute its own
+                  thread or process independently. Therefore, a CPU with multiple cores can handle multiple
+                  programs or processes simultaneously. This is known as parallel processing, where different
+                  cores execute different instructions concurrently, improving overall performance and
+                  multitasking capabilities.</li>
+                <li>A node contains one or more CPUs, each CPU can have multiple cores, and each core can handle a
+                  separate program or process concurrently. This hierarchical structure allows for efficient
+                  multitasking and parallel processing in modern computing systems (below shows the resources
+                  availability at UW-Madison HPC).
+                  <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                      src="hpc_image/resource.png" alt="resources">
+                    <figcaption style="margin-bottom: 10px;">Computing resources availability at UW-Madison.
+                    </figcaption>
+                  </figure>
+                </li>
+          </ol>
           </ul>
+          </li>
+
+          </ol>
         </section>
-
-
-
 
       </article>
 
@@ -191,8 +457,6 @@
 
   </main>
 
-
-
   <!--
     - custom js link
   -->
@@ -201,8 +465,29 @@
   <!--
     - ionicon link
   -->
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function copyCode() {
+      var textarea = document.createElement("textarea");
+      var code = document.querySelector('#codeBlock code').innerText;
+      textarea.value = code;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+        alert('Copied!');
+      } catch (err) {
+        console.log('Oops, unable to copy', err);
+        alert('Failed to copy, please use Ctrl+C/Cmd+C');
+      }
+      document.body.removeChild(textarea);
+    }
+  </script>
+
 
 </body>
 
