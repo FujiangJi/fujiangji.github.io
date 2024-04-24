@@ -327,33 +327,34 @@
                   <li><strong>Step 2: Initialize Git LFS:</strong> If you haven't already initialized Git LFS for your
                     repository, you can do so by running:
                     <pre
-                      id="codeBlock"><code2 id="bashScript">git lfs install</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                      id="codeBlock"><code2 class="bashScript">git lfs install</code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                   <li><strong>Step 3: Track Large File:</strong> Track the large file using Git LFS. You need to specify
                     the relative path to the file from the root directory of your repository. For example, if the large
                     file is located in a subdirectory named "data" and its filename is "large _file.zip", you can run:
                     <pre
-                      id="codeBlock"><code2 id="bashScript">git lfs track data/large _file.zip</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                      id="codeBlock"><code2 class="bashScript">git lfs track data/large _file.zip</code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                   <li><strong>Step 4: Add and Commit Large File:</strong> Add the large file to the staging area and
                     commit it to your local repository as you normally would:
                     <pre
-                      id="codeBlock"><code2 id="bashScript">git add data/large _file.zip
-git commit -m "Add large file using Git LFS" </code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                      id="codeBlock"><code2 class="bashScript">git add data/large _file.zip
+git commit -m "Add large file using Git LFS" </code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                   <li><strong>Step 5: Push Changes to GitHub:</strong> Once you've committed the changes locally, you
                     can
                     push them to your GitHub repository:
                     <pre
-                      id="codeBlock"><code2 id="bashScript">git push origin main</code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                      id="codeBlock"><code2 class="bashScript">git push origin main</code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                   <li><strong>Step 6: Verify Large File in GitHub:</strong> After pushing the changes, verify that the
                     large file is properly stored using Git LFS in your GitHub repository.</li>
                   <li><strong>Step 7: Download Large File from Github:</strong> Clone this repository to your local PC
                     and
                     navigate to the directory and download the data from github LFS:
-                    <pre id="codeBlock"><code2 id="bashScript">git clone https://github.com/xxx.git
-git lfs ls-files git lfs pull </code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+                    <pre
+                      id="codeBlock"><code2 class="bashScript">git clone https://github.com/xxx.git
+git lfs ls-files git lfs pull</code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                 </ol>
               </ul>
@@ -439,18 +440,20 @@ git lfs ls-files git lfs pull </code2><button id="copyButton" class="copy-btn" o
 
 
   <script>
-    function copyText() {
-      const textArea = document.createElement('textarea');
-      const code = document.getElementById('bashScript');
-      let text = code.innerText.replace(/(\r\n|\n|\r)/gm, "\n").replace(/^\s*\n/gm, "");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      const button = document.getElementById('copyButton');
-      button.textContent = 'Copied!';
-      setTimeout(() => button.textContent = 'Copy', 4000);
+    function copyText(element) {
+      var text = element.previousElementSibling.innerText;
+      var textarea = document.createElement("textarea");
+      textarea.textContent = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      element.textContent = "Copied";
+      // 两秒后恢复原始状态
+      setTimeout(function () {
+        element.textContent = "Copy";
+        element.style.backgroundColor = "";
+      }, 4000);
     }
   </script>
 

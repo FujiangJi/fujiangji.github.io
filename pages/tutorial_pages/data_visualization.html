@@ -244,10 +244,21 @@
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">GitHub setup:</h4>
               <pre>
-                <code class="language-python" id="bashScript">import numpy as np
+                <code class="language-python" class="bashScript">import numpy as np
 # Create an array
 arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])
-print(arr)</code><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button></pre>
+print(arr)</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+
+              <pre>
+  <code class="language-python" class="bashScript">import numpy as np
+# Create an array
+arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])
+print(arr)</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+              <pre>
+  <code class="language-python" class="bashScript">import numpy as np
+# Create an array
+arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])arr = np.array([1, 2, 3, 4, 5])
+print(arr)</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
 
             </li>
 
@@ -291,18 +302,20 @@ print(arr)</code><button id="copyButton" class="copy-btn" onclick="copyText()">C
 
 
   <script>
-    function copyText() {
-      const textArea = document.createElement('textarea');
-      const code = document.getElementById('bashScript');
-      let text = code.innerText.replace(/(\r\n|\n|\r)/gm, "\n").replace(/^\s*\n/gm, "");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      const button = document.getElementById('copyButton');
-      button.textContent = 'Copied!';
-      setTimeout(() => button.textContent = 'Copy', 4000);
+    function copyText(element) {
+      var text = element.previousElementSibling.innerText;
+      var textarea = document.createElement("textarea");
+      textarea.textContent = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      element.textContent = "Copied";
+      // 两秒后恢复原始状态
+      setTimeout(function () {
+        element.textContent = "Copy";
+        element.style.backgroundColor = "";
+      }, 4000);
     }
   </script>
 

@@ -443,7 +443,7 @@
                       target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>):
                     <code>sbatch tasks_upload.sh</code> (below shows the template of <code>tasks_upload.sh</code>).
                     <pre id="codeBlock">
-                    <code2 id="bashScript">#!/bin/bash
+                    <code2 class="bashScript">#!/bin/bash
 <a style="color:rgb(193, 190, 190)"># Sets the name of the job. This is typically used for identification purposes.</a><strong>SBATCH --job-name=PLSR_modeling</strong>
 <a style="color:rgb(193, 190, 190)"># Requests one compute node for the job</a><strong>SBATCH --nodes=1</strong>
 <a style="color:rgb(193, 190, 190)"># 10 tasks (or processes) running per node. This parameter is relevant for parallel computing.</a><strong>SBATCH --ntasks-per-node=1</strong>
@@ -452,7 +452,7 @@
 <a style="color:rgb(193, 190, 190)"># specifies the maximum runtime for the job as 24 hours</a><strong>SBATCH --time=24:00:00</strong>
 <a style="color:rgb(193, 190, 190)"># the log file</a><strong>SBATCH --output=PLSR_modeling.out</strong>
 <a style="color:rgb(193, 190, 190)"># Activate the conda environment</a><strong>source /software/fji7/miniconda3/bin/activate /software/fji7/miniconda3/envs/Fujiang_envs</strong>
-<a style="color:rgb(193, 190, 190)"># Run the script</a><strong>python /home/fji7/HPC_test/Spatial_PFTs.py</strong></code2><button id="copyButton" class="copy-btn" onclick="copyText()">Copy</button>
+<a style="color:rgb(193, 190, 190)"># Run the script</a><strong>python /home/fji7/HPC_test/Spatial_PFTs.py</strong></code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button>
 </pre>
                   </li>
                   <li>In a typical computing system, there is a hierarchical relationship between nodes, cores, and
@@ -512,18 +512,20 @@
 
 
   <script>
-    function copyText() {
-      const textArea = document.createElement('textarea');
-      const code = document.getElementById('bashScript');
-      let text = code.innerText.replace(/(\r\n|\n|\r)/gm, "\n").replace(/^\s*\n/gm, "");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      const button = document.getElementById('copyButton');
-      button.textContent = 'Copied!';
-      setTimeout(() => button.textContent = 'Copy', 4000);
+    function copyText(element) {
+      var text = element.previousElementSibling.innerText;
+      var textarea = document.createElement("textarea");
+      textarea.textContent = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      element.textContent = "Copied";
+      // 两秒后恢复原始状态
+      setTimeout(function () {
+        element.textContent = "Copy";
+        element.style.backgroundColor = "";
+      }, 4000);
     }
   </script>
 
