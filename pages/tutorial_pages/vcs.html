@@ -338,7 +338,9 @@
                   <li><strong>Step 4: Add and Commit Large File:</strong> Add the large file to the staging area and
                     commit it to your local repository as you normally would:
                     <pre
-                      id="codeBlock"><code2 class="bashScript">git add data/large _file.zip
+                      id="codeBlock"><code2 class="bashScript">git add .gitattributes
+git commit -m "Track large files with Git LFS"
+git add data/large _file.zip
 git commit -m "Add large file using Git LFS" </code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
                   </li>
                   <li><strong>Step 5: Push Changes to GitHub:</strong> Once you've committed the changes locally, you
