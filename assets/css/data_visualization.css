@@ -1574,7 +1574,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box {
-    border-radius: 30px;
+    border-radius: 0px;
   }
 
   .avatar-box img {
