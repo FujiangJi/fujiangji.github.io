@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Visualization</title>
+  <title>Read and Write GeoTIFF</title>
   <style>
     pre,
     code {
@@ -17,6 +17,7 @@
       border-radius: 5px;
       background: #0a0707 !important;
       color: #f8f8f2 !important;
+      line-height: 1.5 !important;
     }
 
     .copy-btn {
@@ -254,146 +255,57 @@
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Python for Data Visualization</h3>
+            <h3 class="h3">Read & Write GeoTIFF</h3>
           </div>
-          <ol class="timeline-list">
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">1. Ways to generate axes</h4>
 
-              <pre><code class="language-python" class="bashScript">"""
-1.1 plt.subplots
- fig,ax = plt.subplots(nrows, ncols, figsize=(width, height), dpi, sharex=False, sharey=False, **kwargs)
- Parameters:
-------------------------------
-  - fig: figure
-  - ax: axes or array of Axes.
-  - dpi: the resolution of figure.
-  - nrows/ncols: number of rows/columns of the subplot grid.
-  - sharex/sharey: bool, default: False.
-                   Controls sharing of properties among x (sharex) or y (sharey) axes:
-  - figsize: the size of the created figure (Width, height) in inches (float, float).
-  - **kwargs: other parameters such as squeeze, width_ratios, height_ratios, subplot_kw, 
-              gridspec_kw, etc. that are passed to the pyplot.figure call
-"""
+          <pre><code class="language-python" class="bashScript">import numpy as np
+from osgeo import gdal, ogr, gdalconst
 
-import matplotlib.pyplot as plt
-# generate a single axes figure (output 1).
-fig, ax = plt.subplots(1,1, figsize=(2, 2), dpi=100)
-# generate a two rows and two columns axes fugure (output 2). 
-# ax[0] (1st row, 1st coloumn), ax[1] (1st row, 2nd coloumn) (1st row, 1st coloumn), ax[2], ax[3] represent each axes.
-fig, ax = plt.subplots(2,2, figsize=(3, 3), dpi=100)
-# initialize the axes.
-config = {"font.family":'Helvetica'}
-plt.subplots_adjust(wspace = 0.1,hspace = 0.1)
-plt.rcParams.update(config)
+def read_tif(tif_file):
+    """
+    Parameters:
+    ------------------------------
+      - tif_file: the full path of the GeoTIFF data (e.g., "/data/imagery.tif").
+      - im_data: (rows, cols, bands)
+    """
+    dataset = gdal.Open(tif_file)
+    cols = dataset.RasterXSize
+    rows = dataset.RasterYSize
+    im_proj = (dataset.GetProjection())
+    im_Geotrans = (dataset.GetGeoTransform())
+    im_data = dataset.ReadAsArray(0, 0, cols, rows)
+    if im_data.ndim == 3:
+        im_data = np.moveaxis(dataset.ReadAsArray(0, 0, cols, rows), 0, -1)
 
-# generate a two rows and two columns axes fugure. 
-# ax1 (1st row, 1st coloumn), ax2 (1st row, 2nd coloumn) (1st row, 1st coloumn), ax3, ax4 represent each axes.
-fig, ([ax1,ax2],[ax3,ax4]) = plt.subplots(2,2, figsize=(3, 3), dpi=100)
-# all the ases share the same x and y label (output 3).
-fig.text(0.5, 0, 'x', ha='center')
-fig.text(0, 0.5, 'y', va='center',rotation='vertical')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img src="./data_visualization_image/1.1.1.png" alt="Image 1">
-                <img src="./data_visualization_image/1.1.2.png" alt="Image 2">
-                <img src="./data_visualization_image/1.1.3.png" alt="Image 3">
-              </div>
-              <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: output 1; Middle: output 2; Right: output
-                3.</figcaption>
+    dataset = None
+    return im_data, im_Geotrans, im_proj, rows, cols
 
-              <pre><code class="language-python" class="bashScript">"""
-1.2 plt.figure
- fig = plt.figure(figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True, **kwargs)
- Parameters:
-------------------------------
-  - fig: figure
-  - dpi: the resolution of figure.
-  - figsize: the size of the created figure (Width, height) in inches (float, float).
-  - dpi:the resolution of the figure in dots-per-inch.
-  - facecolorcolor: the background color.
-  - edgecolorcolor: the border color.
-  - frameonbool, default: True. If False, suppress drawing the figure frame.
-  - **kwargs: additional keyword arguments are passed to the Figure constructor.
-------------------------------
-  Useful for iteratively figure plotting.
-"""
+def array_to_geotiff(array, output_path, geo_transform, projection, band_names=None):
+    """
+    Parameters:
+    ------------------------------
+      - array: the image array that need to be saved (rows, cols, bands).
+      - output_path: the full path that save the GeoTIFF data (e,g., "/data/saved_imagery.tif").
+      - geo_transform: geotransform of data.
+      - projection: projection of data.
+      - band_names: the band names as list.
+    """
+    rows, cols, num_bands = array.shape
+    driver = gdal.GetDriverByName('GTiff')
+    dataset = driver.Create(output_path, cols, rows, num_bands, gdal.GDT_Float32)
+    
+    dataset.SetGeoTransform(geo_transform)
+    dataset.SetProjection(projection)
+    
+    for band_num in range(num_bands):
+        band = dataset.GetRasterBand(band_num + 1)
+        band.WriteArray(array[:, :, band_num])
+        band.FlushCache()
+        
+        if band_names:
+            band.SetDescription(band_names[band_num])
+    return</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
 
-import matplotlib.pyplot as plt
-# plot a 2*2 axes figure with 100 dpi (output 1).
-fig = plt.figure(figsize=(3,3), dpi=100)
-config = {"font.family":'Helvetica'}
-plt.subplots_adjust(wspace =0.4,hspace =0.3)
-plt.rcParams.update(config)
-for i in range(4):
-    ax = fig.add_subplot(2,2,i+1)
-
-# plot a 2*2 axes figure with 100 dpi, yellow face and edgecolor (output 2).
-fig = plt.figure(figsize=(3,3), dpi=100, facecolor="y", edgecolor="y")
-config = {"font.family":'Helvetica'}
-plt.subplots_adjust(wspace =0.4,hspace =0.3)
-plt.rcParams.update(config)
-for i in range(4):
-    ax = fig.add_subplot(2,2,i+1)</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img src="./data_visualization_image/1.2.1.png" alt="Image 1">
-                <img src="./data_visualization_image/1.2.2.png" alt="Image 2">
-              </div>
-              <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: output 1; Right: output 2.
-              </figcaption>
-              <pre><code class="language-python" class="bashScript">"""
-1.3 plt.figure & GridSpec
- gs = gridspec.GridSpec(nrows, ncols)
- A grid layout to place subplots within a figure.
-Parameters:
-------------------------------
-  - nrows/ncols: the number of rows and columns of the grid (int).
-  - other parameters: https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html
-  - detailed tutorial: https://matplotlib.org/3.5.0/tutorials/intermediate/gridspec.html
-------------------------------
-  Useful for plotting irregular axes.
-  Useful for iteratively figure plotting.
-
-"""
-
-import matplotlib.pyplot as plt
-from matplotlib import gridspec
-# plot a 1*4 axes figure with 100 dpi using GridSpec
-fig = plt.figure(figsize=(8,2), dpi=100)
-gs = gridspec.GridSpec(2, 8)
-config = {"font.family":'Helvetica'}
-plt.subplots_adjust(wspace =0.7,hspace =0.1)
-plt.rcParams.update(config)
-# can also use interative loop to generate axes.
-ax1 = plt.subplot(gs[0:2, 0:2])
-ax2 = plt.subplot(gs[0:2, 2:4])
-ax3 = plt.subplot(gs[0:2, 4:6])
-ax4 = plt.subplot(gs[0:2, 6:8])</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img style="max-width:100%;" src="./data_visualization_image/1.3.png" alt="Image 1">
-              </div>
-
-
-
-
-            </li>
-
-            <!-- <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Large files uploading to github:</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
-
-              </ul>
-            </li>
-
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Version Control Git (CLM as an example):</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
-
-              </ul>
-            </li> -->
-
-          </ol>
         </section>
 
       </article>
