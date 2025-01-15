@@ -45,6 +45,22 @@
       box-sizing: border-box;
     }
 
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .container img {
+      width: 80%;
+      max-width: 300px;
+      min-width: 200px;
+      height: auto;
+      margin: 5px;
+    }
+
     h2 {
       font-size: 2.2vw;
     }
@@ -285,13 +301,19 @@
                   47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
                   seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
                   transferability of PLSR models in estimating leaf traits.</p>
-                <figure>
-                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                    src="../assets/images/PLSR_paper/0_data_flowchart.png" alt="Flowchart">
-                  <figcaption style="margin-bottom: 10px;">Left: The distribution of leaf samples in (a) climate zones
-                    (Whittaker, 1970) and (b) geographic locations. <br>Right: The framework of this study for testing
-                    the transferability of PLSR modeling across sites, PFTs and time. </figcaption>
-                </figure>
+                <div class="container">
+                  <img style="max-width:100%;" src="../assets/images/PLSR_paper/sites_distribution.png"
+                    alt="Site distribution">
+                </div>
+                <figcaption style="margin-bottom: 10px; text-align: center;">The distribution of leaf samples in (a)
+                  climate zones (Whittaker, 1970) and (b) geographic locations.</figcaption>
+
+                <div class="container">
+                  <img style="max-width:100%;" src="../assets/images/PLSR_paper/flowchart.png" alt="Flowchart">
+                </div>
+                <figcaption style="margin-bottom: 10px; text-align: center;">The framework of this study for testing
+                  the transferability of PLSR modeling across sites, PFTs and time.</figcaption>
+
                 <ol class="order-list" style="font-size: 13px;">
                   <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
                   <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.
@@ -330,20 +352,16 @@
                   which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A higher
                   similarity of spectral diversity among sites or PFTs is associated with the higher transferability of
                   PLSR across geographic sites and PFTs.</p>
-                <figure">
-                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                <figure style="text-align: center;">
+                  <img style="max-width:85%;overflow:hidden; display: inline-block; vertical-align: middle;"
                     src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
                     alt="Spectral diversity">
-                  <figcaption style="margin-bottom: 10px;">Alpha and beta spectral diversity to
+                  <figcaption style="margin-bottom: 10px;text-align: left;">Alpha and beta spectral diversity to
                     explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
                     diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
                     relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
                     transferability across sites and PFTs, respectively.</figcaption>
-                  </figure>
-
-
-
-
+                </figure>
               </ul>
             </li>
 
