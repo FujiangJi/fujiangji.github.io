@@ -334,7 +334,7 @@ ax.text(text_loc[i][1],text_loc[i][4],RMSE_, fontsize=8,transform=ax.transAxes)
 ax.text(text_loc[i][2],text_loc[i][5],NRMSE_, fontsize=8,transform=ax.transAxes)
 ax.text(0.02,0.93, f'{title1[i]} {tr}: {title2[i]} 5-fold CV', transform=ax.transAxes, fontsize = 8,fontweight='bold') 
 i = i+1
-# plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/random_temporal_cv.jpg"
                 alt="Image 1">
 
@@ -424,7 +424,7 @@ for text in grid._legend.get_texts():
     text.set_color("white")
     
 plt.show()
-# plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/trait_covariance.png"
                 alt="Image 1">
 
@@ -512,7 +512,7 @@ for i in range(2):
         print('--------------------')
         sca_plot(ax[i][j],x1,x2,y1,y2,variable1,variable2,y_lim[j])
 ax[0][0].text(-0.25,0.9, 'a', transform=ax[0][0].transAxes, fontsize = 10,fontweight = 'bold')
-# plt.savefig('Figure_export/Extended Data Figure 3(a).png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+plt.savefig('Figure_export/Extended Data Figure 3(a).png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/LAI_FRAR.jpg" alt="Image 1">
             </li>
 
@@ -521,7 +521,6 @@ ax[0][0].text(-0.25,0.9, 'a', transform=ax[0][0].transAxes, fontsize = 10,fontwe
               <pre><code class="language-python" class="bashScript">import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.ticker as ticker
-
 
 # open the data.
 df = pd.read_csv("data/seasonal_traits.csv")
@@ -581,7 +580,8 @@ for i, tr in enumerate(tr_name):
         ax.set_xticklabels([])
         ax.set_xlabel('')
     if i !=0:
-        ax.get_legend().remove()</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+        ax.get_legend().remove()
+plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/seasonal_variation.png"
                 alt="Image 1">
               <pre><code class="language-python" class="bashScript">import pandas as pd
@@ -650,7 +650,15 @@ ax1.text(0.02,0.93, '(a) $R^2$ for PFTs extrapolation', transform=ax1.transAxes,
 ax2.text(0.02,0.93, '(b) $NRMSE$ for PFTs extrapolation', transform=ax2.transAxes, fontsize = 10, color = "white") </code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/PFT_extra.png" alt="Image 1">
 
-              <pre><code class="language-python" class="bashScript">colors = {'Chla+b':'orangered','Ccar':'dodgerblue','EWT':"deepskyblue",'LMA':'limegreen'}
+              <pre><code class="language-python" class="bashScript">import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+from matplotlib.ticker import FuncFormatter
+from matplotlib.ticker import FormatStrFormatter
+
+colors = {'Chla+b':'orangered','Ccar':'dodgerblue','EWT':"deepskyblue",'LMA':'limegreen'}
 colors2 = {'Chla+b':'blue','Ccar':'red','EWT':"green",'LMA':'orange'}
 units = {'Chla+b':' ($\mu g/cm^2$)','Ccar':' ($\mu g/cm^2$)','EWT':' ($g/m^2$)','LMA':' ($g/m^2$)'}
 site_label = {'Chla+b':['s1','s2','s3','s4','s5','s6','s7','s8'],'Ccar':['s1','s2','s3','s4','s5'],
@@ -775,7 +783,27 @@ for ds in data_type:
 plt.savefig(f'1_Figures/1_leaf traits variations.png', dpi=500, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
               <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/leaf_traits_variation.jpg"
                 alt="Image 1">
-              <pre><code class="language-python" class="bashScript">refl_pro = pd.read_csv("data/2_PROSPECT_reflectance_LUT.csv")
+              <pre><code class="language-python" class="bashScript">import pandas as pd
+import numpy as np
+import seaborn as sns
+from scipy import stats
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+from scipy.stats import gaussian_kde
+from matplotlib.lines import Line2D
+from sklearn.metrics import mean_squared_error
+
+def rsquared(x, y): 
+    slope, intercept, r_value, p_value, std_err = stats.linregress(x, y) 
+    a = r_value**2
+    return a
+
+def d(x,y):
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+    return z
+  
+refl_pro = pd.read_csv("data/2_PROSPECT_reflectance_LUT.csv")
 refl_sip = pd.read_csv("data/1_SIP_reflectance_LUT.csv")
 
 #***********************************************************************8
