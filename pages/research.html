@@ -54,11 +54,10 @@
     }
 
     .container img {
-      width: 80%;
-      max-width: 300px;
-      min-width: 200px;
-      height: auto;
-      margin: 5px;
+      width: 100%;
+      width: auto;
+      height: 400px;
+      margin: 2px;
     }
 
     h2 {
@@ -239,11 +238,9 @@
 
       </nav>
 
-
       <!--
         - #RESEARCH
       -->
-
       <article class="research active" data-page="research">
 
         <header>
@@ -262,9 +259,124 @@
 
           <ol class="timeline-list">
 
-            <!--Research one-->
+            <!--Research One-->
             <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Unveiling the transferability of PLSR models for leaf trait estimation:
+              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Leveraging transfer learning and leaf
+                spectroscopy for leaf trait prediction with broad spatial, species, and temporal applicability (<a
+                  href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>, <a
+                  href="https://github.com/FujiangJi/transfer_learning_models" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">data and code availability</a>).</h4>
+              <ul class="skills-list content-card"
+                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
+                <p style="margin-bottom: 8px;">Accurate and reliable prediction of leaf traits is crucial for
+                  understanding plant adaptations to environmental variation, monitoring terrestrial ecosystems, and
+                  enhancing comprehension of functional diversity and ecosystem functioning.</p>
+                <p style="margin-bottom: 8px;">Various approaches (e.g., statistical, physical models) have been
+                  developed to estimate leaf traits through hyperspectral remote sensing and leaf spectroscopy. However,
+                  the absence of high-performing, transferable, and stable models across various domains of space, plant
+                  functional types (PFTs) and seasons hinder our ability to quantify and comprehend spatiotemporal
+                  variations in leaf traits.</p>
+                <p style="margin-bottom: 8px;">This study proposes robust and highly transferable models for better
+                  predicting leaf traits with hyperspectral reflectance. Three datasets were assembled, pairing common
+                  leaf traits — chlorophyll (Chla+b, µg/cm<sup>2</sup>), carotenoids (Ccar, µg/cm<sup>2</sup>), leaf
+                  mass per area (LAM, g/m<sup>2</sup>), equivalent water thickness (EWT, g/m<sup>2</sup>) — with leaf
+                  spectra measurements collected across diverse geographic locations in the U.S. and Europe, PFTs, and
+                  seasons.Measurements were acquired using spectroradiometers (e.g., ASD FieldSpec 3/4/Pro and SVC
+                  HR-1024i) with integrating spheres, leaf clips, and contact probes.</p>
+
+                <ol class="order-list" style="font-size: 14px;">
+                  <li style="margin-bottom: 8px;">Research Questions:</li>
+                  <ol class="order-list2" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">Do our proposed transfer learning models for predicting leaf traits
+                      have better performance than other state-of-the-art statistical models like PLSR and GPR, and the
+                      pure RTMs?</li>
+                    <li style="margin-bottom: 8px;">Are the transfer learning models more transferable across different
+                      geographic locations, PFTs, and seasons than other models?</li>
+                    <li style="margin-bottom: 8px;">How the inconsistency and the quantity of real observations used for
+                      fine-tuning influence the performance of transfer learning models?</li>
+                  </ol>
+                </ol>
+
+                <div id="foldable-content" style="display: none;">
+
+                  <ol class="order-list" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">we created three distinct subsets (spatial, PFT and temporal) from
+                      the compiled dataset. In the spatial and PFT datasets, leaf spectra were measured using two
+                      different spectroradiometers: the ASD FieldSpec 3/4/Pro (Malvern Analytical Inc., Westborough, MA,
+                      USA) for Chla+b, Ccar, and LMA samples, and the SVC HR-1024i full-spectrum spectroradiometer
+                      (Spectra Vista Corp., Poughkeepsie,
+                      NY, USA) for EWT samples. In the temporal dataset, all spectra were measured using the ASD
+                      FieldSpec 3/4/Pro. Moreover, three measurement methods were used, an integrating sphere, which
+                      captured spectra as directional-hemispherical reflectance (DHRF); and a leaf clip and contact
+                      probe, whichacquired spectra as bidirectional reflectance factor (BRF).</li>
+                    <li style="margin-bottom: 3px;">Leaf traits exhibited large variations across different sites, PFTs
+                      and seasons. (Right figure)</li>
+                  </ol>
+
+                  <div class="container">
+                    <img src="../assets/images/Transfer_learning_paper/Fig1.jpg" alt="Site_distribution">
+                    <img src="../assets/images/Transfer_learning_paper/Fig3.jpg" alt="Trait_variations">
+                  </div>
+                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: Overall workflow for estimating leaf
+                    traits based on various models;<br> Right: Pre-training processes using the synthetic data of RTMs
+                    (PROSPECT and Leaf-SIP).</figcaption>
+
+                  <ol class="order-list" style="font-size: 14px;">
+                    <li style="margin-bottom: 8px;">To develop robust and transferable models for predicting leaf
+                      traits, we designed the framework with the following four steps:</li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">Pure radiative transfer modeling.</li>
+                      <li style="margin-bottom: 3px;">Transfer learning modeling.</li>
+                      <li style="margin-bottom: 3px;">Statistical modeling.</li>
+                      <li style="margin-bottom: 3px;">Model performance assessment.</li>
+                    </ol>
+                    <li style="margin-bottom: 8px;">Using synthetic reflectance simulations, pre-trained DNN models were
+                      applied to predict leaf traits. The results demonstrate that the pre-trained DNN models
+                      effectively estimated the leaf traits when compared to their true values, regardless of whether
+                      the synthetic data were generated using PROSPECT or Leaf-SIP.</li>
+                  </ol>
+
+                  <div class="container">
+                    <img src="../assets/images/Transfer_learning_paper/Fig2.jpg" alt="modeling_methods">
+                    <img src="../assets/images/Transfer_learning_paper/Fig4.jpg" alt="Pre-train_results">
+                  </div>
+
+                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: Spatial distribution of leaf trait
+                    samples in the spatial dataset;<br> Right: Mean leaf traits, reflectance and variability
+                    (coefficient of variation, CV) among sites, plant functional types (PFTs) and growing season in the
+                    datasets. </figcaption>
+
+
+                  <ol class="order-list" style="font-size: 14px;">
+                    <li style="margin-bottom: 8px;">Through comparison with other state-of-the-art statistical models,
+                      including partial-least squares regression (PLSR) and Gaussian Process Regression (GPR), as well
+                      as pure physical models, we found that the proposed transfer learning models achieved better
+                      predictive performance and higher transferability.</li>
+                  </ol>
+                  <div class="container">
+                    <img src="../assets/images/Transfer_learning_paper/Fig5.jpg" alt="modeling_methods">
+                    <img src="../assets/images/Transfer_learning_paper/Fig6.jpg" alt="Pre-train_results">
+                  </div>
+
+                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: The performance of different models
+                    in predicting leaf traits by incorporating varying proportions of observations for model training or
+                    fine-tuning;<br> Right: Out-of-domains performance of different models.</figcaption>
+
+                </div>
+                <!-- Toggle button -->
+                <button onclick="toggleFoldable(this)"
+                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
+                  id="toggle-btn">
+                  Show more
+                </button>
+              </ul>
+            </li>
+
+            <!--Research Two-->
+            <li class="timeline-item" style="padding-left: 0px;">
+              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Unveiling the transferability of PLSR models
+                for leaf trait estimation:
                 lessons from a comprehensive analysis with a novel global dataset (<a
                   href="https://doi.org/10.1111/NPH.19807" target="_blank"
                   style="color: hsl(45, 100%, 72%); display: inline;">Link</a>, <a
@@ -276,7 +388,6 @@
                   ecological processes. Partial least-squares regression (PLSR) models with leaf spectroscopy are widely
                   applied for trait estimation, but their transferability across space, time and plant functional types
                   (PFTs) remains unclear.</p>
-
 
                 <ol class="order-list" style="font-size: 14px;">
                   <li style="margin-bottom: 8px;">Research Questions:</li>
@@ -296,78 +407,93 @@
                   </ol>
                 </ol>
 
-                <p style="margin-bottom: 8px;">We compiled a novel dataset of paired leaf traits and spectra, with
-                  47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
-                  seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
-                  transferability of PLSR models in estimating leaf traits.</p>
-                <div class="container">
-                  <img style="max-width:100%;" src="../assets/images/PLSR_paper/sites_distribution.png"
-                    alt="Site distribution">
+                <div id="foldable-content" style="display: none;">
+
+                  <p style="margin-bottom: 8px;">We compiled a novel dataset of paired leaf traits and spectra, with
+                    47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
+                    seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
+                    transferability of PLSR models in estimating leaf traits.</p>
+                  <div class="container">
+                    <img style="max-width:100%;" src="../assets/images/PLSR_paper/sites_distribution.png"
+                      alt="Site distribution">
+                  </div>
+                  <figcaption style="margin-bottom: 10px; text-align: center;">The distribution of leaf samples in (a)
+                    climate zones (Whittaker, 1970) and (b) geographic locations.</figcaption>
+
+                  <div class="container">
+                    <img style="max-width:100%;" src="../assets/images/PLSR_paper/flowchart.png" alt="Flowchart">
+                  </div>
+                  <figcaption style="margin-bottom: 10px; text-align: center;">The framework of this study for testing
+                    the transferability of PLSR modeling across sites, PFTs and time.</figcaption>
+
+                  <ol class="order-list" style="font-size: 13px;">
+                    <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
+                    <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840
+                      samples.
+                    </li>
+                    <li style="margin-bottom: 3px;">Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples.
+                    </li>
+                    <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water
+                      content): 3,581 samples.</li>
+                    <li style="margin-bottom: 3px;">Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.</li>
+                    <li style="margin-bottom: 15px;">Evergreen needleleaf forests (ENF, n = 891); Evergreen broadleaf
+                      forests (EBF, n = 1,382); Deciduous needleleaf forests (DNF, n = 77); Deciduous broadleaf forests
+                      (DBF, n = 26,944); Shrublands (SHR, n = 1,599); Grasslands (GRA, n = 11,833); Croplands (CRP, n =
+                      3,409); Vine (n = 637).</li>
+                  </ol>
+
+                  <p style="margin-bottom: 8px;"> While PLSR models demonstrate commendable performance in predicting
+                    chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training
+                    data space, their efficacy diminishes when extrapolating to new contexts. Specifically,
+                    extrapolating
+                    to locations, seasons, and PFTs beyond the training data leads to reduced <i>R<sup>2</sup></i>
+                    (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased <i>NRMSE</i> (3.58-18.24%, 6.27-11.55% and
+                    7.0-33.12%) compared to nonspatial random cross-validation (NRCV). These findings highlight
+                    potential
+                    errors in estimating leaf traits across large spatial domains, diverse PFTs and time due to biased
+                    validation schemes and provide guidance for future field sampling strategies and remote sensing
+                    applications.</p>
+                  <figure>
+                    <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                      src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
+                    <figcaption style="margin-bottom: 10px;">The relationship between predicted and
+                      observed leaf traits. <br>Left: random 10-fold CV (cross-validation) compared to spatial 10-fold
+                      CV.
+                      <br>Upper Right: cross-PFTs validation.<br>Bottom Right: random 5-fold CV compared to temporal
+                      5-fold CV.
+                    </figcaption>
+                  </figure>
+
+                  <p style="margin-bottom: 8px;"> Alpha and beta spectral diversity exhibited positive relationships in
+                    which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A
+                    higher
+                    similarity of spectral diversity among sites or PFTs is associated with the higher transferability
+                    of
+                    PLSR across geographic sites and PFTs.</p>
+                  <figure style="text-align: center;">
+                    <img style="max-width:85%;overflow:hidden; display: inline-block; vertical-align: middle;"
+                      src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
+                      alt="Spectral diversity">
+                    <figcaption style="margin-bottom: 10px;text-align: left;">Alpha and beta spectral diversity to
+                      explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
+                      diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
+                      relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
+                      transferability across sites and PFTs, respectively.</figcaption>
+                  </figure>
                 </div>
-                <figcaption style="margin-bottom: 10px; text-align: center;">The distribution of leaf samples in (a)
-                  climate zones (Whittaker, 1970) and (b) geographic locations.</figcaption>
-
-                <div class="container">
-                  <img style="max-width:100%;" src="../assets/images/PLSR_paper/flowchart.png" alt="Flowchart">
-                </div>
-                <figcaption style="margin-bottom: 10px; text-align: center;">The framework of this study for testing
-                  the transferability of PLSR modeling across sites, PFTs and time.</figcaption>
-
-                <ol class="order-list" style="font-size: 13px;">
-                  <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
-                  <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.
-                  </li>
-                  <li style="margin-bottom: 3px;">Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples.
-                  </li>
-                  <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water
-                    content): 3,581 samples.</li>
-                  <li style="margin-bottom: 3px;">Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.</li>
-                  <li style="margin-bottom: 15px;">Evergreen needleleaf forests (ENF, n = 891); Evergreen broadleaf
-                    forests (EBF, n = 1,382); Deciduous needleleaf forests (DNF, n = 77); Deciduous broadleaf forests
-                    (DBF, n = 26,944); Shrublands (SHR, n = 1,599); Grasslands (GRA, n = 11,833); Croplands (CRP, n =
-                    3,409); Vine (n = 637).</li>
-                </ol>
-
-                <p style="margin-bottom: 8px;"> While PLSR models demonstrate commendable performance in predicting
-                  chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training
-                  data space, their efficacy diminishes when extrapolating to new contexts. Specifically, extrapolating
-                  to locations, seasons, and PFTs beyond the training data leads to reduced <i>R<sup>2</sup></i>
-                  (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased <i>NRMSE</i> (3.58-18.24%, 6.27-11.55% and
-                  7.0-33.12%) compared to nonspatial random cross-validation (NRCV). These findings highlight potential
-                  errors in estimating leaf traits across large spatial domains, diverse PFTs and time due to biased
-                  validation schemes and provide guidance for future field sampling strategies and remote sensing
-                  applications.</p>
-                <figure>
-                  <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                    src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
-                  <figcaption style="margin-bottom: 10px;">The relationship between predicted and
-                    observed leaf traits. <br>Left: random 10-fold CV (cross-validation) compared to spatial 10-fold CV.
-                    <br>Upper Right: cross-PFTs validation.<br>Bottom Right: random 5-fold CV compared to temporal
-                    5-fold CV.
-                  </figcaption>
-                </figure>
-
-                <p style="margin-bottom: 8px;"> Alpha and beta spectral diversity exhibited positive relationships in
-                  which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A higher
-                  similarity of spectral diversity among sites or PFTs is associated with the higher transferability of
-                  PLSR across geographic sites and PFTs.</p>
-                <figure style="text-align: center;">
-                  <img style="max-width:85%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                    src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
-                    alt="Spectral diversity">
-                  <figcaption style="margin-bottom: 10px;text-align: left;">Alpha and beta spectral diversity to
-                    explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
-                    diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
-                    relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
-                    transferability across sites and PFTs, respectively.</figcaption>
-                </figure>
+                <!-- Toggle button -->
+                <button onclick="toggleFoldable(this)"
+                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
+                  id="toggle-btn">
+                  Show more
+                </button>
               </ul>
             </li>
 
-            <!--Research two-->
+            <!--Research Three-->
             <li class=" timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Regional Crop Yield Estimation by Assimilating Time Series of
-                Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model (<a
+              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Regional Crop Yield Estimation by
+                Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model (<a
                   href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
                   style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
               <ul class="skills-list content-card"
@@ -378,66 +504,74 @@
                   Studies (WOFOST) model and time series Sentinel-2 imagery, we achieved daily crop simulations and
                   crop yield estimations at two adjacent farms in China.
                 </p>
-
-                <figure>
-                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_fields.png" alt="Fields">
-                  <figcaption style="margin-bottom: 10px;">Left: Location of the study areas and the crop type
-                    distribution map. <br>Right: Distribution of sampling points during the growing season.
-                  </figcaption>
-                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_results.png" alt="Results">
-                  <figcaption style="margin-bottom: 10px;">Left: Spatial distribution map of yield simulations
-                    by different models and the corresponding performance. <br>Right: Representative fields with
-                    sampling quadrats that show the relationship between the yield distribution and DEM.</figcaption>
-                </figure>
-                <ol class="order-list">
-                  <li>Compared with the WOFOST model, the coupled CASA-WOFOST model provided a much faster
-                    running speed
-                    in yield simulations and a similar accuracy;</li>
-                  <li>Compared with the CASA model, the coupled model provided higher simulation accuracy in
-                    mountainous areas and regions of uneven terrain.</li>
-                </ol>
+                <div id="foldable-content" style="display: none;">
+                  <figure>
+                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_fields.png" alt="Fields">
+                    <figcaption style="margin-bottom: 10px;">Left: Location of the study areas and the crop type
+                      distribution map. <br>Right: Distribution of sampling points during the growing season.
+                    </figcaption>
+                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_results.png"
+                      alt="Results">
+                    <figcaption style="margin-bottom: 10px;">Left: Spatial distribution map of yield simulations
+                      by different models and the corresponding performance. <br>Right: Representative fields with
+                      sampling quadrats that show the relationship between the yield distribution and DEM.</figcaption>
+                  </figure>
+                  <ol class="order-list">
+                    <li>Compared with the WOFOST model, the coupled CASA-WOFOST model provided a much faster
+                      running speed in yield simulations and a similar accuracy;</li>
+                    <li>Compared with the CASA model, the coupled model provided higher simulation accuracy in
+                      mountainous areas and regions of uneven terrain.</li>
+                  </ol>
+                </div>
+                <!-- Toggle button -->
+                <button onclick="toggleFoldable(this)"
+                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
+                  id="toggle-btn">
+                  Show more
+                </button>
               </ul>
             </li>
 
-            <!--Research three-->
+            <!--Research Four-->
             <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Comparison of Machine Learning Regression Algorithms for
-                Cotton Leaf
-                Area Index Retrieval Using Sentinel-2 Spectral Bands (<a href="https://doi.org/10.3390/app9071459"
-                  target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
+              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Comparison of Machine Learning Regression
+                Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands (<a
+                  href="https://doi.org/10.3390/app9071459" target="_blank"
+                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
               <ul class="skills-list content-card"
                 style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
-                <p style="margin-bottom: 8px;">Leaf area index (LAI) is a crucial crop biophysical parameter
-                  that has
-                  been widely used in a variety of fields. Five learning regression algorithms (MLRAs),
-                  artificial
-                  neural network (ANN), support vector regression (SVR), Gaussian process regression (GPR),
-                  random
-                  forest (RF) and gradient boosting regression tree (GBRT), have been used in the retrieval of
-                  cotton
-                  LAI with Sentinel-2 spectral bands. The performances of the five machine learning models are
-                  compared
-                  for better applications of MLRAs in remote sensing. We conducted the comparison of five
-                  MLRAs in an
-                  agricultural area of Northwest China over three cotton seasons with the corresponding field
-                  campaigns
-                  for modeling and validation. Results show that the GBRT model outperforms the other models
-                  with
+                <p style="margin-bottom: 8px;">Leaf area index (LAI) is a crucial crop biophysical parameter that has
+                  been widely used in a variety of fields. Five learning regression algorithms (MLRAs), artificial
+                  neural network (ANN), support vector regression (SVR), Gaussian process regression (GPR), random
+                  forest (RF) and gradient boosting regression tree (GBRT), have been used in the retrieval of cotton
+                  LAI with Sentinel-2 spectral bands. The performances of the five machine learning models are compared
+                  for better applications of MLRAs in remote sensing. We conducted the comparison of five MLRAs in an
+                  agricultural area of Northwest China over three cotton seasons with the corresponding field campaigns
+                  for modeling and validation. Results show that the GBRT model outperforms the other models with
                   respect to model accuracy in average.
                 </p>
-                <figure>
-                  <img style="max-width:100%;overflow:hidden;"
-                    src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="LAI maps">
-                  <figcaption style="margin-bottom: 10px;">Upper: Location of study area and in-situ leaf area
-                    index(LAI) quadrats from three field campaigns. <br>Bottom: Final cotton LAI map obtained
-                    using GBRT
-                    model and masked by the cotton fields.</figcaption>
-                  <img style="max-width:100%;overflow:hidden;" src="../assets/images/LAI_paper/0_Accuracy.png"
-                    alt="Accuracy">
-                  <figcaption style="margin-bottom: 10px;">Upper: Sensitivity of the ML models to the training
-                    sample
-                    size. <br>Bottom: The performance of different ML models for estimating LAI.</figcaption>
-                </figure>
+
+                <div id="foldable-content" style="display: none;">
+                  <figure>
+                    <img style="max-width:100%;overflow:hidden;"
+                      src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="LAI maps">
+                    <figcaption style="margin-bottom: 10px;">Upper: Location of study area and in-situ leaf area
+                      index(LAI) quadrats from three field campaigns. <br>Bottom: Final cotton LAI map obtained
+                      using GBRT
+                      model and masked by the cotton fields.</figcaption>
+                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/LAI_paper/0_Accuracy.png"
+                      alt="Accuracy">
+                    <figcaption style="margin-bottom: 10px;">Upper: Sensitivity of the ML models to the training
+                      sample
+                      size. <br>Bottom: The performance of different ML models for estimating LAI.</figcaption>
+                  </figure>
+                </div>
+                <!-- Toggle button -->
+                <button onclick="toggleFoldable(this)"
+                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
+                  id="toggle-btn">
+                  Show more
+                </button>
               </ul>
             </li>
 
@@ -466,6 +600,27 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- <script>
+    function toggleFoldableContent() {
+      const content = document.getElementById("foldable-content");
+      const btn = document.getElementById("toggle-btn");
+      const isHidden = content.style.display === "none" || content.style.display === "";
+
+      content.style.display = isHidden ? "block" : "none";
+      btn.textContent = isHidden ? "Show less" : "Show more";
+    }
+  </script> -->
+
+  <script>
+    function toggleFoldable(button) {
+      const foldableContent = button.previousElementSibling;
+      const isHidden = foldableContent.style.display === "none" || foldableContent.style.display === "";
+
+      foldableContent.style.display = isHidden ? "block" : "none";
+      button.textContent = isHidden ? "Show less" : "Show more";
+    }
+  </script>
+
 
 </body>
 
