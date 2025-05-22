@@ -48,6 +48,83 @@
     h2 {
       font-size: 2.2vw;
     }
+
+    .gallery-container {
+      max-width: 2000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .main-image {
+      position: relative;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      /* contain or cover */
+      border-radius: 8px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background: rgba(0, 0, 0, 0.589);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .thumbnails {
+      margin-top: 10px;
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    .thumbnails img {
+      height: 80px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.05);
+    }
+
+    #lightboxOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 2147483647;
+    }
+
+    #lightboxOverlay img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -233,7 +310,7 @@
           <h2 class="h2 article-title">Blog</h2>
         </header>
 
-        <section class="mapbox" data-mapbox style="height: 400px;">
+        <section class="mapbox" data-mapbox style="height: 500px;">
           <figure>
             <iframe
               src="https://www.google.com/maps/d/embed?mid=10q202LWWyNufEiU3LX7FoEezv41a7K0&ehbc=2E312F&noprof=1&ll=35,5&z=2"
@@ -242,208 +319,364 @@
         </section>
 
 
-        <section class="blog-posts">
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/1_UW-Madison/1.jpg" alt="UW-Madison" loading="lazy">
+            </figure>
 
-          <ul class="blog-posts-list">
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Study/Living</p>
 
-            <li class="blog-post-item">
-              <a href="#">
-                <div class="blog-content">
+                <span class="dot"></span>
 
-                  <div class="blog-meta">
-                    <p class="blog-category"></p>
+                <time datetime="2022-02-23">Aug. 2021 - Present</time>
+              </div>
 
-                    <span class="dot"></span>
+              <h3 class="h3 blog-item-title">UW-Madison</h3>
 
-                    <time datetime="2022-02-23">Oct, 23, 2024</time>
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/1_UW-Madison/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Comming soon!</h3>
-                </div>
-
-              </a>
-            </li>
-
-            <!-- <li class="blog-post-item">
-              <a
-                href="https://fujiangji.wixsite.com/fujiang-old/post/field-campaigns-at-inner-mongolia-and-xinjiang-china">
-
-                <figure class="blog-banner-box">
-                  <img src="blogs_pages/Field_works/IMG_0327.JPG" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/1_UW-Madison/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/8.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/9.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/10.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/11.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/12.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/13.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/14.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/15.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/16.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/17.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/18.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/21.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/22.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/23.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/24.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/25.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/27.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/28.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/29.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/30.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/31.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/32.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/1_UW-Madison/33.jpg" onclick="setMainImage(this)">
                   </div>
-
-                  <h3 class="h3 blog-item-title">field campaigns</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
                 </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
-              </a>
-            </li> -->
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/2_China/1.jpg" alt="China" loading="lazy">
+            </figure>
 
-            <!-- <li class="blog-post-item">
-              <a href="#">
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Travel</p>
 
-                <figure class="blog-banner-box">
-                  <img src="../assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
+                <span class="dot"></span>
 
-                <div class="blog-content">
+                <time datetime="2022-02-23">2014 - 2021</time>
+              </div>
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+              <h3 class="h3 blog-item-title">China</h3>
 
-                    <span class="dot"></span>
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/2_China/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="../assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/2_China/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/28.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/24.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/25.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/26.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/27.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/8.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/9.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/10.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/11.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/12.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/13.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/14.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/15.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/16.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/17.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/18.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/19.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/20.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/21.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/22.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/2_China/23.jpg" onclick="setMainImage(this)">
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
                 </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
-              </a>
-            </li>
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/3_US/1.jpg" alt="US" loading="lazy">
+            </figure>
 
-            <li class="blog-post-item">
-              <a href="#">
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Travel</p>
 
-                <figure class="blog-banner-box">
-                  <img src="../assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
+                <span class="dot"></span>
 
-                <div class="blog-content">
+                <time datetime="2022-02-23">2021 - Present</time>
+              </div>
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+              <h3 class="h3 blog-item-title">United States</h3>
 
-                    <span class="dot"></span>
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/3_US/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
                   </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="../assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/3_US/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/8.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/9.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/10.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/11.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/12.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/13.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/14.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/15.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/16.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/17.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/18.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/21.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/22.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/23.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/24.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/25.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/26.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/27.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/28.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/3_US/29.jpg" onclick="setMainImage(this)">
                   </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
                 </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
-              </a>
-            </li>
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/4_Thailand/1.jpg" alt="Thailand" loading="lazy">
+            </figure>
 
-            <li class="blog-post-item">
-              <a href="#">
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Travel</p>
 
-                <figure class="blog-banner-box">
-                  <img src="../assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
+                <span class="dot"></span>
 
-                <div class="blog-content">
+                <time datetime="2022-02-23">2018</time>
+              </div>
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+              <h3 class="h3 blog-item-title">Thailand</h3>
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/4_Thailand/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/4_Thailand/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/4_Thailand/8.jpg" onclick="setMainImage(this)">
+                  </div>
                 </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
-              </a>
-            </li> -->
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/5_Turkey/1.jpg" alt="Turkey" loading="lazy">
+            </figure>
 
-          </ul>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Travel</p>
 
-        </section>
+                <span class="dot"></span>
+
+                <time datetime="2022-02-23">2018</time>
+              </div>
+
+              <h3 class="h3 blog-item-title">Turkey</h3>
+
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/5_Turkey/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
+                  </div>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/5_Turkey/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/8.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/5_Turkey/9.jpg" onclick="setMainImage(this)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/6_Vietnam/1.JPG" alt="Vietnam" loading="lazy">
+            </figure>
+
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Travel</p>
+
+                <span class="dot"></span>
+
+                <time datetime="2022-02-23">2019</time>
+              </div>
+
+              <h3 class="h3 blog-item-title">Vietnam</h3>
+
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
+
+
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/6_Vietnam/1.jpg" alt="Main" onclick="openLightbox(this)">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
+                  </div>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/6_Vietnam/1.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/2.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/3.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/4.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/5.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/6.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/7.JPG" onclick="setMainImage(this)">
+                    <img src="blogs_pages/6_Vietnam/8.JPG" onclick="setMainImage(this)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="blog-post-item" onclick="toggleContent(this)">
+          <a>
+            <figure class="blog-banner-box">
+              <img src="blogs_pages/7_Field_works/1.JPG" alt="Field_work" loading="lazy">
+            </figure>
+
+            <div class="blog-content">
+              <div class="blog-meta">
+                <p class="blog-category">Study</p>
+
+                <span class="dot"></span>
+
+                <time datetime="2022-02-23">2018 - 2021</time>
+              </div>
+
+              <h3 class="h3 blog-item-title">Field Works</h3>
+
+              <div class="blog-hidden-text" style="display: none; padding: 10px;">
+
+
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
+                    <img id="mainImage" src="blogs_pages/7_Field_works/1.jpg" alt="Main" onclick="openLightbox()">
+                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
+                  </div>
+                  <div class="thumbnails" id="thumbnailStrip">
+                    <img src="blogs_pages/7_Field_works/1.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/2.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/3.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/4.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/5.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/6.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/7.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/8.jpg" onclick="setMainImage(this)">
+                    <img src="blogs_pages/7_Field_works/9.jpg" onclick="setMainImage(this)">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
 
       </article>
-
     </div>
 
   </main>
 
-
+  <!-- 弹出层：Lightbox -->
+  <div id="lightboxOverlay" onclick="closeLightbox()">
+    <img id="lightboxImage" src="" alt="Full View">
+  </div>
 
   <!--
     - custom js link
@@ -456,6 +689,65 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script>
+    function toggleContent(item) {
+      const event = window.event;
+      const clicked = event.target;
+
+      const hiddenArea = item.querySelector('.blog-hidden-text');
+      if (hiddenArea.contains(clicked)) return;
+
+      hiddenArea.style.display = (hiddenArea.style.display === "block") ? "none" : "block";
+    }
+
+    function setMainImage(img) {
+      const container = img.closest('.blog-hidden-text');
+      const main = container.querySelector(".main-image img");
+      main.src = img.src;
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      const container = event.target.closest('.blog-hidden-text');
+      const thumbnails = Array.from(container.querySelectorAll(".thumbnails img"));
+      const main = container.querySelector(".main-image img");
+      const currentIndex = thumbnails.findIndex(img => img.src === main.src);
+      const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+      main.src = thumbnails[newIndex].src;
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      const container = event.target.closest('.blog-hidden-text');
+      const thumbnails = Array.from(container.querySelectorAll(".thumbnails img"));
+      const main = container.querySelector(".main-image img");
+      const currentIndex = thumbnails.findIndex(img => img.src === main.src);
+      const newIndex = (currentIndex + 1) % thumbnails.length;
+      main.src = thumbnails[newIndex].src;
+    }
+  </script>
+
+  <script>
+    function openLightbox(imgElement) {
+      const lightbox = document.getElementById("lightboxOverlay");
+      const lightboxImage = document.getElementById("lightboxImage");
+      lightboxImage.src = imgElement.src;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightboxOverlay").style.display = "none";
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+
+
+
 </body>
+
+
 
 </html>
