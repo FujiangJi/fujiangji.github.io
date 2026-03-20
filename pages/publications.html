@@ -108,7 +108,10 @@
       row-gap: 4px;
     }
 
-    .note-sep { color: hsla(0,0%,100%,0.2); font-style: normal; }
+    .note-sep {
+      color: hsla(0, 0%, 100%, 0.2);
+      font-style: normal;
+    }
 
     /* =============================================
        PAPER LIST
@@ -145,7 +148,9 @@
       transition: background 0.25s;
     }
 
-    .pub-item:hover { box-shadow: var(--shadow-3); }
+    .pub-item:hover {
+      box-shadow: var(--shadow-3);
+    }
 
     /* First-author / corresponding-author highlight */
     .pub-item--featured {
@@ -153,10 +158,12 @@
     }
 
     .pub-item--featured::before {
-      background: linear-gradient(100deg, hsla(45,100%,72%,0.05) 0%, var(--bg-gradient-jet) 35%);
+      background: linear-gradient(100deg, hsla(45, 100%, 72%, 0.05) 0%, var(--bg-gradient-jet) 35%);
     }
 
-    .pub-item--featured:hover { border-left-color: hsl(45, 100%, 72%); }
+    .pub-item--featured:hover {
+      border-left-color: hsl(45, 100%, 72%);
+    }
 
     /* Row: number badge + content + toggle */
     .pub-item-inner {
@@ -178,7 +185,10 @@
       white-space: nowrap;
     }
 
-    .pub-body { flex: 1; min-width: 0; }
+    .pub-body {
+      flex: 1;
+      min-width: 0;
+    }
 
     /* Author line */
     .pub-authors {
@@ -207,7 +217,10 @@
       transition: opacity 0.2s;
     }
 
-    .pub-title-link:hover { opacity: 0.80; text-decoration: underline; }
+    .pub-title-link:hover {
+      opacity: 0.80;
+      text-decoration: underline;
+    }
 
     .pub-title-plain {
       color: var(--white-2);
@@ -236,12 +249,41 @@
       white-space: nowrap;
     }
 
-    .journal-rse   { background: hsla(205,70%,50%,0.12); color: hsl(205,70%,72%); border: 1px solid hsla(205,70%,50%,0.28); }
-    .journal-nature{ background: hsla(145,55%,45%,0.12); color: hsl(145,55%,65%); border: 1px solid hsla(145,55%,45%,0.28); }
-    .journal-np    { background: hsla(145,55%,45%,0.12); color: hsl(145,55%,65%); border: 1px solid hsla(145,55%,45%,0.28); }
-    .journal-ieee  { background: hsla(220,70%,55%,0.12); color: hsl(220,70%,75%); border: 1px solid hsla(220,70%,55%,0.28); }
-    .journal-ef    { background: hsla(30,70%,50%,0.12);  color: hsl(30,70%,70%);  border: 1px solid hsla(30,70%,50%,0.28);  }
-    .journal-other { background: hsla(240,5%,40%,0.15);  color: var(--light-gray-70); border: 1px solid hsla(240,5%,55%,0.2); }
+    .journal-rse {
+      background: hsla(205, 70%, 50%, 0.12);
+      color: hsl(205, 70%, 72%);
+      border: 1px solid hsla(205, 70%, 50%, 0.28);
+    }
+
+    .journal-nature {
+      background: hsla(145, 55%, 45%, 0.12);
+      color: hsl(145, 55%, 65%);
+      border: 1px solid hsla(145, 55%, 45%, 0.28);
+    }
+
+    .journal-np {
+      background: hsla(145, 55%, 45%, 0.12);
+      color: hsl(145, 55%, 65%);
+      border: 1px solid hsla(145, 55%, 45%, 0.28);
+    }
+
+    .journal-ieee {
+      background: hsla(220, 70%, 55%, 0.12);
+      color: hsl(220, 70%, 75%);
+      border: 1px solid hsla(220, 70%, 55%, 0.28);
+    }
+
+    .journal-ef {
+      background: hsla(30, 70%, 50%, 0.12);
+      color: hsl(30, 70%, 70%);
+      border: 1px solid hsla(30, 70%, 50%, 0.28);
+    }
+
+    .journal-other {
+      background: hsla(240, 5%, 40%, 0.15);
+      color: var(--light-gray-70);
+      border: 1px solid hsla(240, 5%, 55%, 0.2);
+    }
 
     /* Impact Factor badge */
     .badge-if {
@@ -317,10 +359,29 @@
       letter-spacing: 0.2px;
     }
 
-    .badge-esi   { background: hsla(145,60%,40%,0.15); color: hsl(145,60%,62%); border: 1px solid hsla(145,60%,40%,0.30); }
-    .badge-review{ background: hsla(200,60%,40%,0.12); color: hsl(200,60%,68%); border: 1px solid hsla(200,60%,40%,0.28); }
-    .badge-ca    { background: hsla(45,100%,72%,0.10); color: hsl(45,80%,65%);  border: 1px solid hsla(45,100%,72%,0.24); }
-    .badge-prep  { background: hsla(280,50%,55%,0.12); color: hsl(280,50%,75%); border: 1px solid hsla(280,50%,55%,0.28); }
+    .badge-esi {
+      background: hsla(145, 60%, 40%, 0.15);
+      color: hsl(145, 60%, 62%);
+      border: 1px solid hsla(145, 60%, 40%, 0.30);
+    }
+
+    .badge-review {
+      background: hsla(200, 60%, 40%, 0.12);
+      color: hsl(200, 60%, 68%);
+      border: 1px solid hsla(200, 60%, 40%, 0.28);
+    }
+
+    .badge-ca {
+      background: hsla(45, 100%, 72%, 0.10);
+      color: hsl(45, 80%, 65%);
+      border: 1px solid hsla(45, 100%, 72%, 0.24);
+    }
+
+    .badge-prep {
+      background: hsla(280, 50%, 55%, 0.12);
+      color: hsl(280, 50%, 75%);
+      border: 1px solid hsla(280, 50%, 55%, 0.28);
+    }
 
     /* Role badge */
     .badge-role {
@@ -332,9 +393,24 @@
       white-space: nowrap;
       letter-spacing: 0.2px;
     }
-    .badge-role-first    { background: hsla(45,100%,72%,0.13); color: hsl(45,100%,74%); border: 1px solid hsla(45,100%,72%,0.32); }
-    .badge-role-ca       { background: hsla(45,100%,72%,0.13); color: hsl(45,100%,74%); border: 1px solid hsla(45,100%,72%,0.32); }
-    .badge-role-coauthor { background: hsla(240,5%,40%,0.12);  color: var(--light-gray-70); border: 1px solid hsla(240,5%,55%,0.18); }
+
+    .badge-role-first {
+      background: hsla(45, 100%, 72%, 0.13);
+      color: hsl(45, 100%, 74%);
+      border: 1px solid hsla(45, 100%, 72%, 0.32);
+    }
+
+    .badge-role-ca {
+      background: hsla(45, 100%, 72%, 0.13);
+      color: hsl(45, 100%, 74%);
+      border: 1px solid hsla(45, 100%, 72%, 0.32);
+    }
+
+    .badge-role-coauthor {
+      background: hsla(240, 5%, 40%, 0.12);
+      color: var(--light-gray-70);
+      border: 1px solid hsla(240, 5%, 55%, 0.18);
+    }
 
     /* Extra links row */
     .pub-links {
@@ -351,7 +427,10 @@
       transition: opacity 0.2s;
     }
 
-    .pub-link:hover { opacity: 1; text-decoration: underline; }
+    .pub-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
 
     /* =============================================
        ABSTRACT TOGGLE BUTTON
@@ -449,17 +528,21 @@
       z-index: -1;
     }
 
-    .conf-item:hover { box-shadow: var(--shadow-2); }
+    .conf-item:hover {
+      box-shadow: var(--shadow-2);
+    }
 
     .conf-item--featured {
       border-left: 3px solid hsla(45, 100%, 72%, 0.45);
     }
 
     .conf-item--featured::before {
-      background: linear-gradient(100deg, hsla(45,100%,72%,0.04) 0%, var(--bg-gradient-jet) 35%);
+      background: linear-gradient(100deg, hsla(45, 100%, 72%, 0.04) 0%, var(--bg-gradient-jet) 35%);
     }
 
-    .conf-item--featured:hover { border-left-color: hsl(45, 100%, 72%); }
+    .conf-item--featured:hover {
+      border-left-color: hsl(45, 100%, 72%);
+    }
 
     .conf-venue {
       font-style: italic;
@@ -512,7 +595,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
               <i class="ai ai-google-scholar ai-1x"></i>
             </a>
           </li>
@@ -618,15 +702,15 @@
           </div>
 
           <p class="pub-section-note">
-            <span>* = corresponding author</span>
+            <span style="font-style:normal;">* = corresponding author</span>
             <span class="note-sep">|</span>
             <strong style="color:hsl(45,100%,82%);text-decoration:underline;font-style:normal;">Bold gold</strong>
-            <span>= Fujiang Ji</span>
+            <span style="font-style:normal;">= Fujiang Ji</span>
             <span class="note-sep">|</span>
-            <span style="display:inline-block;width:3px;height:11px;background:hsla(45,100%,72%,0.7);border-radius:2px;vertical-align:middle;"></span>
-            <span>= first / corresponding author</span>
-            <span class="note-sep">|</span>
-            <span>Ordered by role → IF → year</span>
+            <span
+              style="display:inline-block;width:3px;height:11px;background:hsla(45,100%,72%,0.7);border-radius:2px;vertical-align:middle;"></span>
+            <span style="font-style:normal;">= first / corresponding author</span>
+
           </p>
 
           <ul class="pub-list">
@@ -638,7 +722,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[1]</span>
                 <div class="pub-body">
-                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Shiklomanov, A. N.; Yang, R.;
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Shiklomanov, A. N.; Yang,
+                    R.;
                     Townsend, P. A.; Li, F.; Hao, D.; Dashti, H.; Kovach, K. R.; You, H.; Zhou, J.; Chen, M.</p>
                   <a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank" class="pub-title-link">
                     Tracking seasonal variability in plant traits from spaceborne PRISMA and NEON AOP across forest
@@ -658,7 +743,20 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Tracking seasonal dynamics of plant functional traits is critical for understanding ecosystem responses to climate variability, yet capturing these dynamics at landscape scales remains challenging. This study leveraged the PRISMA spaceborne hyperspectral sensor to monitor seasonal variability of four key plant traits—leaf chlorophyll content (Cab), equivalent water thickness (EWT), leaf mass per area (LMA), and leaf area index (LAI)—across 11 NEON forest sites spanning diverse forest types and ecoregions across the contiguous United States. We developed a workflow integrating PROSAIL radiative transfer model simulations with machine learning algorithms, achieving robust trait retrieval validated against concurrent NEON AOP airborne hyperspectral estimates (R² = 0.813–0.88 across all traits). Results revealed distinct seasonal trajectories, with deciduous broadleaf forests exhibiting the most pronounced dynamics and evergreen needleleaf forests showing more muted responses. Substantial cross-site and cross-season variation in trait magnitudes highlighted the importance of ecoregion context. These findings demonstrate the potential of spaceborne imaging spectroscopy for characterizing plant trait seasonality at ecosystem scales and provide a foundation for future global trait monitoring efforts.</p>
+                <p>Tracking seasonal dynamics of plant functional traits is critical for understanding ecosystem
+                  responses to climate variability, yet capturing these dynamics at landscape scales remains
+                  challenging. This study leveraged the PRISMA spaceborne hyperspectral sensor to monitor seasonal
+                  variability of four key plant traits—leaf chlorophyll content (Cab), equivalent water thickness (EWT),
+                  leaf mass per area (LMA), and leaf area index (LAI)—across 11 NEON forest sites spanning diverse
+                  forest types and ecoregions across the contiguous United States. We developed a workflow integrating
+                  PROSAIL radiative transfer model simulations with machine learning algorithms, achieving robust trait
+                  retrieval validated against concurrent NEON AOP airborne hyperspectral estimates (R² = 0.813–0.88
+                  across all traits). Results revealed distinct seasonal trajectories, with deciduous broadleaf forests
+                  exhibiting the most pronounced dynamics and evergreen needleleaf forests showing more muted responses.
+                  Substantial cross-site and cross-season variation in trait magnitudes highlighted the importance of
+                  ecoregion context. These findings demonstrate the potential of spaceborne imaging spectroscopy for
+                  characterizing plant trait seasonality at ecosystem scales and provide a foundation for future global
+                  trait monitoring efforts.</p>
               </div>
             </li>
 
@@ -687,7 +785,16 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Accurate prediction of leaf functional traits from spectroscopic measurements is essential for large-scale ecosystem monitoring, yet most existing models suffer from limited transferability across different locations, species, and seasons. This study presents a physics-guided transfer learning framework that leverages a large, diverse global leaf spectral library combined with radiative transfer model simulations to pre-train deep learning encoders, then fine-tunes them on target-domain data. The approach substantially improved trait prediction accuracy across spatial, species, and temporal boundaries compared to conventional PLSR and deep learning baselines. By embedding physical knowledge of leaf optics into the learning process, the model generalizes effectively with minimal site-specific calibration data, offering a scalable solution for leaf trait mapping from airborne and spaceborne imaging spectroscopy.</p>
+                <p>Accurate prediction of leaf functional traits from spectroscopic measurements is essential for
+                  large-scale ecosystem monitoring, yet most existing models suffer from limited transferability across
+                  different locations, species, and seasons. This study presents a physics-guided transfer learning
+                  framework that leverages a large, diverse global leaf spectral library combined with radiative
+                  transfer model simulations to pre-train deep learning encoders, then fine-tunes them on target-domain
+                  data. The approach substantially improved trait prediction accuracy across spatial, species, and
+                  temporal boundaries compared to conventional PLSR and deep learning baselines. By embedding physical
+                  knowledge of leaf optics into the learning process, the model generalizes effectively with minimal
+                  site-specific calibration data, offering a scalable solution for leaf trait mapping from airborne and
+                  spaceborne imaging spectroscopy.</p>
               </div>
             </li>
 
@@ -718,7 +825,17 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Partial least squares regression (PLSR) models demonstrate commendable performance in predicting leaf functional traits—including chlorophyll content, carotenoids, leaf water, and leaf mass per area—within their original training datasets. However, performance degrades significantly when applied to new contexts. Using a novel global leaf spectral dataset assembled for this study, we systematically evaluated PLSR transferability across new locations, seasons, and plant functional types. When extrapolating beyond training conditions, models showed substantially reduced accuracy (R² = 0.12–0.49 for new locations, 0.15–0.42 for new seasons, and 0.25–0.56 for new plant functional types) alongside increased error rates (NRMSE = 3.58–33.12%). The study emphasizes the importance of incorporating greater spectral diversity during model training to improve transferability, and highlights potential systematic errors when applying leaf trait estimates across large spatial scales, diverse vegetation types, and different time periods.</p>
+                <p>Partial least squares regression (PLSR) models demonstrate commendable performance in predicting leaf
+                  functional traits—including chlorophyll content, carotenoids, leaf water, and leaf mass per
+                  area—within their original training datasets. However, performance degrades significantly when applied
+                  to new contexts. Using a novel global leaf spectral dataset assembled for this study, we
+                  systematically evaluated PLSR transferability across new locations, seasons, and plant functional
+                  types. When extrapolating beyond training conditions, models showed substantially reduced accuracy (R²
+                  = 0.12–0.49 for new locations, 0.15–0.42 for new seasons, and 0.25–0.56 for new plant functional
+                  types) alongside increased error rates (NRMSE = 3.58–33.12%). The study emphasizes the importance of
+                  incorporating greater spectral diversity during model training to improve transferability, and
+                  highlights potential systematic errors when applying leaf trait estimates across large spatial scales,
+                  diverse vegetation types, and different time periods.</p>
               </div>
             </li>
 
@@ -727,7 +844,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[4]</span>
                 <div class="pub-body">
-                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Meng, J.; Cheng, Z.; Fang, H.; Wang, Y.</p>
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Meng, J.; Cheng, Z.; Fang, H.; Wang,
+                    Y.</p>
                   <a href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" class="pub-title-link">
                     Crop Yield Estimation at Field Scales by Assimilating Time Series of Sentinel-2 Data into a
                     Modified CASA-WOFOST Coupled Model
@@ -746,7 +864,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Accurate field-scale crop yield estimation is essential for precision agriculture and food security assessment. This study developed a data assimilation framework that integrates time series Sentinel-2 satellite observations into a modified CASA-WOFOST coupled model, combining the carbon assimilation capabilities of CASA with the process-based crop growth simulation of WOFOST. The approach sequentially assimilated leaf area index and canopy light absorption retrieved from Sentinel-2 imagery to constrain model state variables throughout the growing season. Evaluated across multiple field sites for winter wheat and summer maize, the framework achieved substantially improved yield predictions compared to either model run independently, demonstrating the value of satellite data assimilation for operational crop monitoring at agricultural management scales.</p>
+                <p>Accurate field-scale crop yield estimation is essential for precision agriculture and food security
+                  assessment. This study developed a data assimilation framework that integrates time series Sentinel-2
+                  satellite observations into a modified CASA-WOFOST coupled model, combining the carbon assimilation
+                  capabilities of CASA with the process-based crop growth simulation of WOFOST. The approach
+                  sequentially assimilated leaf area index and canopy light absorption retrieved from Sentinel-2 imagery
+                  to constrain model state variables throughout the growing season. Evaluated across multiple field
+                  sites for winter wheat and summer maize, the framework achieved substantially improved yield
+                  predictions compared to either model run independently, demonstrating the value of satellite data
+                  assimilation for operational crop monitoring at agricultural management scales.</p>
               </div>
             </li>
 
@@ -755,7 +881,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[5]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Wang, W.; Lu, B.; Li, Y.; <strong class="pub-self">Ji, F.<sup>*</sup></strong></p>
+                  <p class="pub-authors">Wang, W.; Lu, B.; Li, Y.; <strong class="pub-self">Ji, F.<sup>*</sup></strong>
+                  </p>
                   <a href="https://doi.org/10.3390/geomatics6010021" target="_blank" class="pub-title-link">
                     A Quantitative Assessment of the Inconsistency Between Waterbody Segmentation and Shoreline
                     Positioning in Deep Learning Models
@@ -774,7 +901,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study evaluates the inconsistency between deep learning-based waterbody segmentation and shoreline positioning using aerial imagery from the Great Lakes region. Despite strong pixel-level segmentation accuracy (&gt;98% accuracy, &gt;90% IoU) across five benchmark models tested on 20,689 NAIP images, shoreline positioning accuracy was substantially lower and varied significantly by landscape type—with poorest results in wetlands and urban areas. The shoreline-to-water ratio emerged as the dominant predictor of positioning accuracy, while shoreline complexity and water color showed weaker, context-dependent effects. These findings highlight the need for shoreline-specific evaluation metrics rather than relying solely on conventional segmentation benchmarks when applying deep learning to coastal and lake boundary detection tasks.</p>
+                <p>This study evaluates the inconsistency between deep learning-based waterbody segmentation and
+                  shoreline positioning using aerial imagery from the Great Lakes region. Despite strong pixel-level
+                  segmentation accuracy (&gt;98% accuracy, &gt;90% IoU) across five benchmark models tested on 20,689
+                  NAIP images, shoreline positioning accuracy was substantially lower and varied significantly by
+                  landscape type—with poorest results in wetlands and urban areas. The shoreline-to-water ratio emerged
+                  as the dominant predictor of positioning accuracy, while shoreline complexity and water color showed
+                  weaker, context-dependent effects. These findings highlight the need for shoreline-specific evaluation
+                  metrics rather than relying solely on conventional segmentation benchmarks when applying deep learning
+                  to coastal and lake boundary detection tasks.</p>
               </div>
             </li>
 
@@ -793,7 +928,9 @@
                     <span class="badge-role badge-role-first">First Author</span>
                     <span class="badge-if">IF 1.5</span>
                     <span class="badge-q4">JCR Q4</span>
-                    <span class="pub-badge" style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In Chinese with English Abstract</span>
+                    <span class="pub-badge"
+                      style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In
+                      Chinese with English Abstract</span>
                   </div>
                 </div>
                 <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
@@ -802,7 +939,13 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study investigated soybean yield estimation by coupling the CASA (Carnegie–Ames–Stanford Approach) carbon assimilation model with the WOFOST (World Food Studies) crop growth model. The coupled framework leverages CASA's ability to estimate net primary productivity from remote sensing data and WOFOST's mechanistic representation of crop phenology and biomass allocation to produce field-scale yield estimates. The method was evaluated in major soybean-growing regions, demonstrating improved estimation accuracy over individual models alone and providing a practical approach for regional agricultural monitoring.</p>
+                <p>This study investigated soybean yield estimation by coupling the CASA (Carnegie–Ames–Stanford
+                  Approach) carbon assimilation model with the WOFOST (World Food Studies) crop growth model. The
+                  coupled framework leverages CASA's ability to estimate net primary productivity from remote sensing
+                  data and WOFOST's mechanistic representation of crop phenology and biomass allocation to produce
+                  field-scale yield estimates. The method was evaluated in major soybean-growing regions, demonstrating
+                  improved estimation accuracy over individual models alone and providing a practical approach for
+                  regional agricultural monitoring.</p>
               </div>
             </li>
 
@@ -829,9 +972,12 @@
                   <div class="pub-links">
                     <a href="https://baeri.org/shadows-and-greenness/" target="_blank" class="pub-link">[Media 1]</a>
                     <a href="http://ntrs.nasa.gov/citations/20230013996" target="_blank" class="pub-link">[NASA]</a>
-                    <a href="https://medium.com/bay-area-environmental-research-institute/shadows-greenness-uncovering-satellite-biases-in-viewing-earths-vegetation-c83625f20215" target="_blank" class="pub-link">[Medium]</a>
-                    <a href="https://phys.org/news/2024-01-shadows-greenness-uncovering-satellite-biases.html" target="_blank" class="pub-link">[Phys.org]</a>
-                    <a href="https://urldefense.us/v2/url?u=https-3A__rdcu.be_dl91h&d=DwMFaQ&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=uk3P20a_TWPsDvY5ylZBelVvXYpgzhJink8D7Tplkn0&m=7GraeTN7MPPvSXdNjwcOBQFgH7UlWPVIFR-nc__va82Zca5HVBS2inoDwX0c5lBM&s=0YsVoxQnl8eSjsSBBFotVq4NvkRDJNVFa0-n-FL1Vr4&e=" target="_blank" class="pub-link">[Free version]</a>
+                    <a href="https://medium.com/bay-area-environmental-research-institute/shadows-greenness-uncovering-satellite-biases-in-viewing-earths-vegetation-c83625f20215"
+                      target="_blank" class="pub-link">[Medium]</a>
+                    <a href="https://phys.org/news/2024-01-shadows-greenness-uncovering-satellite-biases.html"
+                      target="_blank" class="pub-link">[Phys.org]</a>
+                    <a href="https://urldefense.us/v2/url?u=https-3A__rdcu.be_dl91h&d=DwMFaQ&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=uk3P20a_TWPsDvY5ylZBelVvXYpgzhJink8D7Tplkn0&m=7GraeTN7MPPvSXdNjwcOBQFgH7UlWPVIFR-nc__va82Zca5HVBS2inoDwX0c5lBM&s=0YsVoxQnl8eSjsSBBFotVq4NvkRDJNVFa0-n-FL1Vr4&e="
+                      target="_blank" class="pub-link">[Free version]</a>
                   </div>
                 </div>
                 <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
@@ -840,7 +986,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Satellite-based vegetation greenness indices are widely used as proxies for canopy photosynthetic activity and leaf biochemistry, yet their accuracy is sensitive to canopy structural properties. This study demonstrated that structural complexity in vegetation—particularly shadow casting by canopy elements—creates systematic biases in greenness measures retrieved from multi-spectral satellites. Using radiative transfer modeling and observational data spanning diverse biomes, the authors showed that shadow fraction governs the magnitude and direction of these biases, causing greenness indices to diverge from true leaf biochemistry signals in structurally complex canopies. The findings have broad implications for interpreting satellite-derived vegetation monitoring products and correcting for structural confounders in global ecological analyses.</p>
+                <p>Satellite-based vegetation greenness indices are widely used as proxies for canopy photosynthetic
+                  activity and leaf biochemistry, yet their accuracy is sensitive to canopy structural properties. This
+                  study demonstrated that structural complexity in vegetation—particularly shadow casting by canopy
+                  elements—creates systematic biases in greenness measures retrieved from multi-spectral satellites.
+                  Using radiative transfer modeling and observational data spanning diverse biomes, the authors showed
+                  that shadow fraction governs the magnitude and direction of these biases, causing greenness indices to
+                  diverge from true leaf biochemistry signals in structurally complex canopies. The findings have broad
+                  implications for interpreting satellite-derived vegetation monitoring products and correcting for
+                  structural confounders in global ecological analyses.</p>
               </div>
             </li>
 
@@ -849,7 +1003,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[8]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Liu, H.; Xiao, J.; Hao, D.; Li, F.; <strong class="pub-self">Ji, F.;</strong> Chen, M.</p>
+                  <p class="pub-authors">Liu, H.; Xiao, J.; Hao, D.; Li, F.; <strong class="pub-self">Ji, F.;</strong>
+                    Chen, M.</p>
                   <a href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank" class="pub-title-link">
                     Hotspot effect improves the ability of satellites to track terrestrial photosynthesis
                   </a>
@@ -867,7 +1022,14 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study investigated how the hotspot effect—the backscatter enhancement of reflectance observed when the viewing angle aligns with the solar illumination direction—improves satellite-based tracking of terrestrial photosynthesis. By leveraging multi-angle remote sensing observations and accounting for bidirectional reflectance distribution function (BRDF) effects at the hotspot geometry, the authors demonstrated enhanced sensitivity to canopy structural and biochemical properties that govern photosynthetic capacity. The approach produced improved estimates of gross primary production across diverse vegetation biomes, highlighting the value of hotspot-geometry observations for future satellite mission design and vegetation monitoring algorithms.</p>
+                <p>This study investigated how the hotspot effect—the backscatter enhancement of reflectance observed
+                  when the viewing angle aligns with the solar illumination direction—improves satellite-based tracking
+                  of terrestrial photosynthesis. By leveraging multi-angle remote sensing observations and accounting
+                  for bidirectional reflectance distribution function (BRDF) effects at the hotspot geometry, the
+                  authors demonstrated enhanced sensitivity to canopy structural and biochemical properties that govern
+                  photosynthetic capacity. The approach produced improved estimates of gross primary production across
+                  diverse vegetation biomes, highlighting the value of hotspot-geometry observations for future
+                  satellite mission design and vegetation monitoring algorithms.</p>
               </div>
             </li>
 
@@ -896,7 +1058,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>A hybrid machine learning model was developed to project large wildfires in the western United States, achieving an F1-score of 0.846 ± 0.012—surpassing process-driven fire danger indices and four commonly used ML models by up to 40% and 9%, respectively. Using explainable AI techniques, the study identified substantial structural differences across ML fire models, even among those with similar predictive accuracy. Strong compound effects from multiple climate variables related to evaporative demand, energy release component, temperature, and wind speed were revealed as key drivers of large fire dynamics. The findings underscore the importance of assessing structural integrity of models in addition to their accuracy, and highlight the need to address compound climate extremes when projecting wildfire risk in the western US.</p>
+                <p>A hybrid machine learning model was developed to project large wildfires in the western United
+                  States, achieving an F1-score of 0.846 ± 0.012—surpassing process-driven fire danger indices and four
+                  commonly used ML models by up to 40% and 9%, respectively. Using explainable AI techniques, the study
+                  identified substantial structural differences across ML fire models, even among those with similar
+                  predictive accuracy. Strong compound effects from multiple climate variables related to evaporative
+                  demand, energy release component, temperature, and wind speed were revealed as key drivers of large
+                  fire dynamics. The findings underscore the importance of assessing structural integrity of models in
+                  addition to their accuracy, and highlight the need to address compound climate extremes when
+                  projecting wildfire risk in the western US.</p>
               </div>
             </li>
 
@@ -905,7 +1075,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[10]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Cheng, Z.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Wang, Y.; Fang, H.; Yu, L.</p>
+                  <p class="pub-authors">Cheng, Z.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Wang, Y.; Fang,
+                    H.; Yu, L.</p>
                   <a href="http://dx.doi.org/10.11834/jrs.20200069" target="_blank" class="pub-title-link">
                     Aboveground biomass estimation of late-stage maize based on the WOFOST model and UAV observations
                   </a>
@@ -915,7 +1086,9 @@
                     <span class="badge-role badge-role-coauthor">Co-Author</span>
                     <span class="badge-if">IF 4.0</span>
                     <span class="badge-q2">JCR Q2</span>
-                    <span class="pub-badge" style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In Chinese with English Abstract</span>
+                    <span class="pub-badge"
+                      style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In
+                      Chinese with English Abstract</span>
                   </div>
                 </div>
                 <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
@@ -924,7 +1097,14 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study estimated aboveground biomass (AGB) of late-stage maize by integrating UAV (unmanned aerial vehicle) remote sensing observations with the WOFOST crop growth model. High-resolution UAV imagery acquired during the grain-filling stage was used to derive canopy structural metrics that constrained WOFOST model state variables through data assimilation. The combined approach captured spatial variability in biomass accumulation at sub-field scales, outperforming both UAV-based empirical regression and standalone WOFOST simulations. The results demonstrate the value of UAV observations for improving crop model estimates during critical late-season growth phases when yield potential is largely determined.</p>
+                <p>This study estimated aboveground biomass (AGB) of late-stage maize by integrating UAV (unmanned
+                  aerial vehicle) remote sensing observations with the WOFOST crop growth model. High-resolution UAV
+                  imagery acquired during the grain-filling stage was used to derive canopy structural metrics that
+                  constrained WOFOST model state variables through data assimilation. The combined approach captured
+                  spatial variability in biomass accumulation at sub-field scales, outperforming both UAV-based
+                  empirical regression and standalone WOFOST simulations. The results demonstrate the value of UAV
+                  observations for improving crop model estimates during critical late-season growth phases when yield
+                  potential is largely determined.</p>
               </div>
             </li>
 
@@ -934,7 +1114,8 @@
                 <span class="pub-num">[11]</span>
                 <div class="pub-body">
                   <p class="pub-authors">Zhang, S.; Dai, X.; Li, J.; Gao, X.; Zhang, F.; Gong, F.; Lu, H.; Wang, M.;
-                    <strong class="pub-self">Ji, F.;</strong> Wang, Z.; &amp; Peng, P.</p>
+                    <strong class="pub-self">Ji, F.;</strong> Wang, Z.; &amp; Peng, P.
+                  </p>
                   <a href="https://doi.org/10.1080/10106049.2022.2032387" target="_blank" class="pub-title-link">
                     Crop Classification for UAV Visible Imagery Using Deep Semantic Segmentation Methods
                   </a>
@@ -952,7 +1133,13 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study evaluated deep semantic segmentation methods for crop classification using visible-band UAV imagery. Several state-of-the-art encoder-decoder architectures were benchmarked for their ability to delineate crop types at sub-meter spatial resolution without relying on multispectral or hyperspectral data. Results demonstrated that deep segmentation models effectively leveraged spectral and textural information in RGB imagery to discriminate between crop types during critical growth stages. The study provides practical guidance for implementing low-cost UAV-based crop mapping workflows in agricultural monitoring and precision farming applications.</p>
+                <p>This study evaluated deep semantic segmentation methods for crop classification using visible-band
+                  UAV imagery. Several state-of-the-art encoder-decoder architectures were benchmarked for their ability
+                  to delineate crop types at sub-meter spatial resolution without relying on multispectral or
+                  hyperspectral data. Results demonstrated that deep segmentation models effectively leveraged spectral
+                  and textural information in RGB imagery to discriminate between crop types during critical growth
+                  stages. The study provides practical guidance for implementing low-cost UAV-based crop mapping
+                  workflows in agricultural monitoring and precision farming applications.</p>
               </div>
             </li>
 
@@ -961,7 +1148,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[12]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Dai, X.; He, X.; Guo, S.; Liu, S.; <strong class="pub-self">Ji, F.;</strong> Ruan, H.</p>
+                  <p class="pub-authors">Dai, X.; He, X.; Guo, S.; Liu, S.; <strong class="pub-self">Ji, F.;</strong>
+                    Ruan, H.</p>
                   <a href="https://doi.org/10.1007/s11042-021-10735-0" target="_blank" class="pub-title-link">
                     Research on hyper-spectral remote sensing image classification by applying stacked de-noising
                     auto-encoders neural network
@@ -980,7 +1168,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study applied stacked de-noising auto-encoders (SDAE), an unsupervised deep learning architecture, to hyperspectral remote sensing image classification. The SDAE framework learns robust spectral feature representations by reconstructing corrupted input spectra, effectively capturing latent structure in high-dimensional hyperspectral data while reducing sensitivity to noise. The learned features were subsequently used to train a supervised classifier, achieving improved classification accuracy compared to traditional dimensionality reduction approaches such as PCA and standard shallow neural networks. The method demonstrated strong performance on benchmark hyperspectral datasets and offers a practical framework for land cover classification with limited labeled training samples.</p>
+                <p>This study applied stacked de-noising auto-encoders (SDAE), an unsupervised deep learning
+                  architecture, to hyperspectral remote sensing image classification. The SDAE framework learns robust
+                  spectral feature representations by reconstructing corrupted input spectra, effectively capturing
+                  latent structure in high-dimensional hyperspectral data while reducing sensitivity to noise. The
+                  learned features were subsequently used to train a supervised classifier, achieving improved
+                  classification accuracy compared to traditional dimensionality reduction approaches such as PCA and
+                  standard shallow neural networks. The method demonstrated strong performance on benchmark
+                  hyperspectral datasets and offers a practical framework for land cover classification with limited
+                  labeled training samples.</p>
               </div>
             </li>
 
@@ -989,7 +1185,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[13]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Mao, H.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Zhang, Q.; Fang, H.</p>
+                  <p class="pub-authors">Mao, H.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Zhang, Q.; Fang,
+                    H.</p>
                   <a href="https://doi.org/10.3390/app9071459" target="_blank" class="pub-title-link">
                     Comparison of Machine Learning Regression Algorithms for Cotton Leaf Area Index Retrieval Using
                     Sentinel-2 Spectral Bands
@@ -1008,7 +1205,15 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>This study benchmarked five machine learning regression algorithms—Gradient Boosted Regression Trees (GBRT), Support Vector Regression (SVR), Artificial Neural Networks (ANN), Gaussian Process Regression (GPR), and Random Forest (RF)—for retrieving cotton leaf area index (LAI) using Sentinel-2 multispectral bands. GBRT achieved the highest overall accuracy (average R² = 0.854), while SVR demonstrated superior computational efficiency. GBRT also showed the most robust performance across varying training sample sizes, maintaining strong accuracy metrics (R² = 0.884) at reduced sample sizes. ANN performed best when fewer spectral bands were available, while SVR, GPR, and RF provided more stable performance across different band configurations. All five models demonstrated significant potential for practical cotton LAI retrieval in precision crop management applications.</p>
+                <p>This study benchmarked five machine learning regression algorithms—Gradient Boosted Regression Trees
+                  (GBRT), Support Vector Regression (SVR), Artificial Neural Networks (ANN), Gaussian Process Regression
+                  (GPR), and Random Forest (RF)—for retrieving cotton leaf area index (LAI) using Sentinel-2
+                  multispectral bands. GBRT achieved the highest overall accuracy (average R² = 0.854), while SVR
+                  demonstrated superior computational efficiency. GBRT also showed the most robust performance across
+                  varying training sample sizes, maintaining strong accuracy metrics (R² = 0.884) at reduced sample
+                  sizes. ANN performed best when fewer spectral bands were available, while SVR, GPR, and RF provided
+                  more stable performance across different band configurations. All five models demonstrated significant
+                  potential for practical cotton LAI retrieval in precision crop management applications.</p>
               </div>
             </li>
 
@@ -1047,7 +1252,12 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Manuscript under review. This study develops a deep hierarchical fusion network for robust reconstruction of hyperspectral imagery from satellite and airborne multispectral observations across heterogeneous scenarios. The approach addresses key challenges in hyperspectral data availability by fusing complementary spatial and spectral information from multiple sensor platforms, enabling high-fidelity spectral reconstruction for downstream applications such as plant trait estimation and surface characterization.</p>
+                <p>Manuscript under review. This study develops a deep hierarchical fusion network for robust
+                  reconstruction of hyperspectral imagery from satellite and airborne multispectral observations across
+                  heterogeneous scenarios. The approach addresses key challenges in hyperspectral data availability by
+                  fusing complementary spatial and spectral information from multiple sensor platforms, enabling
+                  high-fidelity spectral reconstruction for downstream applications such as plant trait estimation and
+                  surface characterization.</p>
               </div>
             </li>
 
@@ -1055,7 +1265,8 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[R2]</span>
                 <div class="pub-body">
-                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Townsend, P. A.; Liu, M.; Chen, M.</p>
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Townsend, P. A.; Liu, M.;
+                    Chen, M.</p>
                   <span class="pub-title-plain">Assessing the suitability of reconstructed high-resolution
                     hyperspectral imagery from PlanetScope and EMIT for plant functional trait estimation</span>
                   <div class="pub-meta">
@@ -1070,7 +1281,12 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Manuscript in preparation. This study evaluates whether high-resolution hyperspectral imagery reconstructed by fusing PlanetScope multispectral data with EMIT spaceborne hyperspectral observations is suitable for estimating plant functional traits. By assessing reconstruction fidelity against reference airborne data and propagating uncertainties through trait retrieval pipelines, the work provides empirical guidance on the operational readiness of sensor-fusion products for ecosystem trait mapping.</p>
+                <p>Manuscript in preparation. This study evaluates whether high-resolution hyperspectral imagery
+                  reconstructed by fusing PlanetScope multispectral data with EMIT spaceborne hyperspectral observations
+                  is suitable for estimating plant functional traits. By assessing reconstruction fidelity against
+                  reference airborne data and propagating uncertainties through trait retrieval pipelines, the work
+                  provides empirical guidance on the operational readiness of sensor-fusion products for ecosystem trait
+                  mapping.</p>
               </div>
             </li>
 
@@ -1093,7 +1309,12 @@
               </div>
               <div class="pub-abstract">
                 <span class="pub-abstract-label">Abstract</span>
-                <p>Manuscript under review. This study quantifies global forest edge extent and its temporal dynamics throughout the 21st century using satellite-derived land cover products. Forest edges—the transition zones between forested and non-forested areas—have distinct microclimatic, ecological, and biodiversity properties compared to forest interiors. By tracking how edge extent has changed in response to deforestation, fragmentation, and reforestation globally, this work provides new insights into the conservation implications of forest structural change at planetary scales.</p>
+                <p>Manuscript under review. This study quantifies global forest edge extent and its temporal dynamics
+                  throughout the 21st century using satellite-derived land cover products. Forest edges—the transition
+                  zones between forested and non-forested areas—have distinct microclimatic, ecological, and
+                  biodiversity properties compared to forest interiors. By tracking how edge extent has changed in
+                  response to deforestation, fragmentation, and reforestation globally, this work provides new insights
+                  into the conservation implications of forest structural change at planetary scales.</p>
               </div>
             </li>
 
@@ -1117,7 +1338,8 @@
                 <span class="pub-num">[C1]</span>
                 <div class="pub-body">
                   <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Li, F.; Hao, D.; Chen, M., et al.</p>
-                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank" class="pub-title-link">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank"
+                    class="pub-title-link">
                     Estimating Leaf Functional Traits with Leaf Spectroscopy and Physics-guided Transfer Learning
                     Based Physical Model Across Biomes
                   </a>
@@ -1195,8 +1417,10 @@
               <div class="pub-item-inner">
                 <span class="pub-num">[C6]</span>
                 <div class="pub-body">
-                  <p class="pub-authors">Chen, M.; <strong class="pub-self">Ji, F.;</strong> Hao, D.; Zeng, Y.; et al.</p>
-                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank" class="pub-title-link">
+                  <p class="pub-authors">Chen, M.; <strong class="pub-self">Ji, F.;</strong> Hao, D.; Zeng, Y.; et al.
+                  </p>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank"
+                    class="pub-title-link">
                     Fast estimation of leaf biochemical properties by inverting a simple leaf spectra model
                   </a>
                   <div class="pub-meta">

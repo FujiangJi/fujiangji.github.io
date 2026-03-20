@@ -51,7 +51,7 @@
     }
 
     .research-direction-card:hover .direction-cover img,
-    .research-direction-card.open  .direction-cover img {
+    .research-direction-card.open .direction-cover img {
       transform: scale(1.04);
       filter: brightness(0.62) saturate(1.05);
     }
@@ -59,12 +59,10 @@
     .direction-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.92) 0%,
-        rgba(0, 0, 0, 0.45) 55%,
-        transparent 100%
-      );
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.92) 0%,
+          rgba(0, 0, 0, 0.45) 55%,
+          transparent 100%);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -120,7 +118,8 @@
       border-radius: 20px;
       transition: background 0.2s, border-color 0.2s;
       cursor: pointer;
-      pointer-events: none; /* cover handles the click */
+      pointer-events: none;
+      /* cover handles the click */
     }
 
     .direction-cover:hover .direction-expand-btn {
@@ -183,12 +182,10 @@
     }
 
     .paper-card.open::before {
-      background: linear-gradient(
-        to bottom right,
-        hsla(240, 1%, 20%, 0.7) 0%,
-        hsla(240, 2%, 13%, 0) 100%
-      ),
-      hsl(240, 2%, 14%);
+      background: linear-gradient(to bottom right,
+          hsla(240, 1%, 20%, 0.7) 0%,
+          hsla(240, 2%, 13%, 0) 100%),
+        hsl(240, 2%, 14%);
     }
 
     /* Paper header (always visible, click to toggle) */
@@ -232,7 +229,7 @@
     }
 
     .paper-card:hover .paper-title-block h4,
-    .paper-card.open  .paper-title-block h4 {
+    .paper-card.open .paper-title-block h4 {
       color: hsl(45, 100%, 72%);
     }
 
@@ -356,6 +353,7 @@
       .direction-cover {
         height: 270px;
       }
+
       .direction-overlay h3 {
         font-size: 19px;
       }
@@ -412,7 +410,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
+              class="social-link">
               <i class="ai ai-google-scholar ai-1x"></i>
             </a>
           </li>
@@ -536,7 +535,8 @@
                       <a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank" class="paper-link-btn">
                         <ion-icon name="link-outline"></ion-icon> Paper
                       </a>
-                      <a href="https://github.com/FujiangJi/PRISMA_seasonal_traits" target="_blank" class="paper-link-btn">
+                      <a href="https://github.com/FujiangJi/PRISMA_seasonal_traits" target="_blank"
+                        class="paper-link-btn">
                         <ion-icon name="logo-github"></ion-icon> Data &amp; Code
                       </a>
                     </div>
@@ -555,13 +555,15 @@
                   <p>This study developed a multi-stage framework by leveraging PRISMA spaceborne hyperspectral data
                     and NEON Airborne Observation Platform (AOP) hyperspectral data to investigate the seasonal
                     dynamics of four key plant traits — <strong style="color:hsl(0,0%,100%);">chlorophyll content
-                    (Chla+b)</strong>, <strong style="color:hsl(0,0%,100%);">carotenoid content (Ccar)</strong>,
+                      (Chla+b)</strong>, <strong style="color:hsl(0,0%,100%);">carotenoid content (Ccar)</strong>,
                     <strong style="color:hsl(0,0%,100%);">equivalent water thickness (EWT)</strong>, and
                     <strong style="color:hsl(0,0%,100%);">nitrogen content</strong> — across 11 NEON sites
-                    representing diverse forest types and ecoregions in the contiguous U.S.</p>
+                    representing diverse forest types and ecoregions in the contiguous U.S.
+                  </p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">What are the capabilities of PRISMA data in quantifying seasonal
                         variations of plant traits at large scales?</li>
@@ -573,7 +575,8 @@
                   </ol>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Four-step framework:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Four-step framework:</strong>
+                    </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Processing the PRISMA hyperspectral data (BRDF correction,
                         geo-referencing, cloud and non-vegetation removal).</li>
@@ -593,11 +596,12 @@
                         achieving overall <em>R<sup>2</sup></em> = 0.78–0.88 and NRMSE = 5.4–8.4 % for all
                         four traits.</li>
                       <li style="margin-bottom: 3px;">Seasonal patterns revealed <strong style="color:hsl(0,0%,100%);">
-                        bell-shaped trajectories</strong> for chlorophyll and carotenoids, driven by structural
+                          bell-shaped trajectories</strong> for chlorophyll and carotenoids, driven by structural
                         changes during leaf maturation and senescence. EWT decreased steadily across most sites.
-                        Nitrogen showed less pronounced seasonal variation, reflecting nutrient resorption patterns.</li>
+                        Nitrogen showed less pronounced seasonal variation, reflecting nutrient resorption patterns.
+                      </li>
                       <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Seasonal variability
-                        drivers:</strong> solar radiation and day length (northern sites); vapor pressure
+                          drivers:</strong> solar radiation and day length (northern sites); vapor pressure
                         (semi-arid regions); temperature (mid-southeastern sites).</li>
                       <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Spatial variability
                         </strong> was primarily driven by soil properties during the peak growing season, with
@@ -620,7 +624,8 @@
                   </figure>
 
                   <figure>
-                    <img src="../assets/images/PRISMA_paper/Fig3_scatter_validation.jpg" alt="Model validation scatter plots">
+                    <img src="../assets/images/PRISMA_paper/Fig3_scatter_validation.jpg"
+                      alt="Model validation scatter plots">
                     <figcaption><strong>Fig. 3</strong> — Correlation between PRISMA-derived traits and NEON AOP
                       traits using the independent 20 % validation datasets for (a) Chla+b
                       (<em>R</em><sup>2</sup> = 0.813, NRMSE = 5.4 %), (b) Ccar (<em>R</em><sup>2</sup> = 0.845,
@@ -659,7 +664,8 @@
                       <a href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank" class="paper-link-btn">
                         <ion-icon name="link-outline"></ion-icon> Paper
                       </a>
-                      <a href="https://github.com/FujiangJi/transfer_learning_models" target="_blank" class="paper-link-btn">
+                      <a href="https://github.com/FujiangJi/transfer_learning_models" target="_blank"
+                        class="paper-link-btn">
                         <ion-icon name="logo-github"></ion-icon> Data &amp; Code
                       </a>
                     </div>
@@ -669,7 +675,8 @@
 
                 <div class="paper-body">
                   <p>Accurate and reliable prediction of leaf traits is crucial for understanding plant adaptations to
-                    environmental variation, monitoring terrestrial ecosystems, and enhancing comprehension of functional
+                    environmental variation, monitoring terrestrial ecosystems, and enhancing comprehension of
+                    functional
                     diversity and ecosystem functioning.</p>
                   <p>Various approaches (e.g., statistical, physical models) have been developed to estimate leaf traits
                     through hyperspectral remote sensing and leaf spectroscopy. However, the absence of high-performing,
@@ -682,11 +689,14 @@
                     collected across diverse geographic locations in the U.S. and Europe, PFTs, and seasons.</p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    </li>
                     <ol class="order-list2" style="font-size: 13px;">
-                      <li style="margin-bottom: 3px;">Do our proposed transfer learning models have better performance than
+                      <li style="margin-bottom: 3px;">Do our proposed transfer learning models have better performance
+                        than
                         PLSR, GPR, and pure RTMs?</li>
-                      <li style="margin-bottom: 3px;">Are the transfer learning models more transferable across different
+                      <li style="margin-bottom: 3px;">Are the transfer learning models more transferable across
+                        different
                         geographic locations, PFTs, and seasons?</li>
                       <li style="margin-bottom: 3px;">How do inconsistency and quantity of real observations used for
                         fine-tuning influence model performance?</li>
@@ -701,7 +711,8 @@
                     Right: Pre-training processes using the synthetic data of RTMs (PROSPECT and Leaf-SIP).</figcaption>
 
                   <ol class="order-list" style="font-size: 13px; margin: 12px 0 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Framework — four steps:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Framework — four
+                        steps:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Pure radiative transfer modeling.</li>
                       <li style="margin-bottom: 3px;">Transfer learning modeling.</li>
@@ -715,7 +726,8 @@
                     <img src="../assets/images/Transfer_learning_paper/Fig4.jpg" alt="Pre-train results">
                   </div>
                   <figcaption>Left: Spatial distribution of leaf trait samples in the spatial dataset.&ensp;
-                    Right: Mean leaf traits, reflectance and variability (CV) among sites, PFTs and growing season.</figcaption>
+                    Right: Mean leaf traits, reflectance and variability (CV) among sites, PFTs and growing season.
+                  </figcaption>
 
                   <p style="margin-top: 12px;">Through comparison with PLSR, GPR, and pure physical models, the proposed
                     transfer learning models achieved better predictive performance and higher transferability.</p>
@@ -724,7 +736,8 @@
                     <img src="../assets/images/Transfer_learning_paper/Fig5.jpg" alt="Model performance">
                     <img src="../assets/images/Transfer_learning_paper/Fig6.jpg" alt="Out-of-domain results">
                   </div>
-                  <figcaption>Left: Performance of different models incorporating varying proportions of observations for
+                  <figcaption>Left: Performance of different models incorporating varying proportions of observations
+                    for
                     training/fine-tuning.&ensp; Right: Out-of-domain performance of different models.</figcaption>
                 </div>
               </div><!-- /paper-1 -->
@@ -746,7 +759,8 @@
                       <a href="https://doi.org/10.1111/NPH.19807" target="_blank" class="paper-link-btn">
                         <ion-icon name="link-outline"></ion-icon> Paper
                       </a>
-                      <a href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank" class="paper-link-btn">
+                      <a href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank"
+                        class="paper-link-btn">
                         <ion-icon name="logo-github"></ion-icon> Data &amp; Code
                       </a>
                     </div>
@@ -755,21 +769,27 @@
                 </div>
 
                 <div class="paper-body">
-                  <p>Leaf traits are essential for understanding many physiological and ecological processes. PLSR models
+                  <p>Leaf traits are essential for understanding many physiological and ecological processes. PLSR
+                    models
                     with leaf spectroscopy are widely applied for trait estimation, but their transferability across
                     space, time and plant functional types (PFTs) remains unclear.</p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    </li>
                     <ol class="order-list2" style="font-size: 13px;">
-                      <li style="margin-bottom: 3px;">How well do PLSR models transfer to new domains (new sites, PFTs and time)?</li>
-                      <li style="margin-bottom: 3px;">What are the potential factors influencing the transferability of PLSR?</li>
+                      <li style="margin-bottom: 3px;">How well do PLSR models transfer to new domains (new sites, PFTs
+                        and time)?</li>
+                      <li style="margin-bottom: 3px;">What are the potential factors influencing the transferability of
+                        PLSR?</li>
                     </ol>
                     <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Hypotheses:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
-                      <li style="margin-bottom: 3px;">Models can expect accurate predictions within the training data range;
+                      <li style="margin-bottom: 3px;">Models can expect accurate predictions within the training data
+                        range;
                         performance declines when extrapolating to new domains.</li>
-                      <li style="margin-bottom: 3px;">Greater spectral diversity in training yields better PLSR transferability.</li>
+                      <li style="margin-bottom: 3px;">Greater spectral diversity in training yields better PLSR
+                        transferability.</li>
                     </ol>
                   </ol>
 
@@ -792,15 +812,18 @@
                     <li style="margin-bottom: 3px;">Leaf spectra: 450–2400 nm, 10 nm interval.</li>
                     <li style="margin-bottom: 3px;">Total chlorophyll (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.</li>
                     <li style="margin-bottom: 3px;">Total carotenoid (Ccar, µg/cm<sup>2</sup>): 4,233 samples.</li>
-                    <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>): 3,581 samples.</li>
+                    <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>): 3,581 samples.
+                    </li>
                     <li style="margin-bottom: 3px;">Leaf mass per area (LMA, g/m<sup>2</sup>): 45,417 samples.</li>
                     <li style="margin-bottom: 10px;">8 PFTs: ENF, EBF, DNF, DBF, SHR, GRA, CRP, Vine.</li>
                   </ol>
 
                   <p>While PLSR models demonstrate commendable performance within their training data space, their
-                    efficacy diminishes when extrapolating to new contexts. Extrapolating to locations, seasons, and PFTs
+                    efficacy diminishes when extrapolating to new contexts. Extrapolating to locations, seasons, and
+                    PFTs
                     beyond training data leads to reduced <em>R<sup>2</sup></em> (0.12–0.49) and increased
-                    <em>NRMSE</em> (3.58–18.24%) compared to nonspatial random cross-validation (NRCV).</p>
+                    <em>NRMSE</em> (3.58–18.24%) compared to nonspatial random cross-validation (NRCV).
+                  </p>
 
                   <figure>
                     <img src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
@@ -813,7 +836,8 @@
                     diversity yielded greater PLSR transferability.</p>
 
                   <figure style="text-align:center;">
-                    <img style="max-width:85%;" src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
+                    <img style="max-width:85%;"
+                      src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
                       alt="Spectral diversity">
                     <figcaption style="text-align:left;">Alpha and beta spectral diversity to explain PLSR
                       transferability. (a–b) relationships between alpha spectral diversity (aSD) and PLSR
@@ -855,7 +879,7 @@
               <!-- Paper 3 -->
               <div class="paper-card" id="paper-3">
                 <div class="paper-card-header" onclick="togglePaper('paper-3')">
-                  <span class="paper-number">3</span>
+                  <span class="paper-number">4</span>
                   <div class="paper-title-block">
                     <h4>Regional Crop Yield Estimation by Assimilating Time Series of Sentinel-2 Data into a
                       Modified CASA-WOFOST Coupled Model</h4>
@@ -906,7 +930,7 @@
               <!-- Paper 4 -->
               <div class="paper-card" id="paper-4">
                 <div class="paper-card-header" onclick="togglePaper('paper-4')">
-                  <span class="paper-number">4</span>
+                  <span class="paper-number">5</span>
                   <div class="paper-title-block">
                     <h4>Comparison of Machine Learning Regression Algorithms for Cotton Leaf Area Index Retrieval
                       Using Sentinel-2 Spectral Bands</h4>
@@ -939,7 +963,8 @@
                   <figure>
                     <img src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="Study area and LAI maps">
                     <figcaption>Upper: Location of study area and in-situ LAI quadrats from three field campaigns.
-                      &ensp;Bottom: Final cotton LAI map obtained using GBRT model, masked by cotton fields.</figcaption>
+                      &ensp;Bottom: Final cotton LAI map obtained using GBRT model, masked by cotton fields.
+                    </figcaption>
                   </figure>
 
                   <figure>
