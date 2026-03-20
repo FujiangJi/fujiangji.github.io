@@ -203,9 +203,7 @@
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-
-        </ul>
+          </li>        </ul>
 
       </div>
 
@@ -217,6 +215,11 @@
     -->
 
     <div class="main-content">
+
+      <button class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="icon icon-moon">&#9790;</span>
+        <span class="icon icon-sun">&#9728;</span>
+      </button>
 
       <!--
         - #NAVBAR
@@ -276,8 +279,20 @@
 
         <h3 class="h3 form-title">Welcome to Fujiang Ji's Webpage</h3>
 
-        <script type='text/javascript' id='clustrmaps'
-          src='//cdn.clustrmaps.com/map_v2.js?cl=fcd86f&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=1e1e20&cmo=ff0404&ct=ffffff'></script>
+        <div id="clustrmaps-wrap" style="text-align:center;"></div>
+        <script>
+          (function () {
+            var wrap = document.getElementById('clustrmaps-wrap');
+            var theme = localStorage.getItem('theme');
+            var darkSrc = '//cdn.clustrmaps.com/map_v2.js?cl=fcd86f&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=1e1e20&cmo=ff0404&ct=ffffff';
+            var lightSrc = '//cdn.clustrmaps.com/map_v2.js?cl=d4940a&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=f0f0f0&cmo=ff0404&ct=333333';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.id = 'clustrmaps';
+            s.src = (theme === 'light') ? lightSrc : darkSrc;
+            wrap.appendChild(s);
+          })();
+        </script>
 
 
 
@@ -375,6 +390,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+<script src="../assets/js/theme-toggle.js"></script>
 </body>
 
 </html>

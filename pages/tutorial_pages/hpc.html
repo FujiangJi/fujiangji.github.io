@@ -28,8 +28,8 @@
       top: 5px;
       right: 5px;
       padding: 5px 10px;
-      background: hsl(240, 1%, 17%);
-      color: hsl(0, 0%, 98%);
+      background: var(--onyx);
+      color: var(--white-2);
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -47,14 +47,14 @@
       white-space: normal;
       font-family: 'Consolas', 'Courier New', monospace;
       padding: 3px;
-      color: hsl(46, 99%, 50%);
+      color: var(--orange-yellow-crayola);
       font-size: 13px
     }
 
     code2 {
       display: block;
       max-width: 100%;
-      color: hsl(46, 99%, 50%);
+      color: var(--orange-yellow-crayola);
       font-size: 13px
     }
   </style>
@@ -202,9 +202,7 @@
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-
-        </ul>
+          </li>        </ul>
 
       </div>
 
@@ -264,13 +262,13 @@
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">Command Lines Basics:</h4>
               <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
                 <ol class=" order-list" style="font-size: 13px; padding-left: 0px;">
                   <li><a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">HPC at UW-Madison:</a> It runs for a maximum
+                      style="color: var(--orange-yellow-crayola); display: inline;">HPC at UW-Madison:</a> It runs for a maximum
                     of 7 days, equivalent to a large computer.</li>
                   <li><a href="https://chtc.cs.wisc.edu/" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">HTC at UW-Madison:</a> It runs for a maximum
+                      style="color: var(--orange-yellow-crayola); display: inline;">HTC at UW-Madison:</a> It runs for a maximum
                     of 3 days and can run multiple jobs in parallel, then combine the results together.</li>
                   <li>How to determine if a task is suitable for running on HPC (a large computer where tasks can
                     interact but also perform parallel computing) or HTC (multiple computers running together without
@@ -282,17 +280,17 @@
                   </li>
                   <li>Abtain the path of files: <code>readlink -f file.txt</code> (Linux);
                     <code>bash-3.2$ pwd file.txt</code> (bash) (<a href="https://juejin.cn/post/6844903481728303112"
-                      target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).
+                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).
                   </li>
                   <li>Navigating directories: <code>cd</code> (<a href="https://linuxize.com/post/linux-cd-command/"
-                      target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
                   <li>Display a list of files: <code>ls</code> (<a
                       href="https://www.atatus.com/blog/ls-command-in-linux-with-example/" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
                   <li>Display the contents of one or more files: <code>cat</code> (short for: concatenate) is used to
                     concatenate files and display their contents on the standard output device (<a
                       href="https://phoenixnap.com/kb/linux-cat-command" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</li>
+                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
                   <li><code>echo “A B B A C C” &gt; example.txt</code> is used to write the string "A B B A C C" to a
                     new
                     file called "example.txt".</li>
@@ -372,7 +370,7 @@
                         <ol class="order-list" style="font-size: 13px;">
                           <li>Step 1: passwordless login: <a
                               href="https://originalix.github.io/2018/04/26/%E5%9C%A8Mac%E4%B8%8A%E4%BD%BF%E7%94%A8ssh-key%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-                              target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>.</li>
+                              target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>.</li>
                           <li>Step 2:
                             <code>scp ~/.ssh/id_rsa.pub ssh NetID@hpclogin3.chtc.wisc.edu:/home/NetID/.ssh/</code>
                           </li>
@@ -386,7 +384,7 @@
                     </ol>
                   </li>
                   <li>Connect VS code and HPC: <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial"
-                      target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>.</li>
+                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>.</li>
                 </ol>
               </ul>
 
@@ -397,12 +395,12 @@
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">Run Python Programs on HPC:</h4>
               <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
 
                 <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
                   <li>Install Miniconda on software directory (<a
                       href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">Link</a>):
+                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>):
                     <ol class=" order-list2" style="font-size: 13px;">
                       <li><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
                       <li><code>sh Miniconda3-latest-Linux-x86_64.sh</code> install Miniconda on the software
@@ -417,7 +415,7 @@
                       <li>After installation, active base environment:
                         <code>eval "$(/software/fji7/miniconda3/bin/conda shell.bash hook)"</code> (<a
                           href="https://stackoverflow.com/questions/55507519/python-activate-conda-env-through-shell-script"
-                          target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).
+                          target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).
                       </li>
                     </ol>
                   </li>
@@ -433,14 +431,14 @@
                   <li>Before submitting jobs, we can apply a small compute resource to debug on
                     HPC:<code>srun -n4 -N1 -p int --pty bash</code> (<a
                       href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">Link1</a>, <a
+                      style="color: var(--orange-yellow-crayola); display: inline;">Link1</a>, <a
                       href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview.html" target="_blank"
-                      style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>).</li>
+                      style="color: var(--orange-yellow-crayola); display: inline;">Link2</a>).</li>
                   <li>Terminal run python file: <code>python name.py</code> or <code>runipy name.ipynb</code></li>
                   <li>Submit jobs: (<a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html"
-                      target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link1</a>,
+                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link1</a>,
                     <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview#high-performance-computing-at-chtc"
-                      target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>):
+                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link2</a>):
                     <code>sbatch tasks_upload.sh</code> (below shows the template of <code>tasks_upload.sh</code>).
                     <pre id="codeBlock">
                     <code2 class="bashScript">#!/bin/bash
@@ -529,6 +527,7 @@
     }
   </script>
 
+<script src="../../assets/js/theme-toggle.js"></script>
 </body>
 
 </html>

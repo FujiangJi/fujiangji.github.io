@@ -100,7 +100,117 @@
 }
 
 
+/*-----------------------------------*\
+  #LIGHT THEME
+\*-----------------------------------*/
 
+[data-theme="light"] {
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 90%) 3%,
+      hsl(0, 0%, 85%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right,
+      hsla(0, 0%, 92%, 0.251) 0%,
+      hsla(0, 0%, 96%, 0) 100%), hsl(0, 0%, 96%);
+  --bg-gradient-yellow-1: linear-gradient(to bottom right,
+      hsl(45, 100%, 71%) 0%,
+      hsla(36, 100%, 69%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg,
+      hsla(45, 100%, 71%, 0.251) 0%,
+      hsla(35, 100%, 68%, 0) 59.86%), hsl(0, 0%, 96%);
+  --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 80%) 0%,
+      hsla(0, 0%, 80%, 0) 50%);
+  --text-gradient-yellow: linear-gradient(to right,
+      hsl(45, 100%, 45%),
+      hsl(35, 100%, 42%));
+
+  --jet: hsl(0, 0%, 82%);
+  --onyx: hsl(0, 0%, 90%);
+  --eerie-black-1: hsl(0, 0%, 96%);
+  --eerie-black-2: hsl(0, 0%, 98%);
+  --smoky-black: hsl(0, 0%, 94%);
+  --white-1: hsl(0, 0%, 15%);
+  --white-2: hsl(0, 0%, 20%);
+  --orange-yellow-crayola: hsl(45, 100%, 45%);
+  --vegas-gold: hsl(45, 54%, 40%);
+  --light-gray: hsl(0, 0%, 30%);
+  --light-gray-70: hsla(0, 0%, 30%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.08);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.08);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.08);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.06);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.08);
+}
+
+
+/*-----------------------------------*\
+  #THEME TOGGLE BUTTON
+\*-----------------------------------*/
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 6;
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: 0.25s ease;
+}
+
+.theme-toggle-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle-btn .icon {
+  font-size: 13px;
+  color: var(--orange-yellow-crayola);
+  line-height: 1;
+}
+
+.theme-toggle-btn .icon-sun { display: none; }
+.theme-toggle-btn .icon-moon { display: block; }
+
+[data-theme="light"] .theme-toggle-btn .icon-sun { display: block; }
+[data-theme="light"] .theme-toggle-btn .icon-moon { display: none; }
+
+.logo-light { display: none !important; }
+.logo-dark { display: block; }
+
+[data-theme="light"] .logo-light { display: block !important; }
+[data-theme="light"] .logo-dark { display: none !important; }
+
+[data-theme="light"] .navbar {
+  background: hsla(0, 0%, 96%, 0.85);
+}
+
+[data-theme="light"] body::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 0%, 0.15);
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 0%, 0.08),
+    inset -1px -1px 0 hsla(0, 0%, 0%, 0.08);
+}
+
+[data-theme="light"] body::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 0%, 0.25);
+}
 
 
 /*-----------------------------------*\

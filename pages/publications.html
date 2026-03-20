@@ -48,7 +48,7 @@
       display: block;
       font-size: 26px;
       font-weight: 600;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       line-height: 1.1;
       margin-bottom: 4px;
     }
@@ -88,7 +88,7 @@
 
     .pub-section-header .section-count {
       font-size: 11px;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       background: hsla(45, 100%, 72%, 0.10);
       border: 1px solid hsla(45, 100%, 72%, 0.25);
       padding: 1px 8px;
@@ -109,7 +109,7 @@
     }
 
     .note-sep {
-      color: hsla(0, 0%, 100%, 0.2);
+      color: var(--light-gray-70);
       font-style: normal;
     }
 
@@ -158,11 +158,11 @@
     }
 
     .pub-item--featured::before {
-      background: linear-gradient(100deg, hsla(45, 100%, 72%, 0.05) 0%, var(--bg-gradient-jet) 35%);
+      background: linear-gradient(100deg, hsla(45, 100%, 50%, 0.08) 0%, transparent 35%), var(--bg-gradient-jet);
     }
 
     .pub-item--featured:hover {
-      border-left-color: hsl(45, 100%, 72%);
+      border-left-color: var(--orange-yellow-crayola);
     }
 
     /* Row: number badge + content + toggle */
@@ -176,7 +176,7 @@
       flex-shrink: 0;
       font-size: 11px;
       font-weight: 600;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       background: hsla(45, 100%, 72%, 0.10);
       border: 1px solid hsla(45, 100%, 72%, 0.25);
       border-radius: 5px;
@@ -198,7 +198,7 @@
     }
 
     .pub-self {
-      color: hsl(45, 100%, 82%);
+      color: var(--orange-yellow-crayola);
       font-weight: 700;
       font-size: 14px;
       text-decoration: underline;
@@ -209,7 +209,7 @@
 
     /* Title link */
     .pub-title-link {
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       font-size: 13.5px;
       font-weight: 400;
       line-height: 1.6;
@@ -344,7 +344,7 @@
       border-radius: 5px;
       white-space: nowrap;
       background: hsla(240, 5%, 35%, 0.10);
-      color: hsla(0, 0%, 100%, 0.35);
+      color: var(--light-gray-70);
       border: 1px solid hsla(240, 5%, 50%, 0.16);
     }
 
@@ -396,13 +396,13 @@
 
     .badge-role-first {
       background: hsla(45, 100%, 72%, 0.13);
-      color: hsl(45, 100%, 74%);
+      color: var(--orange-yellow-crayola);
       border: 1px solid hsla(45, 100%, 72%, 0.32);
     }
 
     .badge-role-ca {
       background: hsla(45, 100%, 72%, 0.13);
-      color: hsl(45, 100%, 74%);
+      color: var(--orange-yellow-crayola);
       border: 1px solid hsla(45, 100%, 72%, 0.32);
     }
 
@@ -422,7 +422,7 @@
 
     .pub-link {
       font-size: 11.5px;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       opacity: 0.80;
       transition: opacity 0.2s;
     }
@@ -446,7 +446,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       transition: background 0.2s ease, border-color 0.2s ease;
       margin-top: 1px;
     }
@@ -479,7 +479,7 @@
       display: none;
       margin-top: 12px;
       padding-top: 12px;
-      border-top: 1px solid hsla(0, 0%, 100%, 0.06);
+      border-top: 1px solid var(--jet);
       font-size: 12.5px;
       color: var(--light-gray-70);
       line-height: 1.75;
@@ -497,7 +497,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       opacity: 0.7;
       margin-bottom: 5px;
     }
@@ -537,16 +537,16 @@
     }
 
     .conf-item--featured::before {
-      background: linear-gradient(100deg, hsla(45, 100%, 72%, 0.04) 0%, var(--bg-gradient-jet) 35%);
+      background: linear-gradient(100deg, hsla(45, 100%, 50%, 0.08) 0%, transparent 35%), var(--bg-gradient-jet);
     }
 
     .conf-item--featured:hover {
-      border-left-color: hsl(45, 100%, 72%);
+      border-left-color: var(--orange-yellow-crayola);
     }
 
     .conf-venue {
       font-style: italic;
-      color: hsl(45, 62%, 60%);
+      color: var(--vegas-gold);
     }
   </style>
 </head>
@@ -634,13 +634,17 @@
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-        </ul>
+          </li>        </ul>
       </div>
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
+
+      <button class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="icon icon-moon">&#9790;</span>
+        <span class="icon icon-sun">&#9728;</span>
+      </button>
 
       <nav class="navbar">
         <ul class="navbar-list">
@@ -704,7 +708,7 @@
           <p class="pub-section-note">
             <span style="font-style:normal;">* = corresponding author</span>
             <span class="note-sep">|</span>
-            <strong style="color:hsl(45,100%,82%);text-decoration:underline;font-style:normal;">Bold gold</strong>
+            <strong style="color:var(--orange-yellow-crayola);text-decoration:underline;font-style:normal;">Bold gold</strong>
             <span style="font-style:normal;">= Fujiang Ji</span>
             <span class="note-sep">|</span>
             <span
@@ -1480,6 +1484,7 @@
     }
   </script>
 
+<script src="../assets/js/theme-toggle.js"></script>
 </body>
 
 </html>

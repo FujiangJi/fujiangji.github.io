@@ -28,8 +28,8 @@
       top: 5px;
       right: 5px;
       padding: 5px 10px;
-      background: hsl(240, 1%, 17%);
-      color: hsl(0, 0%, 98%);
+      background: var(--onyx);
+      color: var(--white-2);
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -47,14 +47,14 @@
       white-space: normal;
       font-family: 'Consolas', 'Courier New', monospace;
       padding: 3px;
-      color: hsl(46, 99%, 50%);
+      color: var(--orange-yellow-crayola);
       font-size: 13px
     }
 
     code2 {
       display: block;
       max-width: 100%;
-      color: hsl(46, 99%, 50%);
+      color: var(--orange-yellow-crayola);
       font-size: 13px
     }
   </style>
@@ -202,9 +202,7 @@
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-
-        </ul>
+          </li>        </ul>
 
       </div>
 
@@ -263,9 +261,9 @@
           <ol class="timeline-list">
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">GitHub setup (<a href="https://www.jianshu.com/p/899a2d4de88f"
-                  target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link</a>):</h4>
+                  target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>):</h4>
               <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
 
                 <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
                   <li><strong>Step 1:</strong> Open the terminal → Check if SSH exists on your Mac by entering the
@@ -319,7 +317,7 @@
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">Large files uploading to github:</h4>
               <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
                 <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
                   <li><strong>Step 1: Navigate to the Directory:</strong> Open your terminal or command prompt and
                     navigate to the directory containing the large file you want to upload.</li>
@@ -364,7 +362,7 @@ git lfs ls-files git lfs pull</code2><button id="copyButton" class="copy-btn" on
             <li class="timeline-item" style="padding-left: 0px;">
               <h4 class="h4 timeline-item-title">Version Control Git (CLM as an example):</h4>
               <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.7; text-align: justify;">
+                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
                 <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
                   <li><strong>Step 1:</strong> In the Arctic Carbon Cycle Updates Request of CLM, we can see the first
                     commit is <code style="color:rgb(247, 138, 4);">64aa4d9</code>, the last commit is <code
@@ -458,6 +456,7 @@ git lfs ls-files git lfs pull</code2><button id="copyButton" class="copy-btn" on
     }
   </script>
 
+<script src="../../assets/js/theme-toggle.js"></script>
 </body>
 
 </html>

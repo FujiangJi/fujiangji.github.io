@@ -74,7 +74,7 @@
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       margin-bottom: 7px;
     }
 
@@ -109,7 +109,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       font-size: 12px;
       font-weight: 500;
       background: hsla(45, 100%, 72%, 0.12);
@@ -146,7 +146,7 @@
       flex-direction: column;
       gap: 12px;
       border-top: 1px solid var(--jet);
-      background: hsl(240, 2%, 11%);
+      background: var(--eerie-black-2);
     }
 
     .direction-papers.open {
@@ -182,10 +182,7 @@
     }
 
     .paper-card.open::before {
-      background: linear-gradient(to bottom right,
-          hsla(240, 1%, 20%, 0.7) 0%,
-          hsla(240, 2%, 13%, 0) 100%),
-        hsl(240, 2%, 14%);
+      background: var(--bg-gradient-jet);
     }
 
     /* Paper header (always visible, click to toggle) */
@@ -204,7 +201,7 @@
       border-radius: 50%;
       background: hsla(45, 100%, 72%, 0.12);
       border: 1px solid hsla(45, 100%, 72%, 0.28);
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       font-size: 11px;
       font-weight: 600;
       display: flex;
@@ -230,7 +227,7 @@
 
     .paper-card:hover .paper-title-block h4,
     .paper-card.open .paper-title-block h4 {
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
     }
 
     .paper-meta {
@@ -245,7 +242,7 @@
       padding: 2px 8px;
       border-radius: 4px;
       background: hsla(45, 100%, 72%, 0.08);
-      color: hsl(45, 62%, 62%);
+      color: var(--vegas-gold);
       border: 1px solid hsla(45, 62%, 60%, 0.2);
       white-space: nowrap;
     }
@@ -258,7 +255,7 @@
 
     .paper-link-btn {
       font-size: 11.5px;
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
       display: inline-flex;
       align-items: center;
       gap: 4px;
@@ -287,7 +284,7 @@
 
     .paper-card.open .paper-expand-icon {
       transform: rotate(180deg);
-      color: hsl(45, 100%, 72%);
+      color: var(--orange-yellow-crayola);
     }
 
     /* Paper detail body */
@@ -297,7 +294,7 @@
       color: var(--light-gray);
       font-size: 13px;
       line-height: 1.65;
-      border-top: 1px solid hsla(0, 0%, 25%, 0.45);
+      border-top: 1px solid var(--jet);
       text-align: justify;
     }
 
@@ -357,6 +354,25 @@
       .direction-overlay h3 {
         font-size: 19px;
       }
+    }
+
+    /* =============================================
+       LIGHT THEME OVERRIDES
+    ============================================= */
+    [data-theme="light"] .direction-cover img {
+      filter: brightness(0.85) saturate(1);
+    }
+
+    [data-theme="light"] .research-direction-card:hover .direction-cover img,
+    [data-theme="light"] .research-direction-card.open .direction-cover img {
+      filter: brightness(0.75) saturate(1.05);
+    }
+
+    [data-theme="light"] .direction-overlay {
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.75) 0%,
+          rgba(0, 0, 0, 0.25) 55%,
+          transparent 100%);
     }
   </style>
 </head>
@@ -449,14 +465,18 @@
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-        </ul>
+          </li>        </ul>
       </div>
 
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
+
+      <button class="theme-toggle-btn" aria-label="Toggle theme">
+        <span class="icon icon-moon">&#9790;</span>
+        <span class="icon icon-sun">&#9728;</span>
+      </button>
 
       <!-- NAVBAR -->
       <nav class="navbar">
@@ -554,15 +574,15 @@
 
                   <p>This study developed a multi-stage framework by leveraging PRISMA spaceborne hyperspectral data
                     and NEON Airborne Observation Platform (AOP) hyperspectral data to investigate the seasonal
-                    dynamics of four key plant traits — <strong style="color:hsl(0,0%,100%);">chlorophyll content
-                      (Chla+b)</strong>, <strong style="color:hsl(0,0%,100%);">carotenoid content (Ccar)</strong>,
-                    <strong style="color:hsl(0,0%,100%);">equivalent water thickness (EWT)</strong>, and
-                    <strong style="color:hsl(0,0%,100%);">nitrogen content</strong> — across 11 NEON sites
+                    dynamics of four key plant traits — <strong style="color: var(--white-1);">chlorophyll content
+                      (Chla+b)</strong>, <strong style="color: var(--white-1);">carotenoid content (Ccar)</strong>,
+                    <strong style="color: var(--white-1);">equivalent water thickness (EWT)</strong>, and
+                    <strong style="color: var(--white-1);">nitrogen content</strong> — across 11 NEON sites
                     representing diverse forest types and ecoregions in the contiguous U.S.
                   </p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Research Questions:</strong>
                     </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">What are the capabilities of PRISMA data in quantifying seasonal
@@ -575,7 +595,7 @@
                   </ol>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Four-step framework:</strong>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Four-step framework:</strong>
                     </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Processing the PRISMA hyperspectral data (BRDF correction,
@@ -590,20 +610,20 @@
                   </ol>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Key Findings:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Key Findings:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">PRISMA reliably tracked seasonal variability in plant traits,
                         achieving overall <em>R<sup>2</sup></em> = 0.78–0.88 and NRMSE = 5.4–8.4 % for all
                         four traits.</li>
-                      <li style="margin-bottom: 3px;">Seasonal patterns revealed <strong style="color:hsl(0,0%,100%);">
+                      <li style="margin-bottom: 3px;">Seasonal patterns revealed <strong style="color: var(--white-1);">
                           bell-shaped trajectories</strong> for chlorophyll and carotenoids, driven by structural
                         changes during leaf maturation and senescence. EWT decreased steadily across most sites.
                         Nitrogen showed less pronounced seasonal variation, reflecting nutrient resorption patterns.
                       </li>
-                      <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Seasonal variability
+                      <li style="margin-bottom: 3px;"><strong style="color: var(--white-1);">Seasonal variability
                           drivers:</strong> solar radiation and day length (northern sites); vapor pressure
                         (semi-arid regions); temperature (mid-southeastern sites).</li>
-                      <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Spatial variability
+                      <li style="margin-bottom: 3px;"><strong style="color: var(--white-1);">Spatial variability
                         </strong> was primarily driven by soil properties during the peak growing season, with
                         climatic factors becoming more prominent toward the end of the season.</li>
                     </ol>
@@ -689,7 +709,7 @@
                     collected across diverse geographic locations in the U.S. and Europe, PFTs, and seasons.</p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Research Questions:</strong>
                     </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Do our proposed transfer learning models have better performance
@@ -711,7 +731,7 @@
                     Right: Pre-training processes using the synthetic data of RTMs (PROSPECT and Leaf-SIP).</figcaption>
 
                   <ol class="order-list" style="font-size: 13px; margin: 12px 0 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Framework — four
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Framework — four
                         steps:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Pure radiative transfer modeling.</li>
@@ -775,7 +795,7 @@
                     space, time and plant functional types (PFTs) remains unclear.</p>
 
                   <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Research Questions:</strong>
                     </li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">How well do PLSR models transfer to new domains (new sites, PFTs
@@ -783,7 +803,7 @@
                       <li style="margin-bottom: 3px;">What are the potential factors influencing the transferability of
                         PLSR?</li>
                     </ol>
-                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Hypotheses:</strong></li>
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Hypotheses:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Models can expect accurate predictions within the training data
                         range;
@@ -1004,6 +1024,7 @@
     }
   </script>
 
+<script src="../assets/js/theme-toggle.js"></script>
 </body>
 
 </html>
