@@ -48,6 +48,80 @@
     h2 {
       font-size: 2.2vw;
     }
+
+    /* =============================================
+       RESEARCH OVERVIEW FIGURE
+    ============================================= */
+    .research-figure {
+      display: block;
+      margin: 28px auto 8px;
+      max-width: 92%;
+      position: relative;
+    }
+
+    .research-figure-img-wrap {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--border-gradient-onyx);
+      padding: 2px;
+      /* creates the gradient border */
+      box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.45);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .research-figure-img-wrap:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px hsla(0, 0%, 0%, 0.55),
+        0 0 0 1px hsla(45, 100%, 72%, 0.18);
+    }
+
+    .research-figure-img-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      /* inset slightly from outer border */
+      transition: filter 0.3s ease;
+    }
+
+    .research-figure-img-wrap:hover img {
+      filter: brightness(1.06);
+    }
+
+    figcaption.research-caption {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--light-gray-70);
+      font-style: italic;
+      line-height: 1.5;
+      padding: 0 8px;
+    }
+
+    figcaption.research-caption strong {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      font-style: normal;
+      color: hsl(45, 100%, 72%);
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    /* News section — paper link icon */
+    a.news-paper-btn {
+      display: inline;
+      color: hsl(45, 100%, 72%);
+      font-size: 14px;
+      opacity: 0.8;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    a.news-paper-btn:hover {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -73,7 +147,7 @@
         <div class="info-content">
           <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
 
-          <p class="title">Ph.D. Candidate</p>
+          <p class="title">Postdoctoral Associate</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -99,7 +173,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -262,9 +336,17 @@
               available nutrients, etc. Besides, I received a bachelor's degree in Remote Sensing Science and Technology
               from Chengdu University of Technology, Chengdu, China.
             </p>
-            <figure>
-              <img style="max-width:100%;overflow:hidden;" src="assets/images/about_page/Research_overview.png"
-                alt="Research_overview">
+            <figure class="research-figure">
+              <div class="research-figure-img-wrap">
+                <img src="assets/images/about_page/Research_overview.png"
+                  alt="Research overview — leaf and canopy functional trait estimation using hyperspectral imaging spectroscopy">
+              </div>
+              <figcaption class="research-caption">
+                <strong>Research Overview</strong>
+                Integrating spaceborne / airborne hyperspectral observations, radiative transfer modeling, and machine
+                learning
+                for multi-scale plant functional trait estimation.
+              </figcaption>
             </figure>
           </ul>
         </section>
@@ -318,6 +400,41 @@
 
           </ol>
         </section>
+
+        <!--
+          - Academic Appointments
+        -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Academic Appointments</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Postdoctoral Research Associate</h4>
+              <span>Jan 2026 — Present</span>
+              <p class="timeline-text">
+                <i>&#8226; School of Natural Resources and the Environment, University of Arizona, Tucson, AZ, USA.</i>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Research Assistant</h4>
+              <span>Sep 2021 — Dec 2025</span>
+              <p class="timeline-text">
+                <i>&#8226; Department of Forest and Wildlife Ecology, University of Wisconsin-Madison, WI, USA.</i>
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
         <!--
           - News
         -->
@@ -331,8 +448,8 @@
                   style="color: hsl(45, 62%, 60%);">Nov 20, 2025:</strong> Excited to share our new study published in
                 <em>Remote Sensing of Environment</em>, led by Fujiang, which integrates spaceborne PRISMA and airborne
                 NEON AOP hyperspectral data for tracking the seasonal variability of plant traits across forest types
-                and ecoregions (<a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank"
-                  style="color: hsl(45, 62%, 60%); display: inline;">Link to article</a>).
+                and ecoregions.&nbsp;<a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank"
+                  class="news-paper-btn">↗</a>
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
@@ -350,8 +467,8 @@
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">May 20, 2025:</strong> Excited to share our new study published in
                 <em>Remote Sensing of Environment</em>, led by Fujiang, which Reveals how transfer learning enhances
-                leaf trait prediction across ecosystems (<a href="https://doi.org/10.1016/j.rse.2025.114818"
-                  target="_blank" style="color: hsl(45, 62%, 60%); display: inline;">Link to article</a>).
+                leaf trait prediction across ecosystems.&nbsp;<a href="https://doi.org/10.1016/j.rse.2025.114818"
+                  target="_blank" class="news-paper-btn">↗</a>
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
@@ -361,37 +478,37 @@
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">Dec 11, 2024:</strong> Presented our work about tracking seasonal
-                variations of plant traits using multi-source hyperspectral data across NEON sites on AGU 2024! (<a
+                variations of plant traits using multi-source hyperspectral data across NEON sites on AGU 2024!&nbsp;<a
                   href="https://globalchange.cals.wisc.edu/2024/12/24/agu24/" target="_blank"
-                  style="color: hsl(45, 62%, 60%); display: inline;">Link</a>)
+                  class="news-paper-btn">↗</a>
               </li>
 
+
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: hsl(45, 62%, 60%);">Nov 22, 2024:</strong> Led by Haoran, our new study published in
+                  style="color: hsl(45, 62%, 60%);">May 22, 2024:</strong> Led by Haoran, our new study published in
                 <em>Remote Sensing of Environment</em>, which reveals near-infrared reflectance of vegetation (NIRvP) in
-                the “hotspot” direction offers a stronger correlation with GPP than nadir observations (<a
-                  href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank"
-                  style="color: hsl(45, 62%, 60%); display: inline;">Link to article</a>).
+                the “hotspot” direction offers a stronger correlation with GPP than nadir observations.&nbsp;<a
+                  href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank" class="news-paper-btn">↗</a>
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">Oct 19, 2024:</strong> Our paper published in
                 <em>Earth's Future</em> on projecting large fires in the western US using a hybrid physical-ML model
-                (AttentionFire v2.0). Led by Fa (<a href="https://doi.org/10.1029/2024EF004588" target="_blank"
-                  style="color: hsl(45, 62%, 60%); display: inline;">Link to article</a>).
+                (AttentionFire v2.0). Led by Fa.&nbsp;<a href="https://doi.org/10.1029/2024EF004588" target="_blank"
+                  class="news-paper-btn">↗</a>
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">Sep 11, 2024:</strong> Participated in the Three Minute Thesis
                 competition at the University of Wisconsin-Madison, titled "Eyes in the sky: Decoding plant functional
-                traits with imaging spectroscopy"
+                traits with imaging spectroscopy".
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">May 06, 2024:</strong> Fujiang led a publication in
                 <em>New Phytologist</em> on the transferability of PLSR models for leaf trait estimation: lessons from a
-                comprehensive analysis with a novel global dataset (<a href="https://doi.org/10.1111/nph.19807"
-                  target="_blank" style="color: hsl(45, 62%, 60%); display: inline;">Link to article</a>).
+                comprehensive analysis with a novel global dataset.&nbsp;<a href="https://doi.org/10.1111/nph.19807"
+                  target="_blank" class="news-paper-btn">↗</a>
               </li>
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
@@ -404,11 +521,13 @@
                 Poster Session at UW-Madison.
               </li>
 
+
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">Sep 14, 2023:</strong> Our paper “Structural complexity biases
-                vegetation greenness measures” has been published in <em>Nature Ecology & Evolution</em> (<a
-                  href="https://rdcu.be/dl91h" target="_blank" style="color: hsl(45, 62%, 60%); display: inline;">Link
-                  to article</a>).</li>
+                vegetation greenness measures” has been published in <em>Nature Ecology &amp; Evolution</em>.&nbsp;<a
+                  href="https://rdcu.be/dl91h" target="_blank" class="news-paper-btn">↗</a>
+              </li>
+
 
               <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                   style="color: hsl(45, 62%, 60%);">Dec 15, 2022:</strong> Presented our work on AGU 2022 in Chicago!
@@ -430,10 +549,8 @@
                 <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
                     style="color: hsl(45, 62%, 60%);">Jan 29, 2021:</strong> Our new paper "Crop Yield Estimation at
                   Field Scales by Assimilating Time Series of Sentinel-2 Data Into a Modified CASA-WOFOST Coupled
-                  Model" has been published in <em>IEEE Transactions on Geoscience and Remote Sensing</em> (<a
-                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
-                    style="color: hsl(45, 62%, 60%); display: inline;">Link
-                    to article</a>).</li>
+                  Model" has been published in <em>IEEE Transactions on Geoscience and Remote Sensing</em>.&nbsp;<a
+                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" class="news-paper-btn">↗</a>
                 </li>
               </div>
 

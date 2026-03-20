@@ -5,227 +5,581 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fujiang Ji's Personal Website</title>
+  <title>Fujiang Ji — Publications</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="../assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    .video {
-      width: 1000px;
-      max-width: 100%;
+    /* =============================================
+       STATS BAR
+    ============================================= */
+    .pub-stats {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
     }
 
-    .text-overlay {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
+    .pub-stat {
+      flex: 1;
+      min-width: 110px;
+      position: relative;
+      background: var(--border-gradient-onyx);
+      border-radius: 12px;
+      padding: 16px 12px;
       text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
+      z-index: 1;
     }
 
-    h2 {
-      font-size: 2.2vw;
+    .pub-stat::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background: var(--bg-gradient-jet);
+      border-radius: inherit;
+      z-index: -1;
+    }
+
+    .pub-stat-number {
+      display: block;
+      font-size: 26px;
+      font-weight: 600;
+      color: hsl(45, 100%, 72%);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .pub-stat-label {
+      display: block;
+      font-size: 10.5px;
+      color: var(--light-gray-70);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      line-height: 1.35;
+    }
+
+    /* =============================================
+       SECTION HEADERS
+    ============================================= */
+    .pub-section {
+      margin-bottom: 32px;
+    }
+
+    .pub-section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--jet);
+    }
+
+    .pub-section-header h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white-2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pub-section-header .section-count {
+      font-size: 11px;
+      color: hsl(45, 100%, 72%);
+      background: hsla(45, 100%, 72%, 0.10);
+      border: 1px solid hsla(45, 100%, 72%, 0.25);
+      padding: 1px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    .pub-section-note {
+      font-size: 11.5px;
+      color: var(--light-gray-70);
+      font-style: italic;
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      row-gap: 4px;
+    }
+
+    .note-sep { color: hsla(0,0%,100%,0.2); font-style: normal; }
+
+    /* =============================================
+       PAPER LIST
+    ============================================= */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pub-item {
+      position: relative;
+      background: var(--border-gradient-onyx);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--light-gray);
+      text-align: justify;
+      z-index: 1;
+      transition: box-shadow 0.25s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .pub-item::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background: var(--bg-gradient-jet);
+      border-radius: inherit;
+      z-index: -1;
+      transition: background 0.25s;
+    }
+
+    .pub-item:hover { box-shadow: var(--shadow-3); }
+
+    /* First-author / corresponding-author highlight */
+    .pub-item--featured {
+      border-left: 3px solid hsla(45, 100%, 72%, 0.55);
+    }
+
+    .pub-item--featured::before {
+      background: linear-gradient(100deg, hsla(45,100%,72%,0.05) 0%, var(--bg-gradient-jet) 35%);
+    }
+
+    .pub-item--featured:hover { border-left-color: hsl(45, 100%, 72%); }
+
+    /* Row: number badge + content + toggle */
+    .pub-item-inner {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+    }
+
+    .pub-num {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 600;
+      color: hsl(45, 100%, 72%);
+      background: hsla(45, 100%, 72%, 0.10);
+      border: 1px solid hsla(45, 100%, 72%, 0.25);
+      border-radius: 5px;
+      padding: 2px 7px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .pub-body { flex: 1; min-width: 0; }
+
+    /* Author line */
+    .pub-authors {
+      margin-bottom: 3px;
+      color: var(--light-gray);
+      font-size: 13px;
+    }
+
+    .pub-self {
+      color: hsl(45, 100%, 82%);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+      letter-spacing: 0.2px;
+    }
+
+    /* Title link */
+    .pub-title-link {
+      color: hsl(45, 100%, 72%);
+      font-size: 13.5px;
+      font-weight: 400;
+      line-height: 1.6;
+      display: inline;
+      transition: opacity 0.2s;
+    }
+
+    .pub-title-link:hover { opacity: 0.80; text-decoration: underline; }
+
+    .pub-title-plain {
+      color: var(--white-2);
+      font-size: 13.5px;
+      font-weight: 400;
+      line-height: 1.6;
+      display: inline;
+    }
+
+    /* Journal / meta row */
+    .pub-meta {
+      margin-top: 7px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .journal-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-style: italic;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+    }
+
+    .journal-rse   { background: hsla(205,70%,50%,0.12); color: hsl(205,70%,72%); border: 1px solid hsla(205,70%,50%,0.28); }
+    .journal-nature{ background: hsla(145,55%,45%,0.12); color: hsl(145,55%,65%); border: 1px solid hsla(145,55%,45%,0.28); }
+    .journal-np    { background: hsla(145,55%,45%,0.12); color: hsl(145,55%,65%); border: 1px solid hsla(145,55%,45%,0.28); }
+    .journal-ieee  { background: hsla(220,70%,55%,0.12); color: hsl(220,70%,75%); border: 1px solid hsla(220,70%,55%,0.28); }
+    .journal-ef    { background: hsla(30,70%,50%,0.12);  color: hsl(30,70%,70%);  border: 1px solid hsla(30,70%,50%,0.28);  }
+    .journal-other { background: hsla(240,5%,40%,0.15);  color: var(--light-gray-70); border: 1px solid hsla(240,5%,55%,0.2); }
+
+    /* Impact Factor badge */
+    .badge-if {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      background: hsla(220, 60%, 50%, 0.12);
+      color: hsl(220, 60%, 75%);
+      border: 1px solid hsla(220, 60%, 50%, 0.28);
+      letter-spacing: 0.2px;
+    }
+
+    /* JCR Quartile badges */
+    .badge-q1 {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      background: hsla(145, 60%, 40%, 0.13);
+      color: hsl(145, 60%, 65%);
+      border: 1px solid hsla(145, 60%, 40%, 0.30);
+    }
+
+    .badge-q2 {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      background: hsla(200, 55%, 45%, 0.12);
+      color: hsl(200, 55%, 68%);
+      border: 1px solid hsla(200, 55%, 45%, 0.28);
+    }
+
+    .badge-q3 {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      background: hsla(240, 5%, 40%, 0.12);
+      color: var(--light-gray-70);
+      border: 1px solid hsla(240, 5%, 55%, 0.20);
+    }
+
+    .badge-q4 {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      background: hsla(240, 5%, 35%, 0.10);
+      color: hsla(0, 0%, 100%, 0.35);
+      border: 1px solid hsla(240, 5%, 50%, 0.16);
+    }
+
+    /* Other pub badges */
+    .pub-badge {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 5px;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+
+    .badge-esi   { background: hsla(145,60%,40%,0.15); color: hsl(145,60%,62%); border: 1px solid hsla(145,60%,40%,0.30); }
+    .badge-review{ background: hsla(200,60%,40%,0.12); color: hsl(200,60%,68%); border: 1px solid hsla(200,60%,40%,0.28); }
+    .badge-ca    { background: hsla(45,100%,72%,0.10); color: hsl(45,80%,65%);  border: 1px solid hsla(45,100%,72%,0.24); }
+    .badge-prep  { background: hsla(280,50%,55%,0.12); color: hsl(280,50%,75%); border: 1px solid hsla(280,50%,55%,0.28); }
+
+    /* Role badge */
+    .badge-role {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 5px;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+    .badge-role-first    { background: hsla(45,100%,72%,0.13); color: hsl(45,100%,74%); border: 1px solid hsla(45,100%,72%,0.32); }
+    .badge-role-ca       { background: hsla(45,100%,72%,0.13); color: hsl(45,100%,74%); border: 1px solid hsla(45,100%,72%,0.32); }
+    .badge-role-coauthor { background: hsla(240,5%,40%,0.12);  color: var(--light-gray-70); border: 1px solid hsla(240,5%,55%,0.18); }
+
+    /* Extra links row */
+    .pub-links {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pub-link {
+      font-size: 11.5px;
+      color: hsl(45, 100%, 72%);
+      opacity: 0.80;
+      transition: opacity 0.2s;
+    }
+
+    .pub-link:hover { opacity: 1; text-decoration: underline; }
+
+    /* =============================================
+       ABSTRACT TOGGLE BUTTON
+    ============================================= */
+    .abstract-toggle {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: hsla(45, 100%, 72%, 0.07);
+      border: 1px solid hsla(45, 100%, 72%, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: hsl(45, 100%, 72%);
+      transition: background 0.2s ease, border-color 0.2s ease;
+      margin-top: 1px;
+    }
+
+    .abstract-toggle ion-icon {
+      font-size: 14px;
+      transition: transform 0.25s ease;
+    }
+
+    .abstract-toggle:hover {
+      background: hsla(45, 100%, 72%, 0.14);
+      border-color: hsla(45, 100%, 72%, 0.35);
+    }
+
+    .pub-item.open .abstract-toggle ion-icon,
+    .conf-item.open .abstract-toggle ion-icon {
+      transform: rotate(180deg);
+    }
+
+    .pub-item.open .abstract-toggle,
+    .conf-item.open .abstract-toggle {
+      background: hsla(45, 100%, 72%, 0.14);
+      border-color: hsla(45, 100%, 72%, 0.35);
+    }
+
+    /* =============================================
+       ABSTRACT PANEL
+    ============================================= */
+    .pub-abstract {
+      display: none;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.06);
+      font-size: 12.5px;
+      color: var(--light-gray-70);
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    .pub-item.open .pub-abstract,
+    .conf-item.open .pub-abstract {
+      display: block;
+    }
+
+    .pub-abstract-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: hsl(45, 100%, 72%);
+      opacity: 0.7;
+      margin-bottom: 5px;
+    }
+
+    /* =============================================
+       CONFERENCE ITEM
+    ============================================= */
+    .conf-item {
+      position: relative;
+      background: var(--border-gradient-onyx);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--light-gray);
+      text-align: justify;
+      z-index: 1;
+      transition: box-shadow 0.25s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .conf-item::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background: var(--bg-gradient-jet);
+      border-radius: inherit;
+      z-index: -1;
+    }
+
+    .conf-item:hover { box-shadow: var(--shadow-2); }
+
+    .conf-item--featured {
+      border-left: 3px solid hsla(45, 100%, 72%, 0.45);
+    }
+
+    .conf-item--featured::before {
+      background: linear-gradient(100deg, hsla(45,100%,72%,0.04) 0%, var(--bg-gradient-jet) 35%);
+    }
+
+    .conf-item--featured:hover { border-left-color: hsl(45, 100%, 72%); }
+
+    .conf-venue {
+      font-style: italic;
+      color: hsl(45, 62%, 60%);
     }
   </style>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
           <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
         </figure>
-
         <div class="info-content">
           <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
-
-          <p class="title">Ph.D. Candidate</p>
+          <p class="title">Postdoctoral Associate</p>
         </div>
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
-              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
             </div>
-
           </li>
-
-
           <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>1630 Linden Drive, Madison WI, U.S.</address>
             </div>
-
           </li>
-
         </ul>
 
         <div class="separator"></div>
 
-
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
-              class="social-link">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
               <i class="ai ai-google-scholar ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
               <i class="ai ai-researchgate ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
               <i class="ai ai-orcid ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
               <i class="ai ai-publons ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
-
     </aside>
 
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
       <nav class="navbar">
-
         <ul class="navbar-list">
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='research.html';">Research</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Publications</button>
+            <button class="navbar-link active" data-nav-link>Publications</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='blogs.html';">Blogs</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
           </li>
-
         </ul>
-
       </nav>
-
-      <!--
-        - #Publications
-      -->
 
       <article class="publications active" data-page="publications">
 
@@ -233,221 +587,674 @@
           <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <!--######-->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
+        <!-- STATS BAR -->
+        <div class="pub-stats">
+          <div class="pub-stat">
+            <span class="pub-stat-number">13</span>
+            <span class="pub-stat-label">Peer-reviewed Articles</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat-number">5</span>
+            <span class="pub-stat-label">First-author Papers</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat-number">3</span>
+            <span class="pub-stat-label">Under Review / Prep</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat-number">8</span>
+            <span class="pub-stat-label">Conference Presentations</span>
+          </div>
+        </div>
 
-            <h3 class="h4">Peer-reviewed Journal Articles </h3>
+        <!-- =============================================
+             PEER-REVIEWED PAPERS
+        ============================================= -->
+        <section class="pub-section">
+          <div class="pub-section-header">
+            <div class="icon-box"><ion-icon name="newspaper-outline"></ion-icon></div>
+            <h3>Peer-reviewed Journal Articles</h3>
+            <span class="section-count">13 articles</span>
           </div>
 
-          <ol class="timeline-list">
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">In REVIEW/PREPARATION</h4>
-              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
-                <li><b style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</b> Yang,
-                  J.; Townsend, P. A.; Zheng, T.; Kovach, K. R.; Yu, T.; Yang, R.; Liu, M.; Chen,
-                  M. Robust hyperspectral reconstruction from satellite and airborne observations via a deep
-                  hierarchical fusion network across heterogeneous scenarios, 2025. (Under review).</li>
-                <li><b style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</b> Zheng,
-                  T.; Townsend, P. A.; Liu, M.; Chen, M. Assessing the suitability of
-                  reconstructed high-resolution hyperspectral imagery from PlanetScope and EMIT for plant functional
-                  trait estimation, 2025. (Under Preparation).</li>
-                <li>You, H.; <b style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
-                    F.;</b> Park, T.; Radeloff, V. C.; Hurtt, G.; Jiang. M.; Chen, M. Global Forest Edge
-                  and its Dynamics in 21st Century, 2025. (Under review).</li>
-              </ol>
+          <p class="pub-section-note">
+            <span>* = corresponding author</span>
+            <span class="note-sep">|</span>
+            <strong style="color:hsl(45,100%,82%);text-decoration:underline;font-style:normal;">Bold gold</strong>
+            <span>= Fujiang Ji</span>
+            <span class="note-sep">|</span>
+            <span style="display:inline-block;width:3px;height:11px;background:hsla(45,100%,72%,0.7);border-radius:2px;vertical-align:middle;"></span>
+            <span>= first / corresponding author</span>
+            <span class="note-sep">|</span>
+            <span>Ordered by role → IF → year</span>
+          </p>
+
+          <ul class="pub-list">
+
+            <!-- ── FIRST / CORRESPONDING AUTHOR ── -->
+
+            <!-- [1] Ji et al. RSE 2026 PRISMA — first author, IF 13.5 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[1]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Shiklomanov, A. N.; Yang, R.;
+                    Townsend, P. A.; Li, F.; Hao, D.; Dashti, H.; Kovach, K. R.; You, H.; Zhou, J.; Chen, M.</p>
+                  <a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank" class="pub-title-link">
+                    Tracking seasonal variability in plant traits from spaceborne PRISMA and NEON AOP across forest
+                    types and ecoregions
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-rse">Remote Sensing of Environment</span>
+                    <span class="journal-tag journal-other">2026, 333, 115149</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="badge-if">IF 13.5</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Tracking seasonal dynamics of plant functional traits is critical for understanding ecosystem responses to climate variability, yet capturing these dynamics at landscape scales remains challenging. This study leveraged the PRISMA spaceborne hyperspectral sensor to monitor seasonal variability of four key plant traits—leaf chlorophyll content (Cab), equivalent water thickness (EWT), leaf mass per area (LMA), and leaf area index (LAI)—across 11 NEON forest sites spanning diverse forest types and ecoregions across the contiguous United States. We developed a workflow integrating PROSAIL radiative transfer model simulations with machine learning algorithms, achieving robust trait retrieval validated against concurrent NEON AOP airborne hyperspectral estimates (R² = 0.813–0.88 across all traits). Results revealed distinct seasonal trajectories, with deciduous broadleaf forests exhibiting the most pronounced dynamics and evergreen needleleaf forests showing more muted responses. Substantial cross-site and cross-season variation in trait magnitudes highlighted the importance of ecoregion context. These findings demonstrate the potential of spaceborne imaging spectroscopy for characterizing plant trait seasonality at ecosystem scales and provide a foundation for future global trait monitoring efforts.</p>
+              </div>
             </li>
 
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">PEER-REVIEWED PAPERS</h4>
-              <p style="font-size: 13px;line-height: 1.5; color:hsl(0, 0%, 84%); margin-bottom: 8px;"><em>Access
-                  by clicking the titles</em></p>
-              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
-                <li><strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,F.;</strong> Zheng,
-                  T.; Shiklomanov, A. N.; Yang, R.; Townsend, P. A.; Li, F.; Hao, D.; Dashti, H.; Kovach, K. R.;
-                  You, H.; Zhou, J.; Chen, M. <a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Tracking seasonal variability in plant traits
-                    from spaceborne PRISMA and NEON AOP across forest types and ecoregions</a>,
-                  <em><strong>Remote sensing of Environment</strong></em>, 2026, 333, 115149.
-                </li>
-
-                <li><strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,F.;</strong>
-                  Li, F.; Dashti, H.; Hao, D.; Townsend, P. A.; Zheng, T.; You, H.; Chen, M. <a
-                    href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Leveraging transfer learning and leaf
-                    spectroscopy for leaf trait prediction with broad spatial, species, and
-                    temporal applicability</a>,
-                  <em><strong>Remote sensing of Environment</strong></em>, 2025, 326, 114818.
-                </li>
-                <li><strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,F.<sup>*</sup>;</strong>
-                  Li, F.; Hao, D.; Shiklomanov, A. N.; Yang, X.; Townsend, P. A.; Dashti, H.; Nakaji, T.; Kovach, K. R.;
-                  Liu, H.; Luo, M.; Chen, M. <a href="https://doi.org/10.1111/NPH.19807" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Unveiling the transferability of PLSR models for
-                    leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset</a>,
-                  <em><strong>New Phytologist</strong></em>, 2024, 243: 111-131.
-                </li>
-                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Meng, J.; Cheng Z.; Fang H.; Wang Y. <a
-                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Yield Estimation at field scales by
-                    Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model</a>,
-                  <em><strong>IEEE Transactions on Geoscience and Remote Sensing</strong></em>, 2021, PP (99): 1-14.
-                </li>
-                <li><strong style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Meng, J.; Fang H. <a href="http://www.rsta.ac.cn/CN/Y2020/V35/I2/406" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Study on Soybean Yield Estimation Using the
-                    Coupled CASA and WOFOST Model</a>, <em><strong>Remote Sensing Technology and
-                      Application</strong></em>, 2020,
-                  35(2): 406-415. (In Chinese with English Abstract).</li>
-                <li>Liu, H.; Xiao, J.; Hao, D.; Li, F.; <strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</strong> Chen,
-                  M. <a href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Hotspot effect
-                    improves the ability of satellites to track terrestrial photosynthesis. </a><em><strong>Remote
-                      sensing of
-                      Environment</strong></em>, 2025, 317, 114492.</li>
-                <li>Li, F.; Zhu, Q.; Yuan, K.; <strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</strong>
-                  Paul, A.; Lee, P.; Radeloff, V. C.; Chen, M. <a href="https://doi.org/10.1029/2024EF004588"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Projecting Large Fires
-                    in the Western US With an Interpretable and Accurate Hybrid Machine Learning Method</a>.
-                  <em><strong>Earth’s
-                      Future</strong></em>, 2024.
-                </li>
-                <li>Zeng, Y.; Hao, D.; Park, T.; Zhu, P.; Huete, A.; Myneni, R.; Knyazikhin, Y.; Qi, J.; Nemani, R. R.;
-                  Li, F.; Huang, J.; Gao, Y.; Li, B.; <strong
-                    style="font-size: 16px; text-decoration: underline; color: hsl(0, 0%, 100%);">Ji, F.;</strong>
-                  Köhler, P.; Frankenberg, C.; Berry, J. A.; & Chen, M. <a
-                    href="https://doi.org/10.1038/s41559-023-02187-6" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Structural complexity biases vegetation
-                    greenness measures</a>. <em><strong>Nature Ecology & Evolution</strong></em>, 2023. [<a
-                    href="https://baeri.org/shadows-and-greenness/" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Link1</a>, <a
-                    href="http://ntrs.nasa.gov/citations/20230013996" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Link2</a>, <a
-                    href="https://medium.com/bay-area-environmental-research-institute/shadows-greenness-uncovering-satellite-biases-in-viewing-earths-vegetation-c83625f20215"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link3</a>, <a
-                    href="https://phys.org/news/2024-01-shadows-greenness-uncovering-satellite-biases.html"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link4</a>, <a
-                    href="https://www.einpresswire.com/article/677447726/shadows-greenness-uncovering-satellite-biases-in-viewing-earth-s-vegetation"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Link5</a>, <a
-                    href="https://urldefense.us/v2/url?u=https-3A__rdcu.be_dl91h&d=DwMFaQ&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=uk3P20a_TWPsDvY5ylZBelVvXYpgzhJink8D7Tplkn0&m=7GraeTN7MPPvSXdNjwcOBQFgH7UlWPVIFR-nc__va82Zca5HVBS2inoDwX0c5lBM&s=0YsVoxQnl8eSjsSBBFotVq4NvkRDJNVFa0-n-FL1Vr4&e="
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Free version</a>]</li>
-
-                <li>Mao, H.; Meng, J.; <strong
-                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Zhang,
-                  Q.; Fang, H. <a href="https://doi.org/10.3390/app9071459" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Comparison of Machine Learning Regression
-                    Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands</a>,
-                  <em><strong>Appl.
-                      Sci</strong></em>, 2019, 9, 1459.2.
-                </li>
-
-                <li>Cheng Z.; Meng, J.; <strong
-                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang
-                  Y.; Fang, H.; Yu L. <a href="http://dx.doi.org/10.11834/jrs.20200069" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Aboveground biomass estimation of late-stage
-                    maize based on the WOFOST model and UAV observations</a>, <em><strong>Journal of Remote
-                      Sensing</strong></em>,
-                  2020, 24(11):1403-1418. (In Chinese with English Abstract).</li>
-                <li>Dai, X.; He, X.; Guo, S.; Liu, S.; <strong
-                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Ruan,
-                  H. <a href="https://doi.org/10.1007/s11042-021-10735-0" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Research on hyper-spectral remote sensing image
-                    classification by applying stacked de-noising auto-encoders neural network</a>, <em><strong>Multimed
-                      Tools Appl</strong></em>, 2021(5).</li>
-                <li>Zhang, S.; Dai, X.; Li, J.; Gao, X.; Zhang, F.; Gong, F.; Lu, H.; Wang, M.; <strong
-                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.;</strong> Wang,
-                  Z.; & Peng, P. <a href="https://doi.org/10.1080/10106049.2022.2032387" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Crop Classification for UAV Visible Imagery
-                    Using Deep Semantic Segmentation Methods</a>, <em><strong>Geocarto International</strong></em>, 2022
-                  1–23.</li>
-              </ol>
+            <!-- [2] Ji et al. RSE 2025 Transfer Learning — first author, IF 13.5 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[2]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Li, F.; Dashti, H.; Hao, D.;
+                    Townsend, P. A.; Zheng, T.; You, H.; Chen, M.</p>
+                  <a href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank" class="pub-title-link">
+                    Leveraging transfer learning and leaf spectroscopy for leaf trait prediction with broad spatial,
+                    species, and temporal applicability
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-rse">Remote Sensing of Environment</span>
+                    <span class="journal-tag journal-other">2025, 326, 114818</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="badge-if">IF 13.5</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Accurate prediction of leaf functional traits from spectroscopic measurements is essential for large-scale ecosystem monitoring, yet most existing models suffer from limited transferability across different locations, species, and seasons. This study presents a physics-guided transfer learning framework that leverages a large, diverse global leaf spectral library combined with radiative transfer model simulations to pre-train deep learning encoders, then fine-tunes them on target-domain data. The approach substantially improved trait prediction accuracy across spatial, species, and temporal boundaries compared to conventional PLSR and deep learning baselines. By embedding physical knowledge of leaf optics into the learning process, the model generalizes effectively with minimal site-specific calibration data, offering a scalable solution for leaf trait mapping from airborne and spaceborne imaging spectroscopy.</p>
+              </div>
             </li>
 
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">CONFERENCE PRESENTATIONS</h4>
-              <ol class="paper-order" style="font-size: 15px;line-height: 1.5; text-align: justify;">
-                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Li, F.; Hao, D.; Chen, M., et al. <a
-                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Estimating Leaf Functional Traits with Leaf
-                    Spectroscopy and Physics-guided Transfer Learning Based Physical Model Across Biomes,</a> <em>AGU
-                    Fall Meeting 2022</em> (Chicago, U.S., Dec. 2022).</li>
-                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Zheng, T.; Yang, R;. Kovach, K.R.; Townsend, P. A.; Dashti, H.; Chen, M.; <a href="#"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Seasonal variations of plant
-                    traits from PRISMA hyperspectral imagery over multiple ecological functional areas,</a> <em>AGU
-                    Annual Meeting 2024</em> (Washington, D. C., U.S., Dec. 2024).</li>
-                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> You, H.; Chen, M. <a href="#" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Unveiling the transferability of PLSR models for
-                    leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset,</a>
-                  <em>Bryson Scholarship Poster Session, University of Wisconsin-Madison</em> (Madison, U.S., Feb.
-                  2024).
-                </li>
-                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.</strong>
-                  <a href="#" target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Eyes in the sky:
-                    Decoding plant functional traits with imaging spectroscopy,</a> <em>Three Minute Thesis competition,
-                    University of Wisconsin-Madison</em> (Madison, U.S., Sep. 2024).
-                </li>
-                <li><strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Zheng, T.; Yang, R;. Kovach, K.R.; Townsend, P. A.; Dashti, H.; Chen, M.; <a href="#"
-                    target="_blank" style="color: hsl(45, 100%, 72%); display: inline;">Seasonal variations of plant
-                    traits from PRISMA hyperspectral imagery over multiple ecological functional areas,</a>
-                  <em>AmericaView Annual Meeting </em> (Madison, U.S., April. 2025).
-                </li>
-
-                <li>Chen, M.; <strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Hao, D.; Zeng, Y.; et al. <a
-                    href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Fast estimation of leaf biochemical properties
-                    by inverting a simple leaf spectra model,</a> <em>AGU Fall Meeting 2022</em> (Chicago, U.S., Dec.
-                  2022).
-                </li>
-                <li>You, H.; <strong style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji,
-                    F.;</strong> Chen, M. <a href="#" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Global Mappings of 21st-century Forest Edge
-                    Dynamic,</a> <em>Bryson Scholarship Poster Session, University of Wisconsin-Madison</em> (Madison,
-                  U.S., Feb. 2024).</li>
-                <li>Dashti, H.; Chen, M. You, H.; <strong
-                    style="font-size: 16px; text-decoration: underline;color: hsl(0, 0%, 100%);">Ji, F.</strong> <a
-                    href="https://github.com/FujiangJi/ResearchBazaar" target="_blank"
-                    style="color: hsl(45, 100%, 72%); display: inline;">Getting Started with Python for Analyzing Large
-                    Climate and Satellite Data,</a> <em>UW-Madison Research Bazaar, University of Wisconsin-Madison</em>
-                  (Madison, U.S., Feb. 2024).</li>
-
-              </ol>
+            <!-- [3] Ji et al. New Phytologist 2024 ESI — first + corresponding, IF 8.3 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[3]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.<sup>*</sup>;</strong> Li, F.; Hao, D.;
+                    Shiklomanov, A. N.; Yang, X.; Townsend, P. A.; Dashti, H.; Nakaji, T.; Kovach, K. R.; Liu, H.;
+                    Luo, M.; Chen, M.</p>
+                  <a href="https://doi.org/10.1111/NPH.19807" target="_blank" class="pub-title-link">
+                    Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a
+                    comprehensive analysis with a novel global dataset
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-np">New Phytologist</span>
+                    <span class="journal-tag journal-other">2024, 243: 111–131</span>
+                    <span class="badge-role badge-role-first">First Author · Corresponding Author</span>
+                    <span class="badge-if">IF 8.3</span>
+                    <span class="badge-q1">JCR Q1</span>
+                    <span class="pub-badge badge-esi">ESI Top 1% Highly Cited</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Partial least squares regression (PLSR) models demonstrate commendable performance in predicting leaf functional traits—including chlorophyll content, carotenoids, leaf water, and leaf mass per area—within their original training datasets. However, performance degrades significantly when applied to new contexts. Using a novel global leaf spectral dataset assembled for this study, we systematically evaluated PLSR transferability across new locations, seasons, and plant functional types. When extrapolating beyond training conditions, models showed substantially reduced accuracy (R² = 0.12–0.49 for new locations, 0.15–0.42 for new seasons, and 0.25–0.56 for new plant functional types) alongside increased error rates (NRMSE = 3.58–33.12%). The study emphasizes the importance of incorporating greater spectral diversity during model training to improve transferability, and highlights potential systematic errors when applying leaf trait estimates across large spatial scales, diverse vegetation types, and different time periods.</p>
+              </div>
             </li>
 
-          </ol>
+            <!-- [4] Ji et al. IEEE TGRS 2021 — first author, IF 8.2 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[4]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Meng, J.; Cheng, Z.; Fang, H.; Wang, Y.</p>
+                  <a href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" class="pub-title-link">
+                    Crop Yield Estimation at Field Scales by Assimilating Time Series of Sentinel-2 Data into a
+                    Modified CASA-WOFOST Coupled Model
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-ieee">IEEE Trans. Geosci. Remote Sens.</span>
+                    <span class="journal-tag journal-other">2021, PP(99): 1–14</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="badge-if">IF 8.2</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Accurate field-scale crop yield estimation is essential for precision agriculture and food security assessment. This study developed a data assimilation framework that integrates time series Sentinel-2 satellite observations into a modified CASA-WOFOST coupled model, combining the carbon assimilation capabilities of CASA with the process-based crop growth simulation of WOFOST. The approach sequentially assimilated leaf area index and canopy light absorption retrieved from Sentinel-2 imagery to constrain model state variables throughout the growing season. Evaluated across multiple field sites for winter wheat and summer maize, the framework achieved substantially improved yield predictions compared to either model run independently, demonstrating the value of satellite data assimilation for operational crop monitoring at agricultural management scales.</p>
+              </div>
+            </li>
 
+            <!-- [5] Wang et al. Geomatics — Ji is corresponding author, IF ~2.3 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[5]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Wang, W.; Lu, B.; Li, Y.; <strong class="pub-self">Ji, F.<sup>*</sup></strong></p>
+                  <a href="https://doi.org/10.3390/geomatics6010021" target="_blank" class="pub-title-link">
+                    A Quantitative Assessment of the Inconsistency Between Waterbody Segmentation and Shoreline
+                    Positioning in Deep Learning Models
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Geomatics</span>
+                    <span class="journal-tag journal-other">6(1), 21 · 2025</span>
+                    <span class="badge-role badge-role-ca">Corresponding Author</span>
+                    <span class="badge-if">IF 2.3</span>
+                    <span class="badge-q2">JCR Q2</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study evaluates the inconsistency between deep learning-based waterbody segmentation and shoreline positioning using aerial imagery from the Great Lakes region. Despite strong pixel-level segmentation accuracy (&gt;98% accuracy, &gt;90% IoU) across five benchmark models tested on 20,689 NAIP images, shoreline positioning accuracy was substantially lower and varied significantly by landscape type—with poorest results in wetlands and urban areas. The shoreline-to-water ratio emerged as the dominant predictor of positioning accuracy, while shoreline complexity and water color showed weaker, context-dependent effects. These findings highlight the need for shoreline-specific evaluation metrics rather than relying solely on conventional segmentation benchmarks when applying deep learning to coastal and lake boundary detection tasks.</p>
+              </div>
+            </li>
+
+            <!-- [6] Ji et al. RST&A 2020 — first author, IF ~1.5 -->
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[6]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Meng, J.; Fang, H.</p>
+                  <a href="http://www.rsta.ac.cn/CN/Y2020/V35/I2/406" target="_blank" class="pub-title-link">
+                    Study on Soybean Yield Estimation Using the Coupled CASA and WOFOST Model
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Remote Sensing Technology and Application</span>
+                    <span class="journal-tag journal-other">2020, 35(2): 406–415</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="badge-if">IF 1.5</span>
+                    <span class="badge-q4">JCR Q4</span>
+                    <span class="pub-badge" style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In Chinese with English Abstract</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study investigated soybean yield estimation by coupling the CASA (Carnegie–Ames–Stanford Approach) carbon assimilation model with the WOFOST (World Food Studies) crop growth model. The coupled framework leverages CASA's ability to estimate net primary productivity from remote sensing data and WOFOST's mechanistic representation of crop phenology and biomass allocation to produce field-scale yield estimates. The method was evaluated in major soybean-growing regions, demonstrating improved estimation accuracy over individual models alone and providing a practical approach for regional agricultural monitoring.</p>
+              </div>
+            </li>
+
+            <!-- ── CO-AUTHOR ── -->
+
+            <!-- [7] Zeng et al. Nature Ecology & Evolution 2023 — IF 19.1 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[7]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Zeng, Y.; Hao, D.; Park, T.; Zhu, P.; Huete, A.; Myneni, R.; Knyazikhin, Y.;
+                    Qi, J.; Nemani, R. R.; Li, F.; Huang, J.; Gao, Y.; Li, B.; <strong class="pub-self">Ji, F.;</strong>
+                    Köhler, P.; Frankenberg, C.; Berry, J. A.; &amp; Chen, M.</p>
+                  <a href="https://doi.org/10.1038/s41559-023-02187-6" target="_blank" class="pub-title-link">
+                    Structural complexity biases vegetation greenness measures
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-nature">Nature Ecology &amp; Evolution</span>
+                    <span class="journal-tag journal-other">2023</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 19.1</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                  <div class="pub-links">
+                    <a href="https://baeri.org/shadows-and-greenness/" target="_blank" class="pub-link">[Media 1]</a>
+                    <a href="http://ntrs.nasa.gov/citations/20230013996" target="_blank" class="pub-link">[NASA]</a>
+                    <a href="https://medium.com/bay-area-environmental-research-institute/shadows-greenness-uncovering-satellite-biases-in-viewing-earths-vegetation-c83625f20215" target="_blank" class="pub-link">[Medium]</a>
+                    <a href="https://phys.org/news/2024-01-shadows-greenness-uncovering-satellite-biases.html" target="_blank" class="pub-link">[Phys.org]</a>
+                    <a href="https://urldefense.us/v2/url?u=https-3A__rdcu.be_dl91h&d=DwMFaQ&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=uk3P20a_TWPsDvY5ylZBelVvXYpgzhJink8D7Tplkn0&m=7GraeTN7MPPvSXdNjwcOBQFgH7UlWPVIFR-nc__va82Zca5HVBS2inoDwX0c5lBM&s=0YsVoxQnl8eSjsSBBFotVq4NvkRDJNVFa0-n-FL1Vr4&e=" target="_blank" class="pub-link">[Free version]</a>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Satellite-based vegetation greenness indices are widely used as proxies for canopy photosynthetic activity and leaf biochemistry, yet their accuracy is sensitive to canopy structural properties. This study demonstrated that structural complexity in vegetation—particularly shadow casting by canopy elements—creates systematic biases in greenness measures retrieved from multi-spectral satellites. Using radiative transfer modeling and observational data spanning diverse biomes, the authors showed that shadow fraction governs the magnitude and direction of these biases, causing greenness indices to diverge from true leaf biochemistry signals in structurally complex canopies. The findings have broad implications for interpreting satellite-derived vegetation monitoring products and correcting for structural confounders in global ecological analyses.</p>
+              </div>
+            </li>
+
+            <!-- [8] Liu et al. RSE 2025 — IF 13.5 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[8]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Liu, H.; Xiao, J.; Hao, D.; Li, F.; <strong class="pub-self">Ji, F.;</strong> Chen, M.</p>
+                  <a href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank" class="pub-title-link">
+                    Hotspot effect improves the ability of satellites to track terrestrial photosynthesis
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-rse">Remote Sensing of Environment</span>
+                    <span class="journal-tag journal-other">2025, 317, 114492</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 13.5</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study investigated how the hotspot effect—the backscatter enhancement of reflectance observed when the viewing angle aligns with the solar illumination direction—improves satellite-based tracking of terrestrial photosynthesis. By leveraging multi-angle remote sensing observations and accounting for bidirectional reflectance distribution function (BRDF) effects at the hotspot geometry, the authors demonstrated enhanced sensitivity to canopy structural and biochemical properties that govern photosynthetic capacity. The approach produced improved estimates of gross primary production across diverse vegetation biomes, highlighting the value of hotspot-geometry observations for future satellite mission design and vegetation monitoring algorithms.</p>
+              </div>
+            </li>
+
+            <!-- [9] Li et al. Earth's Future 2024 — IF 7.4 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[9]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Li, F.; Zhu, Q.; Yuan, K.; <strong class="pub-self">Ji, F.;</strong> Paul, A.;
+                    Lee, P.; Radeloff, V. C.; Chen, M.</p>
+                  <a href="https://doi.org/10.1029/2024EF004588" target="_blank" class="pub-title-link">
+                    Projecting Large Fires in the Western US With an Interpretable and Accurate Hybrid Machine
+                    Learning Method
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-ef">Earth's Future</span>
+                    <span class="journal-tag journal-other">2024</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 7.4</span>
+                    <span class="badge-q1">JCR Q1</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>A hybrid machine learning model was developed to project large wildfires in the western United States, achieving an F1-score of 0.846 ± 0.012—surpassing process-driven fire danger indices and four commonly used ML models by up to 40% and 9%, respectively. Using explainable AI techniques, the study identified substantial structural differences across ML fire models, even among those with similar predictive accuracy. Strong compound effects from multiple climate variables related to evaporative demand, energy release component, temperature, and wind speed were revealed as key drivers of large fire dynamics. The findings underscore the importance of assessing structural integrity of models in addition to their accuracy, and highlight the need to address compound climate extremes when projecting wildfire risk in the western US.</p>
+              </div>
+            </li>
+
+            <!-- [10] Cheng et al. JRS 2020 — IF ~4.0 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[10]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Cheng, Z.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Wang, Y.; Fang, H.; Yu, L.</p>
+                  <a href="http://dx.doi.org/10.11834/jrs.20200069" target="_blank" class="pub-title-link">
+                    Aboveground biomass estimation of late-stage maize based on the WOFOST model and UAV observations
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Journal of Remote Sensing</span>
+                    <span class="journal-tag journal-other">2020, 24(11): 1403–1418</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 4.0</span>
+                    <span class="badge-q2">JCR Q2</span>
+                    <span class="pub-badge" style="background:hsla(240,5%,40%,0.15);color:var(--light-gray-70);border:1px solid hsla(240,5%,55%,0.2);font-size:10.5px;padding:2px 8px;border-radius:5px;">In Chinese with English Abstract</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study estimated aboveground biomass (AGB) of late-stage maize by integrating UAV (unmanned aerial vehicle) remote sensing observations with the WOFOST crop growth model. High-resolution UAV imagery acquired during the grain-filling stage was used to derive canopy structural metrics that constrained WOFOST model state variables through data assimilation. The combined approach captured spatial variability in biomass accumulation at sub-field scales, outperforming both UAV-based empirical regression and standalone WOFOST simulations. The results demonstrate the value of UAV observations for improving crop model estimates during critical late-season growth phases when yield potential is largely determined.</p>
+              </div>
+            </li>
+
+            <!-- [11] Zhang et al. Geocarto 2022 — IF ~3.8 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[11]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Zhang, S.; Dai, X.; Li, J.; Gao, X.; Zhang, F.; Gong, F.; Lu, H.; Wang, M.;
+                    <strong class="pub-self">Ji, F.;</strong> Wang, Z.; &amp; Peng, P.</p>
+                  <a href="https://doi.org/10.1080/10106049.2022.2032387" target="_blank" class="pub-title-link">
+                    Crop Classification for UAV Visible Imagery Using Deep Semantic Segmentation Methods
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Geocarto International</span>
+                    <span class="journal-tag journal-other">2022, 1–23</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 3.8</span>
+                    <span class="badge-q2">JCR Q2</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study evaluated deep semantic segmentation methods for crop classification using visible-band UAV imagery. Several state-of-the-art encoder-decoder architectures were benchmarked for their ability to delineate crop types at sub-meter spatial resolution without relying on multispectral or hyperspectral data. Results demonstrated that deep segmentation models effectively leveraged spectral and textural information in RGB imagery to discriminate between crop types during critical growth stages. The study provides practical guidance for implementing low-cost UAV-based crop mapping workflows in agricultural monitoring and precision farming applications.</p>
+              </div>
+            </li>
+
+            <!-- [12] Dai et al. Multimedia Tools 2021 — IF ~3.6 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[12]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Dai, X.; He, X.; Guo, S.; Liu, S.; <strong class="pub-self">Ji, F.;</strong> Ruan, H.</p>
+                  <a href="https://doi.org/10.1007/s11042-021-10735-0" target="_blank" class="pub-title-link">
+                    Research on hyper-spectral remote sensing image classification by applying stacked de-noising
+                    auto-encoders neural network
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Multimedia Tools and Applications</span>
+                    <span class="journal-tag journal-other">2021(5)</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 3.6</span>
+                    <span class="badge-q2">JCR Q2</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study applied stacked de-noising auto-encoders (SDAE), an unsupervised deep learning architecture, to hyperspectral remote sensing image classification. The SDAE framework learns robust spectral feature representations by reconstructing corrupted input spectra, effectively capturing latent structure in high-dimensional hyperspectral data while reducing sensitivity to noise. The learned features were subsequently used to train a supervised classifier, achieving improved classification accuracy compared to traditional dimensionality reduction approaches such as PCA and standard shallow neural networks. The method demonstrated strong performance on benchmark hyperspectral datasets and offers a practical framework for land cover classification with limited labeled training samples.</p>
+              </div>
+            </li>
+
+            <!-- [13] Mao et al. Applied Sciences 2019 — IF ~2.7 -->
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[13]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Mao, H.; Meng, J.; <strong class="pub-self">Ji, F.;</strong> Zhang, Q.; Fang, H.</p>
+                  <a href="https://doi.org/10.3390/app9071459" target="_blank" class="pub-title-link">
+                    Comparison of Machine Learning Regression Algorithms for Cotton Leaf Area Index Retrieval Using
+                    Sentinel-2 Spectral Bands
+                  </a>
+                  <div class="pub-meta">
+                    <span class="journal-tag journal-other">Applied Sciences</span>
+                    <span class="journal-tag journal-other">2019, 9, 1459</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="badge-if">IF 2.7</span>
+                    <span class="badge-q2">JCR Q2</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>This study benchmarked five machine learning regression algorithms—Gradient Boosted Regression Trees (GBRT), Support Vector Regression (SVR), Artificial Neural Networks (ANN), Gaussian Process Regression (GPR), and Random Forest (RF)—for retrieving cotton leaf area index (LAI) using Sentinel-2 multispectral bands. GBRT achieved the highest overall accuracy (average R² = 0.854), while SVR demonstrated superior computational efficiency. GBRT also showed the most robust performance across varying training sample sizes, maintaining strong accuracy metrics (R² = 0.884) at reduced sample sizes. ANN performed best when fewer spectral bands were available, while SVR, GPR, and RF provided more stable performance across different band configurations. All five models demonstrated significant potential for practical cotton LAI retrieval in precision crop management applications.</p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- =============================================
+             IN REVIEW / PREPARATION
+        ============================================= -->
+        <section class="pub-section">
+          <div class="pub-section-header">
+            <div class="icon-box"><ion-icon name="time-outline"></ion-icon></div>
+            <h3>In Review / Preparation</h3>
+            <span class="section-count">3 manuscripts</span>
+          </div>
+
+          <ul class="pub-list">
+
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[R1]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Yang, J.; Townsend, P. A.; Zheng, T.;
+                    Kovach, K. R.; Yu, T.; Yang, R.; Liu, M.; Chen, M.</p>
+                  <span class="pub-title-plain">Robust hyperspectral reconstruction from satellite and airborne
+                    observations via a deep hierarchical fusion network across heterogeneous scenarios</span>
+                  <div class="pub-meta">
+                    <span class="pub-badge badge-review">Under Review — Remote Sensing of Environment</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="journal-tag journal-other">2025</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Manuscript under review. This study develops a deep hierarchical fusion network for robust reconstruction of hyperspectral imagery from satellite and airborne multispectral observations across heterogeneous scenarios. The approach addresses key challenges in hyperspectral data availability by fusing complementary spatial and spectral information from multiple sensor platforms, enabling high-fidelity spectral reconstruction for downstream applications such as plant trait estimation and surface characterization.</p>
+              </div>
+            </li>
+
+            <li class="pub-item pub-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[R2]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Townsend, P. A.; Liu, M.; Chen, M.</p>
+                  <span class="pub-title-plain">Assessing the suitability of reconstructed high-resolution
+                    hyperspectral imagery from PlanetScope and EMIT for plant functional trait estimation</span>
+                  <div class="pub-meta">
+                    <span class="pub-badge badge-prep">In Preparation</span>
+                    <span class="badge-role badge-role-first">First Author</span>
+                    <span class="journal-tag journal-other">2025</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Manuscript in preparation. This study evaluates whether high-resolution hyperspectral imagery reconstructed by fusing PlanetScope multispectral data with EMIT spaceborne hyperspectral observations is suitable for estimating plant functional traits. By assessing reconstruction fidelity against reference airborne data and propagating uncertainties through trait retrieval pipelines, the work provides empirical guidance on the operational readiness of sensor-fusion products for ecosystem trait mapping.</p>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[R3]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">You, H.; <strong class="pub-self">Ji, F.;</strong> Park, T.; Radeloff, V. C.;
+                    Hurtt, G.; Jiang, M.; Chen, M.</p>
+                  <span class="pub-title-plain">Global Forest Edge and its Dynamics in the 21st Century</span>
+                  <div class="pub-meta">
+                    <span class="pub-badge badge-review">Under Review — Nature Communications</span>
+                    <span class="badge-role badge-role-coauthor">Co-Author</span>
+                    <span class="journal-tag journal-other">2025</span>
+                  </div>
+                </div>
+                <button class="abstract-toggle" onclick="toggleAbstract(this)" aria-label="Toggle abstract">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </button>
+              </div>
+              <div class="pub-abstract">
+                <span class="pub-abstract-label">Abstract</span>
+                <p>Manuscript under review. This study quantifies global forest edge extent and its temporal dynamics throughout the 21st century using satellite-derived land cover products. Forest edges—the transition zones between forested and non-forested areas—have distinct microclimatic, ecological, and biodiversity properties compared to forest interiors. By tracking how edge extent has changed in response to deforestation, fragmentation, and reforestation globally, this work provides new insights into the conservation implications of forest structural change at planetary scales.</p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- =============================================
+             CONFERENCE PRESENTATIONS
+        ============================================= -->
+        <section class="pub-section">
+          <div class="pub-section-header">
+            <div class="icon-box"><ion-icon name="mic-outline"></ion-icon></div>
+            <h3>Conference Presentations</h3>
+            <span class="section-count">8 presentations</span>
+          </div>
+
+          <ul class="pub-list">
+
+            <li class="conf-item conf-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C1]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Li, F.; Hao, D.; Chen, M., et al.</p>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFMGC42D0732J/abstract" target="_blank" class="pub-title-link">
+                    Estimating Leaf Functional Traits with Leaf Spectroscopy and Physics-guided Transfer Learning
+                    Based Physical Model Across Biomes
+                  </a>
+                  <div class="pub-meta">
+                    <span class="conf-venue">AGU Fall Meeting 2022</span>
+                    &ensp;·&ensp; Chicago, U.S., Dec. 2022
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item conf-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C2]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Yang, R.; Kovach, K. R.;
+                    Townsend, P. A.; Dashti, H.; Chen, M.</p>
+                  <span class="pub-title-plain">Seasonal variations of plant traits from PRISMA hyperspectral
+                    imagery over multiple ecological functional areas</span>
+                  <div class="pub-meta">
+                    <span class="conf-venue">AGU Annual Meeting 2024</span>
+                    &ensp;·&ensp; Washington, D.C., U.S., Dec. 2024
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item conf-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C3]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> You, H.; Chen, M.</p>
+                  <span class="pub-title-plain">Unveiling the transferability of PLSR models for leaf trait
+                    estimation: lessons from a comprehensive analysis with a novel global dataset</span>
+                  <div class="pub-meta">
+                    <span class="conf-venue">Bryson Scholarship Poster Session, UW-Madison</span>
+                    &ensp;·&ensp; Madison, U.S., Feb. 2024
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item conf-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C4]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.</strong></p>
+                  <span class="pub-title-plain">Eyes in the sky: Decoding plant functional traits with imaging
+                    spectroscopy</span>
+                  <div class="pub-meta">
+                    <span class="conf-venue">Three Minute Thesis Competition, UW-Madison</span>
+                    &ensp;·&ensp; Madison, U.S., Sep. 2024
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item conf-item--featured">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C5]</span>
+                <div class="pub-body">
+                  <p class="pub-authors"><strong class="pub-self">Ji, F.;</strong> Zheng, T.; Yang, R.; Kovach, K. R.;
+                    Townsend, P. A.; Dashti, H.; Chen, M.</p>
+                  <span class="pub-title-plain">Seasonal variations of plant traits from PRISMA hyperspectral
+                    imagery over multiple ecological functional areas</span>
+                  <div class="pub-meta">
+                    <span class="conf-venue">AmericaView Annual Meeting</span>
+                    &ensp;·&ensp; Madison, U.S., Apr. 2025
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C6]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Chen, M.; <strong class="pub-self">Ji, F.;</strong> Hao, D.; Zeng, Y.; et al.</p>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B42I1735C/abstract" target="_blank" class="pub-title-link">
+                    Fast estimation of leaf biochemical properties by inverting a simple leaf spectra model
+                  </a>
+                  <div class="pub-meta">
+                    <span class="conf-venue">AGU Fall Meeting 2022</span>
+                    &ensp;·&ensp; Chicago, U.S., Dec. 2022
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C7]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">You, H.; <strong class="pub-self">Ji, F.;</strong> Chen, M.</p>
+                  <span class="pub-title-plain">Global Mappings of 21st-century Forest Edge Dynamic</span>
+                  <div class="pub-meta">
+                    <span class="conf-venue">Bryson Scholarship Poster Session, UW-Madison</span>
+                    &ensp;·&ensp; Madison, U.S., Feb. 2024
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="conf-item">
+              <div class="pub-item-inner">
+                <span class="pub-num">[C8]</span>
+                <div class="pub-body">
+                  <p class="pub-authors">Dashti, H.; Chen, M.; You, H.; <strong class="pub-self">Ji, F.</strong></p>
+                  <a href="https://github.com/FujiangJi/ResearchBazaar" target="_blank" class="pub-title-link">
+                    Getting Started with Python for Analyzing Large Climate and Satellite Data
+                  </a>
+                  <div class="pub-meta">
+                    <span class="conf-venue">UW-Madison Research Bazaar</span>
+                    &ensp;·&ensp; Madison, U.S., Feb. 2024
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
         </section>
 
       </article>
-
     </div>
 
   </main>
 
-
-
-  <!--
-    - custom js link
-  -->
   <script src="../assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    function toggleAbstract(btn) {
+      const item = btn.closest('.pub-item, .conf-item');
+      item.classList.toggle('open');
+    }
+  </script>
 
 </body>
 

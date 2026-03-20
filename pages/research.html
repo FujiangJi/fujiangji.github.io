@@ -7,610 +7,977 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fujiang Ji's Personal Website</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="../assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    .video {
-      width: 1000px;
-      max-width: 100%;
+    /* =============================================
+       RESEARCH DIRECTION CARDS
+    ============================================= */
+
+    .research-directions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      margin-bottom: 10px;
     }
 
-    .text-overlay {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
+    .research-direction-card {
+      border-radius: 16px;
       overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
+      background: var(--eerie-black-2);
+      box-shadow: var(--shadow-2);
+      border: 1px solid var(--jet);
     }
 
-    .container {
+    /* Cover image area */
+    .direction-cover {
+      position: relative;
+      height: 240px;
+      cursor: pointer;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .direction-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease, filter 0.45s ease;
+      filter: brightness(0.5) saturate(0.85);
+    }
+
+    .research-direction-card:hover .direction-cover img,
+    .research-direction-card.open  .direction-cover img {
+      transform: scale(1.04);
+      filter: brightness(0.62) saturate(1.05);
+    }
+
+    .direction-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.45) 55%,
+        transparent 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px 24px;
+    }
+
+    .direction-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: hsl(45, 100%, 72%);
+      margin-bottom: 7px;
+    }
+
+    .direction-overlay h3 {
+      color: hsl(0, 0%, 100%);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.35;
+      text-transform: none;
+    }
+
+    .direction-desc {
+      color: hsla(0, 0%, 90%, 0.80);
+      font-size: 12.5px;
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .direction-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .direction-count {
+      font-size: 12px;
+      color: hsla(0, 0%, 75%, 0.60);
+    }
+
+    .direction-expand-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: hsl(45, 100%, 72%);
+      font-size: 12px;
+      font-weight: 500;
+      background: hsla(45, 100%, 72%, 0.12);
+      border: 1px solid hsla(45, 100%, 72%, 0.28);
+      padding: 5px 14px 5px 12px;
+      border-radius: 20px;
+      transition: background 0.2s, border-color 0.2s;
+      cursor: pointer;
+      pointer-events: none; /* cover handles the click */
+    }
+
+    .direction-cover:hover .direction-expand-btn {
+      background: hsla(45, 100%, 72%, 0.20);
+      border-color: hsla(45, 100%, 72%, 0.50);
+    }
+
+    .direction-expand-btn ion-icon {
+      font-size: 14px;
+      transition: transform 0.35s ease;
+    }
+
+    .research-direction-card.open .direction-expand-btn ion-icon {
+      transform: rotate(180deg);
+    }
+
+    /* =============================================
+       PAPERS PANEL  (hidden until direction opens)
+    ============================================= */
+
+    .direction-papers {
+      display: none;
+      padding: 18px;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 1px solid var(--jet);
+      background: hsl(240, 2%, 11%);
+    }
+
+    .direction-papers.open {
+      display: flex;
+    }
+
+    /* =============================================
+       INDIVIDUAL PAPER CARD
+    ============================================= */
+
+    .paper-card {
+      position: relative;
+      background: var(--border-gradient-onyx);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-1);
+      z-index: 1;
+      transition: box-shadow 0.25s ease;
+    }
+
+    .paper-card::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      background: var(--bg-gradient-jet);
+      border-radius: inherit;
+      z-index: -1;
+      transition: background 0.25s;
+    }
+
+    .paper-card.open {
+      box-shadow: var(--shadow-3);
+    }
+
+    .paper-card.open::before {
+      background: linear-gradient(
+        to bottom right,
+        hsla(240, 1%, 20%, 0.7) 0%,
+        hsla(240, 2%, 13%, 0) 100%
+      ),
+      hsl(240, 2%, 14%);
+    }
+
+    /* Paper header (always visible, click to toggle) */
+    .paper-card-header {
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+    }
+
+    .paper-number {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: hsla(45, 100%, 72%, 0.12);
+      border: 1px solid hsla(45, 100%, 72%, 0.28);
+      color: hsl(45, 100%, 72%);
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .paper-title-block {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .paper-title-block h4 {
+      color: var(--white-2);
+      font-size: 13.5px;
+      font-weight: 500;
+      line-height: 1.55;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+      text-transform: none;
+    }
+
+    .paper-card:hover .paper-title-block h4,
+    .paper-card.open  .paper-title-block h4 {
+      color: hsl(45, 100%, 72%);
+    }
+
+    .paper-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 9px;
+    }
+
+    .paper-tag {
+      font-size: 10.5px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: hsla(45, 100%, 72%, 0.08);
+      color: hsl(45, 62%, 62%);
+      border: 1px solid hsla(45, 62%, 60%, 0.2);
+      white-space: nowrap;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .paper-link-btn {
+      font-size: 11.5px;
+      color: hsl(45, 100%, 72%);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+      text-decoration: none;
+    }
+
+    .paper-link-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .paper-link-btn ion-icon {
+      font-size: 13px;
+    }
+
+    .paper-expand-icon {
+      margin-left: auto;
+      color: var(--light-gray-70);
+      font-size: 18px;
+      transition: transform 0.3s ease, color 0.2s;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .paper-card.open .paper-expand-icon {
+      transform: rotate(180deg);
+      color: hsl(45, 100%, 72%);
+    }
+
+    /* Paper detail body */
+    .paper-body {
+      display: none;
+      padding: 14px 18px 18px;
+      color: var(--light-gray);
+      font-size: 13px;
+      line-height: 1.65;
+      border-top: 1px solid hsla(0, 0%, 25%, 0.45);
+      text-align: justify;
+    }
+
+    .paper-card.open .paper-body {
+      display: block;
+    }
+
+    .paper-body p {
+      margin-bottom: 10px;
+    }
+
+    .paper-body figure {
+      margin: 14px 0;
+    }
+
+    .paper-body figure img {
+      max-width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .paper-body figcaption {
+      color: var(--light-gray);
+      font-style: italic;
+      font-size: 11.5px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .paper-body .img-row {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: nowrap;
       overflow-x: auto;
+      gap: 8px;
+      margin: 12px 0 6px;
     }
 
-    .container img {
-      width: 100%;
+    .paper-body .img-row img {
+      height: 260px;
       width: auto;
-      height: 400px;
-      margin: 2px;
+      max-width: 100%;
+      border-radius: 8px;
+      flex-shrink: 0;
     }
 
-    h2 {
-      font-size: 2.2vw;
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+
+    @media (min-width: 768px) {
+      .direction-cover {
+        height: 270px;
+      }
+      .direction-overlay h3 {
+        font-size: 19px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
         <figure class="avatar-box">
           <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
         </figure>
-
         <div class="info-content">
           <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
-
-          <p class="title">Ph.D. Candidate</p>
+          <p class="title">Postdoctoral Associate</p>
         </div>
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
-              <a href="fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
             </div>
-
           </li>
-
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>1630 Linden Drive, Madison WI, U.S.</address>
             </div>
-
           </li>
-
         </ul>
 
         <div class="separator"></div>
 
-
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank"
-              class="social-link">
+            <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&hl=en&oi=ao" target="_blank" class="social-link">
               <i class="ai ai-google-scholar ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.researchgate.net/profile/Ji-Fujiang/research" target="_blank" class="social-link">
               <i class="ai ai-researchgate ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" class="social-link">
               <i class="ai ai-orcid ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.webofscience.com/wos/author/record/AFK-7372-2022" target="_blank" class="social-link">
               <i class="ai ai-publons ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://github.com/FujiangJi" target="_blank" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://twitter.com/Fujiang_Ji" target="_blank" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.linkedin.com/in/fujiang-ji-9453aa229" target="_blank" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
 
     </aside>
 
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
+      <!-- NAVBAR -->
       <nav class="navbar">
-
         <ul class="navbar-list">
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link active" data-nav-link>Research</button>
           </li>
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='publications.html';">Publications</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='blogs.html';">Blogs</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
           </li>
-
         </ul>
-
       </nav>
 
-      <!--
-        - #RESEARCH
-      -->
+      <!-- RESEARCH ARTICLE -->
       <article class="research active" data-page="research">
 
         <header>
           <h2 class="h2 article-title">Research</h2>
         </header>
 
-        <!--######-->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+        <div class="research-directions">
+
+          <!-- =============================================
+               DIRECTION 1: Leaf Functional Traits
+          ============================================= -->
+          <div class="research-direction-card" id="dir-1">
+
+            <div class="direction-cover" onclick="toggleDirection('dir-1')">
+              <img src="../assets/images/PLSR_paper/sites_distribution.png" alt="Leaf Functional Traits & Spectroscopy">
+              <div class="direction-overlay">
+                <span class="direction-tag">Direction 01 &mdash; Spectroscopy &amp; Traits</span>
+                <h3>Leaf Functional Traits &amp; Hyperspectral Spectroscopy</h3>
+                <p class="direction-desc">
+                  Estimating and understanding leaf biochemical traits (chlorophyll, LMA, EWT, carotenoids)
+                  through hyperspectral remote sensing, machine learning, and radiative transfer modeling
+                  across diverse ecosystems, plant functional types, and seasons.
+                </p>
+                <div class="direction-footer">
+                  <span class="direction-count">3 studies</span>
+                  <button class="direction-expand-btn">
+                    View Studies <ion-icon name="chevron-down-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <h3 class="h3">Selected researches</h3>
-          </div>
+            <div class="direction-papers" id="dir-1-papers">
 
-          <ol class="timeline-list">
-
-            <!--Research One-->
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Leveraging transfer learning and leaf
-                spectroscopy for leaf trait prediction with broad spatial, species, and temporal applicability (<a
-                  href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>, <a
-                  href="https://github.com/FujiangJi/transfer_learning_models" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">data and code availability</a>).</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
-                <p style="margin-bottom: 8px;">Accurate and reliable prediction of leaf traits is crucial for
-                  understanding plant adaptations to environmental variation, monitoring terrestrial ecosystems, and
-                  enhancing comprehension of functional diversity and ecosystem functioning.</p>
-                <p style="margin-bottom: 8px;">Various approaches (e.g., statistical, physical models) have been
-                  developed to estimate leaf traits through hyperspectral remote sensing and leaf spectroscopy. However,
-                  the absence of high-performing, transferable, and stable models across various domains of space, plant
-                  functional types (PFTs) and seasons hinder our ability to quantify and comprehend spatiotemporal
-                  variations in leaf traits.</p>
-                <p style="margin-bottom: 8px;">This study proposes robust and highly transferable models for better
-                  predicting leaf traits with hyperspectral reflectance. Three datasets were assembled, pairing common
-                  leaf traits — chlorophyll (Chla+b, µg/cm<sup>2</sup>), carotenoids (Ccar, µg/cm<sup>2</sup>), leaf
-                  mass per area (LAM, g/m<sup>2</sup>), equivalent water thickness (EWT, g/m<sup>2</sup>) — with leaf
-                  spectra measurements collected across diverse geographic locations in the U.S. and Europe, PFTs, and
-                  seasons.Measurements were acquired using spectroradiometers (e.g., ASD FieldSpec 3/4/Pro and SVC
-                  HR-1024i) with integrating spheres, leaf clips, and contact probes.</p>
-
-                <ol class="order-list" style="font-size: 14px;">
-                  <li style="margin-bottom: 8px;">Research Questions:</li>
-                  <ol class="order-list2" style="font-size: 13px;">
-                    <li style="margin-bottom: 3px;">Do our proposed transfer learning models for predicting leaf traits
-                      have better performance than other state-of-the-art statistical models like PLSR and GPR, and the
-                      pure RTMs?</li>
-                    <li style="margin-bottom: 8px;">Are the transfer learning models more transferable across different
-                      geographic locations, PFTs, and seasons than other models?</li>
-                    <li style="margin-bottom: 8px;">How the inconsistency and the quantity of real observations used for
-                      fine-tuning influence the performance of transfer learning models?</li>
-                  </ol>
-                </ol>
-
-                <div id="foldable-content" style="display: none;">
-
-                  <ol class="order-list" style="font-size: 13px;">
-                    <li style="margin-bottom: 3px;">we created three distinct subsets (spatial, PFT and temporal) from
-                      the compiled dataset. In the spatial and PFT datasets, leaf spectra were measured using two
-                      different spectroradiometers: the ASD FieldSpec 3/4/Pro (Malvern Analytical Inc., Westborough, MA,
-                      USA) for Chla+b, Ccar, and LMA samples, and the SVC HR-1024i full-spectrum spectroradiometer
-                      (Spectra Vista Corp., Poughkeepsie,
-                      NY, USA) for EWT samples. In the temporal dataset, all spectra were measured using the ASD
-                      FieldSpec 3/4/Pro. Moreover, three measurement methods were used, an integrating sphere, which
-                      captured spectra as directional-hemispherical reflectance (DHRF); and a leaf clip and contact
-                      probe, whichacquired spectra as bidirectional reflectance factor (BRF).</li>
-                    <li style="margin-bottom: 3px;">Leaf traits exhibited large variations across different sites, PFTs
-                      and seasons. (Right figure)</li>
-                  </ol>
-
-                  <div class="container">
-                    <img src="../assets/images/Transfer_learning_paper/Fig1.jpg" alt="Site_distribution">
-                    <img src="../assets/images/Transfer_learning_paper/Fig3.jpg" alt="Trait_variations">
+              <!-- Paper PRISMA -->
+              <div class="paper-card" id="paper-prisma">
+                <div class="paper-card-header" onclick="togglePaper('paper-prisma')">
+                  <span class="paper-number">1</span>
+                  <div class="paper-title-block">
+                    <h4>Tracking seasonal variability in plant traits from spaceborne PRISMA and NEON AOP
+                      across forest types and ecoregions</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">Remote Sensing of Environment 2026</span>
+                      <span class="paper-tag">PRISMA</span>
+                      <span class="paper-tag">NEON AOP</span>
+                      <span class="paper-tag">Seasonal Variability</span>
+                      <span class="paper-tag">Plant Traits</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                      <a href="https://github.com/FujiangJi/PRISMA_seasonal_traits" target="_blank" class="paper-link-btn">
+                        <ion-icon name="logo-github"></ion-icon> Data &amp; Code
+                      </a>
+                    </div>
                   </div>
-                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: Overall workflow for estimating leaf
-                    traits based on various models;<br> Right: Pre-training processes using the synthetic data of RTMs
-                    (PROSPECT and Leaf-SIP).</figcaption>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
 
-                  <ol class="order-list" style="font-size: 14px;">
-                    <li style="margin-bottom: 8px;">To develop robust and transferable models for predicting leaf
-                      traits, we designed the framework with the following four steps:</li>
+                <div class="paper-body">
+                  <p>Plant traits serve as critical indicators of how plants adapt to environmental changes and
+                    influence ecosystem functions. While airborne hyperspectral remote sensing effectively maps plant
+                    traits through detailed reflectance properties, it is limited by cost and scale, making large-scale
+                    and temporal studies challenging. The recently launched spaceborne hyperspectral imager PRISMA
+                    offers frequent, large-scale and high-fidelity observations at 30 m spatial resolution with a
+                    revisit time of ~29 days — making it suitable for large-scale seasonal trait mapping.</p>
+
+                  <p>This study developed a multi-stage framework by leveraging PRISMA spaceborne hyperspectral data
+                    and NEON Airborne Observation Platform (AOP) hyperspectral data to investigate the seasonal
+                    dynamics of four key plant traits — <strong style="color:hsl(0,0%,100%);">chlorophyll content
+                    (Chla+b)</strong>, <strong style="color:hsl(0,0%,100%);">carotenoid content (Ccar)</strong>,
+                    <strong style="color:hsl(0,0%,100%);">equivalent water thickness (EWT)</strong>, and
+                    <strong style="color:hsl(0,0%,100%);">nitrogen content</strong> — across 11 NEON sites
+                    representing diverse forest types and ecoregions in the contiguous U.S.</p>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">What are the capabilities of PRISMA data in quantifying seasonal
+                        variations of plant traits at large scales?</li>
+                      <li style="margin-bottom: 3px;">How do plant traits vary within the growing season for different
+                        forest types and ecoregions, using NEON sites as representative examples?</li>
+                      <li style="margin-bottom: 3px;">What factors control the spatial and seasonal variability of
+                        plant traits?</li>
+                    </ol>
+                  </ol>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Four-step framework:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">Processing the PRISMA hyperspectral data (BRDF correction,
+                        geo-referencing, cloud and non-vegetation removal).</li>
+                      <li style="margin-bottom: 3px;">Generating NEON 1 m high-resolution trait maps using
+                        plot-level PLSR models applied to NEON AOP reflectance.</li>
+                      <li style="margin-bottom: 3px;">Site-level PLSR modeling using upscaled NEON AOP trait maps
+                        and PRISMA reflectance + LAI as predictors to produce 30 m time-series trait maps.</li>
+                      <li style="margin-bottom: 3px;">Analyzing seasonal variation of plant traits across NEON sites
+                        and identifying environmental drivers via random forest models.</li>
+                    </ol>
+                  </ol>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Key Findings:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">PRISMA reliably tracked seasonal variability in plant traits,
+                        achieving overall <em>R<sup>2</sup></em> = 0.78–0.88 and NRMSE = 5.4–8.4 % for all
+                        four traits.</li>
+                      <li style="margin-bottom: 3px;">Seasonal patterns revealed <strong style="color:hsl(0,0%,100%);">
+                        bell-shaped trajectories</strong> for chlorophyll and carotenoids, driven by structural
+                        changes during leaf maturation and senescence. EWT decreased steadily across most sites.
+                        Nitrogen showed less pronounced seasonal variation, reflecting nutrient resorption patterns.</li>
+                      <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Seasonal variability
+                        drivers:</strong> solar radiation and day length (northern sites); vapor pressure
+                        (semi-arid regions); temperature (mid-southeastern sites).</li>
+                      <li style="margin-bottom: 3px;"><strong style="color:hsl(0,0%,100%);">Spatial variability
+                        </strong> was primarily driven by soil properties during the peak growing season, with
+                        climatic factors becoming more prominent toward the end of the season.</li>
+                    </ol>
+                  </ol>
+
+                  <figure>
+                    <img src="../assets/images/PRISMA_paper/Fig1_NEON_sites.jpg" alt="NEON sites map">
+                    <figcaption><strong>Fig. 1</strong> — Eleven selected NEON sites across the contiguous U.S.,
+                      spanning 9 NEON-defined ecological functional domains. Inset photos show representative
+                      vegetation at each site.</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/PRISMA_paper/Fig2_workflow.jpg" alt="Analytical workflow">
+                    <figcaption><strong>Fig. 2</strong> — Summarized four-step workflow: (1) PRISMA preprocessing,
+                      (2) NEON AOP 1 m trait map generation, (3) site-level PLSR modeling to produce 30 m
+                      time-series trait maps, and (4) seasonal analysis with environmental drivers.</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/PRISMA_paper/Fig3_scatter_validation.jpg" alt="Model validation scatter plots">
+                    <figcaption><strong>Fig. 3</strong> — Correlation between PRISMA-derived traits and NEON AOP
+                      traits using the independent 20 % validation datasets for (a) Chla+b
+                      (<em>R</em><sup>2</sup> = 0.813, NRMSE = 5.4 %), (b) Ccar (<em>R</em><sup>2</sup> = 0.845,
+                      NRMSE = 6.3 %), (c) EWT (<em>R</em><sup>2</sup> = 0.88, NRMSE = 7.3 %), and (d) Nitrogen
+                      (<em>R</em><sup>2</sup> = 0.781, NRMSE = 8.4 %).</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/PRISMA_paper/Fig4_trait_maps_SCBI.jpg" alt="Seasonal trait maps at SCBI">
+                    <figcaption><strong>Fig. 4</strong> — PRISMA-derived plant trait maps at the Smithsonian
+                      Conservation Biology Institute (SCBI) site for three representative months (May, August,
+                      October), showing seasonal dynamics of Chla+b, Ccar, EWT, and Nitrogen.</figcaption>
+                  </figure>
+
+                  <p>These findings highlight the capability of PRISMA for large-scale, time-series plant functional
+                    trait mapping and provide valuable insights into the interactions between plant traits and
+                    environmental factors, contributing to our understanding of plant functional ecology and improving
+                    predictions of ecosystem responses to environmental changes.</p>
+                </div>
+              </div><!-- /paper-prisma -->
+
+              <!-- Paper 1 -->
+              <div class="paper-card" id="paper-1">
+                <div class="paper-card-header" onclick="togglePaper('paper-1')">
+                  <span class="paper-number">2</span>
+                  <div class="paper-title-block">
+                    <h4>Leveraging transfer learning and leaf spectroscopy for leaf trait prediction with broad
+                      spatial, species, and temporal applicability</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">Remote Sensing of Environment 2025</span>
+                      <span class="paper-tag">Transfer Learning</span>
+                      <span class="paper-tag">Leaf Traits</span>
+                      <span class="paper-tag">Deep Neural Network</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                      <a href="https://github.com/FujiangJi/transfer_learning_models" target="_blank" class="paper-link-btn">
+                        <ion-icon name="logo-github"></ion-icon> Data &amp; Code
+                      </a>
+                    </div>
+                  </div>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
+
+                <div class="paper-body">
+                  <p>Accurate and reliable prediction of leaf traits is crucial for understanding plant adaptations to
+                    environmental variation, monitoring terrestrial ecosystems, and enhancing comprehension of functional
+                    diversity and ecosystem functioning.</p>
+                  <p>Various approaches (e.g., statistical, physical models) have been developed to estimate leaf traits
+                    through hyperspectral remote sensing and leaf spectroscopy. However, the absence of high-performing,
+                    transferable, and stable models across various domains of space, plant functional types (PFTs) and
+                    seasons hinder our ability to quantify and comprehend spatiotemporal variations in leaf traits.</p>
+                  <p>This study proposes robust and highly transferable models for better predicting leaf traits with
+                    hyperspectral reflectance. Three datasets were assembled, pairing common leaf traits — chlorophyll
+                    (Chla+b, µg/cm<sup>2</sup>), carotenoids (Ccar, µg/cm<sup>2</sup>), leaf mass per area (LMA,
+                    g/m<sup>2</sup>), equivalent water thickness (EWT, g/m<sup>2</sup>) — with leaf spectra measurements
+                    collected across diverse geographic locations in the U.S. and Europe, PFTs, and seasons.</p>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">Do our proposed transfer learning models have better performance than
+                        PLSR, GPR, and pure RTMs?</li>
+                      <li style="margin-bottom: 3px;">Are the transfer learning models more transferable across different
+                        geographic locations, PFTs, and seasons?</li>
+                      <li style="margin-bottom: 3px;">How do inconsistency and quantity of real observations used for
+                        fine-tuning influence model performance?</li>
+                    </ol>
+                  </ol>
+
+                  <div class="img-row">
+                    <img src="../assets/images/Transfer_learning_paper/Fig1.jpg" alt="Site distribution">
+                    <img src="../assets/images/Transfer_learning_paper/Fig3.jpg" alt="Trait variations">
+                  </div>
+                  <figcaption>Left: Overall workflow for estimating leaf traits based on various models.&ensp;
+                    Right: Pre-training processes using the synthetic data of RTMs (PROSPECT and Leaf-SIP).</figcaption>
+
+                  <ol class="order-list" style="font-size: 13px; margin: 12px 0 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Framework — four steps:</strong></li>
                     <ol class="order-list2" style="font-size: 13px;">
                       <li style="margin-bottom: 3px;">Pure radiative transfer modeling.</li>
                       <li style="margin-bottom: 3px;">Transfer learning modeling.</li>
                       <li style="margin-bottom: 3px;">Statistical modeling.</li>
                       <li style="margin-bottom: 3px;">Model performance assessment.</li>
                     </ol>
-                    <li style="margin-bottom: 8px;">Using synthetic reflectance simulations, pre-trained DNN models were
-                      applied to predict leaf traits. The results demonstrate that the pre-trained DNN models
-                      effectively estimated the leaf traits when compared to their true values, regardless of whether
-                      the synthetic data were generated using PROSPECT or Leaf-SIP.</li>
                   </ol>
 
-                  <div class="container">
-                    <img src="../assets/images/Transfer_learning_paper/Fig2.jpg" alt="modeling_methods">
-                    <img src="../assets/images/Transfer_learning_paper/Fig4.jpg" alt="Pre-train_results">
+                  <div class="img-row">
+                    <img src="../assets/images/Transfer_learning_paper/Fig2.jpg" alt="Modeling methods">
+                    <img src="../assets/images/Transfer_learning_paper/Fig4.jpg" alt="Pre-train results">
                   </div>
+                  <figcaption>Left: Spatial distribution of leaf trait samples in the spatial dataset.&ensp;
+                    Right: Mean leaf traits, reflectance and variability (CV) among sites, PFTs and growing season.</figcaption>
 
-                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: Spatial distribution of leaf trait
-                    samples in the spatial dataset;<br> Right: Mean leaf traits, reflectance and variability
-                    (coefficient of variation, CV) among sites, plant functional types (PFTs) and growing season in the
-                    datasets. </figcaption>
+                  <p style="margin-top: 12px;">Through comparison with PLSR, GPR, and pure physical models, the proposed
+                    transfer learning models achieved better predictive performance and higher transferability.</p>
 
-
-                  <ol class="order-list" style="font-size: 14px;">
-                    <li style="margin-bottom: 8px;">Through comparison with other state-of-the-art statistical models,
-                      including partial-least squares regression (PLSR) and Gaussian Process Regression (GPR), as well
-                      as pure physical models, we found that the proposed transfer learning models achieved better
-                      predictive performance and higher transferability.</li>
-                  </ol>
-                  <div class="container">
-                    <img src="../assets/images/Transfer_learning_paper/Fig5.jpg" alt="modeling_methods">
-                    <img src="../assets/images/Transfer_learning_paper/Fig6.jpg" alt="Pre-train_results">
+                  <div class="img-row">
+                    <img src="../assets/images/Transfer_learning_paper/Fig5.jpg" alt="Model performance">
+                    <img src="../assets/images/Transfer_learning_paper/Fig6.jpg" alt="Out-of-domain results">
                   </div>
-
-                  <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: The performance of different models
-                    in predicting leaf traits by incorporating varying proportions of observations for model training or
-                    fine-tuning;<br> Right: Out-of-domains performance of different models.</figcaption>
-
+                  <figcaption>Left: Performance of different models incorporating varying proportions of observations for
+                    training/fine-tuning.&ensp; Right: Out-of-domain performance of different models.</figcaption>
                 </div>
-                <!-- Toggle button -->
-                <button onclick="toggleFoldable(this)"
-                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
-                  id="toggle-btn">
-                  Show more
-                </button>
-              </ul>
-            </li>
+              </div><!-- /paper-1 -->
 
-            <!--Research Two-->
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Unveiling the transferability of PLSR models
-                for leaf trait estimation:
-                lessons from a comprehensive analysis with a novel global dataset (<a
-                  href="https://doi.org/10.1111/NPH.19807" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>, <a
-                  href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">data and code availability</a>).</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
-                <p style="margin-bottom: 8px;">Leaf traits are essential for understanding many physiological and
-                  ecological processes. Partial least-squares regression (PLSR) models with leaf spectroscopy are widely
-                  applied for trait estimation, but their transferability across space, time and plant functional types
-                  (PFTs) remains unclear.</p>
-
-                <ol class="order-list" style="font-size: 14px;">
-                  <li style="margin-bottom: 8px;">Research Questions:</li>
-                  <ol class="order-list2" style="font-size: 13px;">
-                    <li style="margin-bottom: 3px;">How well do the PLSR models transfer to new domains (new sites, PFTs
-                      and time)?</li>
-                    <li style="margin-bottom: 8px;">What are the potential factors influencing the transferability of
-                      PLSR?</li>
-                  </ol>
-                  <li style="margin-bottom: 8px;">Hypotheses:</li>
-                  <ol class="order-list2" style="font-size: 13px;">
-                    <li style="margin-bottom: 3px;">Predictive models can expect accurate trait predictions for new
-                      measurements falling within the range of the data used during model training and the model
-                      performance will decline when extrapolating to new domains;</li>
-                    <li style="margin-bottom: 8px;">Greater spectral diversity in model training means better
-                      predictability of the PLSR models in new domains.</li>
-                  </ol>
-                </ol>
-
-                <div id="foldable-content" style="display: none;">
-
-                  <p style="margin-bottom: 8px;">We compiled a novel dataset of paired leaf traits and spectra, with
-                    47,393 records for >700 species and eight PFTs at 101 globally-distributed locations across multiple
-                    seasons. Using this dataset, we conducted an unprecedented comprehensive analysis to assess the
-                    transferability of PLSR models in estimating leaf traits.</p>
-                  <div class="container">
-                    <img style="max-width:100%;" src="../assets/images/PLSR_paper/sites_distribution.png"
-                      alt="Site distribution">
+              <!-- Paper 2 -->
+              <div class="paper-card" id="paper-2">
+                <div class="paper-card-header" onclick="togglePaper('paper-2')">
+                  <span class="paper-number">3</span>
+                  <div class="paper-title-block">
+                    <h4>Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a
+                      comprehensive analysis with a novel global dataset</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">New Phytologist 2024</span>
+                      <span class="paper-tag">PLSR</span>
+                      <span class="paper-tag">Transferability</span>
+                      <span class="paper-tag">Global Dataset</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.1111/NPH.19807" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                      <a href="https://github.com/FujiangJi/PLSR_trait_models_evaluation/tree/main" target="_blank" class="paper-link-btn">
+                        <ion-icon name="logo-github"></ion-icon> Data &amp; Code
+                      </a>
+                    </div>
                   </div>
-                  <figcaption style="margin-bottom: 10px; text-align: center;">The distribution of leaf samples in (a)
-                    climate zones (Whittaker, 1970) and (b) geographic locations.</figcaption>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
 
-                  <div class="container">
-                    <img style="max-width:100%;" src="../assets/images/PLSR_paper/flowchart.png" alt="Flowchart">
-                  </div>
-                  <figcaption style="margin-bottom: 10px; text-align: center;">The framework of this study for testing
-                    the transferability of PLSR modeling across sites, PFTs and time.</figcaption>
+                <div class="paper-body">
+                  <p>Leaf traits are essential for understanding many physiological and ecological processes. PLSR models
+                    with leaf spectroscopy are widely applied for trait estimation, but their transferability across
+                    space, time and plant functional types (PFTs) remains unclear.</p>
 
-                  <ol class="order-list" style="font-size: 13px;">
-                    <li style="margin-bottom: 3px;">Leaf spectra ranging from 450 to 2400 nm with 10 nm interval.</li>
-                    <li style="margin-bottom: 3px;">Total chlorophyll content (Chla+b, µg/cm<sup>2</sup>): 6,840
-                      samples.
-                    </li>
-                    <li style="margin-bottom: 3px;">Total carotenoid content (Ccar, µg/cm<sup>2</sup>): 4,233 samples.
-                    </li>
-                    <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>; a.k.a., leaf water
-                      content): 3,581 samples.</li>
-                    <li style="margin-bottom: 3px;">Leaf mass per area (LMA; g/m<sup>2</sup>): 45,417 samples.</li>
-                    <li style="margin-bottom: 15px;">Evergreen needleleaf forests (ENF, n = 891); Evergreen broadleaf
-                      forests (EBF, n = 1,382); Deciduous needleleaf forests (DNF, n = 77); Deciduous broadleaf forests
-                      (DBF, n = 26,944); Shrublands (SHR, n = 1,599); Grasslands (GRA, n = 11,833); Croplands (CRP, n =
-                      3,409); Vine (n = 637).</li>
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Research Questions:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">How well do PLSR models transfer to new domains (new sites, PFTs and time)?</li>
+                      <li style="margin-bottom: 3px;">What are the potential factors influencing the transferability of PLSR?</li>
+                    </ol>
+                    <li style="margin-bottom: 6px;"><strong style="color: hsl(0,0%,100%);">Hypotheses:</strong></li>
+                    <ol class="order-list2" style="font-size: 13px;">
+                      <li style="margin-bottom: 3px;">Models can expect accurate predictions within the training data range;
+                        performance declines when extrapolating to new domains.</li>
+                      <li style="margin-bottom: 3px;">Greater spectral diversity in training yields better PLSR transferability.</li>
+                    </ol>
                   </ol>
 
-                  <p style="margin-bottom: 8px;"> While PLSR models demonstrate commendable performance in predicting
-                    chlorophyll content, carotenoid, leaf water and leaf mass per area prediction within their training
-                    data space, their efficacy diminishes when extrapolating to new contexts. Specifically,
-                    extrapolating
-                    to locations, seasons, and PFTs beyond the training data leads to reduced <i>R<sup>2</sup></i>
-                    (0.12-0.49, 0.15-0.42, and 0.25-0.56) and increased <i>NRMSE</i> (3.58-18.24%, 6.27-11.55% and
-                    7.0-33.12%) compared to nonspatial random cross-validation (NRCV). These findings highlight
-                    potential
-                    errors in estimating leaf traits across large spatial domains, diverse PFTs and time due to biased
-                    validation schemes and provide guidance for future field sampling strategies and remote sensing
-                    applications.</p>
+                  <p>We compiled a novel dataset of paired leaf traits and spectra, with 47,393 records for &gt;700
+                    species and eight PFTs at 101 globally-distributed locations across multiple seasons.</p>
+
                   <figure>
-                    <img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                      src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
-                    <figcaption style="margin-bottom: 10px;">The relationship between predicted and
-                      observed leaf traits. <br>Left: random 10-fold CV (cross-validation) compared to spatial 10-fold
-                      CV.
-                      <br>Upper Right: cross-PFTs validation.<br>Bottom Right: random 5-fold CV compared to temporal
-                      5-fold CV.
-                    </figcaption>
+                    <img src="../assets/images/PLSR_paper/sites_distribution.png" alt="Site distribution">
+                    <figcaption>The distribution of leaf samples in (a) climate zones (Whittaker, 1970) and
+                      (b) geographic locations.</figcaption>
                   </figure>
 
-                  <p style="margin-bottom: 8px;"> Alpha and beta spectral diversity exhibited positive relationships in
-                    which greater similarity of a spectral diversity metric yielded greater PLSR transferability. A
-                    higher
-                    similarity of spectral diversity among sites or PFTs is associated with the higher transferability
-                    of
-                    PLSR across geographic sites and PFTs.</p>
-                  <figure style="text-align: center;">
-                    <img style="max-width:85%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                      src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
+                  <figure>
+                    <img src="../assets/images/PLSR_paper/flowchart.png" alt="Flowchart">
+                    <figcaption>The framework for testing the transferability of PLSR modeling across sites,
+                      PFTs and time.</figcaption>
+                  </figure>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 3px;">Leaf spectra: 450–2400 nm, 10 nm interval.</li>
+                    <li style="margin-bottom: 3px;">Total chlorophyll (Chla+b, µg/cm<sup>2</sup>): 6,840 samples.</li>
+                    <li style="margin-bottom: 3px;">Total carotenoid (Ccar, µg/cm<sup>2</sup>): 4,233 samples.</li>
+                    <li style="margin-bottom: 3px;">Equivalent water thickness (EWT, g/m<sup>2</sup>): 3,581 samples.</li>
+                    <li style="margin-bottom: 3px;">Leaf mass per area (LMA, g/m<sup>2</sup>): 45,417 samples.</li>
+                    <li style="margin-bottom: 10px;">8 PFTs: ENF, EBF, DNF, DBF, SHR, GRA, CRP, Vine.</li>
+                  </ol>
+
+                  <p>While PLSR models demonstrate commendable performance within their training data space, their
+                    efficacy diminishes when extrapolating to new contexts. Extrapolating to locations, seasons, and PFTs
+                    beyond training data leads to reduced <em>R<sup>2</sup></em> (0.12–0.49) and increased
+                    <em>NRMSE</em> (3.58–18.24%) compared to nonspatial random cross-validation (NRCV).</p>
+
+                  <figure>
+                    <img src="../assets/images/PLSR_paper/0_scatter_plots.png" alt="Scatter plots">
+                    <figcaption>The relationship between predicted and observed leaf traits. Left: random 10-fold CV
+                      vs. spatial 10-fold CV. Upper Right: cross-PFTs validation. Bottom Right: random vs. temporal
+                      5-fold CV.</figcaption>
+                  </figure>
+
+                  <p>Alpha and beta spectral diversity exhibited positive relationships — greater similarity of spectral
+                    diversity yielded greater PLSR transferability.</p>
+
+                  <figure style="text-align:center;">
+                    <img style="max-width:85%;" src="../assets/images/PLSR_paper/0_spectral diversity vs PLSR transformation.png"
                       alt="Spectral diversity">
-                    <figcaption style="margin-bottom: 10px;text-align: left;">Alpha and beta spectral diversity to
-                      explain the transferability of PLSR. (a) and (b) are the relationships between alpha spectral
-                      diversity (aSD) and PLSR transferability across sites and PFTs, respectively. (c) and (d) are the
-                      relationships between beta spectral diversity (BSD) and PLSR (partial least-squares regression)
-                      transferability across sites and PFTs, respectively.</figcaption>
+                    <figcaption style="text-align:left;">Alpha and beta spectral diversity to explain PLSR
+                      transferability. (a–b) relationships between alpha spectral diversity (aSD) and PLSR
+                      transferability across sites and PFTs. (c–d) relationships between beta spectral diversity
+                      (BSD) and PLSR transferability across sites and PFTs.</figcaption>
                   </figure>
                 </div>
-                <!-- Toggle button -->
-                <button onclick="toggleFoldable(this)"
-                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
-                  id="toggle-btn">
-                  Show more
-                </button>
-              </ul>
-            </li>
+              </div><!-- /paper-2 -->
 
-            <!--Research Three-->
-            <li class=" timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Regional Crop Yield Estimation by
-                Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model (<a
-                  href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
-                <p style="margin-bottom: 8px;">Rapidly and accurately estimating yields at field scales are
-                  very significant. Each type of currently yield estimation model has been well studied, yet all of
-                  them have certain limitations. Based on a coupled Carnegie-Ames-Stanford approach (CASA)-World Food
-                  Studies (WOFOST) model and time series Sentinel-2 imagery, we achieved daily crop simulations and
-                  crop yield estimations at two adjacent farms in China.
+            </div><!-- /dir-1-papers -->
+          </div><!-- /dir-1 -->
+
+
+          <!-- =============================================
+               DIRECTION 2: Agricultural Remote Sensing
+          ============================================= -->
+          <div class="research-direction-card" id="dir-2">
+
+            <div class="direction-cover" onclick="toggleDirection('dir-2')">
+              <img src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="Agricultural Remote Sensing">
+              <div class="direction-overlay">
+                <span class="direction-tag">Direction 02 &mdash; Crop Modeling &amp; Agricultural RS</span>
+                <h3>Agricultural Remote Sensing &amp; Crop Growth Modeling</h3>
+                <p class="direction-desc">
+                  Crop yield estimation and biophysical parameter retrieval using satellite data (Sentinel-2),
+                  process-based models (WOFOST, CASA), data assimilation, and machine learning at regional scales.
                 </p>
-                <div id="foldable-content" style="display: none;">
+                <div class="direction-footer">
+                  <span class="direction-count">2 studies</span>
+                  <button class="direction-expand-btn">
+                    View Studies <ion-icon name="chevron-down-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="direction-papers" id="dir-2-papers">
+
+              <!-- Paper 3 -->
+              <div class="paper-card" id="paper-3">
+                <div class="paper-card-header" onclick="togglePaper('paper-3')">
+                  <span class="paper-number">3</span>
+                  <div class="paper-title-block">
+                    <h4>Regional Crop Yield Estimation by Assimilating Time Series of Sentinel-2 Data into a
+                      Modified CASA-WOFOST Coupled Model</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">IEEE TGRS 2021</span>
+                      <span class="paper-tag">Data Assimilation</span>
+                      <span class="paper-tag">Crop Yield</span>
+                      <span class="paper-tag">Sentinel-2</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                    </div>
+                  </div>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
+
+                <div class="paper-body">
+                  <p>Rapidly and accurately estimating yields at field scales is very significant. Each type of
+                    currently used yield estimation model has been well studied, yet all have certain limitations. Based
+                    on a coupled Carnegie-Ames-Stanford approach (CASA)–World Food Studies (WOFOST) model and time
+                    series Sentinel-2 imagery, we achieved daily crop simulations and crop yield estimations at two
+                    adjacent farms in China.</p>
+
                   <figure>
-                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_fields.png" alt="Fields">
-                    <figcaption style="margin-bottom: 10px;">Left: Location of the study areas and the crop type
-                      distribution map. <br>Right: Distribution of sampling points during the growing season.
-                    </figcaption>
-                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/TGRS/0_results.png"
-                      alt="Results">
-                    <figcaption style="margin-bottom: 10px;">Left: Spatial distribution map of yield simulations
-                      by different models and the corresponding performance. <br>Right: Representative fields with
-                      sampling quadrats that show the relationship between the yield distribution and DEM.</figcaption>
+                    <img src="../assets/images/TGRS/0_fields.png" alt="Study area and fields">
+                    <figcaption>Left: Location of the study areas and the crop type distribution map.&ensp;
+                      Right: Distribution of sampling points during the growing season.</figcaption>
                   </figure>
-                  <ol class="order-list">
-                    <li>Compared with the WOFOST model, the coupled CASA-WOFOST model provided a much faster
-                      running speed in yield simulations and a similar accuracy;</li>
-                    <li>Compared with the CASA model, the coupled model provided higher simulation accuracy in
-                      mountainous areas and regions of uneven terrain.</li>
+
+                  <figure>
+                    <img src="../assets/images/TGRS/0_results.png" alt="Yield simulation results">
+                    <figcaption>Left: Spatial distribution map of yield simulations by different models and the
+                      corresponding performance.&ensp; Right: Representative fields with sampling quadrats showing
+                      the relationship between yield distribution and DEM.</figcaption>
+                  </figure>
+
+                  <ol class="order-list" style="font-size: 13px; margin-top: 10px;">
+                    <li style="margin-bottom: 6px;">Compared with the WOFOST model, the coupled CASA-WOFOST model
+                      provided a much faster running speed in yield simulations and similar accuracy.</li>
+                    <li style="margin-bottom: 6px;">Compared with the CASA model, the coupled model provided higher
+                      simulation accuracy in mountainous areas and regions of uneven terrain.</li>
                   </ol>
                 </div>
-                <!-- Toggle button -->
-                <button onclick="toggleFoldable(this)"
-                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
-                  id="toggle-btn">
-                  Show more
-                </button>
-              </ul>
-            </li>
+              </div><!-- /paper-3 -->
 
-            <!--Research Four-->
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title" style="line-height: 1.8;">Comparison of Machine Learning Regression
-                Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands (<a
-                  href="https://doi.org/10.3390/app9071459" target="_blank"
-                  style="color: hsl(45, 100%, 72%); display: inline;">Link</a>).</h4>
-              <ul class="skills-list content-card"
-                style="color:hsl(0, 0%, 84%);font-size: 13px; line-height: 1.5; text-align: justify;">
-                <p style="margin-bottom: 8px;">Leaf area index (LAI) is a crucial crop biophysical parameter that has
-                  been widely used in a variety of fields. Five learning regression algorithms (MLRAs), artificial
-                  neural network (ANN), support vector regression (SVR), Gaussian process regression (GPR), random
-                  forest (RF) and gradient boosting regression tree (GBRT), have been used in the retrieval of cotton
-                  LAI with Sentinel-2 spectral bands. The performances of the five machine learning models are compared
-                  for better applications of MLRAs in remote sensing. We conducted the comparison of five MLRAs in an
-                  agricultural area of Northwest China over three cotton seasons with the corresponding field campaigns
-                  for modeling and validation. Results show that the GBRT model outperforms the other models with
-                  respect to model accuracy in average.
-                </p>
+              <!-- Paper 4 -->
+              <div class="paper-card" id="paper-4">
+                <div class="paper-card-header" onclick="togglePaper('paper-4')">
+                  <span class="paper-number">4</span>
+                  <div class="paper-title-block">
+                    <h4>Comparison of Machine Learning Regression Algorithms for Cotton Leaf Area Index Retrieval
+                      Using Sentinel-2 Spectral Bands</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">Applied Sciences 2019</span>
+                      <span class="paper-tag">LAI Retrieval</span>
+                      <span class="paper-tag">Machine Learning</span>
+                      <span class="paper-tag">Sentinel-2</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.3390/app9071459" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                    </div>
+                  </div>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
 
-                <div id="foldable-content" style="display: none;">
+                <div class="paper-body">
+                  <p>Leaf area index (LAI) is a crucial crop biophysical parameter widely used in various fields. Five
+                    machine learning regression algorithms (MLRAs) — ANN, SVR, GPR, Random Forest, and Gradient
+                    Boosting Regression Tree (GBRT) — were used to retrieve cotton LAI with Sentinel-2 spectral bands.
+                    The performances of the five models are compared for better applications of MLRAs in remote
+                    sensing.</p>
+
+                  <p>We conducted the comparison of five MLRAs in an agricultural area of Northwest China over three
+                    cotton seasons with corresponding field campaigns for modeling and validation. Results show that the
+                    GBRT model outperforms the other models with respect to model accuracy on average.</p>
+
                   <figure>
-                    <img style="max-width:100%;overflow:hidden;"
-                      src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="LAI maps">
-                    <figcaption style="margin-bottom: 10px;">Upper: Location of study area and in-situ leaf area
-                      index(LAI) quadrats from three field campaigns. <br>Bottom: Final cotton LAI map obtained
-                      using GBRT
-                      model and masked by the cotton fields.</figcaption>
-                    <img style="max-width:100%;overflow:hidden;" src="../assets/images/LAI_paper/0_Accuracy.png"
-                      alt="Accuracy">
-                    <figcaption style="margin-bottom: 10px;">Upper: Sensitivity of the ML models to the training
-                      sample
-                      size. <br>Bottom: The performance of different ML models for estimating LAI.</figcaption>
+                    <img src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="Study area and LAI maps">
+                    <figcaption>Upper: Location of study area and in-situ LAI quadrats from three field campaigns.
+                      &ensp;Bottom: Final cotton LAI map obtained using GBRT model, masked by cotton fields.</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/LAI_paper/0_Accuracy.png" alt="Model accuracy comparison">
+                    <figcaption>Upper: Sensitivity of ML models to training sample size.&ensp;
+                      Bottom: Performance of different ML models for estimating LAI.</figcaption>
                   </figure>
                 </div>
-                <!-- Toggle button -->
-                <button onclick="toggleFoldable(this)"
-                  style="margin-top: 10px; background: none; border: none; color: hsl(45, 100%, 72%); cursor: pointer; font-size: 14px;"
-                  id="toggle-btn">
-                  Show more
-                </button>
-              </ul>
-            </li>
+              </div><!-- /paper-4 -->
 
-          </ol>
+            </div><!-- /dir-2-papers -->
+          </div><!-- /dir-2 -->
 
-
-        </section>
+        </div><!-- /research-directions -->
 
       </article>
 
-
-
-    </div>
+    </div><!-- /main-content -->
 
   </main>
 
-
-
-  <!--
-    - custom js link
-  -->
   <script src="../assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <script>
-    function toggleFoldable(button) {
-      const foldableContent = button.previousElementSibling;
-      const isHidden = foldableContent.style.display === "none" || foldableContent.style.display === "";
+    function toggleDirection(id) {
+      const card = document.getElementById(id);
+      const papers = document.getElementById(id + '-papers');
+      const isOpen = card.classList.contains('open');
+      card.classList.toggle('open', !isOpen);
+      papers.classList.toggle('open', !isOpen);
+    }
 
-      foldableContent.style.display = isHidden ? "block" : "none";
-      button.textContent = isHidden ? "Show less" : "Show more";
+    function togglePaper(id) {
+      document.getElementById(id).classList.toggle('open');
     }
   </script>
-
 
 </body>
 

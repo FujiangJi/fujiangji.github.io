@@ -302,7 +302,7 @@ article.active {
 .content-card {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 150px;
+  padding: 15px;
   padding-top: 15px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -582,6 +582,12 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  transition: transform var(--transition-1), box-shadow var(--transition-1);
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px hsla(0, 0%, 0%, 0.35);
 }
 
 .service-item::before {
@@ -591,6 +597,11 @@ main {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  transition: background var(--transition-1);
+}
+
+.service-item:hover::before {
+  background: var(--bg-gradient-yellow-2);
 }
 
 .service-icon-box {
@@ -599,6 +610,12 @@ main {
 
 .service-icon-box img {
   margin: auto;
+  border-radius: 8px;
+  transition: transform var(--transition-1);
+}
+
+.service-item:hover .service-icon-box img {
+  transform: scale(1.06);
 }
 
 .service-content-box {
@@ -607,6 +624,11 @@ main {
 
 .service-item-title {
   margin-bottom: 7px;
+  transition: color var(--transition-1);
+}
+
+.service-item:hover .service-item-title {
+  color: var(--orange-yellow-crayola);
 }
 
 .service-item-text {
@@ -873,6 +895,26 @@ main {
 
 .timeline-item {
   position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color var(--transition-1);
+}
+
+.timeline-item:hover {
+  background-color: hsla(45, 100%, 72%, 0.05);
+}
+
+.timeline-item:hover .timeline-item-title {
+  color: var(--orange-yellow-crayola);
+}
+
+.timeline-item:hover::after {
+  background: var(--orange-yellow-crayola);
+  box-shadow: 0 0 0 4px hsla(45, 100%, 72%, 0.2);
+}
+
+.timeline-item-title {
+  transition: color var(--transition-1);
 }
 
 .timeline-item:not(:last-child) {
@@ -934,6 +976,28 @@ main {
 
 .order-list li:before {
   color: var(--light-gray);
+}
+
+/**
+ * News items — better visual separation
+ */
+
+.testimonials .order-list > li {
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid hsla(0, 0%, 25%, 0.6);
+  border-radius: 0 6px 6px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: border-left-color var(--transition-1), background-color var(--transition-1);
+}
+
+.testimonials .order-list > li:last-child {
+  border-bottom: none;
+}
+
+.testimonials .order-list > li:hover {
+  border-left-color: var(--orange-yellow-crayola);
+  background-color: hsla(45, 100%, 72%, 0.05);
 }
 
 .order-list2 {
@@ -1339,6 +1403,7 @@ figcaption {
 }
 
 .videobox {
+  position: relative;
   margin-top: 40px;
   max-width: 100%;
   width: 100%;
