@@ -658,7 +658,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  /*text-align: justify;*/
+  text-align: justify;
 }
 
 .about-text p {
@@ -943,7 +943,7 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
@@ -958,10 +958,16 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients-item img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
@@ -1923,14 +1929,14 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 50px;
+    gap: 20px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
   .clients-item {
-    min-width: calc(33.33% - 35px);
+    min-width: calc(33.33% - 15px);
   }
 
 
@@ -2236,7 +2242,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-item {
-    min-width: calc(25% - 38px);
+    min-width: calc(20% - 15px);
   }
 
 

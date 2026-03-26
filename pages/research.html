@@ -872,14 +872,153 @@
 
 
           <!-- =============================================
-               DIRECTION 2: Agricultural Remote Sensing
+               DIRECTION 2: Hyperspectral Data Fusion
           ============================================= -->
           <div class="research-direction-card" id="dir-2">
 
             <div class="direction-cover" onclick="toggleDirection('dir-2')">
+              <img src="../assets/images/Fusion_paper/0_study_area.png"
+                alt="Hyperspectral Data Fusion">
+              <div class="direction-overlay">
+                <span class="direction-tag">Direction 02 &mdash; Hyperspectral Data Fusion</span>
+                <h3>Hyperspectral Reconstruction &amp; Multi-sensor Data Fusion</h3>
+                <p class="direction-desc">
+                  Reconstructing high spatial resolution hyperspectral imagery by fusing spaceborne
+                  hyperspectral (EMIT) and multispectral (PlanetScope) observations using deep learning,
+                  with validation against airborne AVIRIS-3/SHIFT reference data across diverse landscapes.
+                </p>
+                <div class="direction-footer">
+                  <span class="direction-count">1 study</span>
+                  <button class="direction-expand-btn">
+                    View Studies <ion-icon name="chevron-down-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="direction-papers" id="dir-2-papers">
+
+              <!-- Paper Fusion -->
+              <div class="paper-card" id="paper-fusion">
+                <div class="paper-card-header" onclick="togglePaper('paper-fusion')">
+                  <span class="paper-number">1</span>
+                  <div class="paper-title-block">
+                    <h4>Robust hyperspectral reconstruction from satellite and airborne observations via a deep
+                      hierarchical fusion network across heterogeneous scenarios</h4>
+                    <div class="paper-meta">
+                      <span class="paper-tag">Remote Sensing of Environment 2026</span>
+                      <span class="paper-tag">Hyperspectral Fusion</span>
+                      <span class="paper-tag">EMIT</span>
+                      <span class="paper-tag">PlanetScope</span>
+                      <span class="paper-tag">Deep Learning</span>
+                    </div>
+                    <div class="paper-links">
+                      <a href="https://doi.org/10.1016/j.rse.2026.115385" target="_blank" class="paper-link-btn">
+                        <ion-icon name="link-outline"></ion-icon> Paper
+                      </a>
+                      <a href="https://github.com/FujiangJi/SmallSat_hyperspectral_reconstruction" target="_blank"
+                        class="paper-link-btn">
+                        <ion-icon name="logo-github"></ion-icon> Data &amp; Code
+                      </a>
+                    </div>
+                  </div>
+                  <ion-icon name="chevron-down-outline" class="paper-expand-icon"></ion-icon>
+                </div>
+
+                <div class="paper-body">
+                  <p>High spatial resolution hyperspectral imagery (HR-HSI) is essential for fine-scale ecological and
+                    environmental monitoring, yet current spaceborne sensors are constrained by a trade-off between
+                    spectral and spatial resolution. Hyperspectral reconstruction through data fusion offers a promising
+                    pathway to generate HR-HSI, but most existing approaches are trained on synthetic, perfectly aligned
+                    datasets and their performance under real cross-sensor conditions remains uncertain.</p>
+
+                  <p>This study develops a deep learning fusion framework that reconstructs HR-HSI by integrating
+                    low-resolution hyperspectral imagery from NASA's <strong style="color: var(--white-1);">EMIT</strong>
+                    (60 m, 285 bands) with high-resolution multispectral imagery from <strong
+                      style="color: var(--white-1);">PlanetScope</strong> (3&ndash;5 m, 8 bands). The model was evaluated
+                    across three ecologically distinct landscapes in the western United States using airborne
+                    <strong style="color: var(--white-1);">AVIRIS-3</strong> and
+                    <strong style="color: var(--white-1);">SHIFT</strong> imagery as reference data.
+                  </p>
+
+                  <figure>
+                    <img src="../assets/images/Fusion_paper/0_study_area.png"
+                      alt="Study areas and multi-sensor datasets">
+                    <figcaption>Overview of the three experimental areas and multi-sensor datasets used for
+                      hyperspectral reconstruction. The upper-left panel shows the geographic locations across the
+                      western U.S. Subpanels display side-by-side comparisons of LR-HSI (EMIT), HR-MSI (PlanetScope),
+                      and HR-HSI (AVIRIS-3/SHIFT) for each region. Bottom panels show representative vegetation
+                      spectra from EMIT, AVIRIS/SHIFT, and PlanetScope.</figcaption>
+                  </figure>
+
+                  <ol class="order-list" style="font-size: 13px; margin-bottom: 10px;">
+                    <li style="margin-bottom: 6px;"><strong style="color: var(--white-1);">Research Questions:</strong>
+                      <ol class="order-list2">
+                        <li>How do existing fusion models and the proposed architecture perform and generalize when
+                          applied to real, cross-platform remote sensing data?</li>
+                        <li>How does model complexity affect the accuracy and effectiveness of hyperspectral
+                          reconstruction?</li>
+                      </ol>
+                    </li>
+                  </ol>
+
+                  <figure>
+                    <img src="../assets/images/Fusion_paper/0_architecture.png"
+                      alt="MSAHFNet architecture">
+                    <figcaption>Architecture of the data fusion framework (MSAHFNet). The network takes co-registered
+                      EMIT (LR-HSI) and PlanetScope (HR-MSI) patches as input. A multi-scale residual backbone with
+                      parallel 1&times;1, 3&times;3, and 5&times;5 convolutional branches captures features at varying
+                      spatial scales. Channel-wise spectral attention and spatial attention modules adaptively enhance
+                      informative features. The composite loss combines MSE, SAM, and SmoothL1 terms.</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/Fusion_paper/0_performance.png"
+                      alt="Quantitative performance comparison">
+                    <figcaption>Quantitative performance of hyperspectral reconstruction models across three experimental
+                      areas, evaluated using SAM, RMSE, MAE, MRE, PSNR, and ERGAS. The best-performing model for each
+                      metric is highlighted in red circle, and the second-best in blue. MSHFNet and MSAHFNet consistently
+                      outperform seven state-of-the-art baselines.</figcaption>
+                  </figure>
+
+                  <figure>
+                    <img src="../assets/images/Fusion_paper/0_visual_comparison.png"
+                      alt="Visual comparison of reconstructed imagery">
+                    <figcaption>Visual comparison of reconstructed hyperspectral outputs across three experimental areas.
+                      Each panel shows false-color composites (760, 670, 550 nm) together with per-pixel cumulative RMSE
+                      maps across all spectral bands relative to the reference imagery. MSHFNet and MSAHFNet preserve
+                      fine-grained spatial details and maintain low reconstruction errors across diverse
+                      landscapes.</figcaption>
+                  </figure>
+
+                  <ol class="order-list" style="font-size: 13px; margin-top: 10px;">
+                    <li style="margin-bottom: 6px;">The proposed framework consistently outperformed seven peer
+                      state-of-the-art fusion models, achieving a best SAM of 2.64 and RMSE of 0.0267.</li>
+                    <li style="margin-bottom: 6px;">Stratified analyses across vegetation density gradients, spectral
+                      subregions (VIS, NIR, SWIR), and pixel-level distributions demonstrated strong robustness in
+                      heterogeneous landscapes.</li>
+                    <li style="margin-bottom: 6px;">A sensor inter-calibration pipeline ensured radiometric consistency
+                      between EMIT and PlanetScope, improving the reliability of the fusion inputs.</li>
+                    <li style="margin-bottom: 6px;">The proposed models (1.5M parameters) outperform much larger models
+                      like DSSFNet (313M parameters), demonstrating that architectural efficiency matters more than
+                      brute-force complexity.</li>
+                  </ol>
+                </div>
+              </div><!-- /paper-fusion -->
+
+            </div><!-- /dir-2-papers -->
+          </div><!-- /dir-2 -->
+
+
+          <!-- =============================================
+               DIRECTION 3: Agricultural Remote Sensing
+          ============================================= -->
+          <div class="research-direction-card" id="dir-3">
+
+            <div class="direction-cover" onclick="toggleDirection('dir-3')">
               <img src="../assets/images/LAI_paper/0_study_area_LAI_Maps.png" alt="Agricultural Remote Sensing">
               <div class="direction-overlay">
-                <span class="direction-tag">Direction 02 &mdash; Crop Modeling &amp; Agricultural RS</span>
+                <span class="direction-tag">Direction 03 &mdash; Crop Modeling &amp; Agricultural RS</span>
                 <h3>Agricultural Remote Sensing &amp; Crop Growth Modeling</h3>
                 <p class="direction-desc">
                   Crop yield estimation and biophysical parameter retrieval using satellite data (Sentinel-2),
@@ -894,7 +1033,7 @@
               </div>
             </div>
 
-            <div class="direction-papers" id="dir-2-papers">
+            <div class="direction-papers" id="dir-3-papers">
 
               <!-- Paper 3 -->
               <div class="paper-card" id="paper-3">
@@ -995,8 +1134,8 @@
                 </div>
               </div><!-- /paper-4 -->
 
-            </div><!-- /dir-2-papers -->
-          </div><!-- /dir-2 -->
+            </div><!-- /dir-3-papers -->
+          </div><!-- /dir-3 -->
 
         </div><!-- /research-directions -->
 
