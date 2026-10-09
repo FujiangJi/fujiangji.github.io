@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <script src="../../assets/js/theme-toggle.js?v=20261008-system55"></script>
-  <script src="../../assets/js/site-language.js?v=20261009-controls94"></script>
+  <script src="../../assets/js/site-language.js?v=20261009-arrow98"></script>
   <title>Python for data visualization | Fujiang Ji</title>
   
 
@@ -22,6 +22,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="../../assets/css/data_visualization.css?v=20261006-type2">
+  <link rel="stylesheet" href="../../assets/css/site-icons.css?v=20261009-arrow98">
   <link rel="stylesheet" href="../../assets/css/profile-panel.css?v=20261007-footer53">
   <link rel="stylesheet" href="../../assets/css/site-footer.css?v=20261007-footer53">
   <link rel="stylesheet" href="../../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
@@ -38,7 +39,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 
-  <script src="../../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+  <script src="../../assets/js/visitor-map.js?v=20261009-arrow98" defer></script>
 
 
 
@@ -244,21 +245,21 @@
     <div class="lesson-hero"><div class="lesson-hero-copy"><p>Build clear scientific figures with deliberate subplot layouts, readable axes, and compact legends.</p><div class="lesson-tags"><span>Python</span><span>Matplotlib</span><span>Figure design</span></div><a class="lesson-start" href="#lesson-1">Start learning <span aria-hidden="true">↓</span></a></div><figure class="lesson-figure lesson-figure-hero">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.3.png" data-image-caption="Example output" data-image-background="#ffffff" aria-label="Enlarge figure: Example output" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.3.png" width="678" height="203" alt="Example output" fetchpriority="high" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Example output · Click to enlarge</figcaption></figure></div>
     <div class="lesson-preparation"><details open><summary>What you’ll learn</summary><ul><li>Choose a layout for single and multipanel figures.</li><li>Control axes, ticks, grids, and shared labels.</li><li>Place and customize legends.</li></ul></details><details><summary>Before you begin <span>Python basics</span></summary><ul><li>Python and Matplotlib.</li><li>The layout examples use empty axes; no dataset is needed.</li><li>The legend snippet continues an existing plot with ax and legend handles.</li></ul></details></div>
     <div class="lesson-layout"><aside class="lesson-toc"><details data-lesson-outline><summary>On this page <span>5 sections</span></summary><nav aria-label="Tutorial chapters"><a href="#lesson-1" data-lesson-toc><span>01</span>Create axes with subplots</a><a href="#lesson-2" data-lesson-toc><span>02</span>Build panels with figure</a><a href="#lesson-3" data-lesson-toc><span>03</span>Arrange panels with GridSpec</a><a href="#lesson-4" data-lesson-toc><span>04</span>Style axes and ticks</a><a href="#lesson-5" data-lesson-toc><span>05</span>Refine the legend</a></nav></details></aside><div class="lesson-content"><section class="lesson-section" id="lesson-1" aria-labelledby="lesson-1-title"><div class="lesson-section-heading"><span class="lesson-step">01</span><h3 id="lesson-1-title">Create axes with subplots</h3></div><p class="lesson-section-intro">Start with a single axis or a regular grid. Shared figure labels are useful when several panels use the same variables.</p><div class="lesson-figures lesson-figures-multiple"><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.1.png" data-image-caption="Single axis" data-image-background="#ffffff" aria-label="Enlarge figure: Single axis" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.1.1.png" width="217" height="203" alt="Single axis" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Single axis · Click to enlarge</figcaption></figure><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.2.png" data-image-caption="A 2 × 2 grid" data-image-background="#ffffff" aria-label="Enlarge figure: A 2 × 2 grid" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.1.2.png" width="295" height="280" alt="A 2 × 2 grid" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>A 2 × 2 grid · Click to enlarge</figcaption></figure><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.3.png" data-image-caption="Shared figure labels" data-image-background="#ffffff" aria-label="Enlarge figure: Shared figure labels" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.1.3.png" width="301" height="292" alt="Shared figure labels" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Shared figure labels · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.1 plt.subplots
  fig,ax = plt.subplots(nrows, ncols, figsize=(width, height), dpi, sharex=False, sharey=False, **kwargs)
  Parameters:
@@ -328,11 +329,11 @@ fig.text(0, 0.5, &#x27;y&#x27;, va=&#x27;center&#x27;,rotation=&#x27;vertical&#x
       <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>A 2 × 2 axes array is indexed as ax[row, column]. Use ax.ravel() when you want to iterate over individual panels.</p></aside></section><section class="lesson-section" id="lesson-2" aria-labelledby="lesson-2-title"><div class="lesson-section-heading"><span class="lesson-step">02</span><h3 id="lesson-2-title">Build panels with figure</h3></div><p class="lesson-section-intro">Create the figure first, then add each panel in a loop. This is useful when panel creation is part of an iterative workflow.</p><div class="lesson-figures lesson-figures-multiple"><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.2.1.png" data-image-caption="Default figure background" data-image-background="#ffffff" aria-label="Enlarge figure: Default figure background" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.2.1.png" width="291" height="280" alt="Default figure background" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Default figure background · Click to enlarge</figcaption></figure><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.2.2.png" data-image-caption="Custom figure background" data-image-background="#ffffff" aria-label="Enlarge figure: Custom figure background" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.2.2.png" width="291" height="280" alt="Custom figure background" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Custom figure background · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.2 plt.figure
  fig = plt.figure(figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True, **kwargs)
  Parameters:
@@ -402,7 +403,7 @@ for i in range(4):
       <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-3" aria-labelledby="lesson-3-title"><div class="lesson-section-heading"><span class="lesson-step">03</span><h3 id="lesson-3-title">Arrange panels with GridSpec</h3></div><p class="lesson-section-intro">Use a grid to make panels span different numbers of rows or columns. The example arranges four panels across a flexible grid.</p><div class="lesson-figures"><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.3.png" data-image-caption="Four panels arranged with GridSpec" data-image-background="#ffffff" aria-label="Enlarge figure: Four panels arranged with GridSpec" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/1.3.png" width="678" height="203" alt="Four panels arranged with GridSpec" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Four panels arranged with GridSpec · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.3 plt.figure &amp; GridSpec
  gs = gridspec.GridSpec(nrows, ncols)
  A grid layout to place subplots within a figure.
@@ -461,7 +462,7 @@ ax4 = plt.subplot(gs[0:2, 6:8])</template>
       <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-4" aria-labelledby="lesson-4-title"><div class="lesson-section-heading"><span class="lesson-step">04</span><h3 id="lesson-4-title">Style axes and ticks</h3></div><p class="lesson-section-intro">Set labels and limits, format tick values, control spines, and use a light grid to guide the reader without distracting from the data.</p><div class="lesson-figures"><figure class="lesson-figure">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/2.1.png" data-image-caption="Axis labels, ticks, and grid settings" data-image-background="#ffffff" aria-label="Enlarge figure: Axis labels, ticks, and grid settings" style="--figure-background:#ffffff">
         <img src="./data_visualization_image/2.1.png" width="547" height="226" alt="Axis labels, ticks, and grid settings" loading="lazy" decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>Axis labels, ticks, and grid settings · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>2.1 set axes parameters</pre></details><div class="lesson-code is-collapsed" data-code-card>
       <div class="lesson-code-toolbar"><span class="lesson-code-filename">axes_style.py</span><span class="lesson-code-language">Python</span>
       <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for axes_style.py">Wrap</button><button type="button" data-code-copy aria-label="Copy axes_style.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/axes_style.py" download aria-label="Download axes_style.py">↓</a></div></div>
@@ -604,7 +605,7 @@ for handle in handles:
 legend = ax.legend(handles=new_handles, labels=labels,loc = &#x27;lower right&#x27;,fontsize=8.5, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(1.,0))</template>
       
       <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>This example uses ax and original_handle_colors from the surrounding plotting workflow. It is a continuation snippet.</p></aside></section></div></div>
-    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" rel="noopener noreferrer">Matplotlib tutorials <span aria-hidden="true">↗</span></a><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html" target="_blank" rel="noopener noreferrer">GridSpec reference <span aria-hidden="true">↗</span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/data_visualization/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
+    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" rel="noopener noreferrer">Matplotlib tutorials <span aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></a><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html" target="_blank" rel="noopener noreferrer">GridSpec reference <span aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/data_visualization/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
     <nav class="lesson-next" aria-label="Adjacent tutorials"><a href="./rs_data_processing.html"><span>← Previous tutorial</span><strong>Read &amp; write GeoTIFF</strong></a><a href="./scatter_line_plot.html"><span>Next tutorial →</span><strong>Scatter &amp; line plots</strong></a></nav>
 <footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
           <div class="footer-main">
@@ -661,7 +662,7 @@ legend = ax.legend(handles=new_handles, labels=labels,loc = &#x27;lower right&#x
 
 <dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
   <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
-  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a></div>
   <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
 </dialog>
 <script src="../../assets/js/tutorial-reader.js?v=20261009-i18n90" defer></script>

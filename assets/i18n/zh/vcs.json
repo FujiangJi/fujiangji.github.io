@@ -17,7 +17,7 @@
   "Manage large files with Git LFS": "用 Git LFS 管理大文件",
   "Reproduce a CLM model version": "复现 CLM 模型版本",
   "Create an SSH key if you need one, add the public key to your GitHub account, then test the connection.": "如有需要，生成 SSH 密钥，将公钥添加到 GitHub 账户，再测试连接。",
-  "GitHub’s SSH setup instructions ↗": "GitHub SSH 配置说明 ↗",
+  "GitHub’s SSH setup instructions": "GitHub SSH 配置说明",
   "for adding the key to the agent and account.": "将密钥添加到代理和账户。",
   "Clone the repository, review the working tree, stage the files you intend to publish, and create a descriptive commit.": "克隆仓库，检查工作区，将准备发布的文件加入暂存区，并创建说明清楚的提交。",
   "A clone already has an origin remote. For a new local repository, set its remote URL once before the first push.": "克隆后的仓库已配置 origin 远程地址。新建本地仓库时，应在首次推送前配置一次远程 URL。",

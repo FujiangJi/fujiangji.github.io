@@ -67,7 +67,7 @@
     }
     const open = document.createElement('span');
     open.className = 'visitor-map-open';
-    open.textContent = 'View map ↗';
+    open.innerHTML = 'View map <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg>';
     // The whole provider widget already links to its interactive statistics page.
     // Replace the tiny controls drawn into the background with an honest link cue.
     widget.querySelector('.mapmyvisitors-map').append(open);

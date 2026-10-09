@@ -210,7 +210,7 @@
 
   async function loadLocale() {
     if (!localePromise) {
-      localePromise = Promise.all(['common', page].map(name => fetch(new URL(name + '.json?v=20261009-zh93', localeRoot)).then(response => {
+      localePromise = Promise.all(['common', page].map(name => fetch(new URL(name + '.json?v=20261009-arrow98', localeRoot)).then(response => {
         if (!response.ok) throw new Error('Translation unavailable');
         return response.json();
       }))).then(([common, current]) => { dictionary = {...common, ...current}; }).catch(error => { localePromise = null; throw error; });

@@ -85,13 +85,13 @@ GUIDES = [
          prep=['An approved CHTC account and its assigned access point.', 'A terminal on macOS, Linux, or Windows with SSH support.', 'Adjust paths, resource requests, and environment names for your project.'],
          sections=[
              section('Choose a computing system', 'Match the computing system to how your tasks communicate, rather than choosing by job size alone.',
-                     body='<div class="lesson-comparison"><div><h4>HPC · Slurm</h4><p>Tightly coupled computations that coordinate work across nodes, such as MPI applications.</p></div><div><h4>HTC · HTCondor</h4><p>Many independent jobs, such as parameter sweeps or separate model runs.</p></div></div><p>Resource limits depend on the system and partition. Use the current <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank" rel="noopener noreferrer">CHTC system overview ↗</a> for limits and policies.</p>'),
+                     body='<div class="lesson-comparison"><div><h4>HPC · Slurm</h4><p>Tightly coupled computations that coordinate work across nodes, such as MPI applications.</p></div><div><h4>HTC · HTCondor</h4><p>Many independent jobs, such as parameter sweeps or separate model runs.</p></div></div><p>Resource limits depend on the system and partition. Use the current <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank" rel="noopener noreferrer">CHTC system overview <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a> for limits and policies.</p>'),
              section('Connect and transfer files', 'Use the access point in your welcome email. The HPC example below uses the currently documented spark-login host.', 'connect_and_transfer.sh',
                      note='Run SSH and SCP commands from your local terminal. For HTC, use the assigned ap2001 or ap2002 access point.',
-                     body='<p>For an editor-based workflow, see <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial" target="_blank" rel="noopener noreferrer">VS Code Remote SSH ↗</a>.</p>'),
+                     body='<p>For an editor-based workflow, see <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial" target="_blank" rel="noopener noreferrer">VS Code Remote SSH <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a>.</p>'),
              section('Prepare a Python environment', 'For the HPC example, use a Conda installation available to your compute job, then create a named environment with the packages your analysis needs.', 'python_environment.sh', images=[('hpc_image/miniconda_installation.png','Original Miniconda installation example')],
                      note='The screenshot is an example of the original setup. Use your own software path and check the current installation guide.',
-                     body='<p>See the <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-software" target="_blank" rel="noopener noreferrer">HPC software guide ↗</a> for installation policies. HTC jobs need a portable environment or container; see the <a href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank" rel="noopener noreferrer">HTC Conda guide ↗</a>.</p>'),
+                     body='<p>See the <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-software" target="_blank" rel="noopener noreferrer">HPC software guide <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a> for installation policies. HTC jobs need a portable environment or container; see the <a href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank" rel="noopener noreferrer">HTC Conda guide <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a>.</p>'),
              section('Submit a Slurm job', 'An sbatch file describes the resources and the command to run. Save this example as submit_job.sh and adapt it before submitting.', 'submit_job.sh',
                      note='This is a submission template. Choose CPU, memory, runtime, and partition requests that match the application; the template does not make a serial Python program parallel.'),
              section('Monitor and inspect results', 'Check queue status and job accounting, then inspect the output and error logs. Use the HTC commands when your workload runs under HTCondor.', 'monitor_jobs.sh', images=[('hpc_image/resource.png','Original computing-resource illustration')],
@@ -106,7 +106,7 @@ GUIDES = [
          prep=['Git installed and a GitHub account.', 'Git LFS for the large-file section.', 'Replace example repository names, email addresses, and paths with your own.'],
          sections=[
              section('Connect to GitHub', 'Create an SSH key if you need one, add the public key to your GitHub account, then test the connection.', 'github_connection.sh',
-                     body='<p>Follow <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreferrer">GitHub’s SSH setup instructions ↗</a> for adding the key to the agent and account.</p>'),
+                     body='<p>Follow <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener noreferrer">GitHub’s SSH setup instructions <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a> for adding the key to the agent and account.</p>'),
              section('Record and share changes', 'Clone the repository, review the working tree, stage the files you intend to publish, and create a descriptive commit.', 'record_changes.sh',
                      note='A clone already has an origin remote. For a new local repository, set its remote URL once before the first push.'),
              section('Work with branches', 'Create a branch for a change, commit there, and merge it into the main branch after review.', 'branch_workflow.sh',
@@ -301,7 +301,7 @@ def image_figure(src, caption, hero=False):
     return f'''<figure class="lesson-figure{' lesson-figure-hero' if hero else ''}">
       <button type="button" class="lesson-image-button" data-lesson-image data-image-src="{escape(src)}" data-image-caption="{escape(caption)}" data-image-background="{bg}" aria-label="Enlarge figure: {escape(caption)}" style="--figure-background:{bg}">
         <img src="{escape(src)}" width="{width}" height="{height}" alt="{escape(caption)}" {'fetchpriority="high"' if hero else 'loading="lazy"'} decoding="async">
-        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+        <span class="lesson-enlarge" aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span>
       </button><figcaption>{escape(caption)} · Click to enlarge</figcaption></figure>'''
 
 def code_card(guide, item):
@@ -326,7 +326,7 @@ def code_card(guide, item):
 
 def link(label, href):
     extra=' target="_blank" rel="noopener noreferrer"' if href.startswith('http') else ''
-    return f'<a href="{escape(href)}"{extra}>{escape(label)} <span aria-hidden="true">↗</span></a>'
+    return f'<a href="{escape(href)}"{extra}>{escape(label)} <span aria-hidden="true"><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></span></a>'
 
 def article_content(guide, index):
     tags=''.join(f'<span>{escape(tag)}</span>' for tag in guide['tags'])
@@ -358,7 +358,7 @@ def article_content(guide, index):
 
 IMAGE_DIALOG='''<dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
   <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
-  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"/></svg></a></div>
   <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
 </dialog>'''
 
@@ -389,6 +389,8 @@ def build(original_directory=None):
         start=source.index('<article class="tutorial')
         footer_start=source.index('<footer ',start)
         prefix=source[:start]
+        if 'site-icons.css' not in prefix:
+            prefix=prefix.replace('</head>', '<link rel="stylesheet" href="../../assets/css/site-icons.css?v=20261009-arrow98">\n</head>')
         prefix=re.sub(r'<style>.*?</style>','',prefix,flags=re.S)
         prefix=re.sub(r'<link[^>]+href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/[^>]+>','',prefix)
         prefix=re.sub(r'<link[^>]+href="../../assets/css/tutorial-reader.css[^>]*>','',prefix)
