@@ -1,3 +1,5 @@
+@import url("./theme-colors.css");
+
 /*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
@@ -543,7 +545,7 @@ main {
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
   /*text-align: justify;*/
 }
@@ -662,7 +664,7 @@ main {
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
   display: -webkit-box;
   line-clamp: 4;
@@ -792,7 +794,7 @@ main {
 .modal-content p {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -911,7 +913,7 @@ main {
 
 .timeline-text {
   color: var(--light-gray);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -1095,7 +1097,7 @@ figcaption {
 }
 
 .select-item button:hover {
-  --eerie-black-2: hsl(240, 2%, 20%);
+  --eerie-black-2: var(--theme-soft);
 }
 
 .project-list {
@@ -1301,7 +1303,7 @@ figcaption {
 .blog-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 

@@ -1,3 +1,5 @@
+@import url("./theme-colors.css");
+
 /*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
@@ -572,6 +574,10 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-link {
+  display: block;
+}
+
 .contact-info address {
   font-style: normal;
 }
@@ -656,7 +662,7 @@ main {
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
   text-align: justify;
 }
@@ -797,7 +803,7 @@ main {
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
   display: -webkit-box;
   line-clamp: 4;
@@ -927,7 +933,7 @@ main {
 .modal-content p {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -1017,7 +1023,7 @@ main {
 }
 
 .timeline-item:hover {
-  background-color: hsla(45, 100%, 72%, 0.05);
+  background-color: rgba(var(--theme-accent-rgb), 0.05);
 }
 
 .timeline-item:hover .timeline-item-title {
@@ -1026,7 +1032,7 @@ main {
 
 .timeline-item:hover::after {
   background: var(--orange-yellow-crayola);
-  box-shadow: 0 0 0 4px hsla(45, 100%, 72%, 0.2);
+  box-shadow: 0 0 0 4px rgba(var(--theme-accent-rgb), 0.2);
 }
 
 .timeline-item-title {
@@ -1073,7 +1079,7 @@ main {
 
 .timeline-text {
   color: var(--light-gray);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -1113,7 +1119,7 @@ main {
 
 .testimonials .order-list > li:hover {
   border-left-color: var(--orange-yellow-crayola);
-  background-color: hsla(45, 100%, 72%, 0.05);
+  background-color: rgba(var(--theme-accent-rgb), 0.05);
 }
 
 .order-list2 {
@@ -1279,7 +1285,7 @@ figcaption {
 }
 
 .select-item button:hover {
-  --eerie-black-2: hsl(240, 2%, 20%);
+  --eerie-black-2: var(--theme-soft);
 }
 
 .project-list {
@@ -1485,7 +1491,7 @@ figcaption {
 .blog-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-400);
   line-height: 1.6;
 }
 
@@ -2417,4 +2423,105 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 
+}
+
+/* Academic history: school marks and two columns on desktop. */
+.academic-history {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  margin: 40px 0;
+  cursor: auto;
+}
+
+.academic-column { min-width: 0; }
+
+.academic-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+  font-size: 26px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.academic-heading::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--jet);
+}
+
+.academic-list { display: grid; gap: 28px; margin: 0; padding: 0; }
+
+.academic-entry {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.academic-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.academic-logo[data-institution="arizona"],
+.academic-logo[data-institution="wisconsin"] {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.academic-logo[data-institution="arizona"] { display: grid; place-items: center; }
+.academic-logo > img { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: contain; }
+
+.academic-school {
+  color: var(--white-2);
+  font-size: 18px;
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+  text-transform: none;
+  margin-bottom: 8px;
+}
+
+.academic-detail p {
+  color: var(--light-gray);
+  font-size: 15px;
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+.academic-detail .academic-role { margin-top: 2px; }
+.academic-detail .academic-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-top: 10px;
+  color: var(--light-gray-70);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.academic-location::before { content: "·"; margin-right: 8px; }
+
+@media (min-width: 1024px) {
+  .academic-history { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+}
+
+@media (max-width: 450px) {
+  .academic-heading { font-size: 24px; }
+  .academic-entry { grid-template-columns: 54px minmax(0, 1fr); gap: 14px; }
+  .academic-logo { width: 54px; height: 54px; }
+  .academic-school { font-size: 17px; }
 }

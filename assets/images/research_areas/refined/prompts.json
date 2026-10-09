@@ -1,0 +1,47 @@
+{
+  "created": "2026-10-07",
+  "generator": "Built-in image_gen",
+  "purpose": "User-requested reference refinements, recomposed as true square category illustrations",
+  "assets": [
+    {
+      "category": "plant-traits",
+      "prompt": "Use case: photorealistic-natural / precise-object-edit. Refine the supplied image for a personal research website. Output a true 1:1 square image, equal width and height, with edge-to-edge composition and no border, labels, watermark or plus icon. Preserve the reference's recognizable subject and character; improve framing, natural colors, sharpness, tonal balance and clarity. No infographic elements, arrows, charts, graphs or statistics. This is an autumn mixed forest representing Plant Functional Traits & Diversity. Preserve the varied canopy types, naturally intermixed green, golden-yellow, orange and red trees and the elevated viewpoint. Reframe the composition to emphasize the forest itself, with just a thin band of pale sky near the top. Keep fine believable tree texture, subtle depth, soft daylight and balanced lively autumn color without oversaturation or painterly style. Retain a natural forest landscape rather than making symmetric groups or ornamental specimens. No new landmarks, roads, buildings or people. The square canopy composition should remain instantly recognizable as the provided mixed forest photograph.",
+      "reference": "/Users/jifujiang/Desktop/fujiangji.github.io/pages/blogs_pages/1_UW-Madison/5.jpg",
+      "generated_source": "/Users/jifujiang/.codex/generated_images/01a111e9-11c3-73d1-9073-49decba95fa8/exec-7ae29284-866c-4ae3-986a-a72dc0c7ca53.png",
+      "original": "plant-traits.png",
+      "website_image": "plant-traits.jpg"
+    },
+    {
+      "category": "forest-fragmentation",
+      "prompt": "Use case: photorealistic-natural / precise-object-edit. Refine the supplied image for a personal research website. Output a true 1:1 square image, equal width and height, with edge-to-edge composition and no border, labels, watermark or plus icon. Preserve the reference's recognizable subject and character; improve framing, natural colors, sharpness, tonal balance and clarity. No infographic elements, arrows, charts, graphs or statistics. This is an overhead drone photograph representing Forest Fragmentation & Ecosystem Function. Keep the real-world dense conifer forest and the single pale gravel road curving horizontally through it, recognizable and prominent across the center of the square frame. Preserve the original road shape and relative canopy geometry. Gently lift the deepest shadows so individual tree crowns read clearly, retain natural forest-green tones and realistic low-angle sunlight with dimensional tree shadows. No extra roads, clearcuts, highways, cars, buildings or fabricated land features. Professional aerial ecological photography, subtle editing and credible natural texture rather than glossy CGI.",
+      "reference": "/var/folders/70/r05_p4995_sbrq643tfgnp_40000gn/T/codex-clipboard-5f6e3808-3751-4f12-8b2a-5350aa7accd4.png",
+      "generated_source": "/Users/jifujiang/.codex/generated_images/01a111e9-11c3-73d1-9073-49decba95fa8/exec-699db574-1ce9-430f-b69c-f94d3067b95b.png",
+      "original": "forest-fragmentation.png",
+      "website_image": "forest-fragmentation.jpg"
+    },
+    {
+      "category": "biocrust-feedbacks",
+      "prompt": "Use case: photorealistic-natural / precise-object-edit. Refine the supplied image for a personal research website. Output a true 1:1 square image, equal width and height, with edge-to-edge composition and no border, labels, watermark or plus icon. Preserve the reference's recognizable subject and character; improve framing, natural colors, sharpness, tonal balance and clarity. No infographic elements, arrows, charts, graphs or statistics. The supplied two-panel reference represents Dryland Biocrusts & Climate Feedbacks. Recompose it as ONE coherent square landscape photograph based primarily on the left panel, with the reference's dark, rough, knobby biological soil crust covering orange-red sandy soil in the foreground, a few sparse dryland shrubs in the middle ground, and recognizable red sandstone formations beneath a natural blue sky in the distance. Improve clarity and depth while retaining the realistic scale and rough texture of biocrust; do not turn it into lush moss, succulent plants or a forest floor. Remove A/B labels and the panel split. No people or footprints. Natural documentary photography with gentle daylight, believable geology and subdued earth colors, representative ecological scene rather than a scientific before/after comparison.",
+      "reference": "/var/folders/70/r05_p4995_sbrq643tfgnp_40000gn/T/codex-clipboard-cd14db66-4a9c-4f94-b0e4-6ec9baa92597.png",
+      "generated_source": "/Users/jifujiang/.codex/generated_images/01a111e9-11c3-73d1-9073-49decba95fa8/exec-9044081f-e10b-4af2-8407-5ed5721156e4.png",
+      "original": "biocrust-feedbacks.png",
+      "website_image": "biocrust-feedbacks.jpg"
+    },
+    {
+      "category": "data-fusion",
+      "prompt": "Use case: scientific-educational / precise-object-edit. Refine the supplied image for a personal research website. Output a true 1:1 square image, equal width and height, with edge-to-edge composition and no border, labels, watermark or plus icon. Preserve the reference's recognizable subject and character; improve framing, natural colors, sharpness, tonal balance and clarity. No infographic elements, arrows, charts, graphs or statistics. Rebuild the reference's FOUR separated, aligned, square geospatial data layers in an elegant isometric stack: top a purple/green false-color ecological remote-sensing image; second a high-resolution grayscale satellite image; third a forest canopy height / lidar layer with realistic tree structure in green, yellow and blue; bottom a natural brown/green terrain and elevation image. Keep the overall layered geospatial stack concept and visual identity closely matching the reference. Make all corners complete and comfortably contained in the square, use consistent perspective and cleaner fine detail, and gently soften the floating-layer shadows on a plain white background. The stack should fill most of the square frame and remain legible at thumbnail size. No cropped arrow tips at the left, no connecting lines, no labels, no numbers, no legend, no neural-network diagram, no shiny plastic appearance.",
+      "reference": "/var/folders/70/r05_p4995_sbrq643tfgnp_40000gn/T/codex-clipboard-d5f8197d-40dc-4519-b7fc-cffb5e2aa25a.png",
+      "generated_source": "/Users/jifujiang/.codex/generated_images/01a111e9-11c3-73d1-9073-49decba95fa8/exec-dcf70f41-827f-41ad-827c-2364cd81d532.png",
+      "original": "data-fusion.png",
+      "website_image": "data-fusion.jpg"
+    },
+    {
+      "category": "process-modeling",
+      "prompt": "Use case: scientific-educational.\nAsset type: square category illustration for a personal research website.\nInput image: edit target, the supplied cropped forest / radiative transfer / ecosystem process diagram.\nPrimary request: revise the supplied illustration into a complete 1:1 square composition. Keep its recognizable visual style: green forest canopy and soil-root cutaway, pale blue sky, yellow solar radiation arrows, teal accents and simple climate symbols.\nRecompose rather than crop or stretch. A large forest and soil-root block should remain the dominant subject. Above it show the sun and a cloud with yellow incoming, reflected and transmitted/scattered radiation arrows. Along the left edge place a compact rain, wind and thermometer group representing climate forcing. Beneath the forest place one compact ecosystem-process panel with a leaf, water droplet and heat symbol, illustrating carbon, water and energy. Include a small radiative-transfer inset only if it fits naturally; never crowd the main forest. Keep every element entirely inside the square, with a modest outer margin.\nKeep labels short and exact: \"Climate forcing\", \"Radiative transfer\", \"Carbon · Water · Energy\". No other text.\nThe forest and arrows should read clearly as a website thumbnail. Remove the cropped right-side statistics chart and the large workflow boxes, boundary-crossing connectors and excess bottom feedback loop. No axes, plots, tables, pseudo-text, decorative watermark or plus/zoom icon. Preserve the reference's clean scientific illustration style and natural green, soil brown, blue and yellow colors on a white background. Deliver a square image, equal width and height.",
+      "reference": "/var/folders/70/r05_p4995_sbrq643tfgnp_40000gn/T/codex-clipboard-39fe58bd-f994-4071-9990-be9760717663.png",
+      "generated_source": "/Users/jifujiang/.codex/generated_images/01a111e9-11c3-73d1-9073-49decba95fa8/exec-f1c38f5d-94e3-4172-a774-4bbd7298224a.png",
+      "original": "process-modeling.png",
+      "website_image": "process-modeling.jpg"
+    }
+  ]
+}

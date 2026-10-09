@@ -5,63 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scatter & Line Plots</title>
-  <style>
-    pre,
-    code {
-      position: relative !important;
-      white-space: pre !important;
-      word-wrap: normal !important;
-      overflow-x: auto !important;
-      font-family: 'Consolas', 'Courier New', monospace !important;
-      border-radius: 5px;
-      background: #0a0707 !important;
-      color: #f8f8f2 !important;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px 10px;
-      background: var(--onyx);
-      color: var(--white-2);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .copy-btn:hover {
-      opacity: 1;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .container img {
-      width: 100%;
-      max-width: 300px;
-      min-width: 200px;
-      height: auto;
-      margin: 5px;
-    }
-  </style>
+  <script src="../../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Scatter &amp; line plots | Fujiang Ji</title>
+  
 
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../../assets/css/data_visualization.css">
+  <link rel="stylesheet" href="../../assets/css/data_visualization.css?v=20261006-type2">
+  <link rel="stylesheet" href="../../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
 
   <!--
@@ -71,13 +34,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/monokai-sublime.min.css">
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 
+  <script src="../../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+
+
+
+
+<meta name="description" content="Explore model performance, trait relationships, seasonal patterns, and uncertainty with research plotting examples.">
+<link rel="stylesheet" href="../../assets/css/tutorial-reader.css?v=20261008-reader86">
+<link rel="stylesheet" href="../../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scatter &amp; line plots | Fujiang Ji">
+<meta property="og:description" content="Explore model performance, trait relationships, seasonal patterns, and uncertainty with research plotting examples.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Scatter &amp; line plots | Fujiang Ji">
+<meta name="twitter:description" content="Explore model performance, trait relationships, seasonal patterns, and uncertainty with research plotting examples.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
-<body>
+<body class="tutorial-document">
 
   <!--
     - #MAIN
@@ -89,17 +68,25 @@
     -->
 
     <aside class="sidebar" data-sidebar>
+<button class="theme-toggle-btn" aria-label="Toggle theme">
+              <span class="icon icon-moon">&#9790;</span>
+              <span class="icon icon-sun">&#9728;</span>
+            </button>
+
+
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -125,7 +112,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -140,7 +128,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -184,7 +172,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -214,68 +202,76 @@
       <!--
         - #NAVBAR
       -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" onclick="window.location.href='../tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-      <article class="tutorial active" data-page="tutorial">
-        <header>
-          <h2 class="h2 article-title">Tutorials</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Data Visualization</h3>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" onclick="window.location.href=window.SiteLanguage.href('../tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+            
           </div>
-          <ol class="timeline-list">
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">1. Scatter plots</h4>
-
-              <pre><code class="language-python" class="bashScript">import pandas as pd
+        </nav>
+      </div>
+      <article class="tutorial tutorial-reader active" data-page="tutorial">
+<header class="lesson-header"><a class="lesson-back" href="../tutorials.html">← All tutorials</a><p class="lesson-eyebrow">Visualization · Practical guide</p><h2 class="lesson-title">Scatter &amp; line plots</h2></header>
+    <div class="lesson-hero"><div class="lesson-hero-copy"><p>Explore model performance, trait relationships, seasonal patterns, and uncertainty with research plotting examples.</p><div class="lesson-tags"><span>Python</span><span>Matplotlib</span><span>Seaborn</span></div><a class="lesson-start" href="#lesson-1">Start learning <span aria-hidden="true">↓</span></a></div><figure class="lesson-figure lesson-figure-hero">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/random_temporal_cv.jpg" data-image-caption="Example output" data-image-background="#ffffff" aria-label="Enlarge figure: Example output" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/random_temporal_cv.jpg" width="2119" height="1280" alt="Example output" fetchpriority="high" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Example output · Click to enlarge</figcaption></figure></div>
+    <div class="lesson-preparation"><details open><summary>What you’ll learn</summary><ul><li>Show observation–prediction agreement and point density.</li><li>Compare trait distributions and relationships.</li><li>Visualize seasonal changes, groups, and model performance.</li></ul></details><details><summary>Before you begin <span>Plotting experience</span></summary><ul><li>NumPy, pandas, SciPy, Matplotlib, and Seaborn.</li><li>Research examples require their project-specific CSV or MATLAB inputs.</li><li>Replace data and export paths. The input datasets are not bundled here.</li></ul></details></div>
+    <div class="lesson-layout"><aside class="lesson-toc"><details data-lesson-outline><summary>On this page <span>7 sections</span></summary><nav aria-label="Tutorial chapters"><a href="#lesson-1" data-lesson-toc><span>01</span>Prediction–observation scatter</a><a href="#lesson-2" data-lesson-toc><span>02</span>Trait covariance</a><a href="#lesson-3" data-lesson-toc><span>03</span>Density scatter comparisons</a><a href="#lesson-4" data-lesson-toc><span>04</span>Seasonal variation</a><a href="#lesson-5" data-lesson-toc><span>05</span>Functional-type extrapolation</a><a href="#lesson-6" data-lesson-toc><span>06</span>Trait variability</a><a href="#lesson-7" data-lesson-toc><span>07</span>Model comparisons</a></nav></details></aside><div class="lesson-content"><section class="lesson-section" id="lesson-1" aria-labelledby="lesson-1-title"><div class="lesson-section-heading"><span class="lesson-step">01</span><h3 id="lesson-1-title">Prediction–observation scatter</h3></div><p class="lesson-section-intro">Compare random and temporal cross-validation using density-colored points, a 1:1 line, uncertainty bars, and model metrics.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/random_temporal_cv.jpg" data-image-caption="Trait prediction under random and temporal cross-validation" data-image-background="#ffffff" aria-label="Enlarge figure: Trait prediction under random and temporal cross-validation" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/random_temporal_cv.jpg" width="2119" height="1280" alt="Trait prediction under random and temporal cross-validation" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Trait prediction under random and temporal cross-validation · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">prediction_scatter.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for prediction_scatter.py">Wrap</button><button type="button" data-code-copy aria-label="Copy prediction_scatter.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/prediction_scatter.py" download aria-label="Download prediction_scatter.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="prediction_scatter.py code"><code class="language-python">import pandas as pd
 import numpy as np
 from scipy.stats import gaussian_kde
 import matplotlib.pyplot as plt
 
 def d(x,y):
-xy = np.vstack([x,y])
-z = gaussian_kde(xy)(xy)
-return z
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+    return z
 
 # plot a 2*3 axes figure with 100 dpi.
 fig = plt.figure(figsize=(10.5,6), dpi=100)
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.2)
 plt.rcParams.update(config)
 
 # basic information used in the figure, including the x/y lim, units, accuracy, text location, etc.
-lims = {'Chla+b':90,'Ccar':22,'LMA':350}
-units = {'Chla+b':'($\mu g/cm^2$)','Ccar':'($\mu g/cm^2$)','LMA':'($g/m^2$)'}
+lims = {&#x27;Chla+b&#x27;:90,&#x27;Ccar&#x27;:22,&#x27;LMA&#x27;:350}
+units = {&#x27;Chla+b&#x27;:&#x27;($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27;($\mu g/cm^2$)&#x27;,&#x27;LMA&#x27;:&#x27;($g/m^2$)&#x27;}
 R2_mean = [0.75, 0.598, 0.735, 0.331, 0.285, 0.584]
 R2_std = [0.01, 0.06, 0.08, 0.01, 0.04, 0.13]
 RMSE_mean = [6.13, 1.33, 14.11, 8.04, 1.67, 17.53]
@@ -284,148 +280,320 @@ NRMSE_mean = [12.9, 14.58, 12.53, 24.45, 23.06, 18.8]
 NRMSE_std = [0.14, 1.81,3.35, 0.71, 2.39, 6.67]
 text_loc = [[0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67],[0.02,0.02,0.02,0.83,0.75,0.67],
             [0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67]]
-title1 = ['(a)','(b)', '(c)','(d)','(e)','(f)']
-title2 = ['Random','Random','Random','Temporal','Temporal', 'Temporal']
+title1 = [&#x27;(a)&#x27;,&#x27;(b)&#x27;, &#x27;(c)&#x27;,&#x27;(d)&#x27;,&#x27;(e)&#x27;,&#x27;(f)&#x27;]
+title2 = [&#x27;Random&#x27;,&#x27;Random&#x27;,&#x27;Random&#x27;,&#x27;Temporal&#x27;,&#x27;Temporal&#x27;, &#x27;Temporal&#x27;]
 
 # open the dataset.
-df = pd.read_csv("data/trait_estimation.csv")
+df = pd.read_csv(&quot;data/trait_estimation.csv&quot;)
 
 i = 0
-for cv in df["CV_methods"].unique():
-for tr in df["tr_estimation"].unique():
-ax = fig.add_subplot(2,3,i+1)
+for cv in df[&quot;CV_methods&quot;].unique():
+    for tr in df[&quot;tr_estimation&quot;].unique():
+        ax = fig.add_subplot(2,3,i+1)
 
-data = df[(df["CV_methods"]==cv)&(df["tr_estimation"]==tr)]
+        data = df[(df[&quot;CV_methods&quot;]==cv)&amp;(df[&quot;tr_estimation&quot;]==tr)]
 
-dff = data[(df['final_model_result']>0)&(data[tr]>0)]
-x,y = dff['final_model_result'], dff[tr]
+        dff = data[(df[&#x27;final_model_result&#x27;]&gt;0)&amp;(data[tr]&gt;0)]
+        x,y = dff[&#x27;final_model_result&#x27;], dff[tr]
 
-# plot the error bars.
-iteration_df = dff.loc[:,'iteration_1':'iteration_100']
-mean_all,std_all = np.mean(iteration_df,1), np.std(iteration_df,1)
-lc_all,hc_all = mean_all-1.96*std_all,mean_all+1.96*std_all
-x_right, x_left = hc_all - x, x - lc_all
+        # plot the error bars.
+        iteration_df = dff.loc[:,&#x27;iteration_1&#x27;:&#x27;iteration_100&#x27;]
+        mean_all,std_all = np.mean(iteration_df,1), np.std(iteration_df,1)
+        lc_all,hc_all = mean_all-1.96*std_all,mean_all+1.96*std_all
+        x_right, x_left = hc_all - x, x - lc_all
 
-scatter = ax.scatter(x, y,  c= d(x,y), s=4,cmap='rainbow',zorder = 2)
-ax.errorbar(x,y, xerr=(x_left, x_right),fmt='.',color = 'none',ecolor='k',elinewidth=0.4,zorder = 1)
+        scatter = ax.scatter(x, y,  c= d(x,y), s=4,cmap=&#x27;rainbow&#x27;,zorder = 2)
+        ax.errorbar(x,y, xerr=(x_left, x_right),fmt=&#x27;.&#x27;,color = &#x27;none&#x27;,ecolor=&#x27;k&#x27;,elinewidth=0.4,zorder = 1)
 
-ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls='--',c='k', lw = 1.5,label = '1:1 line')
-cbar = plt.colorbar(scatter, ax=ax,pad=0.01, shrink=0.9)
-ax.text(1.02,0.98,'High',transform=ax.transAxes,fontsize = 8)
-ax.text(1.02,-0.02,'Low',transform=ax.transAxes,fontsize = 8)
-cbar.set_ticks([])
-cbar.set_label('Density', fontsize=9,labelpad=0.1)
+        ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5,label = &#x27;1:1 line&#x27;)
+        cbar = plt.colorbar(scatter, ax=ax,pad=0.01, shrink=0.9)
+        ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 8)
+        ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 8)
+        cbar.set_ticks([])
+        cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
 
-ax.set_xlim(0,lims[tr])
-ax.set_ylim(0,lims[tr])
-ax.set_xlabel(f'Predicted {tr} {units[tr]}', fontsize=10, labelpad = 0.2)
-ax.set_ylabel(f'Observed {tr} {units[tr]}', fontsize=10, labelpad = 0.2)
-ax.tick_params(axis='both', direction='out', labelsize=10)
+        ax.set_xlim(0,lims[tr])
+        ax.set_ylim(0,lims[tr])
+        ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=10, labelpad = 0.2)
+        ax.set_ylabel(f&#x27;Observed {tr} {units[tr]}&#x27;, fontsize=10, labelpad = 0.2)
+        ax.tick_params(axis=&#x27;both&#x27;, direction=&#x27;out&#x27;, labelsize=10)
 
-R2_ = f'$R^2$ = {R2_mean[i]}\u00B1{R2_std[i]}'
-RMSE_ = f'$RMSE$ = {RMSE_mean[i]}\u00B1{RMSE_std[i]} {units[tr][2:-1]}'
-NRMSE_ = f'$NRMSE$ = {NRMSE_mean[i]}%\u00B1{NRMSE_std[i]}%'
+        R2_ = f&#x27;$R^2$ = {R2_mean[i]}\u00B1{R2_std[i]}&#x27;
+        RMSE_ = f&#x27;$RMSE$ = {RMSE_mean[i]}\u00B1{RMSE_std[i]} {units[tr][2:-1]}&#x27;
+        NRMSE_ = f&#x27;$NRMSE$ = {NRMSE_mean[i]}%\u00B1{NRMSE_std[i]}%&#x27;
 
-ax.text(text_loc[i][0],text_loc[i][3],R2_, fontsize=8,transform=ax.transAxes)
-ax.text(text_loc[i][1],text_loc[i][4],RMSE_, fontsize=8,transform=ax.transAxes)
-ax.text(text_loc[i][2],text_loc[i][5],NRMSE_, fontsize=8,transform=ax.transAxes)
-ax.text(0.02,0.93, f'{title1[i]} {tr}: {title2[i]} 5-fold CV', transform=ax.transAxes, fontsize = 8,fontweight='bold') 
-i = i+1
-plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/random_temporal_cv.jpg"
-                alt="Image 1">
+        ax.text(text_loc[i][0],text_loc[i][3],R2_, fontsize=8,transform=ax.transAxes)
+        ax.text(text_loc[i][1],text_loc[i][4],RMSE_, fontsize=8,transform=ax.transAxes)
+        ax.text(text_loc[i][2],text_loc[i][5],NRMSE_, fontsize=8,transform=ax.transAxes)
+        ax.text(0.02,0.93, f&#x27;{title1[i]} {tr}: {title2[i]} 5-fold CV&#x27;, transform=ax.transAxes, fontsize = 8,fontweight=&#x27;bold&#x27;) 
+        i = i+1
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import pandas as pd
+import numpy as np
+from scipy.stats import gaussian_kde
+import matplotlib.pyplot as plt
 
-              <pre><code class="language-python" class="bashScript">import pandas as pd
+def d(x,y):
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+    return z
+
+# plot a 2*3 axes figure with 100 dpi.
+fig = plt.figure(figsize=(10.5,6), dpi=100)
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.2)
+plt.rcParams.update(config)
+
+# basic information used in the figure, including the x/y lim, units, accuracy, text location, etc.
+lims = {&#x27;Chla+b&#x27;:90,&#x27;Ccar&#x27;:22,&#x27;LMA&#x27;:350}
+units = {&#x27;Chla+b&#x27;:&#x27;($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27;($\mu g/cm^2$)&#x27;,&#x27;LMA&#x27;:&#x27;($g/m^2$)&#x27;}
+R2_mean = [0.75, 0.598, 0.735, 0.331, 0.285, 0.584]
+R2_std = [0.01, 0.06, 0.08, 0.01, 0.04, 0.13]
+RMSE_mean = [6.13, 1.33, 14.11, 8.04, 1.67, 17.53]
+RMSE_std = [0.55, 0.14, 6.55, 1.19, 0.17, 7.87]
+NRMSE_mean = [12.9, 14.58, 12.53, 24.45, 23.06, 18.8]
+NRMSE_std = [0.14, 1.81,3.35, 0.71, 2.39, 6.67]
+text_loc = [[0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67],[0.02,0.02,0.02,0.83,0.75,0.67],
+            [0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67], [0.02,0.02,0.02,0.83,0.75,0.67]]
+title1 = [&#x27;(a)&#x27;,&#x27;(b)&#x27;, &#x27;(c)&#x27;,&#x27;(d)&#x27;,&#x27;(e)&#x27;,&#x27;(f)&#x27;]
+title2 = [&#x27;Random&#x27;,&#x27;Random&#x27;,&#x27;Random&#x27;,&#x27;Temporal&#x27;,&#x27;Temporal&#x27;, &#x27;Temporal&#x27;]
+
+# open the dataset.
+df = pd.read_csv(&quot;data/trait_estimation.csv&quot;)
+
+i = 0
+for cv in df[&quot;CV_methods&quot;].unique():
+    for tr in df[&quot;tr_estimation&quot;].unique():
+        ax = fig.add_subplot(2,3,i+1)
+
+        data = df[(df[&quot;CV_methods&quot;]==cv)&amp;(df[&quot;tr_estimation&quot;]==tr)]
+
+        dff = data[(df[&#x27;final_model_result&#x27;]&gt;0)&amp;(data[tr]&gt;0)]
+        x,y = dff[&#x27;final_model_result&#x27;], dff[tr]
+
+        # plot the error bars.
+        iteration_df = dff.loc[:,&#x27;iteration_1&#x27;:&#x27;iteration_100&#x27;]
+        mean_all,std_all = np.mean(iteration_df,1), np.std(iteration_df,1)
+        lc_all,hc_all = mean_all-1.96*std_all,mean_all+1.96*std_all
+        x_right, x_left = hc_all - x, x - lc_all
+
+        scatter = ax.scatter(x, y,  c= d(x,y), s=4,cmap=&#x27;rainbow&#x27;,zorder = 2)
+        ax.errorbar(x,y, xerr=(x_left, x_right),fmt=&#x27;.&#x27;,color = &#x27;none&#x27;,ecolor=&#x27;k&#x27;,elinewidth=0.4,zorder = 1)
+
+        ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5,label = &#x27;1:1 line&#x27;)
+        cbar = plt.colorbar(scatter, ax=ax,pad=0.01, shrink=0.9)
+        ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 8)
+        ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 8)
+        cbar.set_ticks([])
+        cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
+
+        ax.set_xlim(0,lims[tr])
+        ax.set_ylim(0,lims[tr])
+        ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=10, labelpad = 0.2)
+        ax.set_ylabel(f&#x27;Observed {tr} {units[tr]}&#x27;, fontsize=10, labelpad = 0.2)
+        ax.tick_params(axis=&#x27;both&#x27;, direction=&#x27;out&#x27;, labelsize=10)
+
+        R2_ = f&#x27;$R^2$ = {R2_mean[i]}\u00B1{R2_std[i]}&#x27;
+        RMSE_ = f&#x27;$RMSE$ = {RMSE_mean[i]}\u00B1{RMSE_std[i]} {units[tr][2:-1]}&#x27;
+        NRMSE_ = f&#x27;$NRMSE$ = {NRMSE_mean[i]}%\u00B1{NRMSE_std[i]}%&#x27;
+
+        ax.text(text_loc[i][0],text_loc[i][3],R2_, fontsize=8,transform=ax.transAxes)
+        ax.text(text_loc[i][1],text_loc[i][4],RMSE_, fontsize=8,transform=ax.transAxes)
+        ax.text(text_loc[i][2],text_loc[i][5],NRMSE_, fontsize=8,transform=ax.transAxes)
+        ax.text(0.02,0.93, f&#x27;{title1[i]} {tr}: {title2[i]} 5-fold CV&#x27;, transform=ax.transAxes, fontsize = 8,fontweight=&#x27;bold&#x27;) 
+        i = i+1
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 75 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>The reported metric values belong to the original study. Calculate new metrics when adapting this figure to another dataset.</p></aside></section><section class="lesson-section" id="lesson-2" aria-labelledby="lesson-2-title"><div class="lesson-section-heading"><span class="lesson-step">02</span><h3 id="lesson-2-title">Trait covariance</h3></div><p class="lesson-section-intro">Use a pair plot to compare trait distributions and relationships across plant functional types.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/trait_covariance.png" data-image-caption="Covariance of plant traits across functional types" data-image-background="#252a34" aria-label="Enlarge figure: Covariance of plant traits across functional types" style="--figure-background:#252a34">
+        <img src="./data_visualization_image/trait_covariance.png" width="994" height="996" alt="Covariance of plant traits across functional types" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Covariance of plant traits across functional types · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">trait_covariance.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for trait_covariance.py">Wrap</button><button type="button" data-code-copy aria-label="Copy trait_covariance.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/trait_covariance.py" download aria-label="Download trait_covariance.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="trait_covariance.py code"><code class="language-python">import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 
 # open the dataset.
-df_traits = pd.read_csv("data/NEON_AOP_trait_points.csv")
-df = df_traits[["Chla+b", "Ccar", "EWT","Nitrogen","PFT"]]
+df_traits = pd.read_csv(&quot;data/NEON_AOP_trait_points.csv&quot;)
+df = df_traits[[&quot;Chla+b&quot;, &quot;Ccar&quot;, &quot;EWT&quot;,&quot;Nitrogen&quot;,&quot;PFT&quot;]]
 
 # define the unit of each traits
-unit1 = '($\mu g/cm^2$)'
-unit2 = '($g/m^2$)'
+unit1 = &#x27;($\mu g/cm^2$)&#x27;
+unit2 = &#x27;($g/m^2$)&#x27;
 
 # define the palettes for each PFT, either self difine differnt color or sns.hls_palette()
-palettes = ["deepskyblue", "orangered","magenta", "limegreen", "darkorange", "darkblue", "darkturquoise", "orchid"]
-# palettes = sns.hls_palette(len(df["PFT"].unique()))
+palettes = [&quot;deepskyblue&quot;, &quot;orangered&quot;,&quot;magenta&quot;, &quot;limegreen&quot;, &quot;darkorange&quot;, &quot;darkblue&quot;, &quot;darkturquoise&quot;, &quot;orchid&quot;]
+# palettes = sns.hls_palette(len(df[&quot;PFT&quot;].unique()))
 
 # use the sns.pairplot() to show the covariance of different variables.
-grid = sns.pairplot(df,hue = "PFT",kind='reg',corner=True,palette = palettes,
-                    plot_kws={"scatter_kws": {"alpha": 0.1, "s":2},"line_kws":{"alpha": 0.3}},diag_kws={"alpha": 0.5})
+grid = sns.pairplot(df,hue = &quot;PFT&quot;,kind=&#x27;reg&#x27;,corner=True,palette = palettes,
+                    plot_kws={&quot;scatter_kws&quot;: {&quot;alpha&quot;: 0.1, &quot;s&quot;:2},&quot;line_kws&quot;:{&quot;alpha&quot;: 0.3}},diag_kws={&quot;alpha&quot;: 0.5})
 
-grid.fig.patch.set_facecolor('none')  # Make figure background transparent
+grid.fig.patch.set_facecolor(&#x27;none&#x27;)  # Make figure background transparent
 grid.fig.patch.set_alpha(0)          # Set transparency level for the figure background
 for ax in grid.fig.axes:
-    ax.set_facecolor('none')         # Make axes background transparent
+    ax.set_facecolor(&#x27;none&#x27;)         # Make axes background transparent
     
 # set the x/y labels.
-label = [f"Chla+b {unit1}", f"Ccar {unit1}",  f"EWT {unit2}", f"Nitrogen {unit1}"]
+label = [f&quot;Chla+b {unit1}&quot;, f&quot;Ccar {unit1}&quot;,  f&quot;EWT {unit2}&quot;, f&quot;Nitrogen {unit1}&quot;]
 for i in range(1,4):
-    grid.axes[i,0].set_ylabel(label[i],fontsize = 12, color = "white")
-    grid.axes[i,0].tick_params(labelsize=12, colors = 'white')
-    grid.axes[i,0].spines[['bottom', 'left']].set_color('white')
+    grid.axes[i,0].set_ylabel(label[i],fontsize = 12, color = &quot;white&quot;)
+    grid.axes[i,0].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+    grid.axes[i,0].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
 for i in range(0,4):
-    grid.axes[3,i].set_xlabel(label[i],fontsize = 12, color = "white")
-    grid.axes[3,i].tick_params(labelsize=12, colors = 'white')
-    grid.axes[3,i].spines[['bottom', 'left']].set_color('white')
+    grid.axes[3,i].set_xlabel(label[i],fontsize = 12, color = &quot;white&quot;)
+    grid.axes[3,i].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+    grid.axes[3,i].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
 for i in range(0,4):
-    grid.axes[i,i].spines[['bottom', 'left']].set_color('white')
-    grid.axes[i,i].tick_params(labelsize=12, colors = 'white')
-grid.axes[2,1].spines[['bottom', 'left']].set_color('white')
-grid.axes[2,1].tick_params(labelsize=12, colors = 'white')
+    grid.axes[i,i].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+    grid.axes[i,i].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+grid.axes[2,1].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+grid.axes[2,1].tick_params(labelsize=12, colors = &#x27;white&#x27;)
 
 # add text inside the figure.
-grid.axes[0,0].text(1.05,0.1, f"Covariance of plant traits across PFTs",transform=grid.axes[0,0].transAxes, 
-                    fontsize = 12, color = "white", fontweight = "bold",fontstyle='italic')
-grid.axes[0,0].text(1.05,0, f" n = {len(df)}.",transform=grid.axes[0,0].transAxes, fontsize = 12, 
-                    color = "white", fontweight = "bold",fontstyle='italic')
+grid.axes[0,0].text(1.05,0.1, f&quot;Covariance of plant traits across PFTs&quot;,transform=grid.axes[0,0].transAxes, 
+                    fontsize = 12, color = &quot;white&quot;, fontweight = &quot;bold&quot;,fontstyle=&#x27;italic&#x27;)
+grid.axes[0,0].text(1.05,0, f&quot; n = {len(df)}.&quot;,transform=grid.axes[0,0].transAxes, fontsize = 12, 
+                    color = &quot;white&quot;, fontweight = &quot;bold&quot;,fontstyle=&#x27;italic&#x27;)
 
 # add the pearson value of trait-trait relationships for each PFT.
 for i, j in zip(*plt.np.triu_indices_from(grid.axes, 1)):
     r, _ = pearsonr(df.iloc[:, i], df.iloc[:, j])
-    grid.axes[j, i].annotate(f"$r$ = {r:.2f} (overall)", (0.02, 0.95), xycoords='axes fraction', fontsize=9, color='white',fontweight = "bold")
+    grid.axes[j, i].annotate(f&quot;$r$ = {r:.2f} (overall)&quot;, (0.02, 0.95), xycoords=&#x27;axes fraction&#x27;, fontsize=9, color=&#x27;white&#x27;,fontweight = &quot;bold&quot;)
 
     k = 0
     loc = 0
-    for pft in df["PFT"].unique():
-        temp = df[df["PFT"] == pft]
+    for pft in df[&quot;PFT&quot;].unique():
+        temp = df[df[&quot;PFT&quot;] == pft]
         r, _ = pearsonr(temp.iloc[:, i], temp.iloc[:, j])
-        grid.axes[j, i].annotate(f"$r$ = {r:.2f}", (0.02, 0.8-loc), xycoords='axes fraction', fontsize=9, color=palettes[k],fontweight = "bold")
+        grid.axes[j, i].annotate(f&quot;$r$ = {r:.2f}&quot;, (0.02, 0.8-loc), xycoords=&#x27;axes fraction&#x27;, fontsize=9, color=palettes[k],fontweight = &quot;bold&quot;)
         k = k+1
         loc = loc+0.08
 
 # add additional information for trait samples.
 k = 0
 loc = 0
-sns.move_legend(grid, "lower center",bbox_to_anchor=(0.76,0.3), title="PFTs", frameon=False, fontsize = 12)
-for pft in df["PFT"].unique():
-    temp = df[df["PFT"] == pft]
+sns.move_legend(grid, &quot;lower center&quot;,bbox_to_anchor=(0.76,0.3), title=&quot;PFTs&quot;, frameon=False, fontsize = 12)
+for pft in df[&quot;PFT&quot;].unique():
+    temp = df[df[&quot;PFT&quot;] == pft]
     nums = len(temp)
-    grid.axes[1,1].annotate(f"{pft}: n = {nums}", (1.2, 0.7-loc), xycoords='axes fraction',color=palettes[k],fontsize=12,fontstyle='italic')
+    grid.axes[1,1].annotate(f&quot;{pft}: n = {nums}&quot;, (1.2, 0.7-loc), xycoords=&#x27;axes fraction&#x27;,color=palettes[k],fontsize=12,fontstyle=&#x27;italic&#x27;)
     k = k+1
     loc = loc+0.1
 
 # set the legend parameters.
-grid._legend.set_title("PFTs",prop={'size': 12})
+grid._legend.set_title(&quot;PFTs&quot;,prop={&#x27;size&#x27;: 12})
 title = grid._legend.get_title()       
-title.set_color("white")
+title.set_color(&quot;white&quot;)
 
 for handle in grid.legend.legendHandles:
     handle.set_alpha(0.8)
     handle.set_sizes([40])
     
 for text in grid._legend.get_texts():
-    text.set_color("white")
+    text.set_color(&quot;white&quot;)
     
 plt.show()
-plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/trait_covariance.png"
-                alt="Image 1">
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
 
-              <pre><code class="language-python" class="bashScript">import scipy.io as scio
+# open the dataset.
+df_traits = pd.read_csv(&quot;data/NEON_AOP_trait_points.csv&quot;)
+df = df_traits[[&quot;Chla+b&quot;, &quot;Ccar&quot;, &quot;EWT&quot;,&quot;Nitrogen&quot;,&quot;PFT&quot;]]
+
+# define the unit of each traits
+unit1 = &#x27;($\mu g/cm^2$)&#x27;
+unit2 = &#x27;($g/m^2$)&#x27;
+
+# define the palettes for each PFT, either self difine differnt color or sns.hls_palette()
+palettes = [&quot;deepskyblue&quot;, &quot;orangered&quot;,&quot;magenta&quot;, &quot;limegreen&quot;, &quot;darkorange&quot;, &quot;darkblue&quot;, &quot;darkturquoise&quot;, &quot;orchid&quot;]
+# palettes = sns.hls_palette(len(df[&quot;PFT&quot;].unique()))
+
+# use the sns.pairplot() to show the covariance of different variables.
+grid = sns.pairplot(df,hue = &quot;PFT&quot;,kind=&#x27;reg&#x27;,corner=True,palette = palettes,
+                    plot_kws={&quot;scatter_kws&quot;: {&quot;alpha&quot;: 0.1, &quot;s&quot;:2},&quot;line_kws&quot;:{&quot;alpha&quot;: 0.3}},diag_kws={&quot;alpha&quot;: 0.5})
+
+grid.fig.patch.set_facecolor(&#x27;none&#x27;)  # Make figure background transparent
+grid.fig.patch.set_alpha(0)          # Set transparency level for the figure background
+for ax in grid.fig.axes:
+    ax.set_facecolor(&#x27;none&#x27;)         # Make axes background transparent
+    
+# set the x/y labels.
+label = [f&quot;Chla+b {unit1}&quot;, f&quot;Ccar {unit1}&quot;,  f&quot;EWT {unit2}&quot;, f&quot;Nitrogen {unit1}&quot;]
+for i in range(1,4):
+    grid.axes[i,0].set_ylabel(label[i],fontsize = 12, color = &quot;white&quot;)
+    grid.axes[i,0].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+    grid.axes[i,0].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+for i in range(0,4):
+    grid.axes[3,i].set_xlabel(label[i],fontsize = 12, color = &quot;white&quot;)
+    grid.axes[3,i].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+    grid.axes[3,i].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+for i in range(0,4):
+    grid.axes[i,i].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+    grid.axes[i,i].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+grid.axes[2,1].spines[[&#x27;bottom&#x27;, &#x27;left&#x27;]].set_color(&#x27;white&#x27;)
+grid.axes[2,1].tick_params(labelsize=12, colors = &#x27;white&#x27;)
+
+# add text inside the figure.
+grid.axes[0,0].text(1.05,0.1, f&quot;Covariance of plant traits across PFTs&quot;,transform=grid.axes[0,0].transAxes, 
+                    fontsize = 12, color = &quot;white&quot;, fontweight = &quot;bold&quot;,fontstyle=&#x27;italic&#x27;)
+grid.axes[0,0].text(1.05,0, f&quot; n = {len(df)}.&quot;,transform=grid.axes[0,0].transAxes, fontsize = 12, 
+                    color = &quot;white&quot;, fontweight = &quot;bold&quot;,fontstyle=&#x27;italic&#x27;)
+
+# add the pearson value of trait-trait relationships for each PFT.
+for i, j in zip(*plt.np.triu_indices_from(grid.axes, 1)):
+    r, _ = pearsonr(df.iloc[:, i], df.iloc[:, j])
+    grid.axes[j, i].annotate(f&quot;$r$ = {r:.2f} (overall)&quot;, (0.02, 0.95), xycoords=&#x27;axes fraction&#x27;, fontsize=9, color=&#x27;white&#x27;,fontweight = &quot;bold&quot;)
+
+    k = 0
+    loc = 0
+    for pft in df[&quot;PFT&quot;].unique():
+        temp = df[df[&quot;PFT&quot;] == pft]
+        r, _ = pearsonr(temp.iloc[:, i], temp.iloc[:, j])
+        grid.axes[j, i].annotate(f&quot;$r$ = {r:.2f}&quot;, (0.02, 0.8-loc), xycoords=&#x27;axes fraction&#x27;, fontsize=9, color=palettes[k],fontweight = &quot;bold&quot;)
+        k = k+1
+        loc = loc+0.08
+
+# add additional information for trait samples.
+k = 0
+loc = 0
+sns.move_legend(grid, &quot;lower center&quot;,bbox_to_anchor=(0.76,0.3), title=&quot;PFTs&quot;, frameon=False, fontsize = 12)
+for pft in df[&quot;PFT&quot;].unique():
+    temp = df[df[&quot;PFT&quot;] == pft]
+    nums = len(temp)
+    grid.axes[1,1].annotate(f&quot;{pft}: n = {nums}&quot;, (1.2, 0.7-loc), xycoords=&#x27;axes fraction&#x27;,color=palettes[k],fontsize=12,fontstyle=&#x27;italic&#x27;)
+    k = k+1
+    loc = loc+0.1
+
+# set the legend parameters.
+grid._legend.set_title(&quot;PFTs&quot;,prop={&#x27;size&#x27;: 12})
+title = grid._legend.get_title()       
+title.set_color(&quot;white&quot;)
+
+for handle in grid.legend.legendHandles:
+    handle.set_alpha(0.8)
+    handle.set_sizes([40])
+    
+for text in grid._legend.get_texts():
+    text.set_color(&quot;white&quot;)
+    
+plt.show()
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 87 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-3" aria-labelledby="lesson-3-title"><div class="lesson-section-heading"><span class="lesson-step">03</span><h3 id="lesson-3-title">Density scatter comparisons</h3></div><p class="lesson-section-intro">Combine multiple inputs in a panel layout and show the concentration of observations using a density-based color scale.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/LAI_FRAR.jpg" data-image-caption="Density scatter comparisons" data-image-background="#ffffff" aria-label="Enlarge figure: Density scatter comparisons" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/LAI_FRAR.jpg" width="2992" height="1323" alt="Density scatter comparisons" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Density scatter comparisons · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">density_comparison.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for density_comparison.py">Wrap</button><button type="button" data-code-copy aria-label="Copy density_comparison.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/density_comparison.py" download aria-label="Download density_comparison.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="density_comparison.py code"><code class="language-python">import scipy.io as scio
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -449,14 +617,14 @@ def sca_plot(ax,x1,x2,y1,y2,variable1,variable2,ylim):
 
     df1 = pd.concat([x1,y1],axis = 1)
     df2 = pd.concat([x2,y2],axis = 1)
-    df1.dropna(axis=0,how='any',inplace = True)
-    df2.dropna(axis=0,how='any',inplace = True)
-    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls='--',c='k', lw = 1.5)
-    ax.scatter(df1[variable1],df1[variable2],c= d(df1[variable1],df1[variable2]), s=3,cmap='autumn',alpha = 0.07)
-    ax.scatter(df2[variable1],df2[variable2],c= d(df2[variable1],df2[variable2]), s=3,cmap='winter',alpha = 0.05)
+    df1.dropna(axis=0,how=&#x27;any&#x27;,inplace = True)
+    df2.dropna(axis=0,how=&#x27;any&#x27;,inplace = True)
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    ax.scatter(df1[variable1],df1[variable2],c= d(df1[variable1],df1[variable2]), s=3,cmap=&#x27;autumn&#x27;,alpha = 0.07)
+    ax.scatter(df2[variable1],df2[variable2],c= d(df2[variable1],df2[variable2]), s=3,cmap=&#x27;winter&#x27;,alpha = 0.05)
 
-    sns.regplot(variable1,variable2, data = df1, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {'color':'orangered','lw':1.5})
-    sns.regplot(variable1,variable2, data = df2, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {'color':'blue','lw':1.5})
+    sns.regplot(variable1,variable2, data = df1, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;orangered&#x27;,&#x27;lw&#x27;:1.5})
+    sns.regplot(variable1,variable2, data = df2, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;blue&#x27;,&#x27;lw&#x27;:1.5})
     ax.set_xlabel(variable1, fontsize=9, labelpad = 0.2)
     ax.set_ylabel(variable2, fontsize=9, labelpad = 0.2)
     ax.set_ylim(ylim[0],ylim[1])
@@ -465,37 +633,37 @@ def sca_plot(ax,x1,x2,y1,y2,variable1,variable2,ylim):
     a1,b1 = fit_line(df1[variable1],df1[variable2])
     a2,b2 = fit_line(df2[variable1],df2[variable2])
     
-    if (variable1 =='FPAR')&(variable2 =='SIF/PAR'):
-        if b1>0:
-            ax.text(0.02,0.9, f'$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}', transform=ax.transAxes, fontsize = 8,c = 'orangered')
+    if (variable1 ==&#x27;FPAR&#x27;)&amp;(variable2 ==&#x27;SIF/PAR&#x27;):
+        if b1&gt;0:
+            ax.text(0.02,0.9, f&#x27;$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
         else:
-            ax.text(0.02,0.9, f'$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}', transform=ax.transAxes, fontsize = 8,c = 'orangered')
+            ax.text(0.02,0.9, f&#x27;$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
 
-        if b2>0:
-            ax.text(0.02,0.8, f'$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}', transform=ax.transAxes, fontsize = 8,c = 'blue')
+        if b2&gt;0:
+            ax.text(0.02,0.8, f&#x27;$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
         else:
-            ax.text(0.02,0.8, f'$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}', transform=ax.transAxes, fontsize = 8,c = 'blue')
+            ax.text(0.02,0.8, f&#x27;$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
     else:
-        if b1>0:
-            ax.text(0.4,0.12, f'$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}', transform=ax.transAxes, fontsize = 8,c = 'orangered')
+        if b1&gt;0:
+            ax.text(0.4,0.12, f&#x27;$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
         else:
-            ax.text(0.4,0.12, f'$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}', transform=ax.transAxes, fontsize = 8,c = 'orangered')
+            ax.text(0.4,0.12, f&#x27;$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
 
-        if b2>0:
-            ax.text(0.4,0.02, f'$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}', transform=ax.transAxes, fontsize = 8,c = 'blue')
+        if b2&gt;0:
+            ax.text(0.4,0.02, f&#x27;$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
         else:
-            ax.text(0.4,0.02, f'$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}', transform=ax.transAxes, fontsize = 8,c = 'blue')
+            ax.text(0.4,0.02, f&#x27;$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
     return
 
-data = scio.loadmat('data/Figure_1_S2_S3_S4_S7_data.mat')
-x_axis = [['LAI_cb','LAI_an'],['FPAR_cb','FPAR_an']]
-y_axis = [['EVI_cb','EVI_an'],['NIRv_cb','NIRv_an'],['SIF_PAR_cb','SIF_PAR_an'],['NDVI_cb','NDVI_an']]
+data = scio.loadmat(&#x27;data/Figure_1_S2_S3_S4_S7_data.mat&#x27;)
+x_axis = [[&#x27;LAI_cb&#x27;,&#x27;LAI_an&#x27;],[&#x27;FPAR_cb&#x27;,&#x27;FPAR_an&#x27;]]
+y_axis = [[&#x27;EVI_cb&#x27;,&#x27;EVI_an&#x27;],[&#x27;NIRv_cb&#x27;,&#x27;NIRv_an&#x27;],[&#x27;SIF_PAR_cb&#x27;,&#x27;SIF_PAR_an&#x27;],[&#x27;NDVI_cb&#x27;,&#x27;NDVI_an&#x27;]]
 
-v1 = ['LAI','FPAR']
-v2 = ['EVI','NIRv','SIF/PAR','NDVI']
+v1 = [&#x27;LAI&#x27;,&#x27;FPAR&#x27;]
+v2 = [&#x27;EVI&#x27;,&#x27;NIRv&#x27;,&#x27;SIF/PAR&#x27;,&#x27;NDVI&#x27;]
 #*************************************************************************
 fig,ax = plt.subplots(2,4,figsize = (12,5))
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.3,hspace =0.22)
 plt.rcParams.update(config)
 y_lim = [[0.2,0.8],[0,0.5],[0,0.03],[0.4,1]]
@@ -506,82 +674,240 @@ for i in range(2):
         variable1,variable2 = v1[i],v2[j]
         print(i,j,x_axis[i][0],x_axis[i][1],y_axis[j][0],y_axis[j][1])
         print(variable1,variable2)
-        print('--------------------')
+        print(&#x27;--------------------&#x27;)
         sca_plot(ax[i][j],x1,x2,y1,y2,variable1,variable2,y_lim[j])
-ax[0][0].text(-0.25,0.9, 'a', transform=ax[0][0].transAxes, fontsize = 10,fontweight = 'bold')
-plt.savefig('Figure_export/Extended Data Figure 3(a).png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/LAI_FRAR.jpg" alt="Image 1">
-            </li>
+ax[0][0].text(-0.25,0.9, &#x27;a&#x27;, transform=ax[0][0].transAxes, fontsize = 10,fontweight = &#x27;bold&#x27;)
+plt.savefig(&#x27;Figure_export/Extended Data Figure 3(a).png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import scipy.io as scio
+import pandas as pd
+import numpy as np
+import seaborn as sns
+from scipy.stats import gaussian_kde
+import matplotlib.pyplot as plt
 
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">2. Line plots</h4>
-              <pre><code class="language-python" class="bashScript">import matplotlib.pyplot as plt
+def d(x,y):
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+    return z
+
+def fit_line(x, y):
+    line_fit = np.polyfit(x, y, 1)
+    return line_fit[0],line_fit[1]
+
+def sca_plot(ax,x1,x2,y1,y2,variable1,variable2,ylim):
+    x1 = pd.DataFrame(x1.reshape(1,-1)[0],columns = [variable1])
+    x2 = pd.DataFrame(x2.reshape(1,-1)[0],columns = [variable1])
+    y1 = pd.DataFrame(y1.reshape(1,-1)[0],columns = [variable2])
+    y2 = pd.DataFrame(y2.reshape(1,-1)[0],columns = [variable2])
+
+    df1 = pd.concat([x1,y1],axis = 1)
+    df2 = pd.concat([x2,y2],axis = 1)
+    df1.dropna(axis=0,how=&#x27;any&#x27;,inplace = True)
+    df2.dropna(axis=0,how=&#x27;any&#x27;,inplace = True)
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    ax.scatter(df1[variable1],df1[variable2],c= d(df1[variable1],df1[variable2]), s=3,cmap=&#x27;autumn&#x27;,alpha = 0.07)
+    ax.scatter(df2[variable1],df2[variable2],c= d(df2[variable1],df2[variable2]), s=3,cmap=&#x27;winter&#x27;,alpha = 0.05)
+
+    sns.regplot(variable1,variable2, data = df1, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;orangered&#x27;,&#x27;lw&#x27;:1.5})
+    sns.regplot(variable1,variable2, data = df2, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;blue&#x27;,&#x27;lw&#x27;:1.5})
+    ax.set_xlabel(variable1, fontsize=9, labelpad = 0.2)
+    ax.set_ylabel(variable2, fontsize=9, labelpad = 0.2)
+    ax.set_ylim(ylim[0],ylim[1])
+    ax.tick_params(labelsize=8)
+
+    a1,b1 = fit_line(df1[variable1],df1[variable2])
+    a2,b2 = fit_line(df2[variable1],df2[variable2])
+    
+    if (variable1 ==&#x27;FPAR&#x27;)&amp;(variable2 ==&#x27;SIF/PAR&#x27;):
+        if b1&gt;0:
+            ax.text(0.02,0.9, f&#x27;$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
+        else:
+            ax.text(0.02,0.9, f&#x27;$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
+
+        if b2&gt;0:
+            ax.text(0.02,0.8, f&#x27;$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
+        else:
+            ax.text(0.02,0.8, f&#x27;$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
+    else:
+        if b1&gt;0:
+            ax.text(0.4,0.12, f&#x27;$y$ = {str(round(a1,3))}$x$ + {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
+        else:
+            ax.text(0.4,0.12, f&#x27;$y$ = {str(round(a1,3))}$x$ {str(round(b1,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;orangered&#x27;)
+
+        if b2&gt;0:
+            ax.text(0.4,0.02, f&#x27;$y$ = {str(round(a2,3))}$x$ + {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
+        else:
+            ax.text(0.4,0.02, f&#x27;$y$ = {str(round(a2,3))}$x$ {str(round(b2,3))}&#x27;, transform=ax.transAxes, fontsize = 8,c = &#x27;blue&#x27;)
+    return
+
+data = scio.loadmat(&#x27;data/Figure_1_S2_S3_S4_S7_data.mat&#x27;)
+x_axis = [[&#x27;LAI_cb&#x27;,&#x27;LAI_an&#x27;],[&#x27;FPAR_cb&#x27;,&#x27;FPAR_an&#x27;]]
+y_axis = [[&#x27;EVI_cb&#x27;,&#x27;EVI_an&#x27;],[&#x27;NIRv_cb&#x27;,&#x27;NIRv_an&#x27;],[&#x27;SIF_PAR_cb&#x27;,&#x27;SIF_PAR_an&#x27;],[&#x27;NDVI_cb&#x27;,&#x27;NDVI_an&#x27;]]
+
+v1 = [&#x27;LAI&#x27;,&#x27;FPAR&#x27;]
+v2 = [&#x27;EVI&#x27;,&#x27;NIRv&#x27;,&#x27;SIF/PAR&#x27;,&#x27;NDVI&#x27;]
+#*************************************************************************
+fig,ax = plt.subplots(2,4,figsize = (12,5))
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.3,hspace =0.22)
+plt.rcParams.update(config)
+y_lim = [[0.2,0.8],[0,0.5],[0,0.03],[0.4,1]]
+
+for i in range(2):
+    for j in range(4):
+        x1,x2,y1,y2 = data[x_axis[i][0]],data[x_axis[i][1]],data[y_axis[j][0]],data[y_axis[j][1]]
+        variable1,variable2 = v1[i],v2[j]
+        print(i,j,x_axis[i][0],x_axis[i][1],y_axis[j][0],y_axis[j][1])
+        print(variable1,variable2)
+        print(&#x27;--------------------&#x27;)
+        sca_plot(ax[i][j],x1,x2,y1,y2,variable1,variable2,y_lim[j])
+ax[0][0].text(-0.25,0.9, &#x27;a&#x27;, transform=ax[0][0].transAxes, fontsize = 10,fontweight = &#x27;bold&#x27;)
+plt.savefig(&#x27;Figure_export/Extended Data Figure 3(a).png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 85 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-4" aria-labelledby="lesson-4-title"><div class="lesson-section-heading"><span class="lesson-step">04</span><h3 id="lesson-4-title">Seasonal variation</h3></div><p class="lesson-section-intro">Plot repeated trait observations through time and keep colors, labels, and date formatting consistent across panels.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/seasonal_variation.png" data-image-caption="Seasonal variation of plant traits" data-image-background="#252a34" aria-label="Enlarge figure: Seasonal variation of plant traits" style="--figure-background:#252a34">
+        <img src="./data_visualization_image/seasonal_variation.png" width="1024" height="528" alt="Seasonal variation of plant traits" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Seasonal variation of plant traits · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">seasonal_variation.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for seasonal_variation.py">Wrap</button><button type="button" data-code-copy aria-label="Copy seasonal_variation.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/seasonal_variation.py" download aria-label="Download seasonal_variation.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="seasonal_variation.py code"><code class="language-python">import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.ticker as ticker
 
 # open the data.
-df = pd.read_csv("data/seasonal_traits.csv")
+df = pd.read_csv(&quot;data/seasonal_traits.csv&quot;)
 
 # basic information used in the figure
-tr_name = ["Chla+b", "Ccar","EWT", "Nitrogen"]
-units = {'Chla+b':' ($\mu g/cm^2$)','Ccar':' ($\mu g/cm^2$)','EWT':' ($g/m^2$)', "Nitrogen":" ($\mu g/cm^2$)"}
-title = ["(a)","(b)","(c)","(d)"]
-styles = {"BART":{'linestyle': (0, (3, 1, 1, 1, 1, 1)), 'marker': 'o', "color":'#FF0000'},
-          "HARV":{'linestyle': (0, (5, 1)), 'marker': 's', "color":'#FFA500'},
-          "SCBI":{'linestyle': ":", 'marker': '^', "color":'#CCCC00'},
-          "MLBS":{'linestyle': "-.", 'marker': '*', "color":'#0000FF'},
-          "ORNL":{'linestyle': '-', 'marker': 'X', "color":'#4B0082'},
-          "TALL":{'linestyle': (0, (3, 1, 1, 1)), 'marker': 'p', "color":'#EE82EE'}}
+tr_name = [&quot;Chla+b&quot;, &quot;Ccar&quot;,&quot;EWT&quot;, &quot;Nitrogen&quot;]
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;, &quot;Nitrogen&quot;:&quot; ($\mu g/cm^2$)&quot;}
+title = [&quot;(a)&quot;,&quot;(b)&quot;,&quot;(c)&quot;,&quot;(d)&quot;]
+styles = {&quot;BART&quot;:{&#x27;linestyle&#x27;: (0, (3, 1, 1, 1, 1, 1)), &#x27;marker&#x27;: &#x27;o&#x27;, &quot;color&quot;:&#x27;#FF0000&#x27;},
+          &quot;HARV&quot;:{&#x27;linestyle&#x27;: (0, (5, 1)), &#x27;marker&#x27;: &#x27;s&#x27;, &quot;color&quot;:&#x27;#FFA500&#x27;},
+          &quot;SCBI&quot;:{&#x27;linestyle&#x27;: &quot;:&quot;, &#x27;marker&#x27;: &#x27;^&#x27;, &quot;color&quot;:&#x27;#CCCC00&#x27;},
+          &quot;MLBS&quot;:{&#x27;linestyle&#x27;: &quot;-.&quot;, &#x27;marker&#x27;: &#x27;*&#x27;, &quot;color&quot;:&#x27;#0000FF&#x27;},
+          &quot;ORNL&quot;:{&#x27;linestyle&#x27;: &#x27;-&#x27;, &#x27;marker&#x27;: &#x27;X&#x27;, &quot;color&quot;:&#x27;#4B0082&#x27;},
+          &quot;TALL&quot;:{&#x27;linestyle&#x27;: (0, (3, 1, 1, 1)), &#x27;marker&#x27;: &#x27;p&#x27;, &quot;color&quot;:&#x27;#EE82EE&#x27;}}
 
 #******************************************************************************
 fig = plt.figure(figsize = (12,6))
-fig.set_facecolor('none')  # Make figure background transparent
+fig.set_facecolor(&#x27;none&#x27;)  # Make figure background transparent
 fig.set_alpha(0)      
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.18, hspace =0.05)
 plt.rcParams.update(config)
 
-s = df["site"].unique()
+s = df[&quot;site&quot;].unique()
 style = {key: styles[key] for key in s}
 
 # loop the traits for plotting
 for i, tr in enumerate(tr_name):
     ax = fig.add_subplot(2,2,i+1)
     ax.set_facecolor((0,0,0,0.0))
-    ax.grid(color='gray', linestyle=':', linewidth=0.3)
+    ax.grid(color=&#x27;gray&#x27;, linestyle=&#x27;:&#x27;, linewidth=0.3)
 
     kk = 0
     for site in s:
-        df_temp = df[df["site"]==site]
+        df_temp = df[df[&quot;site&quot;]==site]
 
-        df_temp["month"] = df_temp["month"].astype(int)
-        df_temp = df_temp.sort_values(by='month')
+        df_temp[&quot;month&quot;] = df_temp[&quot;month&quot;].astype(int)
+        df_temp = df_temp.sort_values(by=&#x27;month&#x27;)
 
-        x1,y1 = df_temp["month"],df_temp[f"{tr}_mean"]
-        lc1,hc1 = df_temp[f"{tr}_mean"]-df_temp[f"{tr}_std"], df_temp[f"{tr}_mean"]+df_temp[f"{tr}_std"]
+        x1,y1 = df_temp[&quot;month&quot;],df_temp[f&quot;{tr}_mean&quot;]
+        lc1,hc1 = df_temp[f&quot;{tr}_mean&quot;]-df_temp[f&quot;{tr}_std&quot;], df_temp[f&quot;{tr}_mean&quot;]+df_temp[f&quot;{tr}_std&quot;]
         ax.plot(x1,y1,label = site, markersize = 6,linewidth=2, **style[site])
-        ax.fill_between(x1, lc1,hc1, alpha=0.1,color = style[site]["color"])
+        ax.fill_between(x1, lc1,hc1, alpha=0.1,color = style[site][&quot;color&quot;])
         kk = kk+1
 
     ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
-    ax.set_xlabel(f'Months', fontsize=11, labelpad = 6, color = "white")     
-    ax.set_ylabel(f'PRISMA derived \n{tr} {units[tr]}', fontsize=11, color = "white")     
-    ax.tick_params(labelsize=11,direction='in', colors = "white")
-    ax.spines[['top', 'right', 'bottom','left']].set_color("white")
-    ax.text(0.01,0.92,f"{title[i]} monthly -- {tr} -- DBF", fontsize=11,transform=ax.transAxes, color = "white")
-    legend = ax.legend(loc='lower right',fontsize=10, facecolor= 'none',edgecolor = 'none',bbox_to_anchor=(1, -0.01),ncol= 2)
+    ax.set_xlabel(f&#x27;Months&#x27;, fontsize=11, labelpad = 6, color = &quot;white&quot;)     
+    ax.set_ylabel(f&#x27;PRISMA derived \n{tr} {units[tr]}&#x27;, fontsize=11, color = &quot;white&quot;)     
+    ax.tick_params(labelsize=11,direction=&#x27;in&#x27;, colors = &quot;white&quot;)
+    ax.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
+    ax.text(0.01,0.92,f&quot;{title[i]} monthly -- {tr} -- DBF&quot;, fontsize=11,transform=ax.transAxes, color = &quot;white&quot;)
+    legend = ax.legend(loc=&#x27;lower right&#x27;,fontsize=10, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(1, -0.01),ncol= 2)
     for text in legend.get_texts():
-        text.set_color("white")
+        text.set_color(&quot;white&quot;)
     
-    if (i != 2)&(i != 3):
+    if (i != 2)&amp;(i != 3):
         ax.set_xticklabels([])
-        ax.set_xlabel('')
+        ax.set_xlabel(&#x27;&#x27;)
     if i !=0:
         ax.get_legend().remove()
-plt.savefig('Figure_export/xxx.png', dpi=600, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/seasonal_variation.png"
-                alt="Image 1">
-              <pre><code class="language-python" class="bashScript">import pandas as pd
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.ticker as ticker
+
+# open the data.
+df = pd.read_csv(&quot;data/seasonal_traits.csv&quot;)
+
+# basic information used in the figure
+tr_name = [&quot;Chla+b&quot;, &quot;Ccar&quot;,&quot;EWT&quot;, &quot;Nitrogen&quot;]
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;, &quot;Nitrogen&quot;:&quot; ($\mu g/cm^2$)&quot;}
+title = [&quot;(a)&quot;,&quot;(b)&quot;,&quot;(c)&quot;,&quot;(d)&quot;]
+styles = {&quot;BART&quot;:{&#x27;linestyle&#x27;: (0, (3, 1, 1, 1, 1, 1)), &#x27;marker&#x27;: &#x27;o&#x27;, &quot;color&quot;:&#x27;#FF0000&#x27;},
+          &quot;HARV&quot;:{&#x27;linestyle&#x27;: (0, (5, 1)), &#x27;marker&#x27;: &#x27;s&#x27;, &quot;color&quot;:&#x27;#FFA500&#x27;},
+          &quot;SCBI&quot;:{&#x27;linestyle&#x27;: &quot;:&quot;, &#x27;marker&#x27;: &#x27;^&#x27;, &quot;color&quot;:&#x27;#CCCC00&#x27;},
+          &quot;MLBS&quot;:{&#x27;linestyle&#x27;: &quot;-.&quot;, &#x27;marker&#x27;: &#x27;*&#x27;, &quot;color&quot;:&#x27;#0000FF&#x27;},
+          &quot;ORNL&quot;:{&#x27;linestyle&#x27;: &#x27;-&#x27;, &#x27;marker&#x27;: &#x27;X&#x27;, &quot;color&quot;:&#x27;#4B0082&#x27;},
+          &quot;TALL&quot;:{&#x27;linestyle&#x27;: (0, (3, 1, 1, 1)), &#x27;marker&#x27;: &#x27;p&#x27;, &quot;color&quot;:&#x27;#EE82EE&#x27;}}
+
+#******************************************************************************
+fig = plt.figure(figsize = (12,6))
+fig.set_facecolor(&#x27;none&#x27;)  # Make figure background transparent
+fig.set_alpha(0)      
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.18, hspace =0.05)
+plt.rcParams.update(config)
+
+s = df[&quot;site&quot;].unique()
+style = {key: styles[key] for key in s}
+
+# loop the traits for plotting
+for i, tr in enumerate(tr_name):
+    ax = fig.add_subplot(2,2,i+1)
+    ax.set_facecolor((0,0,0,0.0))
+    ax.grid(color=&#x27;gray&#x27;, linestyle=&#x27;:&#x27;, linewidth=0.3)
+
+    kk = 0
+    for site in s:
+        df_temp = df[df[&quot;site&quot;]==site]
+
+        df_temp[&quot;month&quot;] = df_temp[&quot;month&quot;].astype(int)
+        df_temp = df_temp.sort_values(by=&#x27;month&#x27;)
+
+        x1,y1 = df_temp[&quot;month&quot;],df_temp[f&quot;{tr}_mean&quot;]
+        lc1,hc1 = df_temp[f&quot;{tr}_mean&quot;]-df_temp[f&quot;{tr}_std&quot;], df_temp[f&quot;{tr}_mean&quot;]+df_temp[f&quot;{tr}_std&quot;]
+        ax.plot(x1,y1,label = site, markersize = 6,linewidth=2, **style[site])
+        ax.fill_between(x1, lc1,hc1, alpha=0.1,color = style[site][&quot;color&quot;])
+        kk = kk+1
+
+    ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
+    ax.set_xlabel(f&#x27;Months&#x27;, fontsize=11, labelpad = 6, color = &quot;white&quot;)     
+    ax.set_ylabel(f&#x27;PRISMA derived \n{tr} {units[tr]}&#x27;, fontsize=11, color = &quot;white&quot;)     
+    ax.tick_params(labelsize=11,direction=&#x27;in&#x27;, colors = &quot;white&quot;)
+    ax.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
+    ax.text(0.01,0.92,f&quot;{title[i]} monthly -- {tr} -- DBF&quot;, fontsize=11,transform=ax.transAxes, color = &quot;white&quot;)
+    legend = ax.legend(loc=&#x27;lower right&#x27;,fontsize=10, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(1, -0.01),ncol= 2)
+    for text in legend.get_texts():
+        text.set_color(&quot;white&quot;)
+    
+    if (i != 2)&amp;(i != 3):
+        ax.set_xticklabels([])
+        ax.set_xlabel(&#x27;&#x27;)
+    if i !=0:
+        ax.get_legend().remove()
+plt.savefig(&#x27;Figure_export/xxx.png&#x27;, dpi=600, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 64 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-5" aria-labelledby="lesson-5-title"><div class="lesson-section-heading"><span class="lesson-step">05</span><h3 id="lesson-5-title">Functional-type extrapolation</h3></div><p class="lesson-section-intro">Compare measurements and predictions across plant functional types with shared plotting settings.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/PFT_extra.png" data-image-caption="Plant functional-type extrapolation" data-image-background="#252a34" aria-label="Enlarge figure: Plant functional-type extrapolation" style="--figure-background:#252a34">
+        <img src="./data_visualization_image/PFT_extra.png" width="848" height="293" alt="Plant functional-type extrapolation" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Plant functional-type extrapolation · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">functional_type_extrapolation.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for functional_type_extrapolation.py">Wrap</button><button type="button" data-code-copy aria-label="Copy functional_type_extrapolation.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/functional_type_extrapolation.py" download aria-label="Download functional_type_extrapolation.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="functional_type_extrapolation.py code"><code class="language-python">import pandas as pd
 import numpy as np
 import scipy.stats as st
 import matplotlib.pyplot as plt
@@ -589,7 +915,7 @@ import matplotlib.pyplot as plt
 def PFT_extrapolation(ax1,ax2,df1,df2,color,tr):
     ax1.set_facecolor((0,0,0,0.0))
     ax2.set_facecolor((0,0,0,0.0))
-    col1 = [col for col in df2.columns if any(df2[col] > 2)]
+    col1 = [col for col in df2.columns if any(df2[col] &gt; 2)]
     df1.drop(columns=col1,inplace = True), df2.drop(columns=col1,inplace = True)
     df2 = df2*100
     
@@ -602,52 +928,122 @@ def PFT_extrapolation(ax1,ax2,df1,df2,color,tr):
     x1 = np.linspace(1, dp1, num=dp1)
     x2 = np.linspace(1, dp2, num=dp2)
     
-    ax1.plot(x1,m1,marker = 'o',markersize=4,linewidth=2,c = color,label = tr)
-    ax2.plot(x2,m2,marker = 'o',markersize=4,linewidth=2,c = color,label = tr)
+    ax1.plot(x1,m1,marker = &#x27;o&#x27;,markersize=4,linewidth=2,c = color,label = tr)
+    ax2.plot(x2,m2,marker = &#x27;o&#x27;,markersize=4,linewidth=2,c = color,label = tr)
     
     ax1.fill_between(x1, lc1,hc1, alpha=0.1,color = color)
     ax2.fill_between(x2, lc2,hc2, alpha=0.1,color = color)
     
-    ax1.set_xlabel('Number of PFTs trained',fontsize = 10, color = "white")
-    ax2.set_xlabel('Number of PFTs trained',fontsize = 10, color = "white")
-    ax1.set_ylabel('$R^2$',fontsize = 11, color = "white")
-    ax2.set_ylabel('$NRMSE$(%)',fontsize = 11, color = "white")
+    ax1.set_xlabel(&#x27;Number of PFTs trained&#x27;,fontsize = 10, color = &quot;white&quot;)
+    ax2.set_xlabel(&#x27;Number of PFTs trained&#x27;,fontsize = 10, color = &quot;white&quot;)
+    ax1.set_ylabel(&#x27;$R^2$&#x27;,fontsize = 11, color = &quot;white&quot;)
+    ax2.set_ylabel(&#x27;$NRMSE$(%)&#x27;,fontsize = 11, color = &quot;white&quot;)
     
-    legend = ax1.legend(loc = 'lower right',facecolor= 'none',edgecolor = 'none',fontsize = 9)
+    legend = ax1.legend(loc = &#x27;lower right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize = 9)
     for text in legend.get_texts():
-        text.set_color("white")
-    legend = ax2.legend(loc = 'upper right',facecolor= 'none',edgecolor = 'none',fontsize = 9,bbox_to_anchor=(1, 0.95))
+        text.set_color(&quot;white&quot;)
+    legend = ax2.legend(loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize = 9,bbox_to_anchor=(1, 0.95))
     for text in legend.get_texts():
-        text.set_color("white")
-    ax1.tick_params(labelsize=9, colors = "white")
-    ax2.tick_params(labelsize=9, colors = "white")
-    ax1.spines[['top', 'right', 'bottom','left']].set_color("white")
-    ax2.spines[['top', 'right', 'bottom','left']].set_color("white")
+        text.set_color(&quot;white&quot;)
+    ax1.tick_params(labelsize=9, colors = &quot;white&quot;)
+    ax2.tick_params(labelsize=9, colors = &quot;white&quot;)
+    ax1.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
+    ax2.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
     return
 
-df = pd.read_csv("data/PFT_extrapolation.csv")
+df = pd.read_csv(&quot;data/PFT_extrapolation.csv&quot;)
 
 fig,(ax1,ax2) = plt.subplots(1,2,figsize = (10,3))
-fig.set_facecolor('none')
+fig.set_facecolor(&#x27;none&#x27;)
 fig.set_alpha(0)
 
 plt.subplots_adjust(wspace =0.18)
-config = {"font.family":'Calibri'}
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
 plt.rcParams.update(config)
 
-colors = {'Chla+b':'r','Ccar':'g','EWT':'b','LMA':'orange'}
-trait_name = ['Chla+b','Ccar','EWT','LMA']
+colors = {&#x27;Chla+b&#x27;:&#x27;r&#x27;,&#x27;Ccar&#x27;:&#x27;g&#x27;,&#x27;EWT&#x27;:&#x27;b&#x27;,&#x27;LMA&#x27;:&#x27;orange&#x27;}
+trait_name = [&#x27;Chla+b&#x27;,&#x27;Ccar&#x27;,&#x27;EWT&#x27;,&#x27;LMA&#x27;]
 
 for tr in trait_name:
-    data = df[df["tr"]==tr]
-    df1 = data[data["metric"]=="R2"].iloc[:,:-2]
-    df2 = data[data["metric"]=="NRMSE"].iloc[:,:-2]
+    data = df[df[&quot;tr&quot;]==tr]
+    df1 = data[data[&quot;metric&quot;]==&quot;R2&quot;].iloc[:,:-2]
+    df2 = data[data[&quot;metric&quot;]==&quot;NRMSE&quot;].iloc[:,:-2]
     PFT_extrapolation(ax1,ax2,df1,df2,colors[tr],tr) 
-ax1.text(0.02,0.93, '(a) $R^2$ for PFTs extrapolation', transform=ax1.transAxes, fontsize = 10, color = "white")
-ax2.text(0.02,0.93, '(b) $NRMSE$ for PFTs extrapolation', transform=ax2.transAxes, fontsize = 10, color = "white") </code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/PFT_extra.png" alt="Image 1">
+ax1.text(0.02,0.93, &#x27;(a) $R^2$ for PFTs extrapolation&#x27;, transform=ax1.transAxes, fontsize = 10, color = &quot;white&quot;)
+ax2.text(0.02,0.93, &#x27;(b) $NRMSE$ for PFTs extrapolation&#x27;, transform=ax2.transAxes, fontsize = 10, color = &quot;white&quot;) </code></pre>
+      <template data-code-source>import pandas as pd
+import numpy as np
+import scipy.stats as st
+import matplotlib.pyplot as plt
 
-              <pre><code class="language-python" class="bashScript">import pandas as pd
+def PFT_extrapolation(ax1,ax2,df1,df2,color,tr):
+    ax1.set_facecolor((0,0,0,0.0))
+    ax2.set_facecolor((0,0,0,0.0))
+    col1 = [col for col in df2.columns if any(df2[col] &gt; 2)]
+    df1.drop(columns=col1,inplace = True), df2.drop(columns=col1,inplace = True)
+    df2 = df2*100
+    
+    d1,d2,dp1,dp2 = df1.values.T,df2.values.T,len(df1),len(df2)
+    m1,m2 = np.mean(d1, 0),np.mean(d2, 0)
+    
+    lc1,hc1 = st.t.interval(0.95, dp1-1,loc=np.mean(d1, 0),scale=st.sem(d1))
+    lc2,hc2 = st.t.interval(0.95, dp2-1,loc=np.mean(d2, 0),scale=st.sem(d2))
+    
+    x1 = np.linspace(1, dp1, num=dp1)
+    x2 = np.linspace(1, dp2, num=dp2)
+    
+    ax1.plot(x1,m1,marker = &#x27;o&#x27;,markersize=4,linewidth=2,c = color,label = tr)
+    ax2.plot(x2,m2,marker = &#x27;o&#x27;,markersize=4,linewidth=2,c = color,label = tr)
+    
+    ax1.fill_between(x1, lc1,hc1, alpha=0.1,color = color)
+    ax2.fill_between(x2, lc2,hc2, alpha=0.1,color = color)
+    
+    ax1.set_xlabel(&#x27;Number of PFTs trained&#x27;,fontsize = 10, color = &quot;white&quot;)
+    ax2.set_xlabel(&#x27;Number of PFTs trained&#x27;,fontsize = 10, color = &quot;white&quot;)
+    ax1.set_ylabel(&#x27;$R^2$&#x27;,fontsize = 11, color = &quot;white&quot;)
+    ax2.set_ylabel(&#x27;$NRMSE$(%)&#x27;,fontsize = 11, color = &quot;white&quot;)
+    
+    legend = ax1.legend(loc = &#x27;lower right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize = 9)
+    for text in legend.get_texts():
+        text.set_color(&quot;white&quot;)
+    legend = ax2.legend(loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize = 9,bbox_to_anchor=(1, 0.95))
+    for text in legend.get_texts():
+        text.set_color(&quot;white&quot;)
+    ax1.tick_params(labelsize=9, colors = &quot;white&quot;)
+    ax2.tick_params(labelsize=9, colors = &quot;white&quot;)
+    ax1.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
+    ax2.spines[[&#x27;top&#x27;, &#x27;right&#x27;, &#x27;bottom&#x27;,&#x27;left&#x27;]].set_color(&quot;white&quot;)
+    return
+
+df = pd.read_csv(&quot;data/PFT_extrapolation.csv&quot;)
+
+fig,(ax1,ax2) = plt.subplots(1,2,figsize = (10,3))
+fig.set_facecolor(&#x27;none&#x27;)
+fig.set_alpha(0)
+
+plt.subplots_adjust(wspace =0.18)
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
+plt.rcParams.update(config)
+
+colors = {&#x27;Chla+b&#x27;:&#x27;r&#x27;,&#x27;Ccar&#x27;:&#x27;g&#x27;,&#x27;EWT&#x27;:&#x27;b&#x27;,&#x27;LMA&#x27;:&#x27;orange&#x27;}
+trait_name = [&#x27;Chla+b&#x27;,&#x27;Ccar&#x27;,&#x27;EWT&#x27;,&#x27;LMA&#x27;]
+
+for tr in trait_name:
+    data = df[df[&quot;tr&quot;]==tr]
+    df1 = data[data[&quot;metric&quot;]==&quot;R2&quot;].iloc[:,:-2]
+    df2 = data[data[&quot;metric&quot;]==&quot;NRMSE&quot;].iloc[:,:-2]
+    PFT_extrapolation(ax1,ax2,df1,df2,colors[tr],tr) 
+ax1.text(0.02,0.93, &#x27;(a) $R^2$ for PFTs extrapolation&#x27;, transform=ax1.transAxes, fontsize = 10, color = &quot;white&quot;)
+ax2.text(0.02,0.93, &#x27;(b) $NRMSE$ for PFTs extrapolation&#x27;, transform=ax2.transAxes, fontsize = 10, color = &quot;white&quot;) </template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 64 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-6" aria-labelledby="lesson-6-title"><div class="lesson-section-heading"><span class="lesson-step">06</span><h3 id="lesson-6-title">Trait variability</h3></div><p class="lesson-section-intro">Combine grouped comparisons into a multipanel figure to summarize variation across traits and plant groups.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/leaf_traits_variation.jpg" data-image-caption="Variation in leaf traits" data-image-background="#ffffff" aria-label="Enlarge figure: Variation in leaf traits" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/leaf_traits_variation.jpg" width="1280" height="1378" alt="Variation in leaf traits" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Variation in leaf traits · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">trait_variability.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for trait_variability.py">Wrap</button><button type="button" data-code-copy aria-label="Copy trait_variability.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/trait_variability.py" download aria-label="Download trait_variability.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="trait_variability.py code"><code class="language-python">import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -655,41 +1051,41 @@ from matplotlib import gridspec
 from matplotlib.ticker import FuncFormatter
 from matplotlib.ticker import FormatStrFormatter
 
-colors = {'Chla+b':'orangered','Ccar':'dodgerblue','EWT':"pink",'LMA':'limegreen'}
-colors2 = {'Chla+b':'blue','Ccar':'red','EWT':"green",'LMA':'orange'}
-units = {'Chla+b':' ($\mu g/cm^2$)','Ccar':' ($\mu g/cm^2$)','EWT':' ($g/m^2$)','LMA':' ($g/m^2$)'}
-site_label = {'Chla+b':[r"$S_{chl1}$",r"$S_{chl2}$",r"$S_{chl3}$",r"$S_{chl4}$",r"$S_{chl5}$",r"$S_{chl6}$",r"$S_{chl7}$",r"$S_{chl8}$"],
-              'Ccar':[r"$S_{car1}$",r"$S_{car2}$",r"$S_{car3}$",r"$S_{car4}$",r"$S_{car5}$"],
-              'EWT':[r"$S_{ewt1}$",r"$S_{ewt2}$",r"$S_{ewt3}$",r"$S_{ewt4}$"],
-              'LMA':[r"$S_{lma1}$",r"$S_{lma2}$",r"$S_{lma3}$",r"$S_{lma4}$",r"$S_{lma5}$",r"$S_{lma6}$",
-                     r"$S_{lma7}$",r"$S_{lma8}$",r"$S_{lma9}$",r"$S_{lma10}$",r"$S_{lma11}$",r"$S_{lma12}$"]}
-pft_label = {'Chla+b':['DBF',"CRP","GRA"],'Ccar':['DBF',"CRP","GRA"],
-              'EWT':['DBF',"CRP","GRA"],'LMA':['DBF',"CRP","GRA","SHR","vine","EBF","ENF"]}
-temp_label = {'Chla+b':['EGS','PGS','PPS'],'Ccar':['EGS','PGS','PPS'],'LMA':['EGS','PGS','PPS']}
+colors = {&#x27;Chla+b&#x27;:&#x27;orangered&#x27;,&#x27;Ccar&#x27;:&#x27;dodgerblue&#x27;,&#x27;EWT&#x27;:&quot;pink&quot;,&#x27;LMA&#x27;:&#x27;limegreen&#x27;}
+colors2 = {&#x27;Chla+b&#x27;:&#x27;blue&#x27;,&#x27;Ccar&#x27;:&#x27;red&#x27;,&#x27;EWT&#x27;:&quot;green&quot;,&#x27;LMA&#x27;:&#x27;orange&#x27;}
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;,&#x27;LMA&#x27;:&#x27; ($g/m^2$)&#x27;}
+site_label = {&#x27;Chla+b&#x27;:[r&quot;$S_{chl1}$&quot;,r&quot;$S_{chl2}$&quot;,r&quot;$S_{chl3}$&quot;,r&quot;$S_{chl4}$&quot;,r&quot;$S_{chl5}$&quot;,r&quot;$S_{chl6}$&quot;,r&quot;$S_{chl7}$&quot;,r&quot;$S_{chl8}$&quot;],
+              &#x27;Ccar&#x27;:[r&quot;$S_{car1}$&quot;,r&quot;$S_{car2}$&quot;,r&quot;$S_{car3}$&quot;,r&quot;$S_{car4}$&quot;,r&quot;$S_{car5}$&quot;],
+              &#x27;EWT&#x27;:[r&quot;$S_{ewt1}$&quot;,r&quot;$S_{ewt2}$&quot;,r&quot;$S_{ewt3}$&quot;,r&quot;$S_{ewt4}$&quot;],
+              &#x27;LMA&#x27;:[r&quot;$S_{lma1}$&quot;,r&quot;$S_{lma2}$&quot;,r&quot;$S_{lma3}$&quot;,r&quot;$S_{lma4}$&quot;,r&quot;$S_{lma5}$&quot;,r&quot;$S_{lma6}$&quot;,
+                     r&quot;$S_{lma7}$&quot;,r&quot;$S_{lma8}$&quot;,r&quot;$S_{lma9}$&quot;,r&quot;$S_{lma10}$&quot;,r&quot;$S_{lma11}$&quot;,r&quot;$S_{lma12}$&quot;]}
+pft_label = {&#x27;Chla+b&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],&#x27;Ccar&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],
+              &#x27;EWT&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],&#x27;LMA&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;,&quot;SHR&quot;,&quot;vine&quot;,&quot;EBF&quot;,&quot;ENF&quot;]}
+temp_label = {&#x27;Chla+b&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;],&#x27;Ccar&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;],&#x27;LMA&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;]}
 
-data_type = ["sites","PFT","temporal"]
+data_type = [&quot;sites&quot;,&quot;PFT&quot;,&quot;temporal&quot;]
 
 fig = plt.figure(figsize = (14,15))
 gs = gridspec.GridSpec(124, 80)
 
-config = {"font.family":'Calibri'}
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
 plt.subplots_adjust(wspace =0,hspace = 0)
 plt.rcParams.update(config)
 
 j = 0
 for ds in data_type:
-    tr_name = ["Chla+b","Ccar","LMA","EWT"] if ds !="temporal" else ["Chla+b","Ccar","LMA"]
+    tr_name = [&quot;Chla+b&quot;,&quot;Ccar&quot;,&quot;LMA&quot;,&quot;EWT&quot;] if ds !=&quot;temporal&quot; else [&quot;Chla+b&quot;,&quot;Ccar&quot;,&quot;LMA&quot;]
     m = 0
     for tr in tr_name:
-        data = pd.read_csv(f"../0_datasets/{tr}_dataset_{ds}.csv")
-        df, refl = data.loc[:,"Dataset ID":], data.loc[:,"450":"2400"]
+        data = pd.read_csv(f&quot;../0_datasets/{tr}_dataset_{ds}.csv&quot;)
+        df, refl = data.loc[:,&quot;Dataset ID&quot;:], data.loc[:,&quot;450&quot;:&quot;2400&quot;]
         
         ax = plt.subplot(gs[j:j+16, m:m+16])
         axes = plt.subplot(gs[j+20:j+36, m:m+14])
         axes1 = axes.twinx()
         
-        wl_min = '450'
-        wl_max = '2400'
+        wl_min = &#x27;450&#x27;
+        wl_max = &#x27;2400&#x27;
         d_all = refl.loc[:,wl_min:wl_max].values
         m_all = np.mean(d_all,0)
         std_all = np.std(d_all,0)
@@ -697,97 +1093,241 @@ for ds in data_type:
         CV = refl.loc[:,wl_min:wl_max].std()/refl.loc[:,wl_min:wl_max].mean()
         wl = np.arange(int(wl_min),int(wl_max)+1,10)
         
-        axes.plot(wl,m_all,linewidth=2,color = colors[tr], label = "mean reflectance")
+        axes.plot(wl,m_all,linewidth=2,color = colors[tr], label = &quot;mean reflectance&quot;)
         axes.fill_between(wl, lc_all,hc_all, alpha=0.2,color = colors[tr])
-        axes1.plot(wl,savgol_filter(CV,25,3),linewidth=2,ls = '--',color = colors2[tr],label = "mean CV")
+        axes1.plot(wl,savgol_filter(CV,25,3),linewidth=2,ls = &#x27;--&#x27;,color = colors2[tr],label = &quot;mean CV&quot;)
 
         lines, labels = axes.get_legend_handles_labels()
         lines2, labels2 = axes1.get_legend_handles_labels()
-        axes.legend(lines + lines2, labels + labels2, loc = 'upper right',facecolor= 'none',
-                    edgecolor = 'none',fontsize=8,bbox_to_anchor=(0.98, 1.03))
+        axes.legend(lines + lines2, labels + labels2, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,
+                    edgecolor = &#x27;none&#x27;,fontsize=8,bbox_to_anchor=(0.98, 1.03))
     
-        axes.set_xlabel('Wavelength (nm)',fontsize = 9,labelpad = 3)
-        axes.set_ylabel(f"{tr} Reflectance", fontsize=9, labelpad = 0.2)
-        axes1.set_ylabel("Coefficient of variation", fontsize=9, labelpad =0.2)
+        axes.set_xlabel(&#x27;Wavelength (nm)&#x27;,fontsize = 9,labelpad = 3)
+        axes.set_ylabel(f&quot;{tr} Reflectance&quot;, fontsize=9, labelpad = 0.2)
+        axes1.set_ylabel(&quot;Coefficient of variation&quot;, fontsize=9, labelpad =0.2)
 
-        axes.tick_params(labelsize=9, direction = 'in')
-        axes1.tick_params(labelsize=9, direction = 'in')
+        axes.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+        axes1.tick_params(labelsize=9, direction = &#x27;in&#x27;)
         
         axes.yaxis.set_major_formatter(FuncFormatter(no_negative))
-        axes1.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+        axes1.yaxis.set_major_formatter(FormatStrFormatter(&#x27;%.1f&#x27;))
            
-        if ds == "sites":
-            site_info = df.groupby("Site ID")["Latitude","Longitude"].mean().sort_values(by='Latitude')
-            site_info['Latitude'] = site_info['Latitude'].round(2)
-            site_info['Longitude'] = site_info['Longitude'].round(2)
-            site_info['coordinate'] = site_info.apply(lambda row: (row['Latitude'], row['Longitude']), axis=1)
+        if ds == &quot;sites&quot;:
+            site_info = df.groupby(&quot;Site ID&quot;)[&quot;Latitude&quot;,&quot;Longitude&quot;].mean().sort_values(by=&#x27;Latitude&#x27;)
+            site_info[&#x27;Latitude&#x27;] = site_info[&#x27;Latitude&#x27;].round(2)
+            site_info[&#x27;Longitude&#x27;] = site_info[&#x27;Longitude&#x27;].round(2)
+            site_info[&#x27;coordinate&#x27;] = site_info.apply(lambda row: (row[&#x27;Latitude&#x27;], row[&#x27;Longitude&#x27;]), axis=1)
             
-            df_map = pd.DataFrame({'Site ID':site_info.index.tolist()})
-            sort_map = df_map.reset_index().set_index('Site ID')
-            df['Site_idx'] = df['Site ID'].map(sort_map['index'])
-            df.sort_values(by = ['Site_idx'],inplace = True)
+            df_map = pd.DataFrame({&#x27;Site ID&#x27;:site_info.index.tolist()})
+            sort_map = df_map.reset_index().set_index(&#x27;Site ID&#x27;)
+            df[&#x27;Site_idx&#x27;] = df[&#x27;Site ID&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;Site_idx&#x27;],inplace = True)
             df.reset_index(drop = True, inplace = True) 
             
-            width = {'Chla+b':0.7,'Ccar':0.6,'EWT':0.6,'LMA':0.7}
-            sns.boxplot(x= 'Site ID', y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
+            width = {&#x27;Chla+b&#x27;:0.7,&#x27;Ccar&#x27;:0.6,&#x27;EWT&#x27;:0.6,&#x27;LMA&#x27;:0.7}
+            sns.boxplot(x= &#x27;Site ID&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
             
-            ax.set_xlabel(f'Site number of {tr} samples',fontsize = 9,labelpad = 3)
+            ax.set_xlabel(f&#x27;Site number of {tr} samples&#x27;,fontsize = 9,labelpad = 3)
             ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
-            ax.tick_params(labelsize=9, direction = 'in')
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
             ax.set_xticklabels(site_label[tr])
-            if tr == "LMA":
-                ax.tick_params(axis = "x", labelsize=7, direction = 'in',pad = -0.5, rotation=35)
-                ax.set_xlabel(f'Site number of {tr} samples',fontsize = 9,labelpad = -3)
+            if tr == &quot;LMA&quot;:
+                ax.tick_params(axis = &quot;x&quot;, labelsize=7, direction = &#x27;in&#x27;,pad = -0.5, rotation=35)
+                ax.set_xlabel(f&#x27;Site number of {tr} samples&#x27;,fontsize = 9,labelpad = -3)
 
-            ax.text(-0.13,1.05, 'A. Spatial dataset', fontsize=10,transform=ax.transAxes,weight='bold') if tr == "Chla+b" else None
+            ax.text(-0.13,1.05, &#x27;A. Spatial dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
             
-        elif ds == "PFT":
-            df_map = pd.DataFrame({'PFT':['Deciduous broadleaf forests', 'Croplands', 'Grasslands',
-                                          'Shrublands','Vine','Evergreen broadleaf forests',
-                                          'Evergreen needleleaf forests']}) if tr == "LMA" else pd.DataFrame({'PFT':['Deciduous broadleaf forests', 'Croplands', 'Grasslands']})
+        elif ds == &quot;PFT&quot;:
+            df_map = pd.DataFrame({&#x27;PFT&#x27;:[&#x27;Deciduous broadleaf forests&#x27;, &#x27;Croplands&#x27;, &#x27;Grasslands&#x27;,
+                                          &#x27;Shrublands&#x27;,&#x27;Vine&#x27;,&#x27;Evergreen broadleaf forests&#x27;,
+                                          &#x27;Evergreen needleleaf forests&#x27;]}) if tr == &quot;LMA&quot; else pd.DataFrame({&#x27;PFT&#x27;:[&#x27;Deciduous broadleaf forests&#x27;, &#x27;Croplands&#x27;, &#x27;Grasslands&#x27;]})
             
-            sort_map = df_map.reset_index().set_index('PFT')
-            df['PFT_idx'] = df['PFT'].map(sort_map['index'])
-            df.sort_values(by = ['PFT_idx'],inplace = True)
+            sort_map = df_map.reset_index().set_index(&#x27;PFT&#x27;)
+            df[&#x27;PFT_idx&#x27;] = df[&#x27;PFT&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;PFT_idx&#x27;],inplace = True)
             df.reset_index(drop = True, inplace = True) 
             
-            width = {'Chla+b':0.45,'Ccar':0.45,'EWT':0.45,'LMA':0.7}
-            sns.boxplot(x= 'PFT', y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
-            ax.set_xlabel(f'PFT',fontsize = 9,labelpad = 3)
+            width = {&#x27;Chla+b&#x27;:0.45,&#x27;Ccar&#x27;:0.45,&#x27;EWT&#x27;:0.45,&#x27;LMA&#x27;:0.7}
+            sns.boxplot(x= &#x27;PFT&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
+            ax.set_xlabel(f&#x27;PFT&#x27;,fontsize = 9,labelpad = 3)
             ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
-            ax.tick_params(labelsize=9, direction = 'in')
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
             ax.set_xticklabels(pft_label[tr])
-            ax.text(-0.13,1.05, 'B. PFT dataset', fontsize=10,transform=ax.transAxes,weight='bold') if tr == "Chla+b" else None
+            ax.text(-0.13,1.05, &#x27;B. PFT dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
             
         else:
-            df_map = pd.DataFrame({'season':['early growing season','peak growing season','post-peak season']})
-            sort_map = df_map.reset_index().set_index('season')
-            df['season_idx'] = df['season'].map(sort_map['index'])
-            df.sort_values(by = ['season_idx'],inplace = True)
+            df_map = pd.DataFrame({&#x27;season&#x27;:[&#x27;early growing season&#x27;,&#x27;peak growing season&#x27;,&#x27;post-peak season&#x27;]})
+            sort_map = df_map.reset_index().set_index(&#x27;season&#x27;)
+            df[&#x27;season_idx&#x27;] = df[&#x27;season&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;season_idx&#x27;],inplace = True)
             df.reset_index(drop = True, inplace = True) 
             
-            sns.boxplot(x= 'season', y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = 0.5)
-            ax.set_xlabel(f'Seasons',fontsize = 9,labelpad = 3)
+            sns.boxplot(x= &#x27;season&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = 0.5)
+            ax.set_xlabel(f&#x27;Seasons&#x27;,fontsize = 9,labelpad = 3)
             ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
-            ax.tick_params(labelsize=9, direction = 'in')
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
             ax.set_xticklabels(temp_label[tr])
-            ax.text(-0.13,1.05, 'C. Temporal dataset', fontsize=10,transform=ax.transAxes,weight='bold') if tr == "Chla+b" else None
-            text = ('• DBF: Deciduous broadleaf forests\n'
-                    '• CRP: Croplands\n'
-                    '• GRA: Grasslands\n'
-                    '• SHR: Shrublands\n'
-                    '• EBF: Evergreen broadleaf forests\n'
-                    '• ENF: Evergreen needleleaf forests\n'
-                    '• EGS: Early growing season\n'
-                    '• PGS: Peak growing season\n'
-                    '• PPS: Post-peak season\n')
-            ax.text(1.1,-0.5, text,fontsize=10,transform=ax.transAxes,linespacing=1.5) if tr == "LMA" else None       
+            ax.text(-0.13,1.05, &#x27;C. Temporal dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
+            text = (&#x27;• DBF: Deciduous broadleaf forests\n&#x27;
+                    &#x27;• CRP: Croplands\n&#x27;
+                    &#x27;• GRA: Grasslands\n&#x27;
+                    &#x27;• SHR: Shrublands\n&#x27;
+                    &#x27;• EBF: Evergreen broadleaf forests\n&#x27;
+                    &#x27;• ENF: Evergreen needleleaf forests\n&#x27;
+                    &#x27;• EGS: Early growing season\n&#x27;
+                    &#x27;• PGS: Peak growing season\n&#x27;
+                    &#x27;• PPS: Post-peak season\n&#x27;)
+            ax.text(1.1,-0.5, text,fontsize=10,transform=ax.transAxes,linespacing=1.5) if tr == &quot;LMA&quot; else None       
         m = m+20
     j = j+42   
-plt.savefig(f'1_Figures/1_leaf traits variations.png', dpi=500, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/leaf_traits_variation.jpg"
-                alt="Image 1">
-              <pre><code class="language-python" class="bashScript">import pandas as pd
+plt.savefig(f&#x27;1_Figures/1_leaf traits variations.png&#x27;, dpi=500, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+from matplotlib.ticker import FuncFormatter
+from matplotlib.ticker import FormatStrFormatter
+
+colors = {&#x27;Chla+b&#x27;:&#x27;orangered&#x27;,&#x27;Ccar&#x27;:&#x27;dodgerblue&#x27;,&#x27;EWT&#x27;:&quot;pink&quot;,&#x27;LMA&#x27;:&#x27;limegreen&#x27;}
+colors2 = {&#x27;Chla+b&#x27;:&#x27;blue&#x27;,&#x27;Ccar&#x27;:&#x27;red&#x27;,&#x27;EWT&#x27;:&quot;green&quot;,&#x27;LMA&#x27;:&#x27;orange&#x27;}
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;,&#x27;LMA&#x27;:&#x27; ($g/m^2$)&#x27;}
+site_label = {&#x27;Chla+b&#x27;:[r&quot;$S_{chl1}$&quot;,r&quot;$S_{chl2}$&quot;,r&quot;$S_{chl3}$&quot;,r&quot;$S_{chl4}$&quot;,r&quot;$S_{chl5}$&quot;,r&quot;$S_{chl6}$&quot;,r&quot;$S_{chl7}$&quot;,r&quot;$S_{chl8}$&quot;],
+              &#x27;Ccar&#x27;:[r&quot;$S_{car1}$&quot;,r&quot;$S_{car2}$&quot;,r&quot;$S_{car3}$&quot;,r&quot;$S_{car4}$&quot;,r&quot;$S_{car5}$&quot;],
+              &#x27;EWT&#x27;:[r&quot;$S_{ewt1}$&quot;,r&quot;$S_{ewt2}$&quot;,r&quot;$S_{ewt3}$&quot;,r&quot;$S_{ewt4}$&quot;],
+              &#x27;LMA&#x27;:[r&quot;$S_{lma1}$&quot;,r&quot;$S_{lma2}$&quot;,r&quot;$S_{lma3}$&quot;,r&quot;$S_{lma4}$&quot;,r&quot;$S_{lma5}$&quot;,r&quot;$S_{lma6}$&quot;,
+                     r&quot;$S_{lma7}$&quot;,r&quot;$S_{lma8}$&quot;,r&quot;$S_{lma9}$&quot;,r&quot;$S_{lma10}$&quot;,r&quot;$S_{lma11}$&quot;,r&quot;$S_{lma12}$&quot;]}
+pft_label = {&#x27;Chla+b&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],&#x27;Ccar&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],
+              &#x27;EWT&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;],&#x27;LMA&#x27;:[&#x27;DBF&#x27;,&quot;CRP&quot;,&quot;GRA&quot;,&quot;SHR&quot;,&quot;vine&quot;,&quot;EBF&quot;,&quot;ENF&quot;]}
+temp_label = {&#x27;Chla+b&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;],&#x27;Ccar&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;],&#x27;LMA&#x27;:[&#x27;EGS&#x27;,&#x27;PGS&#x27;,&#x27;PPS&#x27;]}
+
+data_type = [&quot;sites&quot;,&quot;PFT&quot;,&quot;temporal&quot;]
+
+fig = plt.figure(figsize = (14,15))
+gs = gridspec.GridSpec(124, 80)
+
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
+plt.subplots_adjust(wspace =0,hspace = 0)
+plt.rcParams.update(config)
+
+j = 0
+for ds in data_type:
+    tr_name = [&quot;Chla+b&quot;,&quot;Ccar&quot;,&quot;LMA&quot;,&quot;EWT&quot;] if ds !=&quot;temporal&quot; else [&quot;Chla+b&quot;,&quot;Ccar&quot;,&quot;LMA&quot;]
+    m = 0
+    for tr in tr_name:
+        data = pd.read_csv(f&quot;../0_datasets/{tr}_dataset_{ds}.csv&quot;)
+        df, refl = data.loc[:,&quot;Dataset ID&quot;:], data.loc[:,&quot;450&quot;:&quot;2400&quot;]
+        
+        ax = plt.subplot(gs[j:j+16, m:m+16])
+        axes = plt.subplot(gs[j+20:j+36, m:m+14])
+        axes1 = axes.twinx()
+        
+        wl_min = &#x27;450&#x27;
+        wl_max = &#x27;2400&#x27;
+        d_all = refl.loc[:,wl_min:wl_max].values
+        m_all = np.mean(d_all,0)
+        std_all = np.std(d_all,0)
+        lc_all,hc_all = m_all-1.96*std_all,m_all+1.96*std_all
+        CV = refl.loc[:,wl_min:wl_max].std()/refl.loc[:,wl_min:wl_max].mean()
+        wl = np.arange(int(wl_min),int(wl_max)+1,10)
+        
+        axes.plot(wl,m_all,linewidth=2,color = colors[tr], label = &quot;mean reflectance&quot;)
+        axes.fill_between(wl, lc_all,hc_all, alpha=0.2,color = colors[tr])
+        axes1.plot(wl,savgol_filter(CV,25,3),linewidth=2,ls = &#x27;--&#x27;,color = colors2[tr],label = &quot;mean CV&quot;)
+
+        lines, labels = axes.get_legend_handles_labels()
+        lines2, labels2 = axes1.get_legend_handles_labels()
+        axes.legend(lines + lines2, labels + labels2, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,
+                    edgecolor = &#x27;none&#x27;,fontsize=8,bbox_to_anchor=(0.98, 1.03))
+    
+        axes.set_xlabel(&#x27;Wavelength (nm)&#x27;,fontsize = 9,labelpad = 3)
+        axes.set_ylabel(f&quot;{tr} Reflectance&quot;, fontsize=9, labelpad = 0.2)
+        axes1.set_ylabel(&quot;Coefficient of variation&quot;, fontsize=9, labelpad =0.2)
+
+        axes.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+        axes1.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+        
+        axes.yaxis.set_major_formatter(FuncFormatter(no_negative))
+        axes1.yaxis.set_major_formatter(FormatStrFormatter(&#x27;%.1f&#x27;))
+           
+        if ds == &quot;sites&quot;:
+            site_info = df.groupby(&quot;Site ID&quot;)[&quot;Latitude&quot;,&quot;Longitude&quot;].mean().sort_values(by=&#x27;Latitude&#x27;)
+            site_info[&#x27;Latitude&#x27;] = site_info[&#x27;Latitude&#x27;].round(2)
+            site_info[&#x27;Longitude&#x27;] = site_info[&#x27;Longitude&#x27;].round(2)
+            site_info[&#x27;coordinate&#x27;] = site_info.apply(lambda row: (row[&#x27;Latitude&#x27;], row[&#x27;Longitude&#x27;]), axis=1)
+            
+            df_map = pd.DataFrame({&#x27;Site ID&#x27;:site_info.index.tolist()})
+            sort_map = df_map.reset_index().set_index(&#x27;Site ID&#x27;)
+            df[&#x27;Site_idx&#x27;] = df[&#x27;Site ID&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;Site_idx&#x27;],inplace = True)
+            df.reset_index(drop = True, inplace = True) 
+            
+            width = {&#x27;Chla+b&#x27;:0.7,&#x27;Ccar&#x27;:0.6,&#x27;EWT&#x27;:0.6,&#x27;LMA&#x27;:0.7}
+            sns.boxplot(x= &#x27;Site ID&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
+            
+            ax.set_xlabel(f&#x27;Site number of {tr} samples&#x27;,fontsize = 9,labelpad = 3)
+            ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+            ax.set_xticklabels(site_label[tr])
+            if tr == &quot;LMA&quot;:
+                ax.tick_params(axis = &quot;x&quot;, labelsize=7, direction = &#x27;in&#x27;,pad = -0.5, rotation=35)
+                ax.set_xlabel(f&#x27;Site number of {tr} samples&#x27;,fontsize = 9,labelpad = -3)
+
+            ax.text(-0.13,1.05, &#x27;A. Spatial dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
+            
+        elif ds == &quot;PFT&quot;:
+            df_map = pd.DataFrame({&#x27;PFT&#x27;:[&#x27;Deciduous broadleaf forests&#x27;, &#x27;Croplands&#x27;, &#x27;Grasslands&#x27;,
+                                          &#x27;Shrublands&#x27;,&#x27;Vine&#x27;,&#x27;Evergreen broadleaf forests&#x27;,
+                                          &#x27;Evergreen needleleaf forests&#x27;]}) if tr == &quot;LMA&quot; else pd.DataFrame({&#x27;PFT&#x27;:[&#x27;Deciduous broadleaf forests&#x27;, &#x27;Croplands&#x27;, &#x27;Grasslands&#x27;]})
+            
+            sort_map = df_map.reset_index().set_index(&#x27;PFT&#x27;)
+            df[&#x27;PFT_idx&#x27;] = df[&#x27;PFT&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;PFT_idx&#x27;],inplace = True)
+            df.reset_index(drop = True, inplace = True) 
+            
+            width = {&#x27;Chla+b&#x27;:0.45,&#x27;Ccar&#x27;:0.45,&#x27;EWT&#x27;:0.45,&#x27;LMA&#x27;:0.7}
+            sns.boxplot(x= &#x27;PFT&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = width[tr])
+            ax.set_xlabel(f&#x27;PFT&#x27;,fontsize = 9,labelpad = 3)
+            ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+            ax.set_xticklabels(pft_label[tr])
+            ax.text(-0.13,1.05, &#x27;B. PFT dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
+            
+        else:
+            df_map = pd.DataFrame({&#x27;season&#x27;:[&#x27;early growing season&#x27;,&#x27;peak growing season&#x27;,&#x27;post-peak season&#x27;]})
+            sort_map = df_map.reset_index().set_index(&#x27;season&#x27;)
+            df[&#x27;season_idx&#x27;] = df[&#x27;season&#x27;].map(sort_map[&#x27;index&#x27;])
+            df.sort_values(by = [&#x27;season_idx&#x27;],inplace = True)
+            df.reset_index(drop = True, inplace = True) 
+            
+            sns.boxplot(x= &#x27;season&#x27;, y= tr,data=df, color=colors[tr],ax = ax, fliersize=0.5,saturation = 0.8,linewidth = 0.5, whis =2,width = 0.5)
+            ax.set_xlabel(f&#x27;Seasons&#x27;,fontsize = 9,labelpad = 3)
+            ax.set_ylabel(tr+ units[tr], fontsize=9, labelpad = 0.2)
+            ax.tick_params(labelsize=9, direction = &#x27;in&#x27;)
+            ax.set_xticklabels(temp_label[tr])
+            ax.text(-0.13,1.05, &#x27;C. Temporal dataset&#x27;, fontsize=10,transform=ax.transAxes,weight=&#x27;bold&#x27;) if tr == &quot;Chla+b&quot; else None
+            text = (&#x27;• DBF: Deciduous broadleaf forests\n&#x27;
+                    &#x27;• CRP: Croplands\n&#x27;
+                    &#x27;• GRA: Grasslands\n&#x27;
+                    &#x27;• SHR: Shrublands\n&#x27;
+                    &#x27;• EBF: Evergreen broadleaf forests\n&#x27;
+                    &#x27;• ENF: Evergreen needleleaf forests\n&#x27;
+                    &#x27;• EGS: Early growing season\n&#x27;
+                    &#x27;• PGS: Peak growing season\n&#x27;
+                    &#x27;• PPS: Post-peak season\n&#x27;)
+            ax.text(1.1,-0.5, text,fontsize=10,transform=ax.transAxes,linespacing=1.5) if tr == &quot;LMA&quot; else None       
+        m = m+20
+    j = j+42   
+plt.savefig(f&#x27;1_Figures/1_leaf traits variations.png&#x27;, dpi=500, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 138 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-7" aria-labelledby="lesson-7-title"><div class="lesson-section-heading"><span class="lesson-step">07</span><h3 id="lesson-7-title">Model comparisons</h3></div><p class="lesson-section-intro">Arrange model evaluation results in a consistent figure and keep labels, statistical annotations, and panel spacing readable.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/pre-train_dnn.jpg" data-image-caption="Model comparison figure" data-image-background="#ffffff" aria-label="Enlarge figure: Model comparison figure" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/pre-train_dnn.jpg" width="1861" height="1280" alt="Model comparison figure" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Model comparison figure · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">model_comparison.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for model_comparison.py">Wrap</button><button type="button" data-code-copy aria-label="Copy model_comparison.py">Copy</button><a href="../../assets/code/tutorials/scatter_line_plot/model_comparison.py" download aria-label="Download model_comparison.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="model_comparison.py code"><code class="language-python">import pandas as pd
 import numpy as np
 import seaborn as sns
 from scipy import stats
@@ -807,13 +1347,13 @@ def d(x,y):
     z = gaussian_kde(xy)(xy)
     return z
   
-refl_pro = pd.read_csv("data/2_PROSPECT_reflectance_LUT.csv")
-refl_sip = pd.read_csv("data/1_SIP_reflectance_LUT.csv")
+refl_pro = pd.read_csv(&quot;data/2_PROSPECT_reflectance_LUT.csv&quot;)
+refl_sip = pd.read_csv(&quot;data/1_SIP_reflectance_LUT.csv&quot;)
 
 #***********************************************************************8
 fig = plt.figure(figsize = (12,8))
 gs = gridspec.GridSpec(19,8)
-config = {"font.family":'Calibri'}
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
 plt.subplots_adjust(wspace =0.7,hspace =2)
 plt.rcParams.update(config)
 
@@ -822,136 +1362,313 @@ ax = plt.subplot(gs[0:7, 0:4])
 wl = np.arange(450,2401)
 for i in range(len(refl_pro)):
     temp = refl_pro.iloc[i]
-    ax.plot(wl,temp,linewidth=0.05,c = 'gray', alpha = 0.05,zorder = 1)
+    ax.plot(wl,temp,linewidth=0.05,c = &#x27;gray&#x27;, alpha = 0.05,zorder = 1)
 
 m_all = np.mean(refl_pro,0)
 std_all = np.std(refl_pro,0)
 lc_all = np.percentile(refl_pro, 2.5, axis=0)
 hc_all = np.percentile(refl_pro, 97.5, axis=0)
-ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = 'orangered',label = '95% CI of mean reflectance',zorder = 2)
-ax.plot(wl,m_all,linewidth=2,c = 'orangered',label = 'Mean reflectance',zorder = 3)
+ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = &#x27;orangered&#x27;,label = &#x27;95% CI of mean reflectance&#x27;,zorder = 2)
+ax.plot(wl,m_all,linewidth=2,c = &#x27;orangered&#x27;,label = &#x27;Mean reflectance&#x27;,zorder = 3)
 
-ax.set_xlabel('Wavelength (nm)', fontsize=9, labelpad = 0.2)
-ax.set_ylabel('Reflectacne', fontsize=9, labelpad = 0.2)
+ax.set_xlabel(&#x27;Wavelength (nm)&#x27;, fontsize=9, labelpad = 0.2)
+ax.set_ylabel(&#x27;Reflectacne&#x27;, fontsize=9, labelpad = 0.2)
 ax.tick_params(labelsize=8)
-legend_elements = [Line2D([0], [0], color='gray', lw=1.5, alpha=1, label='Simulated reflectance')]
+legend_elements = [Line2D([0], [0], color=&#x27;gray&#x27;, lw=1.5, alpha=1, label=&#x27;Simulated reflectance&#x27;)]
 handles, labels = ax.get_legend_handles_labels()
 handles.extend(legend_elements)
-labels.extend(['Simulated reflectance'])
-ax.legend(handles=handles, labels=labels, loc = 'upper right',facecolor= 'none',edgecolor = 'none',fontsize=9)
-ax.text(-0.07,1.03, 'A. RTMs synthetic reflectance', transform=ax.transAxes, fontsize = 9,fontweight='bold')
-ax.text(0.01,0.94, '(A.1) PROSPECT synthetic reflectance', transform=ax.transAxes, fontsize = 8)
+labels.extend([&#x27;Simulated reflectance&#x27;])
+ax.legend(handles=handles, labels=labels, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize=9)
+ax.text(-0.07,1.03, &#x27;A. RTMs synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;)
+ax.text(0.01,0.94, &#x27;(A.1) PROSPECT synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 8)
 
 ### Leaf-SIP synthetic reflectance
 ax = plt.subplot(gs[0:7, 4:8])
 wl = np.arange(450,2401)
 for i in range(len(refl_sip)):
     temp = refl_sip.iloc[i]
-    ax.plot(wl,temp,linewidth=0.05,c = 'gray', alpha = 0.05,zorder = 1)
+    ax.plot(wl,temp,linewidth=0.05,c = &#x27;gray&#x27;, alpha = 0.05,zorder = 1)
 
 m_all = np.mean(refl_sip,0)
 std_all = np.std(refl_sip,0)
 lc_all = np.percentile(refl_sip, 2.5, axis=0)
 hc_all = np.percentile(refl_sip, 97.5, axis=0)
-ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = 'b',label = '95% CI of mean reflectance',zorder = 2)
-ax.plot(wl,m_all,linewidth=2,c = 'b',label = 'Mean reflectance',zorder = 3)
-ax.set_xlabel('Wavelength (nm)', fontsize=9, labelpad = 0.2)
-ax.set_ylabel('Reflectacne', fontsize=9, labelpad = 0.2)
+ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = &#x27;b&#x27;,label = &#x27;95% CI of mean reflectance&#x27;,zorder = 2)
+ax.plot(wl,m_all,linewidth=2,c = &#x27;b&#x27;,label = &#x27;Mean reflectance&#x27;,zorder = 3)
+ax.set_xlabel(&#x27;Wavelength (nm)&#x27;, fontsize=9, labelpad = 0.2)
+ax.set_ylabel(&#x27;Reflectacne&#x27;, fontsize=9, labelpad = 0.2)
 ax.tick_params(labelsize=8)
 
-legend_elements = [Line2D([0], [0], color='gray', lw=1.5, alpha=1, label='Simulated reflectance')]
+legend_elements = [Line2D([0], [0], color=&#x27;gray&#x27;, lw=1.5, alpha=1, label=&#x27;Simulated reflectance&#x27;)]
 handles, labels = ax.get_legend_handles_labels()
 handles.extend(legend_elements)
-labels.extend(['Simulated reflectance'])
-ax.legend(handles=handles, labels=labels, loc = 'upper right',facecolor= 'none',edgecolor = 'none',fontsize=9)
-ax.text(0.01,0.94, '(A.2) Leaf-SIP synthetic reflectance', transform=ax.transAxes, fontsize = 8)
+labels.extend([&#x27;Simulated reflectance&#x27;])
+ax.legend(handles=handles, labels=labels, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize=9)
+ax.text(0.01,0.94, &#x27;(A.2) Leaf-SIP synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 8)
 
 ####
-models = ['PROSPECT','Leaf-SIP']
-tr_name = ['Chla+b','Ccar','EWT','LMA']
-cmaps = {'PROSPECT':'autumn','Leaf-SIP':'winter'}
-colors = {'PROSPECT':'orangered','Leaf-SIP':'blue'}
-units = {'Chla+b':' ($\mu g/cm^2$)','Ccar':' ($\mu g/cm^2$)','EWT':' ($g/m^2$)','LMA':' ($g/m^2$)'}
-title1 =['(C.1)','(C.2)','(C.3)','(C.4)']
-title2 =['(D.1)','(D.2)','(D.3)','(D.4)']
+models = [&#x27;PROSPECT&#x27;,&#x27;Leaf-SIP&#x27;]
+tr_name = [&#x27;Chla+b&#x27;,&#x27;Ccar&#x27;,&#x27;EWT&#x27;,&#x27;LMA&#x27;]
+cmaps = {&#x27;PROSPECT&#x27;:&#x27;autumn&#x27;,&#x27;Leaf-SIP&#x27;:&#x27;winter&#x27;}
+colors = {&#x27;PROSPECT&#x27;:&#x27;orangered&#x27;,&#x27;Leaf-SIP&#x27;:&#x27;blue&#x27;}
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;,&#x27;LMA&#x27;:&#x27; ($g/m^2$)&#x27;}
+title1 =[&#x27;(C.1)&#x27;,&#x27;(C.2)&#x27;,&#x27;(C.3)&#x27;,&#x27;(C.4)&#x27;]
+title2 =[&#x27;(D.1)&#x27;,&#x27;(D.2)&#x27;,&#x27;(D.3)&#x27;,&#x27;(D.4)&#x27;]
 
 j = 0
 for kk, tr in enumerate(tr_name):
-    file_name = f'{tr}/1_PROSPECT_{tr}_ANN_LUT_pred.csv'
+    file_name = f&#x27;{tr}/1_PROSPECT_{tr}_ANN_LUT_pred.csv&#x27;
     df = pd.read_csv(file_name)
-    x,y = df['ANN_pred'],df['LUT_obs']
-    if (tr =='EWT')|(tr =='LMA'):
-        x,y = df['ANN_pred']*10000,df['LUT_obs']*10000
+    x,y = df[&#x27;ANN_pred&#x27;],df[&#x27;LUT_obs&#x27;]
+    if (tr ==&#x27;EWT&#x27;)|(tr ==&#x27;LMA&#x27;):
+        x,y = df[&#x27;ANN_pred&#x27;]*10000,df[&#x27;LUT_obs&#x27;]*10000
 
-    R2 = f'$R^2$ = {str(round(rsquared(x, y),2))}'
-    rmse = f'$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}'
-    nrmse = '$NRMSE$ = '+'{:.1%}'.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
+    R2 = f&#x27;$R^2$ = {str(round(rsquared(x, y),2))}&#x27;
+    rmse = f&#x27;$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}&#x27;
+    nrmse = &#x27;$NRMSE$ = &#x27;+&#x27;{:.1%}&#x27;.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
 
     ax = plt.subplot(gs[8:13, j:j+2])
-    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls='--',c='k', lw = 1.5)
-    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap='autumn',alpha = 0.3)
-    sns.regplot('ANN_pred','LUT_obs', data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {'color':'orangered','lw':1.5})
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap=&#x27;autumn&#x27;,alpha = 0.3)
+    sns.regplot(&#x27;ANN_pred&#x27;,&#x27;LUT_obs&#x27;, data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;orangered&#x27;,&#x27;lw&#x27;:1.5})
 
-    ax.set_xlabel(f'Predicted {tr} {units[tr]}', fontsize=8, labelpad = 0.05)
-    ax.set_ylabel(f'LUT {tr} {units[tr]}', fontsize=8, labelpad = 0.05)
-    ax.text(-0.15,1.08, 'B. Leaf trait prediction using PROSPECT synthetic data', transform=ax.transAxes, fontsize = 9,fontweight='bold') if j==0 else None
+    ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.set_ylabel(f&#x27;LUT {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.text(-0.15,1.08, &#x27;B. Leaf trait prediction using PROSPECT synthetic data&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;) if j==0 else None
 
     cbar = plt.colorbar(scatter, ax=ax,pad=0.02, shrink=0.9)
-    ax.text(1.02,0.98,'High',transform=ax.transAxes,fontsize = 7)
-    ax.text(1.02,-0.02,'Low',transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 7)
     cbar.set_ticks([])
-    cbar.set_label('Density', fontsize=9,labelpad=0.1)
+    cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
 
-    ax.text(0.03,0.92,f'{title1[kk]} PROSPECT - {tr}', fontsize=8,transform=ax.transAxes)
+    ax.text(0.03,0.92,f&#x27;{title1[kk]} PROSPECT - {tr}&#x27;, fontsize=8,transform=ax.transAxes)
     ax.text(0.365,0.22,R2, fontsize=7,transform=ax.transAxes)
     ax.text(0.365,0.14,rmse, fontsize=7,transform=ax.transAxes)
     ax.text(0.365,0.05,nrmse, fontsize=7,transform=ax.transAxes)
-    ax.tick_params(labelsize=8,direction='in')
+    ax.tick_params(labelsize=8,direction=&#x27;in&#x27;)
     j = j+2
 
 j = 0
 for kk, tr in enumerate(tr_name):
-    file_name = f'{tr}/1_Leaf-SIP_{tr}_ANN_LUT_pred.csv'
+    file_name = f&#x27;{tr}/1_Leaf-SIP_{tr}_ANN_LUT_pred.csv&#x27;
     df = pd.read_csv(file_name)
-    x,y = df['ANN_pred'],df['LUT_obs']
-    if (tr =='EWT')|(tr =='LMA'):
-        x,y = df['ANN_pred']*10000,df['LUT_obs']*10000
+    x,y = df[&#x27;ANN_pred&#x27;],df[&#x27;LUT_obs&#x27;]
+    if (tr ==&#x27;EWT&#x27;)|(tr ==&#x27;LMA&#x27;):
+        x,y = df[&#x27;ANN_pred&#x27;]*10000,df[&#x27;LUT_obs&#x27;]*10000
 
-    R2 = f'$R^2$ = {str(round(rsquared(x, y),2))}'
-    rmse = f'$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}'
-    nrmse = '$NRMSE$ = '+'{:.1%}'.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
+    R2 = f&#x27;$R^2$ = {str(round(rsquared(x, y),2))}&#x27;
+    rmse = f&#x27;$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}&#x27;
+    nrmse = &#x27;$NRMSE$ = &#x27;+&#x27;{:.1%}&#x27;.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
 
     ax = plt.subplot(gs[14:19, j:j+2])
-    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls='--',c='k', lw = 1.5)
-    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap='winter',alpha = 0.3)
-    sns.regplot('ANN_pred','LUT_obs', data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {'color':'blue','lw':1.5})
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap=&#x27;winter&#x27;,alpha = 0.3)
+    sns.regplot(&#x27;ANN_pred&#x27;,&#x27;LUT_obs&#x27;, data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;blue&#x27;,&#x27;lw&#x27;:1.5})
 
-    ax.set_xlabel(f'Predicted {tr} {units[tr]}', fontsize=8, labelpad = 0.05)
-    ax.set_ylabel(f'LUT {tr} {units[tr]}', fontsize=8, labelpad = 0.05)
-    ax.text(-0.15,1.08, 'C. Leaf trait prediction using Leaf-SIP synthetic data', transform=ax.transAxes, fontsize = 9,fontweight='bold') if j==0 else None
+    ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.set_ylabel(f&#x27;LUT {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.text(-0.15,1.08, &#x27;C. Leaf trait prediction using Leaf-SIP synthetic data&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;) if j==0 else None
 
     cbar = plt.colorbar(scatter, ax=ax,pad=0.02, shrink=0.9)
-    ax.text(1.02,0.98,'High',transform=ax.transAxes,fontsize = 7)
-    ax.text(1.02,-0.02,'Low',transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 7)
     cbar.set_ticks([])
-    cbar.set_label('Density', fontsize=9,labelpad=0.1)
+    cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
 
-    ax.text(0.03,0.92,f'{title2[kk]} Leaf-SIP - {tr}', fontsize=8,transform=ax.transAxes)
+    ax.text(0.03,0.92,f&#x27;{title2[kk]} Leaf-SIP - {tr}&#x27;, fontsize=8,transform=ax.transAxes)
     ax.text(0.365,0.22,R2, fontsize=7,transform=ax.transAxes)
     ax.text(0.365,0.14,rmse, fontsize=7,transform=ax.transAxes)
     ax.text(0.365,0.05,nrmse, fontsize=7,transform=ax.transAxes)
-    ax.tick_params(labelsize=8,direction='in')
+    ax.tick_params(labelsize=8,direction=&#x27;in&#x27;)
     j = j+2
 
-plt.savefig('1_Figures/2_pretrained_DNN.png', dpi=500, bbox_inches='tight')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <img style="max-width:100%;overflow:hidden;" src="./data_visualization_image/pre-train_dnn.jpg"
-                alt="Image 1">
+plt.savefig(&#x27;1_Figures/2_pretrained_DNN.png&#x27;, dpi=500, bbox_inches=&#x27;tight&#x27;)</code></pre>
+      <template data-code-source>import pandas as pd
+import numpy as np
+import seaborn as sns
+from scipy import stats
+import matplotlib.pyplot as plt
+from matplotlib import gridspec
+from scipy.stats import gaussian_kde
+from matplotlib.lines import Line2D
+from sklearn.metrics import mean_squared_error
 
-            </li>
+def rsquared(x, y): 
+    slope, intercept, r_value, p_value, std_err = stats.linregress(x, y) 
+    a = r_value**2
+    return a
 
-          </ol>
-        </section>
+def d(x,y):
+    xy = np.vstack([x,y])
+    z = gaussian_kde(xy)(xy)
+    return z
+  
+refl_pro = pd.read_csv(&quot;data/2_PROSPECT_reflectance_LUT.csv&quot;)
+refl_sip = pd.read_csv(&quot;data/1_SIP_reflectance_LUT.csv&quot;)
 
+#***********************************************************************8
+fig = plt.figure(figsize = (12,8))
+gs = gridspec.GridSpec(19,8)
+config = {&quot;font.family&quot;:&#x27;Calibri&#x27;}
+plt.subplots_adjust(wspace =0.7,hspace =2)
+plt.rcParams.update(config)
+
+### PROSPECT synthetic reflectance [0-7, 8-13, 14-19]
+ax = plt.subplot(gs[0:7, 0:4])
+wl = np.arange(450,2401)
+for i in range(len(refl_pro)):
+    temp = refl_pro.iloc[i]
+    ax.plot(wl,temp,linewidth=0.05,c = &#x27;gray&#x27;, alpha = 0.05,zorder = 1)
+
+m_all = np.mean(refl_pro,0)
+std_all = np.std(refl_pro,0)
+lc_all = np.percentile(refl_pro, 2.5, axis=0)
+hc_all = np.percentile(refl_pro, 97.5, axis=0)
+ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = &#x27;orangered&#x27;,label = &#x27;95% CI of mean reflectance&#x27;,zorder = 2)
+ax.plot(wl,m_all,linewidth=2,c = &#x27;orangered&#x27;,label = &#x27;Mean reflectance&#x27;,zorder = 3)
+
+ax.set_xlabel(&#x27;Wavelength (nm)&#x27;, fontsize=9, labelpad = 0.2)
+ax.set_ylabel(&#x27;Reflectacne&#x27;, fontsize=9, labelpad = 0.2)
+ax.tick_params(labelsize=8)
+legend_elements = [Line2D([0], [0], color=&#x27;gray&#x27;, lw=1.5, alpha=1, label=&#x27;Simulated reflectance&#x27;)]
+handles, labels = ax.get_legend_handles_labels()
+handles.extend(legend_elements)
+labels.extend([&#x27;Simulated reflectance&#x27;])
+ax.legend(handles=handles, labels=labels, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize=9)
+ax.text(-0.07,1.03, &#x27;A. RTMs synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;)
+ax.text(0.01,0.94, &#x27;(A.1) PROSPECT synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 8)
+
+### Leaf-SIP synthetic reflectance
+ax = plt.subplot(gs[0:7, 4:8])
+wl = np.arange(450,2401)
+for i in range(len(refl_sip)):
+    temp = refl_sip.iloc[i]
+    ax.plot(wl,temp,linewidth=0.05,c = &#x27;gray&#x27;, alpha = 0.05,zorder = 1)
+
+m_all = np.mean(refl_sip,0)
+std_all = np.std(refl_sip,0)
+lc_all = np.percentile(refl_sip, 2.5, axis=0)
+hc_all = np.percentile(refl_sip, 97.5, axis=0)
+ax.fill_between(wl, lc_all,hc_all, alpha=0.1,color = &#x27;b&#x27;,label = &#x27;95% CI of mean reflectance&#x27;,zorder = 2)
+ax.plot(wl,m_all,linewidth=2,c = &#x27;b&#x27;,label = &#x27;Mean reflectance&#x27;,zorder = 3)
+ax.set_xlabel(&#x27;Wavelength (nm)&#x27;, fontsize=9, labelpad = 0.2)
+ax.set_ylabel(&#x27;Reflectacne&#x27;, fontsize=9, labelpad = 0.2)
+ax.tick_params(labelsize=8)
+
+legend_elements = [Line2D([0], [0], color=&#x27;gray&#x27;, lw=1.5, alpha=1, label=&#x27;Simulated reflectance&#x27;)]
+handles, labels = ax.get_legend_handles_labels()
+handles.extend(legend_elements)
+labels.extend([&#x27;Simulated reflectance&#x27;])
+ax.legend(handles=handles, labels=labels, loc = &#x27;upper right&#x27;,facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,fontsize=9)
+ax.text(0.01,0.94, &#x27;(A.2) Leaf-SIP synthetic reflectance&#x27;, transform=ax.transAxes, fontsize = 8)
+
+####
+models = [&#x27;PROSPECT&#x27;,&#x27;Leaf-SIP&#x27;]
+tr_name = [&#x27;Chla+b&#x27;,&#x27;Ccar&#x27;,&#x27;EWT&#x27;,&#x27;LMA&#x27;]
+cmaps = {&#x27;PROSPECT&#x27;:&#x27;autumn&#x27;,&#x27;Leaf-SIP&#x27;:&#x27;winter&#x27;}
+colors = {&#x27;PROSPECT&#x27;:&#x27;orangered&#x27;,&#x27;Leaf-SIP&#x27;:&#x27;blue&#x27;}
+units = {&#x27;Chla+b&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;Ccar&#x27;:&#x27; ($\mu g/cm^2$)&#x27;,&#x27;EWT&#x27;:&#x27; ($g/m^2$)&#x27;,&#x27;LMA&#x27;:&#x27; ($g/m^2$)&#x27;}
+title1 =[&#x27;(C.1)&#x27;,&#x27;(C.2)&#x27;,&#x27;(C.3)&#x27;,&#x27;(C.4)&#x27;]
+title2 =[&#x27;(D.1)&#x27;,&#x27;(D.2)&#x27;,&#x27;(D.3)&#x27;,&#x27;(D.4)&#x27;]
+
+j = 0
+for kk, tr in enumerate(tr_name):
+    file_name = f&#x27;{tr}/1_PROSPECT_{tr}_ANN_LUT_pred.csv&#x27;
+    df = pd.read_csv(file_name)
+    x,y = df[&#x27;ANN_pred&#x27;],df[&#x27;LUT_obs&#x27;]
+    if (tr ==&#x27;EWT&#x27;)|(tr ==&#x27;LMA&#x27;):
+        x,y = df[&#x27;ANN_pred&#x27;]*10000,df[&#x27;LUT_obs&#x27;]*10000
+
+    R2 = f&#x27;$R^2$ = {str(round(rsquared(x, y),2))}&#x27;
+    rmse = f&#x27;$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}&#x27;
+    nrmse = &#x27;$NRMSE$ = &#x27;+&#x27;{:.1%}&#x27;.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
+
+    ax = plt.subplot(gs[8:13, j:j+2])
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap=&#x27;autumn&#x27;,alpha = 0.3)
+    sns.regplot(&#x27;ANN_pred&#x27;,&#x27;LUT_obs&#x27;, data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;orangered&#x27;,&#x27;lw&#x27;:1.5})
+
+    ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.set_ylabel(f&#x27;LUT {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.text(-0.15,1.08, &#x27;B. Leaf trait prediction using PROSPECT synthetic data&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;) if j==0 else None
+
+    cbar = plt.colorbar(scatter, ax=ax,pad=0.02, shrink=0.9)
+    ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 7)
+    cbar.set_ticks([])
+    cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
+
+    ax.text(0.03,0.92,f&#x27;{title1[kk]} PROSPECT - {tr}&#x27;, fontsize=8,transform=ax.transAxes)
+    ax.text(0.365,0.22,R2, fontsize=7,transform=ax.transAxes)
+    ax.text(0.365,0.14,rmse, fontsize=7,transform=ax.transAxes)
+    ax.text(0.365,0.05,nrmse, fontsize=7,transform=ax.transAxes)
+    ax.tick_params(labelsize=8,direction=&#x27;in&#x27;)
+    j = j+2
+
+j = 0
+for kk, tr in enumerate(tr_name):
+    file_name = f&#x27;{tr}/1_Leaf-SIP_{tr}_ANN_LUT_pred.csv&#x27;
+    df = pd.read_csv(file_name)
+    x,y = df[&#x27;ANN_pred&#x27;],df[&#x27;LUT_obs&#x27;]
+    if (tr ==&#x27;EWT&#x27;)|(tr ==&#x27;LMA&#x27;):
+        x,y = df[&#x27;ANN_pred&#x27;]*10000,df[&#x27;LUT_obs&#x27;]*10000
+
+    R2 = f&#x27;$R^2$ = {str(round(rsquared(x, y),2))}&#x27;
+    rmse = f&#x27;$RMSE$ = {str(round(np.sqrt(mean_squared_error(x,y)),1))} {units[tr][2:-1]}&#x27;
+    nrmse = &#x27;$NRMSE$ = &#x27;+&#x27;{:.1%}&#x27;.format(np.sqrt(mean_squared_error(x,y))/(y.max()-y.min()))
+
+    ax = plt.subplot(gs[14:19, j:j+2])
+    ax.plot((0, 1), (0, 1), transform=ax.transAxes, ls=&#x27;--&#x27;,c=&#x27;k&#x27;, lw = 1.5)
+    scatter = ax.scatter(x,y,c= d(x,y), s=20,cmap=&#x27;winter&#x27;,alpha = 0.3)
+    sns.regplot(&#x27;ANN_pred&#x27;,&#x27;LUT_obs&#x27;, data = df, ax = ax,fit_reg=True, ci = 95,scatter=False,line_kws = {&#x27;color&#x27;:&#x27;blue&#x27;,&#x27;lw&#x27;:1.5})
+
+    ax.set_xlabel(f&#x27;Predicted {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.set_ylabel(f&#x27;LUT {tr} {units[tr]}&#x27;, fontsize=8, labelpad = 0.05)
+    ax.text(-0.15,1.08, &#x27;C. Leaf trait prediction using Leaf-SIP synthetic data&#x27;, transform=ax.transAxes, fontsize = 9,fontweight=&#x27;bold&#x27;) if j==0 else None
+
+    cbar = plt.colorbar(scatter, ax=ax,pad=0.02, shrink=0.9)
+    ax.text(1.02,0.98,&#x27;High&#x27;,transform=ax.transAxes,fontsize = 7)
+    ax.text(1.02,-0.02,&#x27;Low&#x27;,transform=ax.transAxes,fontsize = 7)
+    cbar.set_ticks([])
+    cbar.set_label(&#x27;Density&#x27;, fontsize=9,labelpad=0.1)
+
+    ax.text(0.03,0.92,f&#x27;{title2[kk]} Leaf-SIP - {tr}&#x27;, fontsize=8,transform=ax.transAxes)
+    ax.text(0.365,0.22,R2, fontsize=7,transform=ax.transAxes)
+    ax.text(0.365,0.14,rmse, fontsize=7,transform=ax.transAxes)
+    ax.text(0.365,0.05,nrmse, fontsize=7,transform=ax.transAxes)
+    ax.tick_params(labelsize=8,direction=&#x27;in&#x27;)
+    j = j+2
+
+plt.savefig(&#x27;1_Figures/2_pretrained_DNN.png&#x27;, dpi=500, bbox_inches=&#x27;tight&#x27;)</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 157 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section></div></div>
+    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://seaborn.pydata.org/api.html" target="_blank" rel="noopener noreferrer">Seaborn plotting functions <span aria-hidden="true">↗</span></a><a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" rel="noopener noreferrer">Matplotlib tutorials <span aria-hidden="true">↗</span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/scatter_line_plot/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
+    <nav class="lesson-next" aria-label="Adjacent tutorials"><a href="./data_visualization.html"><span>← Previous tutorial</span><strong>Python for data visualization</strong></a><a href="./global_forest_edge_mapping.html"><span>Next tutorial →</span><strong>Global forest-edge mapping</strong></a></nav>
+<footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../../pages/research.html">Research</a>
+                <a href="../../pages/publications.html">Publications</a>
+                <a href="../../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
 
@@ -972,31 +1689,21 @@ plt.savefig('1_Figures/2_pretrained_DNN.png', dpi=500, bbox_inches='tight')</cod
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <script>
-    function copyText(element) {
-      var text = element.previousElementSibling.innerText;
-      var textarea = document.createElement("textarea");
-      textarea.textContent = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      element.textContent = "Copied";
-      // 两秒后恢复原始状态
-      setTimeout(function () {
-        element.textContent = "Copy";
-        element.style.backgroundColor = "";
-      }, 4000);
-    }
-  </script>
+  
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      hljs.highlightAll();
-    });
-  </script>
+  
 
-<script src="../../assets/js/theme-toggle.js"></script>
+
+
+
+
+
+<dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
+  <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
+</dialog>
+<script src="../../assets/js/tutorial-reader.js?v=20261009-i18n90" defer></script>
 </body>
 
 </html>

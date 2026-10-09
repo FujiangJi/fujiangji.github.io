@@ -5,69 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High Throughput Computing</title>
-  <style>
-    pre {
-      position: relative;
-      margin-top: 10px;
-      max-width: 100%;
-      width: 100%;
-      padding: 10px;
-      overflow-x: auto;
-      display: block;
-      border-radius: 16px;
-      margin-bottom: 10px;
-      border: 1px solid var(--jet);
-      white-space: pre;
-      word-wrap: break-word;
-      font-family: 'Consolas', 'Courier New', monospace;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px 10px;
-      background: var(--onyx);
-      color: var(--white-2);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .copy-btn:hover {
-      opacity: 1;
-    }
-
-    code {
-      display: inline-block;
-      max-width: 100%;
-      word-break: break-all;
-      overflow-wrap: break-word;
-      white-space: normal;
-      font-family: 'Consolas', 'Courier New', monospace;
-      padding: 3px;
-      color: var(--orange-yellow-crayola);
-      font-size: 13px
-    }
-
-    code2 {
-      display: block;
-      max-width: 100%;
-      color: var(--orange-yellow-crayola);
-      font-size: 13px
-    }
-  </style>
+  <script src="../../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Research computing with HPC &amp; HTC | Fujiang Ji</title>
+  
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20261006-type2">
+  <link rel="stylesheet" href="../../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
 
   <!--
@@ -78,9 +34,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 
+  <script src="../../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" defer></script>
+
+
+
+
+<meta name="description" content="A practical route from your local terminal to a configured environment, a submitted job, and readable results at UW–Madison CHTC.">
+<link rel="stylesheet" href="../../assets/css/tutorial-reader.css?v=20261008-reader86">
+<link rel="stylesheet" href="../../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research computing with HPC &amp; HTC | Fujiang Ji">
+<meta property="og:description" content="A practical route from your local terminal to a configured environment, a submitted job, and readable results at UW–Madison CHTC.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research computing with HPC &amp; HTC | Fujiang Ji">
+<meta name="twitter:description" content="A practical route from your local terminal to a configured environment, a submitted job, and readable results at UW–Madison CHTC.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
-<body>
+<body class="tutorial-document">
 
   <!--
     - #MAIN
@@ -92,17 +66,25 @@
     -->
 
     <aside class="sidebar" data-sidebar>
+<button class="theme-toggle-btn" aria-label="Toggle theme">
+              <span class="icon icon-moon">&#9790;</span>
+              <span class="icon icon-sun">&#9728;</span>
+            </button>
+
+
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -128,7 +110,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -143,7 +126,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -187,7 +170,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -218,276 +201,283 @@
         - #NAVBAR
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" onclick="window.location.href='../tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <article class="tutorial active" data-page="tutorial">
-        <header>
-          <h2 class="h2 article-title">Tutorials</h2>
-        </header>
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Instructions on How to use HPC and CHTC at UW-Madison</h3>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" onclick="window.location.href=window.SiteLanguage.href('../tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+            
           </div>
-          <ol class="timeline-list">
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Command Lines Basics:</h4>
-              <ul class="skills-list content-card"
-                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
-                <ol class=" order-list" style="font-size: 13px; padding-left: 0px;">
-                  <li><a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">HPC at UW-Madison:</a> It runs for a maximum
-                    of 7 days, equivalent to a large computer.</li>
-                  <li><a href="https://chtc.cs.wisc.edu/" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">HTC at UW-Madison:</a> It runs for a maximum
-                    of 3 days and can run multiple jobs in parallel, then combine the results together.</li>
-                  <li>How to determine if a task is suitable for running on HPC (a large computer where tasks can
-                    interact but also perform parallel computing) or HTC (multiple computers running together without
-                    task
-                    interaction).</li>
-                  <li>Terminal (Mac) &amp; Ubuntu (Win) connect to HPC: <code>ssh NetID@hpclogin3.chtc.wisc.edu</code>
-                  </li>
-                  <li>Terminal (Mac) &amp; Ubuntu (Win) connect to HTC: <code>ssh NetID@submit3.chtc.wisc.edu</code>
-                  </li>
-                  <li>Abtain the path of files: <code>readlink -f file.txt</code> (Linux);
-                    <code>bash-3.2$ pwd file.txt</code> (bash) (<a href="https://juejin.cn/post/6844903481728303112"
-                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).
-                  </li>
-                  <li>Navigating directories: <code>cd</code> (<a href="https://linuxize.com/post/linux-cd-command/"
-                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
-                  <li>Display a list of files: <code>ls</code> (<a
-                      href="https://www.atatus.com/blog/ls-command-in-linux-with-example/" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
-                  <li>Display the contents of one or more files: <code>cat</code> (short for: concatenate) is used to
-                    concatenate files and display their contents on the standard output device (<a
-                      href="https://phoenixnap.com/kb/linux-cat-command" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).</li>
-                  <li><code>echo “A B B A C C” &gt; example.txt</code> is used to write the string "A B B A C C" to a
-                    new
-                    file called "example.txt".</li>
-                  <li><code>python3 wc.py example.txt</code> is to run the Python script <code>wc.py</code> with the
-                    example.txt file as input data in the terminal.</li>
-                  <li><strong>Transfer files</strong>:
-                    <ol class="order-list2" style="font-size: 13px;">
-                      <li>Local desktop % <code>scp NetID@hpclogin3.chtc.wisc.edu:/home/sample.zip .</code>transfer data
-                        from
-                        HPC/HTC to local PC. </li>
-                      <li><code>scp test.zip NetID@hpclogin3.chtc.wisc.edu:/home/</code> transfer data from local PC to
-                        HPC.
-                      </li>
-                      <li>Local desktop %
-                        <code>scp -r NetID@hpclogin3.chtc.wisc.edu:/home/temp /Volumes/data</code>
-                        transfer the whole directory data from HPC/HTC to local PC.
-                      </li>
-                    </ol>
-                  </li>
-                  <li><strong>Compressing files:</strong>
-                    <ol class="order-list2" style="font-size: 13px;">
-                      <li><code>zip -r example.zip example</code> Compressing files.</li>
-                      <li><code>unzip -l name.zip</code> is used to list the files and directories inside a ZIP archive
-                        without actually extracting them.</li>
-                      <li><code>unzip example.zip</code> To unzip the file "exaplem.zip" and extract its contents into
-                        the
-                        current folder.</li>
-                      <li><code>tar -cvf data_folder/data.tar data_folder/</code> compress data.</li>
-                      <li><code>tar -xzf data_folder/data.tar.gz -C data_folder/</code> uzip data.</li>
-                      <li><code>tar -xvf data_folder/data.tar -C data_folder/</code> unzip data.</li>
-                    </ol>
-                  </li>
-                  <li><code>g++ xtem423e4.cpp -o temmodel</code> Compile terrestrial ecosystem model, we have the g++
-                    compiler installed and that the source code file xtem423e4.cpp is in the current directory. It
-                    compiles the source code and generates an executable named temmodel using the -o flag.</li>
-                  <li><code>./temmodel tem4.para tem4.log</code> run TEM, temmodel executable file in the current
-                    directory, and you want to run it with the input parameters file tem4.para and output log file
-                    tem4.log.</li>
-                  <li><code>wc -l filename</code> is used to count the number of lines in a file.</li>
-                  <li>HTC: <code>condor_q</code> is used to query and manage jobs in the HTCondor system. It provides
-                    information about the status of submitted jobs, such as their ID, current status (queued, running,
-                    completed, etc.), and resource usage; <code>condor_status</code> is used to monitor and view the
-                    status
-                    of
-                    computers (also referred to as resources or execution hosts) within the HTCondor system. It provides
-                    information about the availability, load, and other attributes of the computers registered with
-                    HTCondor.
-                  </li>
-                  <li><code>grep mkclds *</code> is used to search for the pattern "mkclds" in all files in the current
-                    directory.</li>
-                  <li><code>:q!</code> Quit vi without saving changes. <code>:wq!</code> Save changes and exit vi
-                    forcefully.
-                  </li>
-                  <li><code>module avail</code> is to view the available modules on your system</li>
-                  <li><code>make</code> using gfortran compile, navigate to the directory containing the Makefile and
-                    the
-                    Fortran source files and run the make command. This will execute the build rule specified in the
-                    Makefile,
-                    compiling the program using gfortran and generating the executable.</li>
+        </nav>
+      </div>
 
+      <article class="tutorial tutorial-reader active" data-page="tutorial">
+<header class="lesson-header"><a class="lesson-back" href="../tutorials.html">← All tutorials</a><p class="lesson-eyebrow">Computing · Practical guide</p><h2 class="lesson-title">Research computing with HPC &amp; HTC</h2></header>
+    <div class="lesson-hero"><div class="lesson-hero-copy"><p>A practical route from your local terminal to a configured environment, a submitted job, and readable results at UW–Madison CHTC.</p><div class="lesson-tags"><span>Shell</span><span>Slurm</span><span>HTCondor</span></div><a class="lesson-start" href="#lesson-1">Start learning <span aria-hidden="true">↓</span></a></div><div class="lesson-flow" role="img" aria-label="Connect to Submit to Monitor"><span class="lesson-flow-step"><b>01</b>Connect</span><span class="lesson-flow-step"><b>02</b>Submit</span><span class="lesson-flow-step"><b>03</b>Monitor</span></div></div>
+    <div class="lesson-preparation"><details open><summary>What you’ll learn</summary><ul><li>Choose between tightly coupled and independent workloads.</li><li>Connect, move files, and prepare a Python environment.</li><li>Submit and monitor a Slurm job.</li></ul></details><details><summary>Before you begin <span>Terminal basics</span></summary><ul><li>An approved CHTC account and its assigned access point.</li><li>A terminal on macOS, Linux, or Windows with SSH support.</li><li>Adjust paths, resource requests, and environment names for your project.</li></ul></details></div>
+    <div class="lesson-layout"><aside class="lesson-toc"><details data-lesson-outline><summary>On this page <span>6 sections</span></summary><nav aria-label="Tutorial chapters"><a href="#lesson-1" data-lesson-toc><span>01</span>Choose a computing system</a><a href="#lesson-2" data-lesson-toc><span>02</span>Connect and transfer files</a><a href="#lesson-3" data-lesson-toc><span>03</span>Prepare a Python environment</a><a href="#lesson-4" data-lesson-toc><span>04</span>Submit a Slurm job</a><a href="#lesson-5" data-lesson-toc><span>05</span>Monitor and inspect results</a><a href="#lesson-6" data-lesson-toc><span>06</span>Terminal command reference</a></nav></details></aside><div class="lesson-content"><section class="lesson-section" id="lesson-1" aria-labelledby="lesson-1-title"><div class="lesson-section-heading"><span class="lesson-step">01</span><h3 id="lesson-1-title">Choose a computing system</h3></div><p class="lesson-section-intro">Match the computing system to how your tasks communicate, rather than choosing by job size alone.</p><div class="lesson-comparison"><div><h4>HPC · Slurm</h4><p>Tightly coupled computations that coordinate work across nodes, such as MPI applications.</p></div><div><h4>HTC · HTCondor</h4><p>Many independent jobs, such as parameter sweeps or separate model runs.</p></div></div><p>Resource limits depend on the system and partition. Use the current <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview" target="_blank" rel="noopener noreferrer">CHTC system overview ↗</a> for limits and policies.</p></section><section class="lesson-section" id="lesson-2" aria-labelledby="lesson-2-title"><div class="lesson-section-heading"><span class="lesson-step">02</span><h3 id="lesson-2-title">Connect and transfer files</h3></div><p class="lesson-section-intro">Use the access point in your welcome email. The HPC example below uses the currently documented spark-login host.</p><p>For an editor-based workflow, see <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial" target="_blank" rel="noopener noreferrer">VS Code Remote SSH ↗</a>.</p><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">connect_and_transfer.sh</span><span class="lesson-code-language">Shell</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for connect_and_transfer.sh">Wrap</button><button type="button" data-code-copy aria-label="Copy connect_and_transfer.sh">Copy</button><a href="../../assets/code/tutorials/hpc/connect_and_transfer.sh" download aria-label="Download connect_and_transfer.sh">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="connect_and_transfer.sh code"><code class="language-bash"># Local terminal: replace YOUR_NETID with your account name.
+ssh YOUR_NETID@spark-login.chtc.wisc.edu
 
-                  <li><strong>How to create alias on local PC and HPC</strong>.
-                    <ol class="order-list2" style="font-size: 13px;">
-                      <li><strong>HPC and HTC:</strong>
-                        <ol class="order-list" style="font-size: 13px;">
-                          <li><code>vi ~/.bashrc</code> setting alias.</li>
-                          <li><code>source ~/.bashrc</code> update alias after setting it.<figure><img
-                                style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                                src="hpc_image/alias.png" alt="alias">
-                              <figcaption style="margin-bottom: 10px;">Examples of Alias. </figcaption>
-                            </figure>
-                          </li>
-                        </ol>
-                      </li>
+# Copy a file to your home directory (run from the local terminal).
+scp input.csv YOUR_NETID@spark-login.chtc.wisc.edu:/home/YOUR_NETID/
 
-                      <li><strong>Login to HPC without password:</strong>
-                        <ol class="order-list" style="font-size: 13px;">
-                          <li>Step 1: passwordless login: <a
-                              href="https://originalix.github.io/2018/04/26/%E5%9C%A8Mac%E4%B8%8A%E4%BD%BF%E7%94%A8ssh-key%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-                              target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>.</li>
-                          <li>Step 2:
-                            <code>scp ~/.ssh/id_rsa.pub ssh NetID@hpclogin3.chtc.wisc.edu:/home/NetID/.ssh/</code>
-                          </li>
-                          <li>Step 3:
-                            <code>scp ~/.ssh/id_rsa.pub ssh NetID@submit3.chtc.wisc.edu:/home/NetID/.ssh/</code>
-                          </li>
-                          <li>Step 4: <code>nano ~/.zshrc</code> setting alias (Mac, local).</li>
-                          <li>Step 5: <code>source ~/.zshrc</code> update alias (Mac, local).</li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li>Connect VS code and HPC: <a href="https://code.visualstudio.com/docs/remote/ssh-tutorial"
-                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>.</li>
-                </ol>
-              </ul>
+# Copy results back to the current local directory.
+scp YOUR_NETID@spark-login.chtc.wisc.edu:/scratch/YOUR_NETID/results.zip .
+</code></pre>
+      <template data-code-source># Local terminal: replace YOUR_NETID with your account name.
+ssh YOUR_NETID@spark-login.chtc.wisc.edu
 
+# Copy a file to your home directory (run from the local terminal).
+scp input.csv YOUR_NETID@spark-login.chtc.wisc.edu:/home/YOUR_NETID/
 
-            </li>
+# Copy results back to the current local directory.
+scp YOUR_NETID@spark-login.chtc.wisc.edu:/scratch/YOUR_NETID/results.zip .
+</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>Run SSH and SCP commands from your local terminal. For HTC, use the assigned ap2001 or ap2002 access point.</p></aside></section><section class="lesson-section" id="lesson-3" aria-labelledby="lesson-3-title"><div class="lesson-section-heading"><span class="lesson-step">03</span><h3 id="lesson-3-title">Prepare a Python environment</h3></div><p class="lesson-section-intro">For the HPC example, use a Conda installation available to your compute job, then create a named environment with the packages your analysis needs.</p><p>See the <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-software" target="_blank" rel="noopener noreferrer">HPC software guide ↗</a> for installation policies. HTC jobs need a portable environment or container; see the <a href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank" rel="noopener noreferrer">HTC Conda guide ↗</a>.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="hpc_image/miniconda_installation.png" data-image-caption="Original Miniconda installation example" data-image-background="#ffffff" aria-label="Enlarge figure: Original Miniconda installation example" style="--figure-background:#ffffff">
+        <img src="hpc_image/miniconda_installation.png" width="909" height="447" alt="Original Miniconda installation example" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Original Miniconda installation example · Click to enlarge</figcaption></figure></div><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">python_environment.sh</span><span class="lesson-code-language">Shell</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for python_environment.sh">Wrap</button><button type="button" data-code-copy aria-label="Copy python_environment.sh">Copy</button><a href="../../assets/code/tutorials/hpc/python_environment.sh" download aria-label="Download python_environment.sh">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="python_environment.sh code"><code class="language-bash"># Run after installing Conda according to the CHTC guide.
+conda env list
+conda create -n research python=3.11
+conda activate research
+conda install numpy pandas matplotlib
+conda env export &gt; environment.yml
+conda deactivate
+# Run the analysis through a compute job, using the next section.
+</code></pre>
+      <template data-code-source># Run after installing Conda according to the CHTC guide.
+conda env list
+conda create -n research python=3.11
+conda activate research
+conda install numpy pandas matplotlib
+conda env export &gt; environment.yml
+conda deactivate
+# Run the analysis through a compute job, using the next section.
+</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>The screenshot is an example of the original setup. Use your own software path and check the current installation guide.</p></aside></section><section class="lesson-section" id="lesson-4" aria-labelledby="lesson-4-title"><div class="lesson-section-heading"><span class="lesson-step">04</span><h3 id="lesson-4-title">Submit a Slurm job</h3></div><p class="lesson-section-intro">An sbatch file describes the resources and the command to run. Save this example as submit_job.sh and adapt it before submitting.</p><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">submit_job.sh</span><span class="lesson-code-language">Shell</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for submit_job.sh">Wrap</button><button type="button" data-code-copy aria-label="Copy submit_job.sh">Copy</button><a href="../../assets/code/tutorials/hpc/submit_job.sh" download aria-label="Download submit_job.sh">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="submit_job.sh code"><code class="language-bash">#!/bin/bash
+#SBATCH --job-name=research_example
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=4G
+#SBATCH --time=01:00:00
+#SBATCH --output=research_%j.out
+#SBATCH --error=research_%j.err
 
+# Replace the Conda installation, environment, and analysis paths.
+source /path/to/miniconda3/etc/profile.d/conda.sh
+conda activate research
+cd /scratch/YOUR_NETID/project
+python analysis.py
+</code></pre>
+      <template data-code-source>#!/bin/bash
+#SBATCH --job-name=research_example
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=4G
+#SBATCH --time=01:00:00
+#SBATCH --output=research_%j.out
+#SBATCH --error=research_%j.err
 
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Run Python Programs on HPC:</h4>
-              <ul class="skills-list content-card"
-                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
+# Replace the Conda installation, environment, and analysis paths.
+source /path/to/miniconda3/etc/profile.d/conda.sh
+conda activate research
+cd /scratch/YOUR_NETID/project
+python analysis.py
+</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>This is a submission template. Choose CPU, memory, runtime, and partition requests that match the application; the template does not make a serial Python program parallel.</p></aside></section><section class="lesson-section" id="lesson-5" aria-labelledby="lesson-5-title"><div class="lesson-section-heading"><span class="lesson-step">05</span><h3 id="lesson-5-title">Monitor and inspect results</h3></div><p class="lesson-section-intro">Check queue status and job accounting, then inspect the output and error logs. Use the HTC commands when your workload runs under HTCondor.</p><dl class="lesson-definitions"><div><dt>Node</dt><dd>A compute server containing processors, memory, and other hardware.</dd></div><div><dt>CPU and core</dt><dd>A CPU contains cores. Match Slurm CPU requests to how the application uses processes or threads.</dd></div></dl><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="hpc_image/resource.png" data-image-caption="Original computing-resource illustration" data-image-background="#ffffff" aria-label="Enlarge figure: Original computing-resource illustration" style="--figure-background:#ffffff">
+        <img src="hpc_image/resource.png" width="1098" height="311" alt="Original computing-resource illustration" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Original computing-resource illustration · Click to enlarge</figcaption></figure></div><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">monitor_jobs.sh</span><span class="lesson-code-language">Shell</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for monitor_jobs.sh">Wrap</button><button type="button" data-code-copy aria-label="Copy monitor_jobs.sh">Copy</button><a href="../../assets/code/tutorials/hpc/monitor_jobs.sh" download aria-label="Download monitor_jobs.sh">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="monitor_jobs.sh code"><code class="language-bash"># Slurm: submit, inspect the queue, and review accounting.
+sbatch submit_job.sh
+squeue -u &quot;$USER&quot;
+sacct -j JOB_ID --format=JobID,State,Elapsed,MaxRSS
 
-                <ol class=" order-list" style="font-size: 13px;padding-left: 0px;">
-                  <li>Install Miniconda on software directory (<a
-                      href="https://chtc.cs.wisc.edu/uw-research-computing/conda-installation" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">Link</a>):
-                    <ol class=" order-list2" style="font-size: 13px;">
-                      <li><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
-                      <li><code>sh Miniconda3-latest-Linux-x86_64.sh</code> install Miniconda on the software
-                        directory.
-                        <figure><img
-                            style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                            src="hpc_image/miniconda_installation.png" alt="miniconda">
-                          <figcaption style="margin-bottom: 10px;">Miniconda installation. </figcaption>
-                        </figure>
+# Inspect the logs for your job.
+cat research_JOB_ID.out
+cat research_JOB_ID.err
 
-                      </li>
-                      <li>After installation, active base environment:
-                        <code>eval "$(/software/fji7/miniconda3/bin/conda shell.bash hook)"</code> (<a
-                          href="https://stackoverflow.com/questions/55507519/python-activate-conda-env-through-shell-script"
-                          target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link</a>).
-                      </li>
-                    </ol>
-                  </li>
-                  <li>View how many environments are already built: <code>conda env list</code></li>
-                  <li>Build or delete an environment for conda:
-                    <code>conda create -n envs_name python=x.x</code>,<code>conda env remove --name envs_name</code>
-                  </li>
-                  <li>Activate/ deactivate the
-                    environment:<code>conda activate envs_name</code>,<code>conda deactivate</code>
-                  </li>
-                  <li>Install packages you need: <code>conda install packages</code>; <code>pip install packages</code>
-                  </li>
-                  <li>Before submitting jobs, we can apply a small compute resource to debug on
-                    HPC:<code>srun -n4 -N1 -p int --pty bash</code> (<a
-                      href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">Link1</a>, <a
-                      href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview.html" target="_blank"
-                      style="color: var(--orange-yellow-crayola); display: inline;">Link2</a>).</li>
-                  <li>Terminal run python file: <code>python name.py</code> or <code>runipy name.ipynb</code></li>
-                  <li>Submit jobs: (<a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission.html"
-                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link1</a>,
-                    <a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-overview#high-performance-computing-at-chtc"
-                      target="_blank" style="color: var(--orange-yellow-crayola); display: inline;">Link2</a>):
-                    <code>sbatch tasks_upload.sh</code> (below shows the template of <code>tasks_upload.sh</code>).
-                    <pre id="codeBlock">
-                    <code2 class="bashScript">#!/bin/bash
-<a style="color:rgb(193, 190, 190)"># Sets the name of the job. This is typically used for identification purposes.</a><strong>SBATCH --job-name=PLSR_modeling</strong>
-<a style="color:rgb(193, 190, 190)"># Requests one compute node for the job</a><strong>SBATCH --nodes=1</strong>
-<a style="color:rgb(193, 190, 190)"># 10 tasks (or processes) running per node. This parameter is relevant for parallel computing.</a><strong>SBATCH --ntasks-per-node=1</strong>
-<a style="color:rgb(193, 190, 190)"># Define the number of CPUs allocated per task</a><strong>SBATCH --cpus-per-task=1</strong>
-<a style="color:rgb(193, 190, 190)"># maximum memory for the whole job is 128GB</a><strong>SBATCH --mem=128gb</strong>
-<a style="color:rgb(193, 190, 190)"># specifies the maximum runtime for the job as 24 hours</a><strong>SBATCH --time=24:00:00</strong>
-<a style="color:rgb(193, 190, 190)"># the log file</a><strong>SBATCH --output=PLSR_modeling.out</strong>
-<a style="color:rgb(193, 190, 190)"># Activate the conda environment</a><strong>source /software/fji7/miniconda3/bin/activate /software/fji7/miniconda3/envs/Fujiang_envs</strong>
-<a style="color:rgb(193, 190, 190)"># Run the script</a><strong>python /home/fji7/HPC_test/Spatial_PFTs.py</strong></code2><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button>
-</pre>
-                  </li>
-                  <li>In a typical computing system, there is a hierarchical relationship between nodes, cores, and
-                    CPUs:
-                    <ol class=" order-list2" style="font-size: 13px;">
-                      <li><strong>Node:</strong> A node refers to a physical computing unit or a server in a distributed
-                        computing system. It can consist of one or more CPUs.</li>
-                      <li><strong>Core:</strong> A core is an individual processing unit within a CPU. Modern CPUs often
-                        have multiple cores, which allows for parallel processing. Each core can execute instructions
-                        independently.</li>
-                      <li><strong>CPU:</strong> The Central Processing Unit (CPU) is the main processing unit of a
-                        computer. It consists of one or more cores. Each CPU can handle multiple tasks concurrently by
-                        utilizing its cores.</li>
-                    </ol>
-                  </li>
-                  <li>It's important to note that while a CPU can have multiple cores, each core can execute its own
-                    thread or process independently. Therefore, a CPU with multiple cores can handle multiple
-                    programs or processes simultaneously. This is known as parallel processing, where different
-                    cores execute different instructions concurrently, improving overall performance and
-                    multitasking capabilities.</li>
-                  <li>A node contains one or more CPUs, each CPU can have multiple cores, and each core can handle a
-                    separate program or process concurrently. This hierarchical structure allows for efficient
-                    multitasking and parallel processing in modern computing systems (below shows the resources
-                    availability at UW-Madison HPC).
-                    <figure><img style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
-                        src="hpc_image/resource.png" alt="resources">
-                      <figcaption style="margin-bottom: 10px;">Computing resources availability at UW-Madison.
-                      </figcaption>
-                    </figure>
-                  </li>
-                </ol>
-              </ul>
-            </li>
+# HTCondor: run on your assigned HTC access point.
+condor_q
+condor_status
+</code></pre>
+      <template data-code-source># Slurm: submit, inspect the queue, and review accounting.
+sbatch submit_job.sh
+squeue -u &quot;$USER&quot;
+sacct -j JOB_ID --format=JobID,State,Elapsed,MaxRSS
 
-          </ol>
-        </section>
+# Inspect the logs for your job.
+cat research_JOB_ID.out
+cat research_JOB_ID.err
 
+# HTCondor: run on your assigned HTC access point.
+condor_q
+condor_status
+</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-6" aria-labelledby="lesson-6-title"><div class="lesson-section-heading"><span class="lesson-step">06</span><h3 id="lesson-6-title">Terminal command reference</h3></div><p class="lesson-section-intro">Keep everyday navigation, inspection, archive, compilation, and environment commands close at hand.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="hpc_image/alias.png" data-image-caption="Original shell-alias examples" data-image-background="#ffffff" aria-label="Enlarge figure: Original shell-alias examples" style="--figure-background:#ffffff">
+        <img src="hpc_image/alias.png" width="540" height="328" alt="Original shell-alias examples" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Original shell-alias examples · Click to enlarge</figcaption></figure></div><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">shell_reference.sh</span><span class="lesson-code-language">Shell</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for shell_reference.sh">Wrap</button><button type="button" data-code-copy aria-label="Copy shell_reference.sh">Copy</button><a href="../../assets/code/tutorials/hpc/shell_reference.sh" download aria-label="Download shell_reference.sh">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="shell_reference.sh code"><code class="language-bash"># Navigate and inspect files.
+pwd
+cd project
+ls -lh
+cat notes.txt
+readlink -f notes.txt
+wc -l notes.txt
+grep &quot;pattern&quot; notes.txt
+echo &quot;A B B A C C&quot; &gt; example.txt
+python3 wc.py example.txt
+
+# Archives: write an archive outside the directory being archived.
+zip -r example.zip example/
+unzip -l example.zip
+unzip example.zip
+tar -cvf data.tar data_folder/
+tar -xvf data.tar -C destination/
+tar -xzf data.tar.gz -C destination/
+
+# Compile and run the original ecosystem-model example.
+g++ xtem423e4.cpp -o temmodel
+./temmodel tem4.para tem4.log
+module avail
+make
+
+# Shell configuration and aliases.
+nano ~/.bashrc
+source ~/.bashrc
+# On macOS with Zsh, use ~/.zshrc instead.
+
+# Conda environment management.
+conda env list
+conda activate research
+conda deactivate
+
+# Interactive Slurm testing (adapt the resource request).
+srun --partition=int --nodes=1 --ntasks=1 --cpus-per-task=4 --time=00:30:00 --pty bash
+
+# In the vi editor: :wq saves and exits; :q! exits without saving.
+</code></pre>
+      <template data-code-source># Navigate and inspect files.
+pwd
+cd project
+ls -lh
+cat notes.txt
+readlink -f notes.txt
+wc -l notes.txt
+grep &quot;pattern&quot; notes.txt
+echo &quot;A B B A C C&quot; &gt; example.txt
+python3 wc.py example.txt
+
+# Archives: write an archive outside the directory being archived.
+zip -r example.zip example/
+unzip -l example.zip
+unzip example.zip
+tar -cvf data.tar data_folder/
+tar -xvf data.tar -C destination/
+tar -xzf data.tar.gz -C destination/
+
+# Compile and run the original ecosystem-model example.
+g++ xtem423e4.cpp -o temmodel
+./temmodel tem4.para tem4.log
+module avail
+make
+
+# Shell configuration and aliases.
+nano ~/.bashrc
+source ~/.bashrc
+# On macOS with Zsh, use ~/.zshrc instead.
+
+# Conda environment management.
+conda env list
+conda activate research
+conda deactivate
+
+# Interactive Slurm testing (adapt the resource request).
+srun --partition=int --nodes=1 --ntasks=1 --cpus-per-task=4 --time=00:30:00 --pty bash
+
+# In the vi editor: :wq saves and exits; :q! exits without saving.
+</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 39 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>Edit aliases for your own access point and reload the appropriate shell configuration. Use the official CHTC login guide for authentication setup.</p></aside></section></div></div>
+    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://chtc.cs.wisc.edu/uw-research-computing/connecting" target="_blank" rel="noopener noreferrer">CHTC login guide <span aria-hidden="true">↗</span></a><a href="https://chtc.cs.wisc.edu/uw-research-computing/hpc-job-submission" target="_blank" rel="noopener noreferrer">Slurm submission guide <span aria-hidden="true">↗</span></a><a href="https://chtc.cs.wisc.edu/uw-research-computing/htcondor-job-submission" target="_blank" rel="noopener noreferrer">HTC job submission <span aria-hidden="true">↗</span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/hpc/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
+    <nav class="lesson-next" aria-label="Adjacent tutorials"><a href="./global_forest_edge_mapping.html"><span>← Previous tutorial</span><strong>Global forest-edge mapping</strong></a><a href="./vcs.html"><span>Next tutorial →</span><strong>Git &amp; GitHub for research</strong></a></nav>
+<footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../../pages/research.html">Research</a>
+                <a href="../../pages/publications.html">Publications</a>
+                <a href="../../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
 
@@ -509,25 +499,19 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <script>
-    function copyText(element) {
-      var text = element.previousElementSibling.innerText;
-      var textarea = document.createElement("textarea");
-      textarea.textContent = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      element.textContent = "Copied";
-      // 两秒后恢复原始状态
-      setTimeout(function () {
-        element.textContent = "Copy";
-        element.style.backgroundColor = "";
-      }, 4000);
-    }
-  </script>
+  
 
-<script src="../../assets/js/theme-toggle.js"></script>
+
+
+
+
+
+<dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
+  <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
+</dialog>
+<script src="../../assets/js/tutorial-reader.js?v=20261009-i18n90" defer></script>
 </body>
 
 </html>

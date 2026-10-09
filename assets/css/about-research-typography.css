@@ -1,0 +1,131 @@
+/* Reading scales scoped to About and Research; other pages keep their styles. */
+article.about,
+article.research {
+  --fs-1: clamp(22px, calc(1.8vw + 6px), 30px);
+  --fs-2: clamp(18px, calc(1.4vw + 6px), 22px);
+}
+
+.about .research-overview-title,
+.about .academic-heading {
+  font-size: clamp(20px, calc(1.4vw + 6px), 22px);
+  line-height: 1.35;
+}
+
+.about .research-area-group-title {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.about .research-area-group-description {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.research .research-vision-question,
+.research .synthesis-title {
+  font-size: clamp(20px, calc(1.6vw + 6px), 26px);
+  line-height: 1.35;
+}
+
+.research .research-future .synthesis-title {
+  font-size: clamp(19px, calc(1.4vw + 6px), 24px);
+}
+
+@media (max-width: 767px) {
+  article.about { --fs-6: 14px; }
+
+  .about .about-text {
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .about .research-caption {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about .academic-school {
+    font-size: 15.5px;
+    line-height: 1.4;
+  }
+
+  .about .academic-detail p { font-size: 14px; }
+  .about .academic-detail .academic-meta { font-size: 12.5px; }
+
+  .about .news-content,
+  .about .award-context,
+  .about .research-project-summary,
+  .about .research-project-description,
+  .about .professional-service-context,
+  .about .research-area-description,
+  .about .expertise-tools {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about .news-date,
+  .about .award-year,
+  .about .research-project-year {
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .about .award-name,
+  .about .professional-service-role,
+  .about .expertise-category {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .about .research-project-title,
+  .about .research-area-card-title {
+    font-size: 15.5px;
+    line-height: 1.4;
+  }
+
+  .about .research-project-meta {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .about .research-project-details summary { font-size: 13px; }
+  .about .research-projects-earlier-heading { font-size: 15px; }
+
+  .about .research-area-group-title {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+
+  .about .research-area-group-description {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .about .professional-service-journals {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .about .award-link { font-size: 13px; }
+
+  .research .research-vision-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .research .direction-overlay h3 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .research .synthesis-step h4 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .research .synthesis-step p,
+  .research .future-priority p,
+  .research .research-future-intro { line-height: 1.6; }
+
+  .research .paper-body { text-align: left; }
+}

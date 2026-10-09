@@ -5,64 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Read and Write GeoTIFF</title>
-  <style>
-    pre,
-    code {
-      position: relative !important;
-      white-space: pre !important;
-      word-wrap: normal !important;
-      overflow-x: auto !important;
-      font-family: 'Consolas', 'Courier New', monospace !important;
-      border-radius: 5px;
-      background: #0a0707 !important;
-      color: #f8f8f2 !important;
-      line-height: 1.5 !important;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px 10px;
-      background: var(--onyx);
-      color: var(--white-2);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .copy-btn:hover {
-      opacity: 1;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .container img {
-      width: 70%;
-      max-width: 300px;
-      min-width: 200px;
-      height: auto;
-      margin: 5px;
-    }
-  </style>
+  <script src="../../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Read &amp; write GeoTIFF | Fujiang Ji</title>
+  
 
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../../assets/css/data_visualization.css">
+  <link rel="stylesheet" href="../../assets/css/data_visualization.css?v=20261006-type2">
+  <link rel="stylesheet" href="../../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
 
   <!--
@@ -72,13 +34,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/monokai-sublime.min.css">
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 
+  <script src="../../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+
+
+
+
+<meta name="description" content="Move between georeferenced raster files and NumPy arrays while keeping the spatial metadata intact.">
+<link rel="stylesheet" href="../../assets/css/tutorial-reader.css?v=20261008-reader86">
+<link rel="stylesheet" href="../../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Read &amp; write GeoTIFF | Fujiang Ji">
+<meta property="og:description" content="Move between georeferenced raster files and NumPy arrays while keeping the spatial metadata intact.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Read &amp; write GeoTIFF | Fujiang Ji">
+<meta name="twitter:description" content="Move between georeferenced raster files and NumPy arrays while keeping the spatial metadata intact.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
-<body>
+<body class="tutorial-document">
 
   <!--
     - #MAIN
@@ -90,17 +68,25 @@
     -->
 
     <aside class="sidebar" data-sidebar>
+<button class="theme-toggle-btn" aria-label="Toggle theme">
+              <span class="icon icon-moon">&#9790;</span>
+              <span class="icon icon-sun">&#9728;</span>
+            </button>
+
+
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -126,7 +112,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -141,7 +128,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -185,7 +172,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -215,56 +202,59 @@
       <!--
         - #NAVBAR
       -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" onclick="window.location.href='../tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-      <article class="tutorial active" data-page="tutorial">
-        <header>
-          <h2 class="h2 article-title">Tutorials</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Read & Write GeoTIFF</h3>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" onclick="window.location.href=window.SiteLanguage.href('../tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+            
           </div>
-
-          <pre><code class="language-python" class="bashScript">import numpy as np
+        </nav>
+      </div>
+      <article class="tutorial tutorial-reader active" data-page="tutorial">
+<header class="lesson-header"><a class="lesson-back" href="../tutorials.html">← All tutorials</a><p class="lesson-eyebrow">Geospatial · Practical guide</p><h2 class="lesson-title">Read &amp; write GeoTIFF</h2></header>
+    <div class="lesson-hero"><div class="lesson-hero-copy"><p>Move between georeferenced raster files and NumPy arrays while keeping the spatial metadata intact.</p><div class="lesson-tags"><span>Python</span><span>GDAL</span><span>NumPy</span></div><a class="lesson-start" href="#lesson-1">Start learning <span aria-hidden="true">↓</span></a></div><div class="lesson-flow" role="img" aria-label="GeoTIFF to NumPy array to GeoTIFF"><span class="lesson-flow-step"><b>01</b>GeoTIFF</span><span class="lesson-flow-step"><b>02</b>NumPy array</span><span class="lesson-flow-step"><b>03</b>GeoTIFF</span></div></div>
+    <div class="lesson-preparation"><details open><summary>What you’ll learn</summary><ul><li>Read raster values and spatial metadata.</li><li>Write multiband arrays back to a GeoTIFF.</li><li>Check array shape, coordinate system, and geotransform.</li></ul></details><details><summary>Before you begin <span>Python basics</span></summary><ul><li>A Python environment with NumPy and GDAL.</li><li>A local GeoTIFF for the usage example.</li><li>Arrays use rows × columns × bands; a single band needs a band axis.</li></ul></details></div>
+    <div class="lesson-layout"><aside class="lesson-toc"><details data-lesson-outline><summary>On this page <span>3 sections</span></summary><nav aria-label="Tutorial chapters"><a href="#lesson-1" data-lesson-toc><span>01</span>Read &amp; write helpers</a><a href="#lesson-2" data-lesson-toc><span>02</span>Use the helpers</a><a href="#lesson-3" data-lesson-toc><span>03</span>Check the output</a></nav></details></aside><div class="lesson-content"><section class="lesson-section" id="lesson-1" aria-labelledby="lesson-1-title"><div class="lesson-section-heading"><span class="lesson-step">01</span><h3 id="lesson-1-title">Read &amp; write helpers</h3></div><p class="lesson-section-intro">The reader returns the array, geotransform, projection, and raster dimensions. The writer expects a three-dimensional array and writes Float32 bands.</p><dl class="lesson-definitions"><div><dt>Array shape</dt><dd>Multiband reads are rearranged from bands × rows × columns to rows × columns × bands.</dd></div><div><dt>Spatial metadata</dt><dd>Pass the original geotransform and projection to the writer to retain the raster location.</dd></div></dl><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">read_write_geotiff.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for read_write_geotiff.py">Wrap</button><button type="button" data-code-copy aria-label="Copy read_write_geotiff.py">Copy</button><a href="../../assets/code/tutorials/rs_data_processing/read_write_geotiff.py" download aria-label="Download read_write_geotiff.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="read_write_geotiff.py code"><code class="language-python">import numpy as np
 from osgeo import gdal, ogr, gdalconst
 
 def read_tif(tif_file):
-    """
+    &quot;&quot;&quot;
     Parameters:
     ------------------------------
-      - tif_file: the full path of the GeoTIFF data (e.g., "/data/imagery.tif").
+      - tif_file: the full path of the GeoTIFF data (e.g., &quot;/data/imagery.tif&quot;).
       - im_data: (rows, cols, bands)
-    """
+    &quot;&quot;&quot;
     dataset = gdal.Open(tif_file)
     cols = dataset.RasterXSize
     rows = dataset.RasterYSize
@@ -278,17 +268,17 @@ def read_tif(tif_file):
     return im_data, im_Geotrans, im_proj, rows, cols
 
 def array_to_geotiff(array, output_path, geo_transform, projection, band_names=None):
-    """
+    &quot;&quot;&quot;
     Parameters:
     ------------------------------
       - array: the image array that need to be saved (rows, cols, bands).
-      - output_path: the full path that save the GeoTIFF data (e,g., "/data/saved_imagery.tif").
+      - output_path: the full path that save the GeoTIFF data (e,g., &quot;/data/saved_imagery.tif&quot;).
       - geo_transform: geotransform of data.
       - projection: projection of data.
       - band_names: the band names as list.
-    """
+    &quot;&quot;&quot;
     rows, cols, num_bands = array.shape
-    driver = gdal.GetDriverByName('GTiff')
+    driver = gdal.GetDriverByName(&#x27;GTiff&#x27;)
     dataset = driver.Create(output_path, cols, rows, num_bands, gdal.GDT_Float32)
     
     dataset.SetGeoTransform(geo_transform)
@@ -303,10 +293,104 @@ def array_to_geotiff(array, output_path, geo_transform, projection, band_names=N
             band.SetDescription(band_names[band_num])
     dataset = None
     band = None
-    return</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
+    return</code></pre>
+      <template data-code-source>import numpy as np
+from osgeo import gdal, ogr, gdalconst
 
-        </section>
+def read_tif(tif_file):
+    &quot;&quot;&quot;
+    Parameters:
+    ------------------------------
+      - tif_file: the full path of the GeoTIFF data (e.g., &quot;/data/imagery.tif&quot;).
+      - im_data: (rows, cols, bands)
+    &quot;&quot;&quot;
+    dataset = gdal.Open(tif_file)
+    cols = dataset.RasterXSize
+    rows = dataset.RasterYSize
+    im_proj = (dataset.GetProjection())
+    im_Geotrans = (dataset.GetGeoTransform())
+    im_data = dataset.ReadAsArray(0, 0, cols, rows)
+    if im_data.ndim == 3:
+        im_data = np.moveaxis(dataset.ReadAsArray(0, 0, cols, rows), 0, -1)
 
+    dataset = None
+    return im_data, im_Geotrans, im_proj, rows, cols
+
+def array_to_geotiff(array, output_path, geo_transform, projection, band_names=None):
+    &quot;&quot;&quot;
+    Parameters:
+    ------------------------------
+      - array: the image array that need to be saved (rows, cols, bands).
+      - output_path: the full path that save the GeoTIFF data (e,g., &quot;/data/saved_imagery.tif&quot;).
+      - geo_transform: geotransform of data.
+      - projection: projection of data.
+      - band_names: the band names as list.
+    &quot;&quot;&quot;
+    rows, cols, num_bands = array.shape
+    driver = gdal.GetDriverByName(&#x27;GTiff&#x27;)
+    dataset = driver.Create(output_path, cols, rows, num_bands, gdal.GDT_Float32)
+    
+    dataset.SetGeoTransform(geo_transform)
+    dataset.SetProjection(projection)
+    
+    for band_num in range(num_bands):
+        band = dataset.GetRasterBand(band_num + 1)
+        band.WriteArray(array[:, :, band_num])
+        band.FlushCache()
+        
+        if band_names:
+            band.SetDescription(band_names[band_num])
+    dataset = None
+    band = None
+    return</template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 49 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-2" aria-labelledby="lesson-2-title"><div class="lesson-section-heading"><span class="lesson-step">02</span><h3 id="lesson-2-title">Use the helpers</h3></div><p class="lesson-section-intro">Save the helpers above as read_write_geotiff.py, place a raster in your data folder, and replace the input and output filenames.</p><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">geotiff_usage.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for geotiff_usage.py">Wrap</button><button type="button" data-code-copy aria-label="Copy geotiff_usage.py">Copy</button><a href="../../assets/code/tutorials/rs_data_processing/geotiff_usage.py" download aria-label="Download geotiff_usage.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="geotiff_usage.py code"><code class="language-python">from read_write_geotiff import read_tif, array_to_geotiff
+
+array, transform, projection, rows, cols = read_tif(&quot;data/imagery.tif&quot;)
+if array.ndim == 2:
+    array = array[..., None]
+array_to_geotiff(array, &quot;data/imagery_copy.tif&quot;, transform, projection)
+print(rows, cols, array.shape)
+</code></pre>
+      <template data-code-source>from read_write_geotiff import read_tif, array_to_geotiff
+
+array, transform, projection, rows, cols = read_tif(&quot;data/imagery.tif&quot;)
+if array.ndim == 2:
+    array = array[..., None]
+array_to_geotiff(array, &quot;data/imagery_copy.tif&quot;, transform, projection)
+print(rows, cols, array.shape)
+</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>A single-band read returns a 2D array. Add the final band dimension before calling the writer.</p></aside></section><section class="lesson-section" id="lesson-3" aria-labelledby="lesson-3-title"><div class="lesson-section-heading"><span class="lesson-step">03</span><h3 id="lesson-3-title">Check the output</h3></div><p class="lesson-section-intro">After writing, inspect the output alongside the input. A matching array shape alone does not confirm that the coordinates were retained.</p><ul class="lesson-checklist"><li>Confirm rows, columns, and band count.</li><li>Compare the projection and six geotransform values.</li><li>Check data type and NoData behavior for your analysis.</li><li>Reopen the output and compare raster values.</li></ul></section></div></div>
+    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://gdal.org/en/stable/api/python/raster_api.html" target="_blank" rel="noopener noreferrer">GDAL raster API <span aria-hidden="true">↗</span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/rs_data_processing/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
+    <nav class="lesson-next" aria-label="Adjacent tutorials"><a href="../tutorials.html"><span>← Tutorial library</span><strong>Explore all guides</strong></a><a href="./data_visualization.html"><span>Next tutorial →</span><strong>Python for data visualization</strong></a></nav>
+<footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../../pages/research.html">Research</a>
+                <a href="../../pages/publications.html">Publications</a>
+                <a href="../../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
 
@@ -327,31 +411,21 @@ def array_to_geotiff(array, output_path, geo_transform, projection, band_names=N
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <script>
-    function copyText(element) {
-      var text = element.previousElementSibling.innerText;
-      var textarea = document.createElement("textarea");
-      textarea.textContent = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      element.textContent = "Copied";
-      // 两秒后恢复原始状态
-      setTimeout(function () {
-        element.textContent = "Copy";
-        element.style.backgroundColor = "";
-      }, 4000);
-    }
-  </script>
+  
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      hljs.highlightAll();
-    });
-  </script>
+  
 
-<script src="../../assets/js/theme-toggle.js"></script>
+
+
+
+
+
+<dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
+  <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
+</dialog>
+<script src="../../assets/js/tutorial-reader.js?v=20261009-i18n90" defer></script>
 </body>
 
 </html>

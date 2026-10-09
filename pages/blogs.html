@@ -5,17 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fujiang Ji's Personal Website</title>
+  <script src="../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Blog | Fujiang Ji</title>
+  <meta name="description" content="A visual journal of fieldwork, academic life, and travels by Fujiang Ji.">
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261006-type2">
+  <link rel="stylesheet" href="../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
+  <link rel="stylesheet" href="../assets/css/blogs.css?v=20261008-blog75-final">
+  <script src="../assets/js/blogs.js?v=20261009-i18n90" defer></script>
 
   <!--
     - google font link
@@ -23,109 +33,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .video {
-      width: 1000px;
-      max-width: 100%;
-    }
-
-    .text-overlay {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
-    }
-
-    h2 {
-      font-size: 2.2vw;
-    }
-
-    .gallery-container {
-      max-width: 2000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .main-image {
-      position: relative;
-    }
-
-    .main-image img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      /* contain or cover */
-      border-radius: 8px;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 30px;
-      background: rgba(0, 0, 0, 0.589);
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 1;
-      user-select: none;
-    }
-
-    .arrow.left {
-      left: 10px;
-    }
-
-    .arrow.right {
-      right: 10px;
-    }
-
-    .thumbnails {
-      margin-top: 10px;
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      padding: 10px 0;
-    }
-
-    .thumbnails img {
-      height: 80px;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .thumbnails img:hover {
-      transform: scale(1.05);
-    }
-
-    #lightboxOverlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 2147483647;
-    }
-
-    #lightboxOverlay img {
-      max-width: 100%;
-      max-height: 100%;
-      border-radius: 8px;
-    }
-  </style>
+  <script src="../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+<link rel="stylesheet" href="../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Fujiang Ji">
+<meta property="og:description" content="A visual journal of fieldwork, academic life, and travels by Fujiang Ji.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blog | Fujiang Ji">
+<meta name="twitter:description" content="A visual journal of fieldwork, academic life, and travels by Fujiang Ji.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
 <body>
@@ -144,13 +62,15 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -176,7 +96,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -191,7 +112,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -235,7 +156,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -272,417 +193,246 @@
         - #NAVBAR
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+          </div>
+        </nav>
+      </div>
 
       <!--
         - #BLOG
       -->
 
       <article class="blogs active" data-page="blogs">
-
         <header>
           <h2 class="h2 article-title">Blog</h2>
+          <p class="blog-intro">A visual journal of fieldwork, travel, and everyday discoveries.</p>
         </header>
 
-        <section class="mapbox" data-mapbox style="height: 500px;">
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=10q202LWWyNufEiU3LX7FoEezv41a7K0&ehbc=2E312F&noprof=1&ll=35,5&z=2"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
+        <section class="blog-feature" aria-labelledby="blog-feature-heading">
+          <img src="../assets/images/blogs/madison/cover.webp" srcset="../assets/images/blogs/madison/cover.webp 960w, ../assets/images/blogs/madison/01-view.webp 1600w" sizes="(min-width: 1024px) 840px, (min-width: 768px) 640px, calc(100vw - 56px)" width="960" height="720" alt="Sunset over a lake in Madison" fetchpriority="high" decoding="async">
+          <div>
+            <p class="blog-feature-eyebrow">Featured collection · UW–Madison</p>
+            <h3 id="blog-feature-heading">Beyond the research</h3>
+            <p class="blog-feature-description">Fieldwork, places, and moments along the way.</p>
+            <a class="blog-feature-action" href="#album-madison" data-open-album="madison" data-album-title="UW–Madison" aria-haspopup="dialog" aria-label="View UW–Madison gallery, 29 photos">Explore Madison <span>29 photos</span><span aria-hidden="true">→</span></a>
+          </div>
         </section>
 
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/1_UW-Madison/1.jpg" alt="UW-Madison" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Study/Living</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">Aug. 2021 - Present</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">UW-Madison</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/1_UW-Madison/1.jpg" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/1_UW-Madison/1.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/2.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/3.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/4.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/5.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/6.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/7.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/8.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/9.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/10.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/11.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/12.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/13.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/15.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/16.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/17.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/18.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/21.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/22.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/23.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/24.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/25.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/27.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/28.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/29.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/30.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/31.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/32.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/1_UW-Madison/33.jpg" onclick="setMainImage(this)">
-                  </div>
+        <section class="blog-collections" id="photo-collections" aria-labelledby="blog-collections-heading">
+          <div class="blog-section-heading">
+            <h3 id="blog-collections-heading">Photo collections</h3>
+            <p class="blog-collection-summary">7 collections · 122 photographs</p>
+          </div>
+          <div class="blog-filters" role="group" aria-label="Filter photo collections">
+            <button class="blog-filter" type="button" data-blog-filter="all" aria-pressed="true">All <span>7</span></button>
+            <button class="blog-filter" type="button" data-blog-filter="fieldwork" aria-pressed="false">Fieldwork <span>1</span></button>
+            <button class="blog-filter" type="button" data-blog-filter="academic" aria-pressed="false">Academic life <span>1</span></button>
+            <button class="blog-filter" type="button" data-blog-filter="travel" aria-pressed="false">Travel <span>5</span></button>
+          </div>
+          <p class="blog-sr-only" id="blog-filter-status" role="status" aria-live="polite"></p>
+          <ul class="blog-albums">
+            <li class="blog-collection" id="album-fieldwork" data-album-category="fieldwork">
+              <a class="blog-card" href="#album-fieldwork" data-open-album="fieldwork" data-album-title="Fieldwork" aria-haspopup="dialog" aria-label="View Fieldwork gallery, 9 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/fieldwork/cover.webp" alt="Fieldwork collection cover" width="960" height="720" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">9 photos</span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/2_China/1.jpg" alt="China" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Travel</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2014 - 2021</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">China</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/2_China/1.jpg" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/2_China/1.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/2.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/3.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/4.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/5.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/6.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/7.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/24.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/25.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/26.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/27.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/8.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/9.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/10.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/11.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/13.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/14.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/15.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/16.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/17.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/18.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/19.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/20.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/21.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/22.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/2_China/23.jpg" onclick="setMainImage(this)">
-                  </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Fieldwork</span><span>2018–2021</span></p>
+                  <h4>Fieldwork</h4>
+                  <p class="blog-card-description">Snapshots from field campaigns and life in the field.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/3_US/1.jpg" alt="US" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Travel</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2021 - Present</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">United States</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-
-
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/3_US/1.jpg" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/3_US/1.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/2.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/3.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/4.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/5.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/6.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/7.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/8.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/9.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/10.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/11.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/12.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/13.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/14.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/15.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/16.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/18.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/19.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/20.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/21.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/22.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/23.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/24.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/25.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/26.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/27.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/28.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/29.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/30.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/31.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/32.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/3_US/33.jpg" onclick="setMainImage(this)">
-                  </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-madison" data-album-category="academic">
+              <a class="blog-card" href="#album-madison" data-open-album="madison" data-album-title="UW–Madison" aria-haspopup="dialog" aria-label="View UW–Madison gallery, 29 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/madison/cover.webp" alt="UW–Madison collection cover" width="960" height="720" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">29 photos</span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/4_Thailand/1.jpg" alt="Thailand" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Travel</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2018</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">Thailand</h3>
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/4_Thailand/1.jpg" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/4_Thailand/1.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/2.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/3.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/4.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/5.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/6.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/7.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/4_Thailand/8.jpg" onclick="setMainImage(this)">
-                  </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Academic life</span><span>Aug 2021–present</span></p>
+                  <h4>UW–Madison</h4>
+                  <p class="blog-card-description">Lakeside views and everyday life in Madison.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/5_Turkey/1.jpg" alt="Turkey" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Travel</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2018</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">Turkey</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/5_Turkey/1.jpg" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/5_Turkey/1.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/2.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/3.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/4.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/5.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/6.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/7.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/8.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/9.jpg" onclick="setMainImage(this)">
-                    <img src="blogs_pages/5_Turkey/10.jpg" onclick="setMainImage(this)">
-                  </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-united-states" data-album-category="travel">
+              <a class="blog-card" href="#album-united-states" data-open-album="united-states" data-album-title="United States" aria-haspopup="dialog" aria-label="View United States gallery, 32 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/united-states/cover.webp" alt="United States collection cover" width="960" height="720" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">32 photos</span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/6_Vietnam/1.JPG" alt="Vietnam" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Travel</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2019</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">Vietnam</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-
-
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/6_Vietnam/1.JPG" alt="Main" onclick="openLightbox(this)">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/6_Vietnam/1.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/2.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/3.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/4.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/5.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/6.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/7.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/6_Vietnam/8.JPG" onclick="setMainImage(this)">
-                  </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Travel</span><span>2021–present</span></p>
+                  <h4>United States</h4>
+                  <p class="blog-card-description">Photographs from travels across the United States.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="blog-post-item" onclick="toggleContent(this)">
-          <a>
-            <figure class="blog-banner-box">
-              <img src="blogs_pages/7_Field_works/1.JPG" alt="Field_work" loading="lazy">
-            </figure>
-
-            <div class="blog-content">
-              <div class="blog-meta">
-                <p class="blog-category">Study</p>
-
-                <span class="dot"></span>
-
-                <time datetime="2022-02-23">2018 - 2021</time>
-              </div>
-
-              <h3 class="h3 blog-item-title">Field Works</h3>
-
-              <div class="blog-hidden-text" style="display: none; padding: 10px;">
-
-
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <span class="arrow left" onclick="prevImage(event)">&#10094;</span>
-                    <img id="mainImage" src="blogs_pages/7_Field_works/1.JPG" alt="Main" onclick="openLightbox()">
-                    <span class="arrow right" onclick="nextImage(event)">&#10095;</span>
-                  </div>
-                  <div class="thumbnails" id="thumbnailStrip">
-                    <img src="blogs_pages/7_Field_works/1.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/2.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/3.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/4.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/5.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/6.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/7.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/8.JPG" onclick="setMainImage(this)">
-                    <img src="blogs_pages/7_Field_works/9.JPG" onclick="setMainImage(this)">
-                  </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-china" data-album-category="travel">
+              <a class="blog-card" href="#album-china" data-open-album="china" data-album-title="China" aria-haspopup="dialog" aria-label="View China gallery, 26 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/china/cover.webp" alt="China collection cover" width="960" height="638" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">26 photos</span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Travel</span><span>2014–2021</span></p>
+                  <h4>China</h4>
+                  <p class="blog-card-description">Places and moments from travels in China.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-thailand" data-album-category="travel">
+              <a class="blog-card" href="#album-thailand" data-open-album="thailand" data-album-title="Thailand" aria-haspopup="dialog" aria-label="View Thailand gallery, 8 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/thailand/cover.webp" alt="Thailand collection cover" width="960" height="770" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">8 photos</span>
+                </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Travel</span><span>2018</span></p>
+                  <h4>Thailand</h4>
+                  <p class="blog-card-description">A photo journal from Thailand in 2018.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-turkey" data-album-category="travel">
+              <a class="blog-card" href="#album-turkey" data-open-album="turkey" data-album-title="Turkey" aria-haspopup="dialog" aria-label="View Turkey gallery, 10 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/turkey/cover.webp" alt="Turkey collection cover" width="960" height="638" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">10 photos</span>
+                </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Travel</span><span>2018</span></p>
+                  <h4>Turkey</h4>
+                  <p class="blog-card-description">A collection of moments from Turkey in 2018.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </li>
+            <li class="blog-collection" id="album-vietnam" data-album-category="travel">
+              <a class="blog-card" href="#album-vietnam" data-open-album="vietnam" data-album-title="Vietnam" aria-haspopup="dialog" aria-label="View Vietnam gallery, 8 photos">
+                <div class="blog-card-cover">
+                  <img src="../assets/images/blogs/vietnam/cover.webp" alt="Vietnam collection cover" width="960" height="637" loading="lazy" decoding="async">
+                  <span class="blog-photo-count">8 photos</span>
+                </div>
+                <div class="blog-card-body">
+                  <p class="blog-card-meta"><span class="blog-card-category">Travel</span><span>2019</span></p>
+                  <h4>Vietnam</h4>
+                  <p class="blog-card-description">Photographs from Vietnam in 2019.</p>
+                  <span class="blog-card-action">View gallery <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
 
+        <section class="blog-map" aria-labelledby="blog-map-heading">
+          <div class="blog-map-heading">
+            <div>
+              <h3 id="blog-map-heading">Places along the way</h3>
+              <p class="blog-map-description">A map of places visited along the way.</p>
+            </div>
+            <button class="blog-map-expand" type="button" data-map-expand aria-expanded="false" aria-controls="blog-travel-map">Expand map</button>
+          </div>
+          <div class="blog-map-frame" id="blog-travel-map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=10q202LWWyNufEiU3LX7FoEezv41a7K0&amp;ehbc=2E312F&amp;noprof=1&amp;ll=35,5&amp;z=2" title="Fujiang Ji’s travel map" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../pages/research.html">Research</a>
+                <a href="../pages/publications.html">Publications</a>
+                <a href="../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
     </div>
 
   </main>
 
-  <!-- 弹出层：Lightbox -->
-  <div id="lightboxOverlay" onclick="closeLightbox()">
-    <img id="lightboxImage" src="" alt="Full View">
-  </div>
+  <dialog class="photo-gallery" id="blog-gallery" aria-labelledby="gallery-title">
+    <div class="gallery-shell">
+      <header class="gallery-header">
+        <div>
+          <p class="gallery-category" data-gallery-category></p>
+          <h2 id="gallery-title" data-gallery-title>Photo collection</h2>
+          <p class="gallery-dates" data-gallery-dates></p>
+        </div>
+        <button class="gallery-close" type="button" data-gallery-close aria-label="Close gallery" autofocus><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+      </header>
+      <div class="gallery-stage">
+        <img data-gallery-image alt="" draggable="false" decoding="async">
+        <button class="gallery-arrow gallery-prev" type="button" data-gallery-prev aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+        <button class="gallery-arrow gallery-next" type="button" data-gallery-next aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+        <p class="gallery-image-status" data-gallery-status role="status"></p>
+      </div>
+      <div class="gallery-caption">
+        <span class="gallery-location" data-gallery-location></span>
+        <div class="gallery-caption-right">
+          <span class="gallery-counter" data-gallery-counter aria-live="polite"></span>
+          <a class="gallery-original" data-gallery-original target="_blank" rel="noopener noreferrer" hidden>Original <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="gallery-thumbnails" data-gallery-thumbnails role="group" aria-label="Choose a photo"></div>
+      <p class="gallery-hint">Swipe or use the arrow keys to browse. Esc to close.</p>
+    </div>
+  </dialog>
 
   <!--
     - custom js link
@@ -695,66 +445,6 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
-    function toggleContent(item) {
-      const event = window.event;
-      const clicked = event.target;
 
-      const hiddenArea = item.querySelector('.blog-hidden-text');
-      if (hiddenArea.contains(clicked)) return;
-
-      hiddenArea.style.display = (hiddenArea.style.display === "block") ? "none" : "block";
-    }
-
-    function setMainImage(img) {
-      const container = img.closest('.blog-hidden-text');
-      const main = container.querySelector(".main-image img");
-      main.src = img.src;
-    }
-
-    function prevImage(event) {
-      event.stopPropagation();
-      const container = event.target.closest('.blog-hidden-text');
-      const thumbnails = Array.from(container.querySelectorAll(".thumbnails img"));
-      const main = container.querySelector(".main-image img");
-      const currentIndex = thumbnails.findIndex(img => img.src === main.src);
-      const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-      main.src = thumbnails[newIndex].src;
-    }
-
-    function nextImage(event) {
-      event.stopPropagation();
-      const container = event.target.closest('.blog-hidden-text');
-      const thumbnails = Array.from(container.querySelectorAll(".thumbnails img"));
-      const main = container.querySelector(".main-image img");
-      const currentIndex = thumbnails.findIndex(img => img.src === main.src);
-      const newIndex = (currentIndex + 1) % thumbnails.length;
-      main.src = thumbnails[newIndex].src;
-    }
-  </script>
-
-  <script>
-    function openLightbox(imgElement) {
-      const lightbox = document.getElementById("lightboxOverlay");
-      const lightboxImage = document.getElementById("lightboxImage");
-      lightboxImage.src = imgElement.src;
-      lightbox.style.display = "flex";
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightboxOverlay").style.display = "none";
-    }
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeLightbox();
-    });
-  </script>
-
-
-
-<script src="../assets/js/theme-toggle.js"></script>
 </body>
-
-
-
 </html>

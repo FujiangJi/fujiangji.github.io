@@ -1,0 +1,51 @@
+{
+  "created": "2026-10-07",
+  "producer": "builtin-imagegen",
+  "mode": "generate; plant traits attachment correction via edit",
+  "purpose": "Single representative category illustrations without diagram elements",
+  "images": [
+    {
+      "category": "plant-traits",
+      "original": "plant-traits.png",
+      "website_image": "plant-traits.jpg",
+      "source_filename": "exec-7b6446e7-82d1-45de-a9f9-73e977ef2e78.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: A single compact botanical specimen composition showing functional diversity of plant foliage: a broad deciduous leaf on a short twig, one narrow leathery leaf, and a small conifer sprig, together as a natural botanical sample. Distinct shapes, venation and realistic textures. No forest, no plots. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent.",
+      "edit_prompt": "Use case: precise-object-edit. Input image 1 is the edit target. Correct ONLY the botanical attachment in this picture. The oak-like broad lobed leaf, the narrow leathery leaf, and the conifer sprig are specimens from three different species, so they must NOT grow from the same twig. Detach the two broad-leaf specimens from the conifer branch. Give each leaf its own short natural petiole, with a visible warm-white gap between it and the conifer sprig. Arrange the three separate collected specimens side by side as one compact botanical sample composition. Maintain the current realistic natural-history style, leaf textures, vein detail, natural palette, square framing and plain warm-white background. No connecting stem shared across species. Absolutely no labels, text, numbers, arrows, charts, boxes, borders, logos or plus signs. It must be a representative plant functional diversity illustration, not an explanatory diagram."
+    },
+    {
+      "category": "forest-fragmentation",
+      "original": "forest-fragmentation.png",
+      "website_image": "forest-fragmentation.jpg",
+      "source_filename": "exec-ea3f3852-d41d-4f1d-8424-9329ef4d3f0c.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: A single compact aerial landscape illustration of a real temperate forest fragmented by one winding rural road and a small agricultural clearing. Forest canopy texture, visible forest edges, irregular patches, realistic scale. One continuous landscape seen obliquely from above; no block cutaway, no comparison panels. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent."
+    },
+    {
+      "category": "biocrust-feedbacks",
+      "original": "biocrust-feedbacks.png",
+      "website_image": "biocrust-feedbacks.jpg",
+      "source_filename": "exec-afe2cd9c-a7e9-457f-a596-a31b09bf6afe.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: One close-up ecological illustration of a small dryland biological soil crust patch, with delicate moss, pale foliose lichens, dark cyanobacterial crust and textured sandy soil. A modest short irregular soil edge can show its shallow surface structure. Realistic moss and lichens are the main subject, very sparse tiny dryland grass. No ecosystem cards, no process panels, no sun symbols. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent."
+    },
+    {
+      "category": "imaging-spectroscopy",
+      "original": "imaging-spectroscopy.png",
+      "website_image": "imaging-spectroscopy.jpg",
+      "source_filename": "exec-f442e271-a038-41bd-befe-2990a7a5eaad.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: One Earth-observing satellite carrying an imaging spectrometer, with blue solar panels, hovering above a small naturally curved portion of Earth showing forest and dryland terrain. One coherent space observation scene, one satellite and a partial planet. Realistic instrument proportions, no named mission branding, no observation cones, no rays, no spectrum. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent."
+    },
+    {
+      "category": "data-fusion",
+      "original": "data-fusion.png",
+      "website_image": "data-fusion.jpg",
+      "source_filename": "exec-88a0b3ed-d60e-468f-9e3a-5014c4ba7a76.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: One understated scientific desktop workstation, a single physical monitor displaying a detailed aerial forest-and-field raster image with subtle muted blue-green and earthy spectral color information, a small keyboard at its base. This should read as ecological remote sensing image analysis and computational work. One coherent object, not separate panels, no charts on screen, no graphs, no numbers, no legible interface text, no code, no brains, no neural network, no circuitry, no glowing futuristic elements. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent."
+    },
+    {
+      "category": "process-modeling",
+      "original": "process-modeling.png",
+      "website_image": "process-modeling.jpg",
+      "source_filename": "exec-572060c2-3743-49f4-a080-2256754f7c3f.png",
+      "prompt": "Use case: stylized-concept. Asset type: square academic website category illustration, readable at 100–130 pixels. Primary request: One realistic broad green leaf shown as a restrained botanical scientific cutaway, with a small part of the leaf surface peeled back naturally to reveal a thin internal mesophyll tissue layer. Soft natural sunlight illuminates the leaf and gives a gentle translucency gradient to represent interactions of light with leaf structure. One single leaf illustration, not a diagram, no solar icon, no drawn beams or lines, no plant pots, no model boxes. Style: restrained natural-history editorial illustration, realistic details, subtle ink and gouache texture, minimal visible outlines, no cartoon or glossy 3D. Composition: one centered coherent subject fills about 80 percent of the square with comfortable margins, clean warm-white plain background. Palette: natural forest greens, muted blue, warm earth colors; calm, no excessive saturation. NO text, labels, lettering, numbers, arrows, arrowheads, curves, chart axes, statistical graphs, diagrams, flowcharts, panels, frames, logos, watermark, or decorative plus signs anywhere. Deliver just one polished representative picture for this category. Solid background, not transparent."
+    }
+  ]
+}

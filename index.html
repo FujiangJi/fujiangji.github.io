@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fujiang Ji's Personal Website</title>
+  <script src="./assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="./assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>About | Fujiang Ji</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="./assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="./assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20261006-history5">
+  <link rel="stylesheet" href="./assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="./assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="./assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <link rel="stylesheet" href="./assets/css/about-research-typography.css?v=20261008-journal74">
+  <script src="./assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
   <!--
     - google font link
@@ -31,18 +39,50 @@
 
     .text-overlay {
       position: absolute;
-      left: 0;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: clamp(18px, 3vw, 36px);
+      background: linear-gradient(180deg, transparent 25%, rgba(0, 0, 0, 0.65));
+      pointer-events: none;
+    }
+
+    .text-overlay .video-welcome {
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(11px, 1vw, 14px);
+      font-weight: 500;
+      line-height: 1.45;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .text-overlay h2 {
+      max-width: 24ch;
+      color: #fff;
+      font-size: clamp(19px, 2.1vw, 30px);
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: left;
+      text-wrap: balance;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .about > .videobox:first-child {
+      margin-top: 0;
+    }
+
+    .videobox .video {
+      display: block;
       width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
+    }
+
+    @media (max-width: 379px) {
+      .text-overlay { padding: 16px; }
+      .text-overlay .video-welcome { margin-bottom: 6px; }
+      .text-overlay h2 { font-size: 17px; }
     }
 
     h2 {
@@ -55,58 +95,73 @@
     .research-figure {
       display: block;
       margin: 28px auto 8px;
-      max-width: 92%;
+      max-width: 100%;
       position: relative;
     }
 
     .research-figure-img-wrap {
       position: relative;
-      border-radius: 14px;
       overflow: hidden;
-      background: var(--border-gradient-onyx);
-      padding: 2px;
-      /* creates the gradient border */
-      box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.45);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .research-figure-img-wrap:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 48px hsla(0, 0%, 0%, 0.55),
-        0 0 0 1px hsla(45, 100%, 72%, 0.18);
     }
 
     .research-figure-img-wrap img {
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      /* inset slightly from outer border */
-      transition: filter 0.3s ease;
     }
 
-    .research-figure-img-wrap:hover img {
-      filter: brightness(1.06);
+    .research-figure-img-wrap .research-overview-light { display: none; }
+    [data-theme="light"] .research-figure-img-wrap .research-overview-light { display: block; }
+    [data-theme="light"] .research-figure-img-wrap .research-overview-dark { display: none; }
+
+    .research-overview-title {
+      text-align: left;
+      text-transform: none;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 16px;
     }
 
     figcaption.research-caption {
-      margin-top: 10px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--light-gray-70);
-      font-style: italic;
-      line-height: 1.5;
-      padding: 0 8px;
+      margin: 0 0 20px;
+      text-align: left;
+      font-size: 15px;
+      color: var(--light-gray);
+      font-style: normal;
+      line-height: 1.7;
+    }
+
+    .research-caption p {
+      margin: 0;
+      text-align: left;
     }
 
     figcaption.research-caption strong {
-      display: block;
-      font-size: 12.5px;
+      display: inline;
       font-weight: 600;
-      font-style: normal;
+      color: var(--white-2);
+    }
+
+    .research-questions {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      line-height: 1.55;
+    }
+
+    .research-questions li {
+      list-style: disc;
+      padding-left: 4px;
+      margin-bottom: 6px;
+    }
+
+    .research-questions li:last-child { margin-bottom: 0; }
+    .research-questions li::marker { color: var(--orange-yellow-crayola); }
+
+    .research-caption .research-questions strong {
+      display: block;
+      margin-bottom: 0;
       color: var(--orange-yellow-crayola);
-      margin-bottom: 2px;
-      letter-spacing: 0.3px;
     }
 
     /* News section — paper link icon */
@@ -122,7 +177,724 @@
     a.news-paper-btn:hover {
       opacity: 1;
     }
+
+    /* News & milestones: one shared card with responsive date/body rows. */
+    .news-card { cursor: auto; }
+
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--jet);
+    }
+
+    .news-item:first-child { padding-top: 0; }
+    .news-item[hidden], .news-toggle[hidden] { display: none; }
+
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px;
+    }
+
+    .news-date {
+      color: var(--vegas-gold);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.7;
+      white-space: nowrap;
+    }
+
+    .news-type {
+      padding: 2px 8px;
+      border-radius: 5px;
+      background: var(--onyx);
+      color: var(--light-gray-70);
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .news-content {
+      min-width: 0;
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.65;
+      overflow-wrap: break-word;
+    }
+
+    .news-content p { margin: 0; }
+
+    .news-content strong {
+      font-weight: 600;
+      color: var(--white-2);
+    }
+
+    .news-item--featured {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .news-item--featured::before {
+      content: "";
+      position: absolute;
+      inset: 6px -12px;
+      border-left: 2px solid var(--orange-yellow-crayola);
+      border-radius: 6px;
+      background: rgba(var(--theme-accent-rgb), 0.06);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .news-item--featured:first-child::before { top: -10px; }
+
+    .news-link {
+      display: inline-block;
+      margin-top: 5px;
+      color: var(--orange-yellow-crayola);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .news-link:hover { text-decoration-color: currentColor; }
+    .news-link span { display: inline; }
+
+    .news-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 18px;
+    }
+
+    .news-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 16px;
+      padding-top: 12px;
+    }
+
+    .news-count {
+      color: var(--light-gray-70);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .news-toggle {
+      min-height: 44px;
+      scroll-margin-bottom: 24px;
+      padding: 9px 14px;
+      border: 1px solid var(--jet);
+      border-radius: 8px;
+      background: var(--onyx);
+      color: var(--orange-yellow-crayola);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .news-toggle:hover { border-color: var(--orange-yellow-crayola); }
+
+    .news-link:focus-visible, .news-toggle:focus-visible {
+      outline: 2px solid var(--orange-yellow-crayola);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .news-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 16px 0;
+      }
+
+      .news-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 10px;
+      }
+
+      .news-toggle { scroll-margin-bottom: 80px; }
+    }
+
+    /* Honors and awards: all entries, with responsive year/content rows. */
+    .awards { scroll-margin-top: 24px; }
+    .awards-title { text-transform: none; }
+    .awards-card { cursor: auto; }
+
+    .award-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .award-item {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--jet);
+      text-align: left;
+    }
+
+    .award-item:first-child { padding-top: 0; }
+    .award-item:last-child { padding-bottom: 0; border-bottom: 0; }
+
+    .award-year {
+      color: var(--vegas-gold);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.75;
+      white-space: nowrap;
+    }
+
+    .award-content { min-width: 0; overflow-wrap: break-word; }
+
+    .award-name {
+      margin: 0;
+      color: var(--white-2);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .award-name strong { font-weight: 600; }
+
+    .award-context {
+      margin: 2px 0 0;
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .award-link {
+      display: inline-block;
+      margin-top: 3px;
+      color: var(--orange-yellow-crayola);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.7;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+    }
+
+    .award-link span { display: inline; }
+    .award-link:hover { text-decoration-color: currentColor; }
+    .award-link:focus-visible {
+      outline: 2px solid var(--orange-yellow-crayola);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .award-item { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 10px 0; }
+    }
+
+    /* Research projects: full titles, concise summaries, and individual details. */
+    .research-projects { scroll-margin-top: 24px; }
+    .research-projects-title { text-transform: none; }
+    .research-projects-card { cursor: auto; }
+    .research-project-list { margin: 0; padding: 0; list-style: none; }
+
+    .research-project-item {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 22px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--jet);
+      text-align: left;
+    }
+
+    .research-project-item:first-child { padding-top: 0; }
+    .research-project-item:last-child { padding-bottom: 0; border-bottom: 0; }
+
+    .research-project-period {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .research-project-year {
+      color: var(--vegas-gold);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.75;
+      white-space: nowrap;
+    }
+
+    .research-project-status {
+      padding: 2px 8px;
+      border: 1px solid var(--theme-line);
+      border-radius: 5px;
+      background: var(--theme-soft);
+      color: var(--orange-yellow-crayola);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .research-project-funding { display: inline-block; margin-bottom: 6px; }
+
+    .research-project-content { min-width: 0; overflow-wrap: break-word; }
+    .research-project-title {
+      margin: 0;
+      color: var(--white-2);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: none;
+    }
+
+    .research-project-meta {
+      margin: 4px 0 6px;
+      color: var(--light-gray-70);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .research-project-meta strong { color: var(--white-2); font-weight: 600; }
+
+    .research-project-summary, .research-project-description {
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.65;
+      font-style: normal;
+    }
+
+    .research-project-summary p { margin: 0; }
+    .research-project-summary p + p { margin-top: 4px; }
+    .research-project-summary strong, .research-project-description strong { font-weight: 600; }
+
+    .research-project-details { margin-top: 5px; }
+    .research-project-details summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      color: var(--orange-yellow-crayola);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.7;
+      list-style: none;
+      cursor: pointer;
+      scroll-margin-bottom: 86px;
+    }
+
+    .research-project-details summary::-webkit-details-marker { display: none; }
+    .research-project-details summary::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -3px;
+    }
+
+    .research-project-details[open] summary::after { transform: rotate(225deg); margin-top: 3px; }
+    .research-project-details summary:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .research-project-details summary:focus-visible {
+      outline: 2px solid var(--orange-yellow-crayola);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .research-project-details .research-project-collapse { display: none; }
+    .research-project-details[open] .research-project-expand { display: none; }
+    .research-project-details[open] .research-project-collapse { display: inline; }
+    .research-project-description { margin-top: 6px; }
+    .research-project-description p { margin: 0; }
+    .research-project-description p + p { margin-top: 6px; }
+
+    .research-projects-earlier-heading {
+      margin: 14px 0 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--jet);
+      color: var(--white-2);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: none;
+    }
+
+    @media (max-width: 600px) {
+      .research-project-item { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 6px 0; }
+      .research-project-period { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; }
+      .research-project-title { font-size: 16px; }
+      .research-projects-earlier-heading { margin-top: 12px; padding-top: 10px; }
+    }
+
+    /* Technical skills: compact category cards with individual tool labels. */
+    .technical-skills { scroll-margin-top: 84px; }
+    .technical-skills-title {
+      margin: 0 0 18px;
+      color: var(--theme-ink);
+      font-size: var(--fs-2);
+      line-height: 1.35;
+      text-align: left;
+      text-transform: none;
+    }
+    .technical-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .technical-skill-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--theme-line);
+      border-radius: 12px;
+      background: rgba(var(--theme-accent-rgb), .055);
+      text-align: left;
+    }
+    :root[data-theme="light"] .technical-skill-card { background: #f2f6fc; }
+    .technical-skill-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .technical-skill-heading ion-icon {
+      flex: 0 0 20px;
+      color: var(--theme-accent);
+      font-size: 20px;
+    }
+    .technical-skill-heading h4 {
+      min-width: 0;
+      margin: 0;
+      color: var(--theme-ink);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-transform: none;
+    }
+    .technical-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .technical-skill-tags li {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      padding: 4px 9px;
+      border: 1px solid rgba(var(--theme-accent-rgb), .16);
+      border-radius: 999px;
+      background: var(--theme-surface);
+      color: var(--theme-body);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+    .technical-skill-tags abbr { text-decoration: none; }
+    @media (min-width: 1024px) {
+      .technical-skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .technical-skills { scroll-margin-top: 20px; }
+      .technical-skills-title { margin-bottom: 14px; }
+      .technical-skills-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+      .technical-skill-card { padding: 14px; }
+      .technical-skill-heading { margin-bottom: 10px; }
+      .technical-skill-heading h4 { font-size: 13px; }
+    }
+
+    /* Professional service: distinct roles and a readable journal list. */
+    .professional-service { scroll-margin-top: 24px; }
+    .professional-service-title { text-transform: none; }
+    .professional-service-card { cursor: auto; }
+    .professional-service-list { margin: 0; padding: 0; list-style: none; }
+
+    .professional-service-item {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 20px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--jet);
+      text-align: left;
+    }
+
+    .professional-service-item:first-child { padding-top: 0; }
+    .professional-service-item:last-child { padding-bottom: 0; border-bottom: 0; }
+
+    .professional-service-category {
+      margin: 0;
+      color: var(--vegas-gold);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.65;
+      text-transform: none;
+    }
+
+    .professional-service-content { min-width: 0; overflow-wrap: break-word; }
+    .professional-service-role {
+      margin: 0;
+      color: var(--white-2);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .professional-service-role strong { font-weight: 600; }
+    .professional-service-context {
+      margin: 2px 0 0;
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .professional-service-year { display: inline; color: var(--vegas-gold); font-weight: 600; }
+
+    .professional-service-journals {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      color: var(--light-gray);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.6;
+      list-style: none;
+    }
+
+    .professional-service-journals li {
+      flex: 0 1 auto;
+      min-width: 0;
+      max-width: 100%;
+      padding: 4px 10px;
+      border: 1px solid var(--theme-line);
+      border-radius: 999px;
+      background: var(--theme-surface);
+      line-height: 1.5;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+
+    @media (max-width: 1023px) {
+      .professional-service-item { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 8px 0; }
+    }
+
+    /* Research themes and approaches: compact cards with real destinations. */
+    .research-areas { margin-bottom: 35px; }
+
+    .research-areas-title {
+      margin-bottom: 20px;
+      text-transform: none;
+      scroll-margin-top: 24px;
+    }
+
+    .research-area-columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 26px;
+    }
+
+    .research-area-group {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      gap: 12px;
+    }
+
+    .research-area-group + .research-area-group {
+      position: relative;
+      padding-top: 20px;
+      border-top: 1px solid var(--theme-line);
+    }
+
+    .research-area-group-header {
+      padding: 14px 16px;
+      border: 1px solid var(--theme-line);
+      border-radius: 10px;
+      background: var(--theme-soft);
+    }
+
+    .research-area-group-title {
+      margin: 0;
+      color: var(--theme-accent);
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-transform: none;
+    }
+
+    .research-area-group-description {
+      margin: 4px 0 0;
+      color: var(--theme-body);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .research-area-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex: 1;
+    }
+
+    .research-area-list > li { display: flex; min-width: 0; }
+
+    .research-area-card {
+      display: grid;
+      grid-template-columns: 128px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      width: 100%;
+      padding: 18px;
+      border: 1px solid var(--jet);
+      border-radius: 12px;
+      background: var(--bg-gradient-jet);
+      text-decoration: none;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .research-area-card:hover {
+      border-color: var(--orange-yellow-crayola);
+      background: rgba(var(--theme-accent-rgb), 0.04);
+    }
+
+    .research-area-card:focus-visible {
+      outline: 2px solid var(--orange-yellow-crayola);
+      outline-offset: 3px;
+    }
+
+    .research-area-visual {
+      position: relative;
+      overflow: hidden;
+      width: 128px;
+      height: 128px;
+      padding: 0;
+      border: 0;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .research-area-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .research-area-cta:focus-visible {
+      outline: 2px solid var(--orange-yellow-crayola);
+      outline-offset: 3px;
+    }
+
+    .research-area-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .research-area-card-title {
+      margin: 0;
+      color: var(--white-2);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-transform: none;
+    }
+
+    .research-area-term { display: inline; white-space: nowrap; }
+
+    .research-area-description {
+      margin: 0;
+      color: var(--light-gray);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .research-area-cta {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      gap: 6px;
+      margin-top: 2px;
+      color: var(--orange-yellow-crayola);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .research-area-card:hover .research-area-cta {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (min-width: 1024px) {
+      .research-area-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .research-area-group + .research-area-group { padding-top: 0; border-top: 0; }
+      .research-area-group + .research-area-group::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -10px;
+        width: 1px;
+        background: var(--theme-line);
+      }
+      .research-area-list { grid-auto-rows: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .research-area-group-header { padding: 12px 14px; }
+      .research-area-group-title { font-size: 20px; }
+      .research-area-card { grid-template-columns: 104px minmax(0, 1fr); gap: 10px 12px; padding: 16px; }
+      .research-area-visual { width: 104px; height: 104px; }
+      .research-area-content { display: contents; }
+      .research-area-card-title { grid-column: 2; align-self: center; }
+      .research-area-description, .research-area-cta { grid-column: 1 / -1; }
+      .research-area-cta { justify-self: start; }
+    }
+
+    @media (max-width: 380px) {
+      .research-area-card { grid-template-columns: 84px minmax(0, 1fr); }
+      .research-area-visual { width: 84px; height: 84px; }
+    }
   </style>
+  <script src="./assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+<meta name="description" content="Fujiang Ji is a postdoctoral researcher at the University of Arizona studying imaging spectroscopy, plant functional traits, forest fragmentation, and dryland biocrusts.">
+<link rel="stylesheet" href="./assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About | Fujiang Ji">
+<meta property="og:description" content="Fujiang Ji is a postdoctoral researcher at the University of Arizona studying imaging spectroscopy, plant functional traits, forest fragmentation, and dryland biocrusts.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About | Fujiang Ji">
+<meta name="twitter:description" content="Fujiang Ji is a postdoctoral researcher at the University of Arizona studying imaging spectroscopy, plant functional traits, forest fragmentation, and dryland biocrusts.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
 <body>
@@ -141,13 +913,15 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="./assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -173,7 +947,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -188,7 +963,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -232,7 +1007,7 @@
           </li>
 
           <li class="social-item">
-            <a href="assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -270,37 +1045,43 @@
         - #NAVBAR
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='./pages/research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link"
-              onclick="window.location.href='./pages/publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='./pages/tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='./pages/blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='./pages/contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link  active" data-nav-link>About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('./pages/research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link"
+                onclick="window.location.href=window.SiteLanguage.href('./pages/publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('./pages/tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('./pages/blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('./pages/contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+          </div>
+        </nav>
+      </div>
 
 
       <!--
@@ -311,7 +1092,8 @@
 
         <section class="videobox">
           <div class="text-overlay">
-            <h2 style="text-align: center;">Welcome to Fujiang Ji's Webpage</h2>
+            <p class="video-welcome">Welcome to Fujiang Ji's Webpage</p>
+            <h2>Observing ecosystem function from field to space.</h2>
           </div>
           <video class="video" style="max-width:100%;overflow:hidden; display: inline-block; vertical-align: middle;"
             src="./assets/images/about_page/Startpage_video.mov" autoplay="autoplay" loop="loop" muted
@@ -324,646 +1106,816 @@
         <section class="about-text">
           <ul class="skills-list content-card">
             <p>
-              I'm Fujiang Ji, currently a postdoctoral associate at the School of Natural Resources and the
-              Environment, University of Arizona, working closely with
+              I'm Fujiang Ji, a postdoctoral associate at the University of Arizona's School of Natural Resources
+              and the Environment, working with
               <a href="https://snre.arizona.edu/william-smith" target="_blank"
                 style="color: var(--orange-yellow-crayola); display: inline;">Prof. William Smith</a>
-              on NASA's Earth Surface Mineral Dust Source Investigation (EMIT) project. This work leverages
-              hyperspectral observations from the EMIT platform and complementary multi-scale remote sensing
-              data to map dryland plant and soil community composition and functional diversity across the
-              Colorado Plateau and global drylands, with a particular emphasis on developing novel maps of
-              biological soil crust cover, community composition, and function.
+              on NASA's EMIT project. I use hyperspectral and multiscale remote sensing to study plant and soil
+              community composition and functional diversity across the Colorado Plateau and global drylands,
+              with a particular focus on biological soil crusts.
             </p>
 
             <p>
-              Before joining the University of Arizona, I received my Ph.D. from the Department of Forest and
-              Wildlife Ecology, University of Wisconsin-Madison, working with
+              I received my Ph.D. from the University of Wisconsin–Madison, where I worked with
               <a href="https://globalchange.cals.wisc.edu/staff/chen-min/" target="_blank"
-                style="color: var(--orange-yellow-crayola); display: inline;">Prof. Min Chen</a>.
-              My doctoral research focused on plant functional
-              trait estimation using hyperspectral imaging spectroscopy at both leaf and canopy scales across
-              multiple ecological functional areas, as well as multi-source remote sensing data fusion
-              (spaceborne, airborne hyperspectral and multispectral data) using deep learning techniques.
+                style="color: var(--orange-yellow-crayola); display: inline;">Prof. Min Chen</a>
+              on plant functional trait estimation at leaf and canopy scales and remote sensing data fusion
+              using deep learning. I previously earned a master's degree in Cartography and Geographic Information
+              System from the Aerospace Information Research Institute, Chinese Academy of Sciences, and a
+              bachelor's degree in Remote Sensing Science and Technology from Chengdu University of Technology.
             </p>
-
-            <p>
-              I earned a Master's degree in Cartography and Geographic Information System from
-              Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing, China. My master's
-              research integrated process-based modeling, remote sensing, and data assimilation to estimate crop
-              yield, soil available nutrients, etc. I received my bachelor's degree in Remote Sensing Science and
-              Technology from Chengdu University of Technology, Chengdu, China.
-            </p>
-            <figure class="research-figure">
-              <div class="research-figure-img-wrap">
-                <img src="assets/images/about_page/Research_overview.png"
-                  alt="Research overview — leaf and canopy functional trait estimation using hyperspectral imaging spectroscopy">
-              </div>
+            <figure class="research-figure" id="research-overview">
               <figcaption class="research-caption">
-                <strong>Research Overview</strong>
-                Integrating spaceborne / airborne hyperspectral observations, radiative transfer modeling, and machine
-                learning
-                for multi-scale plant functional trait estimation.
+                <h3 class="h3 research-overview-title">What is my research about?</h3>
+                <p><strong>How do climate change and human disturbance reshape ecosystem function?</strong></p>
+                <ul class="research-questions">
+                  <li>
+                    <strong>Plant functional traits and diversity</strong>
+                    <p>What drives variation in plant traits across space and time, and how does it shape
+                      ecosystem function?</p>
+                  </li>
+                  <li>
+                    <strong>Forest fragmentation and functional integrity</strong>
+                    <p>How does forest fragmentation alter plant traits, functional diversity, and ecosystem function?</p>
+                  </li>
+                  <li>
+                    <strong>Dryland biocrusts and climate feedbacks</strong>
+                    <p>How do climate change and disturbance reshape biocrust communities, and how do these changes
+                      feed back to climate?</p>
+                  </li>
+                </ul>
               </figcaption>
+              <div class="research-figure-img-wrap">
+                <img class="research-overview-light" src="assets/images/about_page/Research_overview_light.svg?v=20261006-research6"
+                  width="1400" height="850" loading="lazy"
+                  alt="Research overview: hyperspectral remote sensing connects plant functional traits, forest fragmentation, and biological soil crusts with ecosystem function and climate feedbacks. Methods include data fusion, deep learning, and multiscale imaging spectroscopy using EMIT, PRISMA, EnMAP, and NEON AOP.">
+                <img class="research-overview-dark" src="assets/images/about_page/Research_overview_dark.svg?v=20261006-research6"
+                  width="1400" height="850" loading="lazy"
+                  alt="Research overview: hyperspectral remote sensing connects plant functional traits, forest fragmentation, and biological soil crusts with ecosystem function and climate feedbacks. Methods include data fusion, deep learning, and multiscale imaging spectroscopy using EMIT, PRISMA, EnMAP, and NEON AOP.">
+              </div>
             </figure>
           </ul>
         </section>
 
-        <!--
-          - Education
-        -->
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
+        <section class="academic-history content-card" id="academic-history" aria-label="Experience and education">
+          <div class="academic-column" aria-labelledby="experience-heading">
+            <h3 class="h3 academic-heading" id="experience-heading">Experience</h3>
+            <ol class="academic-list">
+              <li class="academic-entry">
+                <span class="academic-logo" data-institution="arizona" role="img" aria-label="University of Arizona logo">
+                  <img class="logo-light" src="assets/images/about_page/UA_academic.png" alt="" width="64" height="64" loading="lazy">
+                  <img class="logo-dark" src="assets/images/about_page/UA_academic_reverse.png" alt="" width="64" height="64" loading="lazy">
+                </span>
+                <div class="academic-detail">
+                  <h4 class="academic-school">University of Arizona</h4>
+                  <p>School of Natural Resources and the Environment</p>
+                  <p class="academic-role">Postdoctoral Research Associate</p>
+                  <p class="academic-meta"><time>Jan 2026 — Present</time><span class="academic-location">Tucson, AZ, USA</span></p>
+                </div>
+              </li>
+              <li class="academic-entry">
+                <img class="academic-logo" data-institution="wisconsin" src="assets/images/about_page/UW_crest.svg" alt="University of Wisconsin–Madison logo" width="64" height="64" loading="lazy">
+                <div class="academic-detail">
+                  <h4 class="academic-school">University of Wisconsin–Madison</h4>
+                  <p>Department of Forest and Wildlife Ecology</p>
+                  <p class="academic-role">Research Associate (unpaid appointment)</p>
+                  <p class="academic-meta"><time>Feb 2026 — Present</time><span class="academic-location">Madison, WI, USA</span></p>
+                </div>
+              </li>
+              <li class="academic-entry">
+                <img class="academic-logo" data-institution="wisconsin" src="assets/images/about_page/UW_crest.svg" alt="University of Wisconsin–Madison logo" width="64" height="64" loading="lazy">
+                <div class="academic-detail">
+                  <h4 class="academic-school">University of Wisconsin–Madison</h4>
+                  <p>Department of Forest and Wildlife Ecology</p>
+                  <p class="academic-role">Research Assistant</p>
+                  <p class="academic-meta"><time>Sep 2021 — Dec 2025</time><span class="academic-location">Madison, WI, USA</span></p>
+                </div>
+              </li>
+            </ol>
           </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">University of Wisconsin-Madison, WI, U.S.</h4>
-              <span>2021 — 2025</span>
-              <p class="timeline-text">
-                <i>&#8226; Forestry, Ph.D.</i>
-              </p>
-              <p class="timeline-text">
-                <i>&#8226; Department of Forest and Wildlife Ecology.</i>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Chinese Academy of Sciences, Beijing, China.</h4>
-              <span>2018 — 2021</span>
-              <p class="timeline-text">
-                <i>&#8226; Cartography and Geographic Information System, MSc.</i>
-              </p>
-              <p class="timeline-text">
-                <i>&#8226; Aerospace Information Research Institute.</i>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Chengdu University of Technology, Chengdu, China</h4>
-              <span>2014 — 2018</span>
-              <p class="timeline-text">
-                <i>&#8226; Remote sensing science and technology, BEng.</i>
-              </p>
-              <p class="timeline-text">
-                <i>&#8226; College of Earth Science</i>
-              </p>
-            </li>
-
-          </ol>
-        </section>
-
-        <!--
-          - Academic Appointments
-        -->
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Academic Appointments</h3>
+          <div class="academic-column" aria-labelledby="education-heading">
+            <h3 class="h3 academic-heading" id="education-heading">Education</h3>
+            <ol class="academic-list">
+              <li class="academic-entry">
+                <img class="academic-logo" data-institution="wisconsin" src="assets/images/about_page/UW_crest.svg" alt="University of Wisconsin–Madison logo" width="64" height="64" loading="lazy">
+                <div class="academic-detail">
+                  <h4 class="academic-school">University of Wisconsin–Madison</h4>
+                  <p>Department of Forest and Wildlife Ecology</p>
+                  <p class="academic-role">Ph.D. in Forestry</p>
+                  <p class="academic-meta"><time>2021 — 2025</time><span class="academic-location">WI, U.S.</span></p>
+                </div>
+              </li>
+              <li class="academic-entry">
+                <img class="academic-logo" data-institution="cas" src="assets/images/about_page/AIR_logo.png" alt="Chinese Academy of Sciences logo" width="64" height="64" loading="lazy">
+                <div class="academic-detail">
+                  <h4 class="academic-school">Chinese Academy of Sciences</h4>
+                  <p>Aerospace Information Research Institute</p>
+                  <p class="academic-role">M.Sc. in Cartography and Geographic Information System</p>
+                  <p class="academic-meta"><time>2018 — 2021</time><span class="academic-location">Beijing, China</span></p>
+                </div>
+              </li>
+              <li class="academic-entry">
+                <img class="academic-logo" data-institution="cdut" src="assets/images/about_page/CDUT_logo.png" alt="Chengdu University of Technology logo" width="64" height="64" loading="lazy">
+                <div class="academic-detail">
+                  <h4 class="academic-school">Chengdu University of Technology</h4>
+                  <p>College of Earth Science</p>
+                  <p class="academic-role">B.Eng. in Remote Sensing Science and Technology</p>
+                  <p class="academic-meta"><time>2014 — 2018</time><span class="academic-location">Chengdu, China</span></p>
+                </div>
+              </li>
+            </ol>
           </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Postdoctoral Research Associate</h4>
-              <span>Jan 2026 — Present</span>
-              <p class="timeline-text">
-                <i>&#8226; School of Natural Resources and the Environment, University of Arizona, Tucson, AZ, USA.</i>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Research Associate</h4>
-              <span>Feb 2026 — Present</span>
-              <p class="timeline-text">
-                <i>&#8226; Department of Forest and Wildlife Ecology, University of Wisconsin-Madison, WI, USA.</i>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Research Assistant</h4>
-              <span>Sep 2021 — Dec 2025</span>
-              <p class="timeline-text">
-                <i>&#8226; Department of Forest and Wildlife Ecology, University of Wisconsin-Madison, WI, USA.</i>
-              </p>
-            </li>
-
-          </ol>
         </section>
 
         <!--
           - News
         -->
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">News</h3>
+        <section class="testimonials news-section" aria-labelledby="news-milestones">
+          <h3 class="h3 testimonials-title" id="news-milestones" style="text-transform: none;">News &amp; milestones</h3>
 
-          <ul class="skills-list content-card" style="color: var(--light-gray);font-size: 14px; line-height: 1.5;">
-            <ol class="order-list" style="font-size: 14px;">
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Jun 9, 2026:</strong> Fujiang received the Postdoctoral Research
-                Development Grant from the University of Arizona Postdoctoral Affairs and was named a Sursum
-                Fellow.&nbsp;<a
-                  href="https://postdoc.arizona.edu/news/congratulations-2026-postdoctoral-development-grant-awardees"
-                  target="_blank" class="news-paper-btn">↗</a>
+          <div class="content-card news-card">
+            <ol class="news-list" id="news-list">
+              <li class="news-item news-item--featured">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-10-05">Oct 5, 2026</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>Nature Communications</em> reveals a <strong>24 million km decline in global forest edge length</strong> from 2000–2020, with episodic changes closely tracking policy-driven land management.</p>
+                  <a class="news-link" href="https://doi.org/10.1038/s41467-026-78347-6" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Apr 23, 2026:</strong> Fujiang received the Annual Best Ph.D.
-                Dissertation Award in Forestry Ecology at the University of Wisconsin-Madison.
+              <li class="news-item news-item--featured">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-09-12">Sep 12, 2026</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>Communications Earth &amp; Environment</em> provides experimental evidence that <strong>biocrust degradation can amplify climate warming</strong> across global drylands.</p>
+                  <a class="news-link" href="https://doi.org/10.1038/s43247-026-03874-5" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Apr 16, 2026:</strong> Honored to give an invited talk at the
-                NASA ARID seminar on "Understanding the Dynamics of Plant Functional Traits Across Spatial, Temporal,
-                and Biological Scales Using Multi-Source Hyperspectral Remote Sensing Observations."
+              <li class="news-item news-item--featured">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-06-09">Jun 9, 2026</time>
+                  <span class="news-type">Award</span>
+                </div>
+                <div class="news-content">
+                  <p>Received the University of Arizona’s <strong>Postdoctoral Research Development Grant</strong> and was named a <strong>Sursum Fellow</strong>.</p>
+                  <a class="news-link" href="https://postdoc.arizona.edu/news/congratulations-2026-postdoctoral-development-grant-awardees" target="_blank" rel="noopener noreferrer">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Mar 25, 2026:</strong> Our new paper is published in
-                <em>Remote Sensing of Environment</em>! This study develops a deep learning fusion framework that
-                reconstructs high spatial resolution hyperspectral imagery by integrating EMIT and PlanetScope data,
-                validated against AVIRIS-3 and SHIFT observations across heterogeneous landscapes.&nbsp;<a
-                  href="https://doi.org/10.1016/j.rse.2026.115385" target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-04-23">Apr 23, 2026</time>
+                  <span class="news-type">Award</span>
+                </div>
+                <div class="news-content">
+                  <p>Received the <strong>Annual Best Ph.D. Dissertation Award in Forestry Ecology</strong> at the University of Wisconsin–Madison.</p>
+                  <a class="news-link" href="https://globalchange.cals.wisc.edu/2026/06/19/congratulations-to-fujiang-on-receiving-the-departments-best-dissertation-award/" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2026 Best Ph.D. Dissertation Award in Forestry Ecology">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Dec 20, 2025:</strong> Presented our latest work at the
-                <em>AGU Annual Meeting 2025</em> in New Orleans, LA.&nbsp;<a
-                  href="https://globalchange.cals.wisc.edu/2025/12/26/agu-2025/" target="_blank"
-                  class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-04-16">Apr 16, 2026</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Gave an <strong>invited NASA ARID seminar</strong> on plant functional trait dynamics across spatial, temporal, and biological scales using hyperspectral observations.</p>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Nov 20, 2025:</strong> Excited to share our new study published in
-                <em>Remote Sensing of Environment</em>, led by Fujiang, which integrates spaceborne PRISMA and airborne
-                NEON AOP hyperspectral data for tracking the seasonal variability of plant traits across forest types
-                and ecoregions.&nbsp;<a href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank"
-                  class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-03-25">Mar 25, 2026</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>Remote Sensing of Environment</em> uses deep learning to combine EMIT and PlanetScope observations and <strong>reconstruct high-resolution hyperspectral imagery</strong>.</p>
+                  <a class="news-link" href="https://doi.org/10.1016/j.rse.2026.115385" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Nov 4, 2025:</strong> Fujiang has successfully defended his Ph.D.
-                dissertation, focused on plant functional trait estimation across multiple scales using hyperspectral
-                observations.&nbsp;<a
-                  href="https://globalchange.cals.wisc.edu/2025/11/04/congratulations-to-dr-fujiang-ji-on-his-successful-phd-defense/"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2026-01-10">Jan 10, 2026</time>
+                  <span class="news-type">Career</span>
+                </div>
+                <div class="news-content">
+                  <p>Officially joined the <strong>Ecosystem Climate Dynamics (ECD) Lab</strong>, led by Prof. William Smith at the University of Arizona, as a <strong>postdoctoral associate</strong>.</p>
+                  <a class="news-link" href="https://sites.arizona.edu/ecd-lab/" target="_blank" rel="noopener noreferrer">Lab website <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">July 23, 2025:</strong> Fujiang gave a talk at NASA's EMIT science
-                meeting titled "Hyperspectral reconstruction from spaceborne and airborne observations to map plant
-                functional traits in fine detail".
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-12-20">Dec 20, 2025</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Presented our latest research at the <strong>AGU Annual Meeting 2025</strong> in New Orleans.</p>
+                  <div class="news-links">
+                    <a class="news-link" href="./pages/publications.html#poster-agu-2025-hyperspectral-reconstruction" target="_blank" rel="noopener noreferrer">Poster: hyperspectral reconstruction <span aria-hidden="true">↗</span></a>
+                    <a class="news-link" href="./pages/publications.html#poster-agu-2025-fused-imagery-traits" target="_blank" rel="noopener noreferrer">Poster: plant traits <span aria-hidden="true">↗</span></a>
+                    <a class="news-link" href="https://globalchange.cals.wisc.edu/2025/12/26/agu-2025/" target="_blank" rel="noopener noreferrer">Details <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">May 20, 2025:</strong> Excited to share our new study published in
-                <em>Remote Sensing of Environment</em>, led by Fujiang, which Reveals how transfer learning enhances
-                leaf trait prediction across ecosystems.&nbsp;<a href="https://doi.org/10.1016/j.rse.2025.114818"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-11-20">Nov 20, 2025</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>I led a study in <em>Remote Sensing of Environment</em> tracking <strong>seasonal plant trait variability</strong> across forest types and ecoregions using satellite and airborne spectroscopy.</p>
+                  <a class="news-link" href="https://doi.org/10.1016/j.rse.2025.115149" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Apr 11, 2025:</strong> Fujiang has been awarded the department’s
-                Joon Lee Award in recognition of his outstanding academic performance.&nbsp;<a
-                  href="https://globalchange.cals.wisc.edu/2025/04/11/fujiang-wins-the-joon-lee-award/"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-11-04">Nov 4, 2025</time>
+                  <span class="news-type">Career</span>
+                </div>
+                <div class="news-content">
+                  <p>Successfully <strong>defended my Ph.D. dissertation</strong> on estimating plant functional traits across multiple scales using hyperspectral observations.</p>
+                  <a class="news-link" href="https://globalchange.cals.wisc.edu/2025/11/04/congratulations-to-dr-fujiang-ji-on-his-successful-phd-defense/" target="_blank" rel="noopener noreferrer">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Dec 11, 2024:</strong> Presented our work about tracking seasonal
-                variations of plant traits using multi-source hyperspectral data across NEON sites on AGU 2024!&nbsp;<a
-                  href="https://globalchange.cals.wisc.edu/2024/12/24/agu24/" target="_blank"
-                  class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-07-23">Jul 23, 2025</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Gave a talk at <strong>NASA’s EMIT science meeting</strong> on hyperspectral reconstruction for mapping plant functional traits in fine detail.</p>
+                </div>
               </li>
-
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">May 22, 2024:</strong> Led by Haoran, our new study published in
-                <em>Remote Sensing of Environment</em>, which reveals near-infrared reflectance of vegetation (NIRvP) in
-                the “hotspot” direction offers a stronger correlation with GPP than nadir observations.&nbsp;<a
-                  href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-05-20">May 20, 2025</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>I led a study in <em>Remote Sensing of Environment</em> showing how <strong>transfer learning improves leaf trait prediction</strong> across ecosystems.</p>
+                  <a class="news-link" href="https://doi.org/10.1016/j.rse.2025.114818" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Oct 19, 2024:</strong> Our paper published in
-                <em>Earth's Future</em> on projecting large fires in the western US using a hybrid physical-ML model
-                (AttentionFire v2.0). Led by Fa.&nbsp;<a href="https://doi.org/10.1029/2024EF004588" target="_blank"
-                  class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-04-11">Apr 11, 2025</time>
+                  <span class="news-type">Award</span>
+                </div>
+                <div class="news-content">
+                  <p>Received the <strong>Joon Lee Award</strong> from the University of Wisconsin–Madison’s Department of Forest and Wildlife Ecology for outstanding academic performance.</p>
+                  <a class="news-link" href="https://globalchange.cals.wisc.edu/2025/04/11/fujiang-wins-the-joon-lee-award/" target="_blank" rel="noopener noreferrer">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Sep 11, 2024:</strong> Participated in the Three Minute Thesis
-                competition at the University of Wisconsin-Madison, titled "Eyes in the sky: Decoding plant functional
-                traits with imaging spectroscopy".
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-12-11">Dec 11, 2024</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Presented our research on seasonal plant trait variation across NEON sites at <strong>AGU 2024</strong>.</p>
+                  <div class="news-links">
+                    <a class="news-link" href="./pages/publications.html#poster-agu-2024-prisma-seasonal-traits" target="_blank" rel="noopener noreferrer" aria-label="View AGU 2024 poster: Seasonal traits with PRISMA">View poster <span aria-hidden="true">↗</span></a>
+                    <a class="news-link" href="https://globalchange.cals.wisc.edu/2024/12/24/agu24/" target="_blank" rel="noopener noreferrer">Details <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">May 06, 2024:</strong> Fujiang led a publication in
-                <em>New Phytologist</em> on the transferability of PLSR models for leaf trait estimation: lessons from a
-                comprehensive analysis with a novel global dataset.&nbsp;<a href="https://doi.org/10.1111/nph.19807"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-10-19">Oct 19, 2024</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>Earth’s Future</em>, led by Fa, projects <strong>large fires in the western US</strong> using the hybrid physical–machine learning model AttentionFire v2.0.</p>
+                  <a class="news-link" href="https://doi.org/10.1029/2024EF004588" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Apr 30, 2024:</strong> Fujiang has been awarded the department’s
-                annual Thomas O’Brien Award.
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-09-11">Sep 11, 2024</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Participated in UW–Madison’s <strong>Three Minute Thesis competition</strong> with “Eyes in the sky: Decoding plant functional traits with imaging spectroscopy.”</p>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Feb 25, 2024:</strong> Presented our work on Bryson Scholarship
-                Poster Session at UW-Madison.
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-05-22">May 22, 2024</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>Remote Sensing of Environment</em>, led by Haoran, shows that <strong>hotspot NIRvP observations</strong> correlate more strongly with gross primary productivity than nadir observations.</p>
+                  <a class="news-link" href="https://doi.org/10.1016/j.rse.2024.114492" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Sep 14, 2023:</strong> Our paper “Structural complexity biases
-                vegetation greenness measures” has been published in <em>Nature Ecology &amp; Evolution</em>.&nbsp;<a
-                  href="https://rdcu.be/dl91h" target="_blank" class="news-paper-btn">↗</a>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-05-06">May 6, 2024</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>I led a <em>New Phytologist</em> study examining the <strong>transferability of leaf trait prediction models</strong> using a comprehensive global dataset.</p>
+                  <a class="news-link" href="https://doi.org/10.1111/nph.19807" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Dec 15, 2022:</strong> Presented our work on AGU 2022 in Chicago!
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-04-30">Apr 30, 2024</time>
+                  <span class="news-type">Award</span>
+                </div>
+                <div class="news-content">
+                  <p>Received the annual <strong>Thomas O’Brien Award</strong> from the University of Wisconsin–Madison’s Department of Forest and Wildlife Ecology.</p>
+                  <a class="news-link" href="https://globalchange.cals.wisc.edu/2024/04/30/congratulations-to-fujiang-who-received-the-departments-annual-thomas-obrien-award/" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2024 Annual Thomas O'Brien Award">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                  style="color: var(--vegas-gold);">Sep 01, 2021:</strong> Excited to join the Global Change Research
-                Laboratory in the Department of Forest & Wildlife Ecology at the University of Wisconsin–Madison, led by
-                Prof. Min Chen.
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2024-02-25">Feb 25, 2024</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Presented our research at the <strong>Bryson Scholarship Poster Session</strong> at UW–Madison.</p>
+                  <a class="news-link" href="./pages/publications.html#poster-bryson-2024-plsr-transferability" target="_blank" rel="noopener noreferrer" aria-label="View Bryson 2024 poster: PLSR model transferability">View poster <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <div id="foldable-content" style="display: none;">
-                <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                    style="color: var(--vegas-gold);">May 20, 2021:</strong> Fujiang successfully defending his master
-                  thesis on crop yield estimation based on crop growth model with remote sensing data assimilation
-                  algorithm.
-                </li>
-
-                <li style="margin-bottom: 5px; padding-left: 7em; text-indent: -7em;"><strong
-                    style="color: var(--vegas-gold);">Jan 29, 2021:</strong> Our new paper "Crop Yield Estimation at
-                  Field Scales by Assimilating Time Series of Sentinel-2 Data Into a Modified CASA-WOFOST Coupled
-                  Model" has been published in <em>IEEE Transactions on Geoscience and Remote Sensing</em>.&nbsp;<a
-                    href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" class="news-paper-btn">↗</a>
-                </li>
-              </div>
-
-
-              <!-- Toggle button -->
-              <button onclick="toggleFoldable(this)"
-                style="margin-top: 10px; background: none; border: none; color: var(--orange-yellow-crayola); cursor: pointer; font-size: 14px;"
-                id="toggle-btn">
-                Show more
-              </button>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2023-09-14">Sep 14, 2023</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper “<strong>Structural complexity biases vegetation greenness measures</strong>” was published in <em>Nature Ecology &amp; Evolution</em>.</p>
+                  <a class="news-link" href="https://rdcu.be/dl91h" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
+              </li>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2022-12-15">Dec 15, 2022</time>
+                  <span class="news-type">Talk</span>
+                </div>
+                <div class="news-content">
+                  <p>Presented our research at <strong>AGU 2022</strong> in Chicago.</p>
+                  <a class="news-link" href="./pages/publications.html#poster-agu-2022-physics-guided-transfer-learning" target="_blank" rel="noopener noreferrer" aria-label="View AGU 2022 poster: Physics-guided transfer learning">View poster <span aria-hidden="true">↗</span></a>
+                </div>
+              </li>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2021-09-01">Sep 1, 2021</time>
+                  <span class="news-type">Career</span>
+                </div>
+                <div class="news-content">
+                  <p>Joined Prof. Min Chen’s <strong>Global Change Research Laboratory</strong> in the Department of Forest and Wildlife Ecology at the University of Wisconsin–Madison.</p>
+                </div>
+              </li>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2021-05-20">May 20, 2021</time>
+                  <span class="news-type">Career</span>
+                </div>
+                <div class="news-content">
+                  <p>Successfully <strong>defended my master’s thesis</strong> on estimating crop yield by integrating crop growth models with remote sensing data assimilation.</p>
+                </div>
+              </li>
+              <li class="news-item">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2021-01-29">Jan 29, 2021</time>
+                  <span class="news-type">Publication</span>
+                </div>
+                <div class="news-content">
+                  <p>Our paper in <em>IEEE Transactions on Geoscience and Remote Sensing</em> estimates <strong>field-scale crop yield</strong> by assimilating Sentinel-2 observations into a coupled crop model.</p>
+                  <a class="news-link" href="https://doi.org/10.1109/TGRS.2020.3047102" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+                </div>
+              </li>
             </ol>
-          </ul>
-
+            <div class="news-footer">
+              <p class="news-count" id="news-count" role="status" aria-live="polite">Showing 25 of 25</p>
+              <button class="news-toggle" id="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" hidden>Show more</button>
+            </div>
+          </div>
         </section>
 
         <!--
           - Research interests
         -->
 
-        <section class="service">
-
-          <h3 class="h3 service-title">Research Interests</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/plant_traits.png
-                " alt="plant traits" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Leaf functional traits</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Predicting leaf traits by integrating hyperspectral RS and various modeling methods
-                  at canopy and leaf scales.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/remote_sensing.png" alt="remote sensing" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">hyperspectral RS</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Leaf spectroscopy: ASD, SVC, PSR, etc. Imaging spectroscopy: PRISMA, SBG, EnMap, DESIS, AVIRIS, etc.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/RTM.png" alt="RTM" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Radiative transfer modeling</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  PROSPECT, PROSAIL, Leaf-Canopy SIP models,etc.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/functional_diversity.png" alt="Functional diversity" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Forest Functional Diversity</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Forest functional diversity (richness, divergence and evenness).
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/CLM.png" alt="CLM" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Land surface model</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Learn land surface processes and the interactions between the land surface and the atmosphere.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/ML.jpeg" alt="ML" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Machine Learning</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Utilize advanced ML algorithms to estimate leaf traits, predict wildfire, etc.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/Crop_yield.png" alt="Crop yield" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Crop yield estimation</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  Regional scales crop yield estimation based on crop growth models and data assimilation methods.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/about_page/WOFOST.jpeg" alt="WOFOST" width="130">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title" style="font-size: 16px;">Crop growth modeling</h4>
-
-                <p class="service-item-text" style="font-size: 13px;">
-                  integrate various factors (weather, soil, etc) to predict crop growth, yield, and response to
-                  environmental factors.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
+        <section class="research-areas" aria-labelledby="research-areas">
+          <h3 class="h3 research-areas-title" id="research-areas">Research themes &amp; approaches</h3>
+          <div class="research-area-columns">
+            <section class="research-area-group" aria-labelledby="research-themes">
+              <header class="research-area-group-header">
+                <h4 class="research-area-group-title" id="research-themes">Research themes</h4>
+                <p class="research-area-group-description">The questions I investigate</p>
+              </header>
+              <ul class="research-area-list">
+                <li>
+                  <div class="research-area-card" aria-labelledby="research-area-traits">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/refined/plant-traits.jpg" alt="A diverse mixed forest canopy with green, gold, orange and red autumn foliage." loading="lazy" decoding="async" width="384" height="384">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-traits">Plant Functional Traits &amp; Diversity</h5>
+                      <p class="research-area-description">Map how plant traits and functional diversity vary across seasons, ecosystems, and spatial scales.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#dir-1">Explore research <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="research-area-card" aria-labelledby="research-area-fragmentation">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/refined/forest-fragmentation.jpg" alt="An overhead forest view with a curving road separating dense tree canopies." loading="lazy" decoding="async" width="384" height="384">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-fragmentation">Forest Fragmentation &amp; Ecosystem Function</h5>
+                      <p class="research-area-description">Investigate how forest edges and fragmentation reshape plant traits, functional diversity, and ecosystem function.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#dir-2">Explore research <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="research-area-card" aria-labelledby="research-area-biocrusts">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/refined/biocrust-feedbacks.jpg" alt="Biological soil crust in a dryland landscape with sparse shrubs and red sandstone formations." loading="lazy" decoding="async" width="384" height="384">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-biocrusts">Dryland Biocrusts &amp; Climate Feedbacks</h5>
+                      <p class="research-area-description">Map biocrust cover, composition, and function to understand dryland responses to climate change and disturbance.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#dir-3">Explore research <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="research-area-group" aria-labelledby="research-approaches">
+              <header class="research-area-group-header">
+                <h4 class="research-area-group-title" id="research-approaches">Approaches</h4>
+                <p class="research-area-group-description">The tools and methods I use</p>
+              </header>
+              <ul class="research-area-list">
+                <li>
+                  <div class="research-area-card research-area-card--method" aria-labelledby="research-area-spectroscopy">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/representative/imaging-spectroscopy.jpg" alt="An Earth-observing satellite above forest and dryland terrain." loading="lazy" decoding="async" width="640" height="640">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-spectroscopy">Imaging Spectroscopy &amp; Multiscale Remote Sensing</h5>
+                      <p class="research-area-description">Connect field, drone, airborne, and satellite spectroscopy to observe plant and soil communities across scales.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#paper-prisma">View study <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="research-area-card research-area-card--method" aria-labelledby="research-area-fusion">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/refined/data-fusion.jpg" alt="Four aligned geospatial layers showing false-color imagery, grayscale imagery, forest structure and terrain." loading="lazy" decoding="async" width="384" height="384">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-fusion">Data Fusion &amp; Machine Learning</h5>
+                      <p class="research-area-description">Combine hyperspectral and high-resolution imagery with machine learning to reconstruct spectra and predict ecological traits.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#paper-fusion">View study <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="research-area-card research-area-card--method" aria-labelledby="research-area-modeling">
+                    <div class="research-area-visual">
+                      <img class="research-area-photo" src="./assets/images/research_areas/refined/process-modeling.jpg" alt="Forest canopy and roots with climate forcing, radiative transfer, and carbon, water and energy processes." loading="lazy" decoding="async" width="384" height="384">
+                    </div>
+                    <div class="research-area-content">
+                      <h5 class="research-area-card-title" id="research-area-modeling">Radiative Transfer &amp; <span class="research-area-term">Process-based</span> Modeling</h5>
+                      <p class="research-area-description">Integrate radiative transfer, process-based models, and data assimilation to estimate plant traits and crop productivity.</p>
+                      <a class="research-area-cta" href="./pages/research.html?v=20261007-researchlinks51#paper-1">View study <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
         </section>
 
         <!--
           - Honors and Awards
         -->
 
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Honors and Awards</h3>
+        <section class="testimonials awards" id="honors-awards" aria-labelledby="honors-awards-heading">
+          <h3 class="h3 testimonials-title awards-title" id="honors-awards-heading">Honors &amp; awards</h3>
 
-          <ul class="skills-list content-card" style="color: var(--light-gray);font-size: 14px; line-height: 1.5;">
-            <ol class="order-list" style="font-size: 14px;">
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2026:</strong> Postdoctoral Research Development Grant (University
-                of Arizona Sursum Fellows).&nbsp;<a
-                  href="https://postdoc.arizona.edu/news/congratulations-2026-postdoctoral-development-grant-awardees"
-                  target="_blank" class="news-paper-btn">↗</a>
+          <div class="content-card awards-card">
+            <ul class="award-list">
+              <li class="award-item">
+                <span class="award-year">2026</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Postdoctoral Research Development Grant</strong></p>
+                  <p class="award-context">University of Arizona · Sursum Fellows</p>
+                  <a class="award-link" href="https://postdoc.arizona.edu/news/congratulations-2026-postdoctoral-development-grant-awardees" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2026 Postdoctoral Research Development Grant">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2026:</strong> Best Ph.D. Dissertation Award in Forestry Ecology,
-                University of Wisconsin-Madison.
+              <li class="award-item">
+                <span class="award-year">2026</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Best Ph.D. Dissertation Award in Forestry Ecology</strong></p>
+                  <p class="award-context">University of Wisconsin-Madison</p>
+                  <a class="award-link" href="https://globalchange.cals.wisc.edu/2026/06/19/congratulations-to-fujiang-on-receiving-the-departments-best-dissertation-award/" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2026 Best Ph.D. Dissertation Award in Forestry Ecology">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2025:</strong> Annual Joon Lee Award, Department of Forest &amp;
-                Wildlife Ecology, University of Wisconsin-Madison.&nbsp;<a
-                  href="https://globalchange.cals.wisc.edu/2025/04/11/fujiang-wins-the-joon-lee-award/"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="award-item">
+                <span class="award-year">2025</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Annual Joon Lee Award</strong></p>
+                  <p class="award-context">Department of Forest &amp; Wildlife Ecology, University of Wisconsin-Madison</p>
+                  <a class="award-link" href="https://globalchange.cals.wisc.edu/2025/04/11/fujiang-wins-the-joon-lee-award/" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2025 Annual Joon Lee Award">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2024:</strong> Annual Thomas O'Brien Award, Department of Forest
-                &amp; Wildlife Ecology, UW-Madison.
+              <li class="award-item">
+                <span class="award-year">2024</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Annual Thomas O'Brien Award</strong></p>
+                  <p class="award-context">Department of Forest &amp; Wildlife Ecology, University of Wisconsin-Madison</p>
+                  <a class="award-link" href="https://globalchange.cals.wisc.edu/2024/04/30/congratulations-to-fujiang-who-received-the-departments-annual-thomas-obrien-award/" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2024 Annual Thomas O'Brien Award">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2020:</strong> Excellent Student of University of Chinese Academy
-                of Sciences.&nbsp;<a
-                  href="http://www.aircas.cas.cn/kjrh/rhtzgg/202104/t20210430_6007841.html" target="_blank"
-                  class="news-paper-btn">↗</a>
+              <li class="award-item">
+                <span class="award-year">2020</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Excellent Student</strong></p>
+                  <p class="award-context">University of Chinese Academy of Sciences</p>
+                  <a class="award-link" href="http://www.aircas.cas.cn/kjrh/rhtzgg/202104/t20210430_6007841.html" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2020 Excellent Student award">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2020:</strong> Postgraduate Student Scholarship of University of
-                Chinese Academy of Sciences.
+              <li class="award-item">
+                <span class="award-year">2020</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Postgraduate Student Scholarship</strong></p>
+                  <p class="award-context">University of Chinese Academy of Sciences</p>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2017:</strong> First Prize of the 6th National College Student GIS
-                Application Skills Competition.&nbsp;<a href="https://news.cdut.edu.cn/info/1003/23089.htm"
-                  target="_blank" class="news-paper-btn">↗</a>
+              <li class="award-item">
+                <span class="award-year">2018</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Outstanding Graduate (Class of 2018)</strong></p>
+                  <p class="award-context">Chengdu University of Technology</p>
+                  <a class="award-link" href="https://news.cdut.edu.cn/_mediafile/cdlgxww/zfsmp/UserFiles/File/20171110/20171110113336_757.pdf" target="_blank" rel="noopener noreferrer" aria-label="Details about the Chengdu University of Technology Outstanding Graduate award for the Class of 2018 (PDF)">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2017:</strong> Excellent Graduates of Sichuan Province, China.&nbsp;<a
-                  href="https://news.cdut.edu.cn/info/1005/22445.htm" target="_blank" class="news-paper-btn">↗</a>
+              <li class="award-item">
+                <span class="award-year">2017</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>First Prize of the 6th National College Student GIS Application Skills Competition</strong></p>
+                  <a class="award-link" href="https://news.cdut.edu.cn/info/1003/23089.htm" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2017 National College Student GIS competition prize">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2016 &amp; 2017:</strong> Excellent Student of Chengdu University
-                of Technology.
+              <li class="award-item">
+                <span class="award-year">2017</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Excellent Graduates of Sichuan Province, China</strong></p>
+                  <a class="award-link" href="https://news.cdut.edu.cn/info/1005/22445.htm" target="_blank" rel="noopener noreferrer" aria-label="Details about the 2017 Excellent Graduates of Sichuan Province award">Details <span aria-hidden="true">↗</span></a>
+                </div>
               </li>
-
-              <li style="margin-bottom: 6px; padding-left: 5em; text-indent: -5em;"><strong
-                  style="color: var(--vegas-gold);">2015:</strong> National Encouragement Scholarship.
+              <li class="award-item">
+                <span class="award-year">2016 &amp; 2017</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>Excellent Student</strong></p>
+                  <p class="award-context">Chengdu University of Technology</p>
+                </div>
               </li>
-
-            </ol>
-          </ul>
-
+              <li class="award-item">
+                <span class="award-year">2015</span>
+                <div class="award-content">
+                  <p class="award-name"><strong>National Encouragement Scholarship</strong></p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!--
           - Research Projects
         -->
 
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Projects and Research Experiences</h3>
+        <section class="testimonials research-projects" id="research-projects" aria-labelledby="research-projects-heading">
+          <h3 class="h3 testimonials-title research-projects-title" id="research-projects-heading">Research projects</h3>
 
-          <ul class="skills-list content-card" style="color: var(--light-gray);font-size: 14px; line-height: 1.5;">
+          <div class="content-card research-projects-card">
+            <ul class="research-project-list">
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2026–present</span>
+                  <span class="research-project-status">Ongoing</span>
+                </div>
+                <div class="research-project-content">
+                  <span class="research-project-status research-project-funding">NASA-funded project</span>
+                  <h4 class="research-project-title" id="research-project-name-0">NASA Earth Surface Mineral Dust Source Investigation (EMIT) – Dryland Ecosystem Mapping with Multiscale Hyperspectral Remote Sensing</h4>
+                  <p class="research-project-meta">University of Arizona · Postdoctoral Research Associate</p>
+                  <div class="research-project-summary">
+                    <p><strong>Research focus:</strong> Mapping plant and soil community composition and functional diversity across the Colorado Plateau and global drylands.</p>
+                    <p><strong>My contribution:</strong> Integrating NASA EMIT with drone, airborne, and satellite observations to develop maps of biocrust cover, community composition, and function.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-0"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> January 2026 – present</p>
+                      <p>Integrating hyperspectral observations from NASA's EMIT platform with complementary drone-, aircraft- (GEMx), and satellite-scale (EnMAP, PACE) datasets to map dryland plant and soil community composition and functional diversity across the Colorado Plateau and global drylands. A key focus is developing novel maps of biological soil crust (biocrust) cover, community composition, and function — photosynthetic soil surface communities of cyanobacteria, mosses, and lichens that play critical roles in soil stabilization, fertility, water cycling, and carbon exchange. Collaborating with the NASA EMIT Science and Applications Team and researchers at the U.S. Geological Survey.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2024–2025</span>
+                </div>
+                <div class="research-project-content">
+                  <span class="research-project-status research-project-funding">NASA-funded project</span>
+                  <h4 class="research-project-title" id="research-project-name-1">Advance spaceborne mapping of plant functional traits with high-resolution and hyperspectral data over sparse vegetation canopies (80NSSC24K0054)</h4>
+                  <p class="research-project-meta">University of Wisconsin–Madison · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>Research focus:</strong> Repeatable mapping of plant functional traits in sparsely vegetated landscapes.</p>
+                    <p><strong>My contribution:</strong> Proposed a data-fusion framework combining PlanetScope with DESIS or EMIT observations.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-1"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> March 2024 – December 2025</p>
+                      <p>Developed a data fusion framework to enable large-scale, repeatable mapping of plant functional traits in sparsely vegetated areas by combining PlanetScope imagery with DESIS or EMIT imaging spectroscopy.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2021–2024</span>
+                </div>
+                <div class="research-project-content">
+                  <h4 class="research-project-title" id="research-project-name-2">Monitoring and understanding seasonal variations of forest functional traits and diversity by integrating observations from multi-source RS data</h4>
+                  <p class="research-project-meta">University of Wisconsin–Madison · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>Research focus:</strong> Understanding how forest traits and functional diversity change across seasons and ecosystems.</p>
+                    <p><strong>My contribution:</strong> Combining PRISMA, NEON airborne data, and field measurements with empirical, physical, and hybrid models.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-2"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> September 2021 – December 2024</p>
+                      <p>Combined PRISMA imaging spectroscopy, NEON AOP observations, field measurements of leaf spectra and traits, and empirical, physical, and hybrid models to investigate how plant functional traits vary through the growing season and across forest ecosystems.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+            </ul>
 
-
-            <ol class="order-list" style="font-size: 15px;">
-
-              <li style="margin-bottom: 10px;"><strong style="color: var(--vegas-gold);">Postdoctoral Research Associate,
-                  University of Arizona, January, 2026 – Present.</strong></li>
-              <ol class="order-list2" style="font-size: 14px;">
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">NASA Earth Surface Mineral Dust
-                    Source Investigation (EMIT) – Dryland Ecosystem Mapping with Multiscale Hyperspectral Remote
-                    Sensing,</strong> <em>January, 2026 – Present.</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Integrating hyperspectral
-                    observations from NASA's EMIT platform with complementary drone-, aircraft- (GEMx), and
-                    satellite-scale (EnMAP, PACE) datasets to map dryland plant and soil community composition and
-                    functional diversity across the Colorado Plateau and global drylands. A key focus is developing
-                    novel maps of biological soil crust (biocrust) cover, community composition, and function —
-                    photosynthetic soil surface communities of cyanobacteria, mosses, and lichens that play critical
-                    roles in soil stabilization, fertility, water cycling, and carbon exchange. Collaborating with
-                    the NASA EMIT Science and Applications Team and researchers at the U.S. Geological Survey.</em>
-                </p>
-              </ol>
-
-              <li style="margin-bottom: 10px;"><strong style="color: var(--vegas-gold);">Graduate Research Assistant,
-                  University of Wisconsin-Madison, September, 2021 – December, 2025.</strong></li>
-
-              <ol class="order-list2" style="font-size: 14px;">
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">Advance spaceborne mapping of
-                    plant functional traits with high-resolution and hyperspectral data over sparse vegetation canopies
-                    (80NSSC24K0054),</strong> <em>March, 2024 – December, 2025 (Expected).</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Proposed a novel framework for data
-                    fusion and enable large-scale, repeatable plant functional trait mapping in sparsely vegetated areas
-                    through the unique combination of small commercial satellite sensors (PlanetScope) and hyperspectral
-                    DESIS or EMIT data.</em></p>
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">Monitoring and understanding
-                    seasonal variations of forest functional traits and diversity by integrating observations from
-                    multi-source RS data,</strong> <em>September, 2021– December, 2024.</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Using satellite hyperspectral data
-                    (PRISMA), NEON AOP data, in-situ leaf spectra and traits as well as different modeling methods
-                    (empirical, physical, hybrid) to investigate how does functional traits vary over the growing season
-                    and across different forest ecosystems (different NEON sites).</em></p>
-              </ol>
-
-              <li style="margin-bottom: 10px;"><strong style="color: var(--vegas-gold);">Graduate Research Assistant,
-                  Aerospace Information Research Institute, Chinese Academy of Sciences, September, 2018 – June,
-                  2021.</strong></li>
-              <ol class="order-list2" style="font-size: 14px;">
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">China High-resolution EO System
-                    – Quantitative Retrieval Technology of Vegetation Parameters from GF-6 WFV Satellite Image
-                    (30-Y20A03-9003-17/18-05),</strong> <em>2018-2019.</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Using the WFV wide camera of the
-                    GF-6 satellite to estimate the yield of crops in the Xinjiang experimental area. I mainly completed
-                    the combination of the crop model and data assimilation algorithm based on the IDL language.</em>
-                </p>
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">The STS (Science and Technology
-                    Service Network Initiative) Program of Chinese Academy of Sciences (KFJ-EW-STS-069),</strong>
-                  <em>2019-2020.</em>
-                </li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Conducted field campaigns and
-                    remote sensing monitoring at the field scale, including crop physiological/biochemical parameters
-                    retrieval, crop conditions, biomass, soil nutrient status, yield monitoring, etc. Also arranged
-                    monthly project meetings and draft monthly progress reports.</em></p>
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">“Big Earth Data” Science
-                    Engineering Project of Chinese Academy of Sciences (CASEarth) – Big Earth Data Supports the U.N.
-                    Sustainable Development Goals (SDGs),</strong> <em>2020.</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Produced the 2000-2019 farmland
-                    productivity dataset in Northeast Eurasia by using the crop growth model through the JavaScript API
-                    interface of the Google Earth Engine platform; Wrote the SDGs 2.4 documents in both Chinese and
-                    English.</em></p>
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">Precision Insurance of Wheat
-                    Based on Spatial Big Data,</strong> <em>2018-2019.</em></li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Assimilating time-series remotely
-                    sensed data into crop growth to realize yield estimation, and crop disaster level assessment, and
-                    established a wheat insurance technical system.</em></p>
-              </ol>
-
-              <li style="margin-bottom: 10px;"><strong style="color: var(--vegas-gold);">Undergrad Research Assistant,
-                  Chengdu University of Technology, September – December, 2016.</strong></li>
-              <ol class="order-list2" style="font-size: 14px;">
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">Research on technologies
-                    used to demarcate red-line areas of ecology in major districts and counties of Sichuan Province,
-                    China, initiated by a professor in the department,</strong> <em>2016.</em></li>
-              </ol>
-
-              <li style="margin-bottom: 10px;"><strong style="color: var(--vegas-gold);">Project Leader, Chengdu
-                  University of Technology, 2017 – 2018.</strong></li>
-              <ol class="order-list2" style="font-size: 14px;">
-                <li style="margin-bottom: 8px;"><strong style="color: var(--white-1);">National College Students'
-                    innovation and entrepreneurship training program (Grant No. 201710616032),</strong>
-                  <em>2017-2018.</em>
-                </li>
-                <p style="margin-bottom: 8px; margin-top: 8px; font-size: 14px;"><em>Inversion and Detection of
-                    Parameter of the Growing Status of Rice based on Hyperspectral Data.</em></p>
-
-              </ol>
-            </ol>
-          </ul>
-
+            <h4 class="research-projects-earlier-heading">Earlier projects</h4>
+            <ul class="research-project-list research-project-list-earlier">
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2020</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-5">“Big Earth Data” Science Engineering Project of Chinese Academy of Sciences (CASEarth) – Big Earth Data Supports the U.N. Sustainable Development Goals (SDGs)</h5>
+                  <p class="research-project-meta">Aerospace Information Research Institute, Chinese Academy of Sciences · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Produced a 2000–2019 farmland productivity dataset for Northeast Eurasia and bilingual SDG 2.4 documentation.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-5"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> 2020</p>
+                      <p>Produced the 2000-2019 farmland productivity dataset in Northeast Eurasia by using the crop growth model through the JavaScript API interface of the Google Earth Engine platform; wrote the SDG 2.4 documents in both Chinese and English.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2019–2020</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-4">The STS (Science and Technology Service Network Initiative) Program of Chinese Academy of Sciences (KFJ-EW-STS-069)</h5>
+                  <p class="research-project-meta">Aerospace Information Research Institute, Chinese Academy of Sciences · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Conducted field campaigns and remote sensing monitoring of crop conditions, biomass, soil nutrients, and yield.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-4"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> 2019–2020</p>
+                      <p>Conducted field campaigns and remote sensing monitoring to assess crop physiology, biochemistry, condition, biomass, soil nutrients, and yield. Organized monthly project meetings and drafted progress reports.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2018–2019</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-3">China High-resolution EO System – Quantitative Retrieval Technology of Vegetation Parameters from GF-6 WFV Satellite Image (30-Y20A03-9003-17/18-05)</h5>
+                  <p class="research-project-meta">Aerospace Information Research Institute, Chinese Academy of Sciences · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Implemented crop-model and data-assimilation workflows in IDL to estimate crop yields from GF-6 observations in Xinjiang.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-3"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> 2018–2019</p>
+                      <p>Used GF-6 WFV observations to estimate crop yield in the Xinjiang study area, integrating crop growth modeling and data assimilation in IDL.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2018–2019</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-6">Precision Insurance of Wheat Based on Spatial Big Data</h5>
+                  <p class="research-project-meta">Aerospace Information Research Institute, Chinese Academy of Sciences · Graduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Assimilated time-series remote sensing into crop models for yield estimation, crop-damage assessment, and a wheat insurance system.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-6"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> 2018–2019</p>
+                      <p>Assimilated time-series remote sensing observations into crop growth models to estimate yield and assess crop damage, and developed a technical framework for wheat insurance.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2017–2018</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-8">National College Students' innovation and entrepreneurship training program (Grant No. 201710616032)</h5>
+                  <p class="research-project-meta">Chengdu University of Technology · <strong>Project Leader</strong></p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Led a student research project on estimating rice growth parameters from hyperspectral data.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-8"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> 2017–2018</p>
+                      <p>Inversion and Detection of Parameter of the Growing Status of Rice based on Hyperspectral Data.</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+              <li class="research-project-item">
+                <div class="research-project-period">
+                  <span class="research-project-year">2016</span>
+                </div>
+                <div class="research-project-content">
+                  <h5 class="research-project-title" id="research-project-name-7">Research on technologies used to demarcate red-line areas of ecology in major districts and counties of Sichuan Province, China, initiated by a professor in the department</h5>
+                  <p class="research-project-meta">Chengdu University of Technology · Undergraduate Research Assistant</p>
+                  <div class="research-project-summary">
+                    <p><strong>My contribution:</strong> Supported a faculty-initiated project on ecological red-line delineation in Sichuan Province.</p>
+                  </div>
+                  <details class="research-project-details">
+                    <summary aria-describedby="research-project-name-7"><span class="research-project-expand">Project details</span><span class="research-project-collapse">Hide details</span></summary>
+                    <div class="research-project-description">
+                      <p><strong>Participation period:</strong> September–December 2016</p>
+                    </div>
+                  </details>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Service</h3>
+        <section class="testimonials professional-service" id="professional-service" aria-labelledby="professional-service-heading">
+          <h3 class="h3 testimonials-title professional-service-title" id="professional-service-heading">Professional service</h3>
 
-          <ul class="skills-list content-card" style="color: var(--light-gray);font-size: 14px; line-height: 1.5;">
-            <ol class="order-list" style="font-size: 15px;">
-              <li style="margin-bottom: 5px;"><strong style="color: var(--vegas-gold);">Reviewer for scientific
-                  Journals: </strong><em>Remote Sensing of Environment; Agricultural and Forest Meteorology; Earth
-                  System Science Data; Remote Sensing;
-                  IEEE Transactions on Geoscience and Remote Sensing; Science of the Total Environment, Frontiers of
-                  Earth Science.</em></li>
-            </ol>
-          </ul>
-
+          <div class="content-card professional-service-card">
+            <ul class="professional-service-list">
+              <li class="professional-service-item">
+                <h4 class="professional-service-category">Conference organization</h4>
+                <div class="professional-service-content">
+                  <p class="professional-service-role"><strong>Session Convener and Chair</strong></p>
+                  <p class="professional-service-context"><span class="professional-service-year">2026</span> · AGU Annual Meeting</p>
+                </div>
+              </li>
+              <li class="professional-service-item">
+                <h4 class="professional-service-category">Proposal review</h4>
+                <div class="professional-service-content">
+                  <p class="professional-service-role"><strong>Proposal Review Panelist</strong></p>
+                  <p class="professional-service-context"><span class="professional-service-year">2026</span> · NASA research proposals</p>
+                </div>
+              </li>
+              <li class="professional-service-item">
+                <h4 class="professional-service-category">Journal peer review</h4>
+                <div class="professional-service-content">
+                  <ul class="professional-service-journals" aria-label="Journals reviewed">
+                    <li>Remote Sensing of Environment</li>
+                    <li>Agricultural and Forest Meteorology</li>
+                    <li>Earth System Science Data</li>
+                    <li>Remote Sensing</li>
+                    <li>IEEE Transactions on Geoscience and Remote Sensing</li>
+                    <li>Science of the Total Environment</li>
+                    <li>Frontiers of Earth Science</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!--
@@ -1018,7 +1970,8 @@
 
             <li class="clients-item">
               <a href="https://www.arizona.edu/" target="_blank">
-                <img src="./assets/images/about_page/UA_logo.svg" alt="UA logo">
+                <img class="logo-light" src="./assets/images/about_page/UA_logo.svg" alt="University of Arizona logo">
+                <img class="logo-dark" src="./assets/images/about_page/UA_academic_reverse.png" alt="University of Arizona logo">
               </a>
             </li>
 
@@ -1046,95 +1999,63 @@
 
 
         <!--
-          - Skills
+          - Technical skills
         -->
 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">1. Programming: Python, R, ENVI/IDL, MATLAB, JavaScript</h5>
-                <data value="80">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
+        <section class="technical-skills" id="technical-expertise" aria-labelledby="technical-skills-heading">
+          <h3 class="h3 technical-skills-title" id="technical-skills-heading">Technical skills</h3>
+          <ul class="technical-skills-grid">
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon><h4>Programming languages</h4></div>
+              <ul class="technical-skill-tags"><li>Python</li><li>R</li><li>IDL</li><li>MATLAB</li><li>JavaScript</li></ul>
             </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">2. Models: World Food Studies (WOFOST), AquaCrop, PROSPECT, PROSAIL, Leaf-SIP.</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon><h4>Scientific computing</h4></div>
+              <ul class="technical-skill-tags"><li><abbr title="High-performance computing">HPC</abbr></li><li><abbr title="High-throughput computing">HTC</abbr></li><li>Algorithm design</li><li>System development</li></ul>
             </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">3. Computing: High throughput computing (HTC), High Performance computing (HPC).</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="layers-outline" aria-hidden="true"></ion-icon><h4>GIS &amp; remote sensing</h4></div>
+              <ul class="technical-skill-tags"><li>Google Earth Engine (GEE)</li><li>ArcGIS</li><li>QGIS</li><li>ENVI</li><li>SNAP</li><li>ERDAS</li><li>Data processing</li></ul>
             </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">4. GIS and Remote sensing software: GEE, ArcGIS, QGIS, ENVI, SNAP, ERDAS.</h5>
-                <data value="70">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="leaf-outline" aria-hidden="true"></ion-icon><h4>Ecosystem &amp; crop models</h4></div>
+              <ul class="technical-skill-tags"><li>World Food Studies (WOFOST)</li><li>AquaCrop</li></ul>
             </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">5. Instruments: LAI 2200, SPAD 502, TDR 300, etc.</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="sunny-outline" aria-hidden="true"></ion-icon><h4>Radiative transfer models</h4></div>
+              <ul class="technical-skill-tags"><li>PROSPECT</li><li>PROSAIL</li><li>Leaf-SIP</li></ul>
             </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">6. Remote sensing data processing, algorithm design and system development. </h5>
-                <data value="70">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
+            <li class="technical-skill-card">
+              <div class="technical-skill-heading"><ion-icon name="flask-outline" aria-hidden="true"></ion-icon><h4>Field instrumentation</h4></div>
+              <ul class="technical-skill-tags"><li>LAI-2200</li><li>SPAD-502</li><li>TDR-300</li></ul>
             </li>
-
           </ul>
-
         </section>
+
+        <footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="./index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="./pages/research.html">Research</a>
+                <a href="./pages/publications.html">Publications</a>
+                <a href="./pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="./assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
     </div>
@@ -1156,16 +2077,36 @@
 
 
   <script>
-    function toggleFoldable(button) {
-      const foldableContent = button.previousElementSibling;
-      const isHidden = foldableContent.style.display === "none" || foldableContent.style.display === "";
+    (() => {
+      const list = document.getElementById('news-list');
+      const button = document.getElementById('news-toggle');
+      const count = document.getElementById('news-count');
+      if (!list || !button || !count) return;
 
-      foldableContent.style.display = isHidden ? "block" : "none";
-      button.textContent = isHidden ? "Show less" : "Show more";
-    }
+      const items = Array.from(list.children);
+      const defaultCount = 6;
+
+      function setExpanded(expanded) {
+        items.forEach((item, index) => {
+          item.hidden = !expanded && index >= defaultCount;
+        });
+        button.setAttribute('aria-expanded', String(expanded));
+        button.textContent = expanded ? 'Show less' : 'Show more';
+        count.textContent = `Showing ${expanded ? items.length : Math.min(defaultCount, items.length)} of ${items.length}`;
+      }
+
+      setExpanded(false);
+      button.hidden = items.length <= defaultCount;
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        setExpanded(!expanded);
+        // Keep the focused control in view when the longer list collapses.
+        if (expanded) button.scrollIntoView({ block: 'end' });
+      });
+    })();
   </script>
 
-  <script src="./assets/js/theme-toggle.js"></script>
+  
 </body>
 
 </html>

@@ -1,0 +1,136 @@
+/* Shared personal profile panel for main pages and tutorial pages. */
+.sidebar { transition: max-height var(--transition-2); }
+.sidebar .avatar-box {
+  width: 85px;
+  height: 85px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: none;
+}
+
+.sidebar .avatar-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transform-origin: 50% 30%;
+}
+
+.sidebar .info-content { min-width: 0; }
+.sidebar .info-content .name {
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+.sidebar .research-identity {
+  margin: 0 0 9px;
+  color: var(--theme-accent);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.sidebar .info-content .title {
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--theme-body);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.sidebar .institution {
+  margin: 2px 0 0;
+  color: var(--theme-accent-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.sidebar .separator { margin: 20px 0; }
+.sidebar .separator:last-of-type { margin: 16px 0; }
+.sidebar .contacts-list { gap: 16px; }
+.sidebar .contact-item { align-items: flex-start; gap: 10px; }
+.sidebar .contact-item .icon-box {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 19px;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-size: 20px;
+}
+.sidebar .contact-item .icon-box::before { display: none; }
+.sidebar .contact-info {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+}
+.sidebar .contact-title { font-size: 11px; line-height: 1.5; }
+.sidebar .contact-info :is(.contact-link, address) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.sidebar .contact-info .contact-link { display: block; }
+.sidebar .contact-info .contact-link-primary {
+  color: var(--theme-ink);
+  font-weight: 500;
+}
+.sidebar .contact-info .contact-link-secondary {
+  color: var(--theme-muted);
+  font-size: 13px;
+}
+.sidebar .contact-info .contact-link:hover {
+  color: var(--theme-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-office { margin-bottom: 18px; }
+.contact-office .contact-office-title { margin-bottom: 6px; text-transform: none; }
+.contact-office address {
+  color: var(--theme-body);
+  font-size: 15px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Let the identity text wrap without clipping the collapsed contact panel. */
+@media (max-width: 1249px) {
+  .sidebar,
+  .sidebar.active { max-height: none; }
+  .sidebar:not(.active) .sidebar-info_more { display: none; }
+}
+
+@media (min-width: 580px) {
+  .sidebar .avatar-box { width: 120px; height: 120px; border-radius: 18px; }
+  .sidebar .info-content .name { font-size: 24px; }
+  .sidebar .research-identity { font-size: 12px; }
+}
+
+@media (min-width: 1250px) {
+  .sidebar { padding-top: 28px; }
+  .sidebar .avatar-box { width: 200px; height: 200px; }
+  .sidebar .info-content { width: 100%; text-align: center; }
+  .sidebar .info-content .name { font-size: 26px; }
+
+  .sidebar .research-identity {
+    max-width: 220px;
+    margin: 0 auto 12px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .sidebar .info-content .title, .sidebar .institution { font-size: 14px; }
+  .sidebar .institution { text-align: center; }
+}

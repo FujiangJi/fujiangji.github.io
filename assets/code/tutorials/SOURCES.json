@@ -1,0 +1,157 @@
+{
+  "version": "20261008-reader86",
+  "guides": [
+    {
+      "page": "pages/tutorial_pages/rs_data_processing.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/rs_data_processing/read_write_geotiff.py",
+          "sha256": "444a1baed80c2908a87e4deaa4fb23396624ec47a6675e3b3bf76e32b04ca451"
+        },
+        {
+          "file": "assets/code/tutorials/rs_data_processing/geotiff_usage.py",
+          "sha256": "919111cf9f1716382426a489e1da8d24f577d3714ef987d27092fe28d10f08c7"
+        }
+      ]
+    },
+    {
+      "page": "pages/tutorial_pages/data_visualization.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/data_visualization/subplots.py",
+          "sha256": "d1bcc864a8e97dd5e00a7a9c7ce52ec51f4051d0b6b8329d75caf32471c314ff"
+        },
+        {
+          "file": "assets/code/tutorials/data_visualization/figure_panels.py",
+          "sha256": "f02dc7d3a99ab537f43400ff4d942fd8164f68dbc36e612f6bb3c455f2fc94cb"
+        },
+        {
+          "file": "assets/code/tutorials/data_visualization/gridspec_layout.py",
+          "sha256": "d184f8b7eea7ebd589ce329adb0b04d02bb705c67dd1bde9a53d69c23b4f8ffd"
+        },
+        {
+          "file": "assets/code/tutorials/data_visualization/axes_style.py",
+          "sha256": "dee593bc63376c3835effd7dadb3e099fa4d8df88265494b21a2f9b159dab2ae"
+        },
+        {
+          "file": "assets/code/tutorials/data_visualization/legend_style.py",
+          "sha256": "9e89166491037bd3a701836ccedddb3a8c4616dc5d4a25b90e89359defab5f74"
+        }
+      ]
+    },
+    {
+      "page": "pages/tutorial_pages/scatter_line_plot.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/prediction_scatter.py",
+          "sha256": "d5ed1f5983641dabef7d216a26dcf72158d4ec954671360d2af554ab626ce08e"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/trait_covariance.py",
+          "sha256": "a30bd60fe0ae8721b1112f33981001e0b933e8ffd011891091bf85b93cb3d80a"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/density_comparison.py",
+          "sha256": "566fd04e57ed72d0072c39b5aa58831d0a862e5b0c6293eaf2171e762037603c"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/seasonal_variation.py",
+          "sha256": "c198bd94dbf1fb6fcb298d695adf75bcb2933d75c95c409a45914b5451ce7313"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/functional_type_extrapolation.py",
+          "sha256": "53355ee4381f00b3bddbb62b154430930055282a948b494ed7057f2a3bfd687c"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/trait_variability.py",
+          "sha256": "59ed931b9c4a40ac4c02528c961133dc6a089e60fb644941937d5fdaa98aa3ad"
+        },
+        {
+          "file": "assets/code/tutorials/scatter_line_plot/model_comparison.py",
+          "sha256": "2ddce128c5306766f3c98c6606d408a9a1d9e1be5ea089cb7d7e69c86dfd495f"
+        }
+      ]
+    },
+    {
+      "page": "pages/tutorial_pages/global_forest_edge_mapping.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/global_forest_edge_mapping/global_edge_map.py",
+          "sha256": "e4c84b58797a3d433dcf6a254458a265c47f57d75d05a93b2f75ced375fef6da"
+        },
+        {
+          "file": "assets/code/tutorials/global_forest_edge_mapping/country_edge_statistics.py",
+          "sha256": "ed38be33c448f335d87852fb951622dc7f336afd8664b57a075938302296a0b5"
+        },
+        {
+          "file": "assets/code/tutorials/global_forest_edge_mapping/edge_dynamics.py",
+          "sha256": "25d607286ae7c382ff4f60fde528219d57afe7a577a78227b02b4200f2b7b0f6"
+        },
+        {
+          "file": "assets/code/tutorials/global_forest_edge_mapping/edge_area_relationships.py",
+          "sha256": "a58b8ed643b1ab4187b0d7652413d497e22eddfe0d0dba2d96571d2d269bea85"
+        },
+        {
+          "file": "assets/code/tutorials/global_forest_edge_mapping/landscape_patterns.py",
+          "sha256": "4a771f18fc5e3c88f8e7b40c7a0da562770095dbde2eeb9e886e9d73d3cd02ac"
+        }
+      ]
+    },
+    {
+      "page": "pages/tutorial_pages/hpc.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/hpc/connect_and_transfer.sh",
+          "sha256": "2b6d0c0d971e37fe6b2047859dae0e2fd8710e7dad6ba4ffb56fe599bb42dec4"
+        },
+        {
+          "file": "assets/code/tutorials/hpc/python_environment.sh",
+          "sha256": "664b2554f8ab6dec46dbcc2fa54ae326dfab2e9929b2b8de6ff5319e846419f2"
+        },
+        {
+          "file": "assets/code/tutorials/hpc/submit_job.sh",
+          "sha256": "c4392f20ff5211e6f2b1cf26cf630eaa352d218c33939f4597c7171280b567d0"
+        },
+        {
+          "file": "assets/code/tutorials/hpc/monitor_jobs.sh",
+          "sha256": "645353323d2e300a8ffb893d88c43c215249aba12141851a007dc9bfbfc8b0b7"
+        },
+        {
+          "file": "assets/code/tutorials/hpc/shell_reference.sh",
+          "sha256": "25d353a86433c8afb803d64099b965e67de5e8f50bff6c99c60de8bde7d03686"
+        }
+      ]
+    },
+    {
+      "page": "pages/tutorial_pages/vcs.html",
+      "code": [
+        {
+          "file": "assets/code/tutorials/vcs/github_connection.sh",
+          "sha256": "2bdb2d7a3bf6ca3c0f19213b7bb65a8d8f20b018a6345d5f9530cb4d532375db"
+        },
+        {
+          "file": "assets/code/tutorials/vcs/record_changes.sh",
+          "sha256": "40c04eac48f5b8204b77d11a5150a4c2d401d495aa3ca1d7f145b11639ffa46f"
+        },
+        {
+          "file": "assets/code/tutorials/vcs/branch_workflow.sh",
+          "sha256": "344c5fd49cde36c4748ec8fb403f20e08e0c79155bf375a10a58684934950462"
+        },
+        {
+          "file": "assets/code/tutorials/vcs/large_files.sh",
+          "sha256": "77b75a3bb32e5f77e8362e75d4fb48da62f926cb775eba2f9818c766b34d20a0"
+        },
+        {
+          "file": "assets/code/tutorials/vcs/clm_versions.sh",
+          "sha256": "65a079648fc967eae0bfe21f78886dee27f852bf5e260dbb47ede97d579c1e16"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Research plotting examples originate from the six existing tutorial pages.",
+    "The density-scatter helper indentation was corrected.",
+    "HPC and Git examples were reorganized and corrected with links to official documentation.",
+    "Research figures remain unchanged in their original directories."
+  ]
+}

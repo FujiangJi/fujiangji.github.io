@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+<title id="title">Fujiang Ji — research overview</title>
+<desc id="desc">Research themes and methods: Hyperspectral Remote Sensing; Plant Functional Traits; Biological Soil Crusts; Ecosystem Function; Forest Fragmentation; Dryland Ecosystems; Imaging Spectroscopy; Functional Diversity; Data Fusion; Climate Feedbacks; Deep Learning; Community Composition; Trait Transferability; Radiative Transfer; Multiscale Mapping; Forest Edge Effects; Global Change; Seasonal Dynamics; EMIT; Transfer Learning; Leaf Spectroscopy; Climate Experiments; Spectral Diversity; Field Observations; PRISMA; EnMAP; NEON AOP; PlanetScope; UAS.</desc>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="700">
+<text x="140" y="445" font-size="76" fill="#aac8ff">Hyperspectral Remote Sensing</text>
+<text x="285" y="530" font-size="76" fill="#e4edf9">Plant Functional Traits</text>
+<text x="328" y="359" font-size="72" fill="#e7b893">Biological Soil Crusts</text>
+<text x="406" y="588" font-size="60" fill="#e4edf9">Ecosystem Function</text>
+<text x="412" y="280" font-size="56" fill="#aac8ff">Forest Fragmentation</text>
+<text x="452" y="654" font-size="54" fill="#e7b893">Dryland Ecosystems</text>
+<text x="408" y="215" font-size="54" fill="#aac8ff">Imaging Spectroscopy</text>
+<text x="481" y="713" font-size="46" fill="#e4edf9">Functional Diversity</text>
+<text x="545" y="161" font-size="46" fill="#aac8ff">Data Fusion</text>
+<text x="495" y="768" font-size="44" fill="#e7b893">Climate Feedbacks</text>
+<text x="560" y="106" font-size="40" fill="#aac8ff">Deep Learning</text>
+<text x="500" y="808" font-size="36" fill="#e7b893">Community Composition</text>
+<text x="838" y="153" font-size="34" fill="#e4edf9">Trait Transferability</text>
+<text x="1009" y="570" font-size="34" fill="#aac8ff">Radiative Transfer</text>
+<text x="77" y="574" font-size="34" fill="#aac8ff">Multiscale Mapping</text>
+<text x="118" y="642" font-size="34" fill="#e4edf9">Forest Edge Effects</text>
+<text x="154" y="282" font-size="34" fill="#e7b893">Global Change</text>
+<text x="1005" y="286" font-size="32" fill="#e4edf9">Seasonal Dynamics</text>
+<text x="1012" y="618" font-size="40" fill="#e7b893">EMIT</text>
+<text x="270" y="151" font-size="30" fill="#aac8ff">Transfer Learning</text>
+<text x="1008" y="242" font-size="30" fill="#aebdd1">Leaf Spectroscopy</text>
+<text x="525" y="57" font-size="30" fill="#e7b893">Climate Experiments</text>
+<text x="137" y="237" font-size="30" fill="#e4edf9">Spectral Diversity</text>
+<text x="198" y="702" font-size="30" fill="#aebdd1">Field Observations</text>
+<text x="196" y="366" font-size="30" fill="#aebdd1">PRISMA</text>
+<text x="1087" y="370" font-size="30" fill="#aebdd1">EnMAP</text>
+<text x="1087" y="330" font-size="28" fill="#aebdd1">NEON AOP</text>
+<text x="1003" y="652" font-size="28" fill="#aebdd1">PlanetScope</text>
+<text x="250" y="329" font-size="28" fill="#aebdd1">UAS</text>
+</g>
+</svg>

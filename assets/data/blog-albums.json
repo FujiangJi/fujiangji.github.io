@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "madison",
+    "title": "UW–Madison",
+    "category": "academic",
+    "categoryLabel": "Academic life",
+    "location": "Madison, Wisconsin",
+    "dates": "Aug 2021–present",
+    "description": "Lakeside views and everyday life in Madison.",
+    "photos": [
+      {
+        "original": "blogs_pages/1_UW-Madison/1.jpg",
+        "view": "../assets/images/blogs/madison/01-view.webp",
+        "thumb": "../assets/images/blogs/madison/01-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 1"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/2.jpg",
+        "view": "../assets/images/blogs/madison/02-view.webp",
+        "thumb": "../assets/images/blogs/madison/02-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 2"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/3.jpg",
+        "view": "../assets/images/blogs/madison/03-view.webp",
+        "thumb": "../assets/images/blogs/madison/03-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 3"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/4.jpg",
+        "view": "../assets/images/blogs/madison/04-view.webp",
+        "thumb": "../assets/images/blogs/madison/04-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 4"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/5.jpg",
+        "view": "../assets/images/blogs/madison/05-view.webp",
+        "thumb": "../assets/images/blogs/madison/05-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 5"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/6.jpg",
+        "view": "../assets/images/blogs/madison/06-view.webp",
+        "thumb": "../assets/images/blogs/madison/06-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 6"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/7.jpg",
+        "view": "../assets/images/blogs/madison/07-view.webp",
+        "thumb": "../assets/images/blogs/madison/07-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 7"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/8.jpg",
+        "view": "../assets/images/blogs/madison/08-view.webp",
+        "thumb": "../assets/images/blogs/madison/08-thumb.webp",
+        "width": 1129,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 8"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/9.jpg",
+        "view": "../assets/images/blogs/madison/09-view.webp",
+        "thumb": "../assets/images/blogs/madison/09-thumb.webp",
+        "width": 1107,
+        "height": 1001,
+        "alt": "UW–Madison — photograph 9"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/10.jpg",
+        "view": "../assets/images/blogs/madison/10-view.webp",
+        "thumb": "../assets/images/blogs/madison/10-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 10"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/11.jpg",
+        "view": "../assets/images/blogs/madison/11-view.webp",
+        "thumb": "../assets/images/blogs/madison/11-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 11"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/12.jpg",
+        "view": "../assets/images/blogs/madison/12-view.webp",
+        "thumb": "../assets/images/blogs/madison/12-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 12"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/13.jpg",
+        "view": "../assets/images/blogs/madison/13-view.webp",
+        "thumb": "../assets/images/blogs/madison/13-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 13"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/15.jpg",
+        "view": "../assets/images/blogs/madison/14-view.webp",
+        "thumb": "../assets/images/blogs/madison/14-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 14"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/16.jpg",
+        "view": "../assets/images/blogs/madison/15-view.webp",
+        "thumb": "../assets/images/blogs/madison/15-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 15"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/17.jpg",
+        "view": "../assets/images/blogs/madison/16-view.webp",
+        "thumb": "../assets/images/blogs/madison/16-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "UW–Madison — photograph 16"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/18.jpg",
+        "view": "../assets/images/blogs/madison/17-view.webp",
+        "thumb": "../assets/images/blogs/madison/17-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 17"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/21.jpg",
+        "view": "../assets/images/blogs/madison/18-view.webp",
+        "thumb": "../assets/images/blogs/madison/18-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 18"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/22.jpg",
+        "view": "../assets/images/blogs/madison/19-view.webp",
+        "thumb": "../assets/images/blogs/madison/19-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 19"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/23.jpg",
+        "view": "../assets/images/blogs/madison/20-view.webp",
+        "thumb": "../assets/images/blogs/madison/20-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 20"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/24.jpg",
+        "view": "../assets/images/blogs/madison/21-view.webp",
+        "thumb": "../assets/images/blogs/madison/21-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 21"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/25.jpg",
+        "view": "../assets/images/blogs/madison/22-view.webp",
+        "thumb": "../assets/images/blogs/madison/22-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 22"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/27.jpg",
+        "view": "../assets/images/blogs/madison/23-view.webp",
+        "thumb": "../assets/images/blogs/madison/23-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 23"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/28.jpg",
+        "view": "../assets/images/blogs/madison/24-view.webp",
+        "thumb": "../assets/images/blogs/madison/24-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "UW–Madison — photograph 24"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/29.jpg",
+        "view": "../assets/images/blogs/madison/25-view.webp",
+        "thumb": "../assets/images/blogs/madison/25-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 25"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/30.jpg",
+        "view": "../assets/images/blogs/madison/26-view.webp",
+        "thumb": "../assets/images/blogs/madison/26-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 26"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/31.jpg",
+        "view": "../assets/images/blogs/madison/27-view.webp",
+        "thumb": "../assets/images/blogs/madison/27-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 27"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/32.jpg",
+        "view": "../assets/images/blogs/madison/28-view.webp",
+        "thumb": "../assets/images/blogs/madison/28-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 28"
+      },
+      {
+        "original": "blogs_pages/1_UW-Madison/33.jpg",
+        "view": "../assets/images/blogs/madison/29-view.webp",
+        "thumb": "../assets/images/blogs/madison/29-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "UW–Madison — photograph 29"
+      }
+    ],
+    "cover": "../assets/images/blogs/madison/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 720
+  },
+  {
+    "id": "china",
+    "title": "China",
+    "category": "travel",
+    "categoryLabel": "Travel",
+    "location": "China",
+    "dates": "2014–2021",
+    "description": "Places and moments from travels in China.",
+    "photos": [
+      {
+        "original": "blogs_pages/2_China/1.jpg",
+        "view": "../assets/images/blogs/china/01-view.webp",
+        "thumb": "../assets/images/blogs/china/01-thumb.webp",
+        "width": 1600,
+        "height": 1064,
+        "alt": "China — photograph 1"
+      },
+      {
+        "original": "blogs_pages/2_China/2.jpg",
+        "view": "../assets/images/blogs/china/02-view.webp",
+        "thumb": "../assets/images/blogs/china/02-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "China — photograph 2"
+      },
+      {
+        "original": "blogs_pages/2_China/3.jpg",
+        "view": "../assets/images/blogs/china/03-view.webp",
+        "thumb": "../assets/images/blogs/china/03-thumb.webp",
+        "width": 1600,
+        "height": 1064,
+        "alt": "China — photograph 3"
+      },
+      {
+        "original": "blogs_pages/2_China/4.jpg",
+        "view": "../assets/images/blogs/china/04-view.webp",
+        "thumb": "../assets/images/blogs/china/04-thumb.webp",
+        "width": 1600,
+        "height": 1600,
+        "alt": "China — photograph 4"
+      },
+      {
+        "original": "blogs_pages/2_China/5.jpg",
+        "view": "../assets/images/blogs/china/05-view.webp",
+        "thumb": "../assets/images/blogs/china/05-thumb.webp",
+        "width": 1600,
+        "height": 1064,
+        "alt": "China — photograph 5"
+      },
+      {
+        "original": "blogs_pages/2_China/6.jpg",
+        "view": "../assets/images/blogs/china/06-view.webp",
+        "thumb": "../assets/images/blogs/china/06-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 6"
+      },
+      {
+        "original": "blogs_pages/2_China/7.jpg",
+        "view": "../assets/images/blogs/china/07-view.webp",
+        "thumb": "../assets/images/blogs/china/07-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 7"
+      },
+      {
+        "original": "blogs_pages/2_China/24.jpg",
+        "view": "../assets/images/blogs/china/08-view.webp",
+        "thumb": "../assets/images/blogs/china/08-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 8"
+      },
+      {
+        "original": "blogs_pages/2_China/25.jpg",
+        "view": "../assets/images/blogs/china/09-view.webp",
+        "thumb": "../assets/images/blogs/china/09-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 9"
+      },
+      {
+        "original": "blogs_pages/2_China/26.jpg",
+        "view": "../assets/images/blogs/china/10-view.webp",
+        "thumb": "../assets/images/blogs/china/10-thumb.webp",
+        "width": 1063,
+        "height": 1600,
+        "alt": "China — photograph 10"
+      },
+      {
+        "original": "blogs_pages/2_China/27.jpg",
+        "view": "../assets/images/blogs/china/11-view.webp",
+        "thumb": "../assets/images/blogs/china/11-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 11"
+      },
+      {
+        "original": "blogs_pages/2_China/8.jpg",
+        "view": "../assets/images/blogs/china/12-view.webp",
+        "thumb": "../assets/images/blogs/china/12-thumb.webp",
+        "width": 1600,
+        "height": 950,
+        "alt": "China — photograph 12"
+      },
+      {
+        "original": "blogs_pages/2_China/9.jpg",
+        "view": "../assets/images/blogs/china/13-view.webp",
+        "thumb": "../assets/images/blogs/china/13-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 13"
+      },
+      {
+        "original": "blogs_pages/2_China/10.jpg",
+        "view": "../assets/images/blogs/china/14-view.webp",
+        "thumb": "../assets/images/blogs/china/14-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 14"
+      },
+      {
+        "original": "blogs_pages/2_China/11.jpg",
+        "view": "../assets/images/blogs/china/15-view.webp",
+        "thumb": "../assets/images/blogs/china/15-thumb.webp",
+        "width": 1600,
+        "height": 1066,
+        "alt": "China — photograph 15"
+      },
+      {
+        "original": "blogs_pages/2_China/13.jpg",
+        "view": "../assets/images/blogs/china/16-view.webp",
+        "thumb": "../assets/images/blogs/china/16-thumb.webp",
+        "width": 1184,
+        "height": 1184,
+        "alt": "China — photograph 16"
+      },
+      {
+        "original": "blogs_pages/2_China/14.jpg",
+        "view": "../assets/images/blogs/china/17-view.webp",
+        "thumb": "../assets/images/blogs/china/17-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 17"
+      },
+      {
+        "original": "blogs_pages/2_China/15.jpg",
+        "view": "../assets/images/blogs/china/18-view.webp",
+        "thumb": "../assets/images/blogs/china/18-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 18"
+      },
+      {
+        "original": "blogs_pages/2_China/16.jpg",
+        "view": "../assets/images/blogs/china/19-view.webp",
+        "thumb": "../assets/images/blogs/china/19-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "China — photograph 19"
+      },
+      {
+        "original": "blogs_pages/2_China/17.jpg",
+        "view": "../assets/images/blogs/china/20-view.webp",
+        "thumb": "../assets/images/blogs/china/20-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 20"
+      },
+      {
+        "original": "blogs_pages/2_China/18.jpg",
+        "view": "../assets/images/blogs/china/21-view.webp",
+        "thumb": "../assets/images/blogs/china/21-thumb.webp",
+        "width": 1600,
+        "height": 1114,
+        "alt": "China — photograph 21"
+      },
+      {
+        "original": "blogs_pages/2_China/19.jpg",
+        "view": "../assets/images/blogs/china/22-view.webp",
+        "thumb": "../assets/images/blogs/china/22-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 22"
+      },
+      {
+        "original": "blogs_pages/2_China/20.jpg",
+        "view": "../assets/images/blogs/china/23-view.webp",
+        "thumb": "../assets/images/blogs/china/23-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 23"
+      },
+      {
+        "original": "blogs_pages/2_China/21.jpg",
+        "view": "../assets/images/blogs/china/24-view.webp",
+        "thumb": "../assets/images/blogs/china/24-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "China — photograph 24"
+      },
+      {
+        "original": "blogs_pages/2_China/22.jpg",
+        "view": "../assets/images/blogs/china/25-view.webp",
+        "thumb": "../assets/images/blogs/china/25-thumb.webp",
+        "width": 1600,
+        "height": 1202,
+        "alt": "China — photograph 25"
+      },
+      {
+        "original": "blogs_pages/2_China/23.jpg",
+        "view": "../assets/images/blogs/china/26-view.webp",
+        "thumb": "../assets/images/blogs/china/26-thumb.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "China — photograph 26"
+      }
+    ],
+    "cover": "../assets/images/blogs/china/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 638
+  },
+  {
+    "id": "united-states",
+    "title": "United States",
+    "category": "travel",
+    "categoryLabel": "Travel",
+    "location": "United States",
+    "dates": "2021–present",
+    "description": "Photographs from travels across the United States.",
+    "photos": [
+      {
+        "original": "blogs_pages/3_US/1.jpg",
+        "view": "../assets/images/blogs/united-states/01-view.webp",
+        "thumb": "../assets/images/blogs/united-states/01-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 1"
+      },
+      {
+        "original": "blogs_pages/3_US/2.jpg",
+        "view": "../assets/images/blogs/united-states/02-view.webp",
+        "thumb": "../assets/images/blogs/united-states/02-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 2"
+      },
+      {
+        "original": "blogs_pages/3_US/3.jpg",
+        "view": "../assets/images/blogs/united-states/03-view.webp",
+        "thumb": "../assets/images/blogs/united-states/03-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 3"
+      },
+      {
+        "original": "blogs_pages/3_US/4.jpg",
+        "view": "../assets/images/blogs/united-states/04-view.webp",
+        "thumb": "../assets/images/blogs/united-states/04-thumb.webp",
+        "width": 996,
+        "height": 1600,
+        "alt": "United States — photograph 4"
+      },
+      {
+        "original": "blogs_pages/3_US/5.jpg",
+        "view": "../assets/images/blogs/united-states/05-view.webp",
+        "thumb": "../assets/images/blogs/united-states/05-thumb.webp",
+        "width": 1268,
+        "height": 1600,
+        "alt": "United States — photograph 5"
+      },
+      {
+        "original": "blogs_pages/3_US/6.jpg",
+        "view": "../assets/images/blogs/united-states/06-view.webp",
+        "thumb": "../assets/images/blogs/united-states/06-thumb.webp",
+        "width": 1184,
+        "height": 1246,
+        "alt": "United States — photograph 6"
+      },
+      {
+        "original": "blogs_pages/3_US/7.jpg",
+        "view": "../assets/images/blogs/united-states/07-view.webp",
+        "thumb": "../assets/images/blogs/united-states/07-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 7"
+      },
+      {
+        "original": "blogs_pages/3_US/8.jpg",
+        "view": "../assets/images/blogs/united-states/08-view.webp",
+        "thumb": "../assets/images/blogs/united-states/08-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 8"
+      },
+      {
+        "original": "blogs_pages/3_US/9.jpg",
+        "view": "../assets/images/blogs/united-states/09-view.webp",
+        "thumb": "../assets/images/blogs/united-states/09-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 9"
+      },
+      {
+        "original": "blogs_pages/3_US/10.jpg",
+        "view": "../assets/images/blogs/united-states/10-view.webp",
+        "thumb": "../assets/images/blogs/united-states/10-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 10"
+      },
+      {
+        "original": "blogs_pages/3_US/11.jpg",
+        "view": "../assets/images/blogs/united-states/11-view.webp",
+        "thumb": "../assets/images/blogs/united-states/11-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "United States — photograph 11"
+      },
+      {
+        "original": "blogs_pages/3_US/12.jpg",
+        "view": "../assets/images/blogs/united-states/12-view.webp",
+        "thumb": "../assets/images/blogs/united-states/12-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "United States — photograph 12"
+      },
+      {
+        "original": "blogs_pages/3_US/13.jpg",
+        "view": "../assets/images/blogs/united-states/13-view.webp",
+        "thumb": "../assets/images/blogs/united-states/13-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 13"
+      },
+      {
+        "original": "blogs_pages/3_US/14.jpg",
+        "view": "../assets/images/blogs/united-states/14-view.webp",
+        "thumb": "../assets/images/blogs/united-states/14-thumb.webp",
+        "width": 1600,
+        "height": 969,
+        "alt": "United States — photograph 14"
+      },
+      {
+        "original": "blogs_pages/3_US/15.jpg",
+        "view": "../assets/images/blogs/united-states/15-view.webp",
+        "thumb": "../assets/images/blogs/united-states/15-thumb.webp",
+        "width": 1585,
+        "height": 1057,
+        "alt": "United States — photograph 15"
+      },
+      {
+        "original": "blogs_pages/3_US/16.jpg",
+        "view": "../assets/images/blogs/united-states/16-view.webp",
+        "thumb": "../assets/images/blogs/united-states/16-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "United States — photograph 16"
+      },
+      {
+        "original": "blogs_pages/3_US/18.jpg",
+        "view": "../assets/images/blogs/united-states/17-view.webp",
+        "thumb": "../assets/images/blogs/united-states/17-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 17"
+      },
+      {
+        "original": "blogs_pages/3_US/19.jpg",
+        "view": "../assets/images/blogs/united-states/18-view.webp",
+        "thumb": "../assets/images/blogs/united-states/18-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "United States — photograph 18"
+      },
+      {
+        "original": "blogs_pages/3_US/20.jpg",
+        "view": "../assets/images/blogs/united-states/19-view.webp",
+        "thumb": "../assets/images/blogs/united-states/19-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 19"
+      },
+      {
+        "original": "blogs_pages/3_US/21.jpg",
+        "view": "../assets/images/blogs/united-states/20-view.webp",
+        "thumb": "../assets/images/blogs/united-states/20-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "United States — photograph 20"
+      },
+      {
+        "original": "blogs_pages/3_US/22.jpg",
+        "view": "../assets/images/blogs/united-states/21-view.webp",
+        "thumb": "../assets/images/blogs/united-states/21-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 21"
+      },
+      {
+        "original": "blogs_pages/3_US/23.jpg",
+        "view": "../assets/images/blogs/united-states/22-view.webp",
+        "thumb": "../assets/images/blogs/united-states/22-thumb.webp",
+        "width": 1004,
+        "height": 1436,
+        "alt": "United States — photograph 22"
+      },
+      {
+        "original": "blogs_pages/3_US/24.jpg",
+        "view": "../assets/images/blogs/united-states/23-view.webp",
+        "thumb": "../assets/images/blogs/united-states/23-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 23"
+      },
+      {
+        "original": "blogs_pages/3_US/25.jpg",
+        "view": "../assets/images/blogs/united-states/24-view.webp",
+        "thumb": "../assets/images/blogs/united-states/24-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 24"
+      },
+      {
+        "original": "blogs_pages/3_US/26.jpg",
+        "view": "../assets/images/blogs/united-states/25-view.webp",
+        "thumb": "../assets/images/blogs/united-states/25-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "United States — photograph 25"
+      },
+      {
+        "original": "blogs_pages/3_US/27.jpg",
+        "view": "../assets/images/blogs/united-states/26-view.webp",
+        "thumb": "../assets/images/blogs/united-states/26-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "United States — photograph 26"
+      },
+      {
+        "original": "blogs_pages/3_US/28.jpg",
+        "view": "../assets/images/blogs/united-states/27-view.webp",
+        "thumb": "../assets/images/blogs/united-states/27-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 27"
+      },
+      {
+        "original": "blogs_pages/3_US/29.jpg",
+        "view": "../assets/images/blogs/united-states/28-view.webp",
+        "thumb": "../assets/images/blogs/united-states/28-thumb.webp",
+        "width": 1535,
+        "height": 1134,
+        "alt": "United States — photograph 28"
+      },
+      {
+        "original": "blogs_pages/3_US/30.jpg",
+        "view": "../assets/images/blogs/united-states/29-view.webp",
+        "thumb": "../assets/images/blogs/united-states/29-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "United States — photograph 29"
+      },
+      {
+        "original": "blogs_pages/3_US/31.jpg",
+        "view": "../assets/images/blogs/united-states/30-view.webp",
+        "thumb": "../assets/images/blogs/united-states/30-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 30"
+      },
+      {
+        "original": "blogs_pages/3_US/32.jpg",
+        "view": "../assets/images/blogs/united-states/31-view.webp",
+        "thumb": "../assets/images/blogs/united-states/31-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "United States — photograph 31"
+      },
+      {
+        "original": "blogs_pages/3_US/33.jpg",
+        "view": "../assets/images/blogs/united-states/32-view.webp",
+        "thumb": "../assets/images/blogs/united-states/32-thumb.webp",
+        "width": 1067,
+        "height": 1600,
+        "alt": "United States — photograph 32"
+      }
+    ],
+    "cover": "../assets/images/blogs/united-states/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 720
+  },
+  {
+    "id": "thailand",
+    "title": "Thailand",
+    "category": "travel",
+    "categoryLabel": "Travel",
+    "location": "Thailand",
+    "dates": "2018",
+    "description": "A photo journal from Thailand in 2018.",
+    "photos": [
+      {
+        "original": "blogs_pages/4_Thailand/1.jpg",
+        "view": "../assets/images/blogs/thailand/01-view.webp",
+        "thumb": "../assets/images/blogs/thailand/01-thumb.webp",
+        "width": 1600,
+        "height": 1283,
+        "alt": "Thailand — photograph 1"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/2.jpg",
+        "view": "../assets/images/blogs/thailand/02-view.webp",
+        "thumb": "../assets/images/blogs/thailand/02-thumb.webp",
+        "width": 1600,
+        "height": 899,
+        "alt": "Thailand — photograph 2"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/3.jpg",
+        "view": "../assets/images/blogs/thailand/03-view.webp",
+        "thumb": "../assets/images/blogs/thailand/03-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Thailand — photograph 3"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/4.jpg",
+        "view": "../assets/images/blogs/thailand/04-view.webp",
+        "thumb": "../assets/images/blogs/thailand/04-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Thailand — photograph 4"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/5.jpg",
+        "view": "../assets/images/blogs/thailand/05-view.webp",
+        "thumb": "../assets/images/blogs/thailand/05-thumb.webp",
+        "width": 1063,
+        "height": 1600,
+        "alt": "Thailand — photograph 5"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/6.jpg",
+        "view": "../assets/images/blogs/thailand/06-view.webp",
+        "thumb": "../assets/images/blogs/thailand/06-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "alt": "Thailand — photograph 6"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/7.jpg",
+        "view": "../assets/images/blogs/thailand/07-view.webp",
+        "thumb": "../assets/images/blogs/thailand/07-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Thailand — photograph 7"
+      },
+      {
+        "original": "blogs_pages/4_Thailand/8.jpg",
+        "view": "../assets/images/blogs/thailand/08-view.webp",
+        "thumb": "../assets/images/blogs/thailand/08-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Thailand — photograph 8"
+      }
+    ],
+    "cover": "../assets/images/blogs/thailand/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 770
+  },
+  {
+    "id": "turkey",
+    "title": "Turkey",
+    "category": "travel",
+    "categoryLabel": "Travel",
+    "location": "Turkey",
+    "dates": "2018",
+    "description": "A collection of moments from Turkey in 2018.",
+    "photos": [
+      {
+        "original": "blogs_pages/5_Turkey/1.jpg",
+        "view": "../assets/images/blogs/turkey/01-view.webp",
+        "thumb": "../assets/images/blogs/turkey/01-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 1"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/2.jpg",
+        "view": "../assets/images/blogs/turkey/02-view.webp",
+        "thumb": "../assets/images/blogs/turkey/02-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 2"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/3.jpg",
+        "view": "../assets/images/blogs/turkey/03-view.webp",
+        "thumb": "../assets/images/blogs/turkey/03-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 3"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/4.jpg",
+        "view": "../assets/images/blogs/turkey/04-view.webp",
+        "thumb": "../assets/images/blogs/turkey/04-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 4"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/5.jpg",
+        "view": "../assets/images/blogs/turkey/05-view.webp",
+        "thumb": "../assets/images/blogs/turkey/05-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 5"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/6.jpg",
+        "view": "../assets/images/blogs/turkey/06-view.webp",
+        "thumb": "../assets/images/blogs/turkey/06-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 6"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/7.jpg",
+        "view": "../assets/images/blogs/turkey/07-view.webp",
+        "thumb": "../assets/images/blogs/turkey/07-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Turkey — photograph 7"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/8.jpg",
+        "view": "../assets/images/blogs/turkey/08-view.webp",
+        "thumb": "../assets/images/blogs/turkey/08-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Turkey — photograph 8"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/9.jpg",
+        "view": "../assets/images/blogs/turkey/09-view.webp",
+        "thumb": "../assets/images/blogs/turkey/09-thumb.webp",
+        "width": 1600,
+        "height": 1415,
+        "alt": "Turkey — photograph 9"
+      },
+      {
+        "original": "blogs_pages/5_Turkey/10.jpg",
+        "view": "../assets/images/blogs/turkey/10-view.webp",
+        "thumb": "../assets/images/blogs/turkey/10-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Turkey — photograph 10"
+      }
+    ],
+    "cover": "../assets/images/blogs/turkey/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 638
+  },
+  {
+    "id": "vietnam",
+    "title": "Vietnam",
+    "category": "travel",
+    "categoryLabel": "Travel",
+    "location": "Vietnam",
+    "dates": "2019",
+    "description": "Photographs from Vietnam in 2019.",
+    "photos": [
+      {
+        "original": "blogs_pages/6_Vietnam/1.JPG",
+        "view": "../assets/images/blogs/vietnam/01-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/01-thumb.webp",
+        "width": 1600,
+        "height": 1062,
+        "alt": "Vietnam — photograph 1"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/2.JPG",
+        "view": "../assets/images/blogs/vietnam/02-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/02-thumb.webp",
+        "width": 1600,
+        "height": 1600,
+        "alt": "Vietnam — photograph 2"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/3.JPG",
+        "view": "../assets/images/blogs/vietnam/03-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/03-thumb.webp",
+        "width": 1600,
+        "height": 1064,
+        "alt": "Vietnam — photograph 3"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/4.JPG",
+        "view": "../assets/images/blogs/vietnam/04-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/04-thumb.webp",
+        "width": 1600,
+        "height": 1063,
+        "alt": "Vietnam — photograph 4"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/5.JPG",
+        "view": "../assets/images/blogs/vietnam/05-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/05-thumb.webp",
+        "width": 1063,
+        "height": 1600,
+        "alt": "Vietnam — photograph 5"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/6.JPG",
+        "view": "../assets/images/blogs/vietnam/06-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/06-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Vietnam — photograph 6"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/7.JPG",
+        "view": "../assets/images/blogs/vietnam/07-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/07-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Vietnam — photograph 7"
+      },
+      {
+        "original": "blogs_pages/6_Vietnam/8.JPG",
+        "view": "../assets/images/blogs/vietnam/08-view.webp",
+        "thumb": "../assets/images/blogs/vietnam/08-thumb.webp",
+        "width": 1280,
+        "height": 1600,
+        "alt": "Vietnam — photograph 8"
+      }
+    ],
+    "cover": "../assets/images/blogs/vietnam/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 637
+  },
+  {
+    "id": "fieldwork",
+    "title": "Fieldwork",
+    "category": "fieldwork",
+    "categoryLabel": "Fieldwork",
+    "location": "In the field",
+    "dates": "2018–2021",
+    "description": "Snapshots from field campaigns and life in the field.",
+    "photos": [
+      {
+        "original": "blogs_pages/7_Field_works/1.JPG",
+        "view": "../assets/images/blogs/fieldwork/01-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/01-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Fieldwork — photograph 1"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/2.JPG",
+        "view": "../assets/images/blogs/fieldwork/02-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/02-thumb.webp",
+        "width": 1441,
+        "height": 1600,
+        "alt": "Fieldwork — photograph 2"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/3.JPG",
+        "view": "../assets/images/blogs/fieldwork/03-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/03-thumb.webp",
+        "width": 1202,
+        "height": 1600,
+        "alt": "Fieldwork — photograph 3"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/4.JPG",
+        "view": "../assets/images/blogs/fieldwork/04-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/04-thumb.webp",
+        "width": 900,
+        "height": 1600,
+        "alt": "Fieldwork — photograph 4"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/5.JPG",
+        "view": "../assets/images/blogs/fieldwork/05-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/05-thumb.webp",
+        "width": 1600,
+        "height": 739,
+        "alt": "Fieldwork — photograph 5"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/6.JPG",
+        "view": "../assets/images/blogs/fieldwork/06-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/06-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "alt": "Fieldwork — photograph 6"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/7.JPG",
+        "view": "../assets/images/blogs/fieldwork/07-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/07-thumb.webp",
+        "width": 1200,
+        "height": 1600,
+        "alt": "Fieldwork — photograph 7"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/8.JPG",
+        "view": "../assets/images/blogs/fieldwork/08-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/08-thumb.webp",
+        "width": 900,
+        "height": 1600,
+        "alt": "Fieldwork — photograph 8"
+      },
+      {
+        "original": "blogs_pages/7_Field_works/9.JPG",
+        "view": "../assets/images/blogs/fieldwork/09-view.webp",
+        "thumb": "../assets/images/blogs/fieldwork/09-thumb.webp",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Fieldwork — photograph 9"
+      }
+    ],
+    "cover": "../assets/images/blogs/fieldwork/cover.webp",
+    "coverWidth": 960,
+    "coverHeight": 720
+  }
+]

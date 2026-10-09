@@ -1,0 +1,88 @@
+/* The tutorial directory shares the site's palette and reading width. */
+article.tutorials { --fs-1: clamp(22px, 2.2vw, 30px); }
+.tutorials .article-title { margin-bottom: 12px; }
+.tutorials-intro { margin-bottom: 22px; color: var(--theme-body); font-size: 14px; line-height: 1.65; }
+.tutorial-feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 26px; margin-bottom: 30px; padding: 26px; overflow: hidden; border: 1px solid rgba(var(--theme-accent-rgb), .26); border-radius: 16px; background: linear-gradient(125deg, rgba(var(--theme-accent-rgb), .09), rgba(var(--theme-accent-rgb), .02)), var(--theme-surface); }
+.tutorial-feature-eyebrow { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; color: var(--theme-accent); font-size: 10px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; }
+.tutorial-feature-eyebrow svg { width: 15px; height: 15px; }
+.tutorial-feature h3 { margin-bottom: 10px; color: var(--theme-ink); font-size: 24px; font-weight: 600; line-height: 1.3; }
+.tutorial-feature-description { color: var(--theme-body); font-size: 14px; line-height: 1.65; }
+.tutorial-feature-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 18px; }
+.tutorial-primary-action { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 9px 14px; border: 1px solid var(--theme-accent); border-radius: 9px; background: var(--theme-accent); color: var(--theme-page); font-size: 12px; font-weight: 500; }
+.tutorial-primary-action:hover { box-shadow: 0 4px 14px rgba(var(--theme-accent-rgb), .16); }
+.tutorial-research-link { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; color: var(--theme-accent); font-size: 12px; font-weight: 500; }
+.tutorial-feature-preview { min-width: 0; }
+.tutorial-package-logo { display: flex; align-items: center; justify-content: center; min-height: 150px; padding: 22px; border: 1px solid var(--theme-line); border-radius: 11px; background: rgba(var(--theme-surface-rgb), .65); }
+.tutorial-package-logo img { width: 100%; height: auto; object-fit: contain; }
+.hyperproc-logo--light { display: none; }
+.hyperproc-logo--dark { display: block; }
+:root[data-theme="light"] .hyperproc-logo--light { display: block; }
+:root[data-theme="light"] .hyperproc-logo--dark { display: none; }
+.tutorial-feature-preview figcaption { margin-top: 9px; color: var(--theme-muted); font-size: 11px; font-style: normal; font-weight: 400; line-height: 1.5; }
+.tutorial-library { scroll-margin-top: 84px; }
+.tutorial-library-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 14px; }
+.tutorial-library-header h3 { color: var(--theme-ink); font-size: 20px; font-weight: 600; line-height: 1.4; }
+.tutorial-library-summary { color: var(--theme-muted); font-size: 11px; line-height: 1.5; }
+.tutorial-filters { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+.tutorial-filter { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 7px 12px; border: 1px solid var(--theme-line); border-radius: 999px; color: var(--theme-body); font-size: 12px; font-weight: 500; line-height: 1.5; transition: background .18s, border-color .18s; }
+.tutorial-filter-count { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 999px; background: var(--theme-soft); color: var(--theme-muted); font-size: 10px; font-weight: 400; }
+.tutorial-filter[aria-pressed="true"] { border-color: rgba(var(--theme-accent-rgb), .6); background: rgba(var(--theme-accent-rgb), .1); color: var(--theme-accent); }
+.tutorial-filter[aria-pressed="true"] .tutorial-filter-count { background: rgba(var(--theme-accent-rgb), .13); color: var(--theme-accent); }
+.tutorial-filter:hover { border-color: var(--theme-accent); }
+.tutorial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 18px; margin: 0; padding: 0; }
+.tutorial-item { min-width: 0; }
+.tutorial-item[hidden] { display: none; }
+.tutorial-card { display: flex; flex-direction: column; height: 100%; overflow: hidden; border: 1px solid var(--theme-line); border-radius: 14px; background: rgba(var(--theme-soft-rgb), .35); color: var(--theme-body); transition: border-color .2s, box-shadow .2s; }
+.tutorial-card:hover { border-color: rgba(var(--theme-accent-rgb), .6); box-shadow: 0 6px 22px rgba(0, 0, 0, .07); }
+.tutorial-card-cover { position: relative; aspect-ratio: 16 / 7; overflow: hidden; background: var(--theme-soft); }
+.tutorial-card-cover img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.tutorial-card-cover--figure { padding: 8px; background: #fff; }
+.tutorial-card-cover--figure img { object-fit: contain; }
+.tutorial-card-cover--biocrust img { object-position: center 60%; }
+.tutorial-card:hover .tutorial-card-cover img { transform: scale(1.025); }
+.tutorial-card:hover .tutorial-card-cover--figure img { transform: none; }
+.tutorial-card-body { display: flex; flex: 1; flex-direction: column; padding: 17px; }
+.tutorial-card-category { margin-bottom: 7px; color: var(--theme-accent); font-size: 11px; font-weight: 500; line-height: 1.5; }
+.tutorial-card h4 { margin-bottom: 8px; color: var(--theme-ink); font-size: 18px; font-weight: 600; line-height: 1.35; }
+.tutorial-card-description { margin-bottom: 13px; color: var(--theme-body); font-size: 14px; line-height: 1.6; }
+.tutorial-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tutorial-tools li { padding: 3px 9px; border: 1px solid var(--theme-line); border-radius: 999px; background: var(--theme-surface); color: var(--theme-muted); font-size: 12px; line-height: 1.5; }
+.tutorial-card-action { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 15px; padding-top: 12px; border-top: 1px solid var(--theme-line); color: var(--theme-accent); font-size: 12px; font-weight: 500; }
+.tutorial-card-action svg { width: 16px; height: 16px; }
+.tutorials a:focus-visible, .tutorials button:focus-visible { outline: 2px solid var(--theme-accent); outline-offset: 3px; }
+.tutorial-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+@media (max-width: 1023px) {
+  .tutorial-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tutorial-filter { min-height: 44px; }
+  .tutorial-filter[data-tutorial-filter="all"] { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .tutorial-feature { gap: 20px; padding: 22px; }
+  .tutorial-feature h3 { font-size: 22px; }
+  .tutorial-feature-description { font-size: 13px; }
+  .tutorial-feature-actions { gap: 8px; }
+  .tutorial-card-body { padding: 15px; }
+  .tutorial-card h4 { font-size: 16px; }
+}
+@media (max-width: 600px) {
+  .tutorials .tutorials-intro { margin-bottom: 18px; font-size: 13px; }
+  .tutorial-feature { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-bottom: 24px; padding: 18px; border-radius: 13px; }
+  .tutorial-feature h3 { font-size: 20px; }
+  .tutorial-feature-eyebrow { font-size: 9px; letter-spacing: 1px; }
+  .tutorial-package-logo { min-height: 110px; padding: 16px; }
+  .tutorial-feature-actions { gap: 8px 14px; margin-top: 14px; }
+  .tutorial-primary-action, .tutorial-research-link { min-height: 44px; font-size: 11px; }
+  .tutorial-library { scroll-margin-top: 20px; }
+  .tutorial-library-header h3 { font-size: 18px; }
+  .tutorial-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; margin-bottom: 16px; }
+  .tutorial-filter { min-height: 44px; padding: 6px 8px; gap: 6px; font-size: 11px; }
+  .tutorial-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .tutorial-card-cover { aspect-ratio: 16 / 8; }
+  .tutorial-card-body { padding: 15px; }
+  .tutorial-card-action { margin-top: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-card, .tutorial-card-cover img, .tutorial-filter { transition: none; }
+  .tutorial-card:hover .tutorial-card-cover img { transform: none; }
+}

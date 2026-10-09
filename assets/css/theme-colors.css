@@ -1,0 +1,66 @@
+/* Shared palette only. Legacy variable names preserve the existing page styles. */
+:root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --theme-page: #181a20;
+  --theme-surface: #22252d;
+  --theme-surface-rgb: 34, 37, 45;
+  --theme-soft: #2a2f39;
+  --theme-soft-rgb: 42, 47, 57;
+  --theme-line: #3b414d;
+  --theme-ink: #f2f4f8;
+  --theme-body: #d5dbe5;
+  --theme-muted: #a9b2c2;
+  --theme-accent: #95baff;
+  --theme-accent-rgb: 149, 186, 255;
+  --theme-accent-secondary: #b4c8ed;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --theme-page: #f8f7f2;
+  --theme-surface: #fffefb;
+  --theme-surface-rgb: 255, 254, 251;
+  --theme-soft: #edf0f5;
+  --theme-soft-rgb: 237, 240, 245;
+  --theme-line: #dce0e6;
+  --theme-ink: #222936;
+  --theme-body: #444c59;
+  --theme-muted: #656d7b;
+  --theme-accent: #365f9c;
+  --theme-accent-rgb: 54, 95, 156;
+  --theme-accent-secondary: #456593;
+  --shadow-1: -4px 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 16px 30px rgba(0, 0, 0, 0.08);
+  --shadow-3: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --shadow-4: 0 25px 50px rgba(0, 0, 0, 0.06);
+  --shadow-5: 0 24px 80px rgba(0, 0, 0, 0.08);
+}
+
+:root:not([data-theme="light"]),
+:root[data-theme="light"] {
+  --bg-gradient-onyx: linear-gradient(to bottom right, var(--theme-soft) 3%, var(--theme-surface) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, rgba(var(--theme-soft-rgb), 0.251) 0%, rgba(var(--theme-soft-rgb), 0) 100%), var(--theme-surface);
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, var(--theme-accent) 0%, rgba(var(--theme-accent-rgb), 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, rgba(var(--theme-accent-rgb), 0.251) 0%, rgba(var(--theme-accent-rgb), 0) 59.86%), var(--theme-surface);
+  --border-gradient-onyx: linear-gradient(to bottom right, var(--theme-line) 0%, transparent 50%);
+  --text-gradient-yellow: linear-gradient(to right, var(--theme-accent), var(--theme-accent-secondary));
+  --jet: var(--theme-line);
+  --onyx: var(--theme-soft);
+  --eerie-black-1: var(--theme-surface);
+  --eerie-black-2: var(--theme-surface);
+  --smoky-black: var(--theme-page);
+  --white-1: var(--theme-ink);
+  --white-2: var(--theme-ink);
+  --orange-yellow-crayola: var(--theme-accent);
+  --vegas-gold: var(--theme-accent-secondary);
+  --light-gray: var(--theme-body);
+  --light-gray-70: var(--theme-muted);
+}
+
+:root:not([data-theme="light"]) .navbar {
+  background: rgba(var(--theme-surface-rgb), 0.75);
+}
+
+:root[data-theme="light"] .navbar {
+  background: rgba(var(--theme-surface-rgb), 0.85);
+}

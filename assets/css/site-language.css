@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'Source Han Sans';
+  src: url('../fonts/source-han-sans-cn-site.woff2?v=20261009-zh93') format('woff2');
+  font-style: normal;
+  font-weight: 250 900;
+  font-display: swap;
+  unicode-range: U+2000-206F, U+3000-303F, U+3400-9FFF, U+FF00-FFEF;
+}
+
+:root[lang='zh-CN'] { --ff-poppins: 'Poppins', 'Source Han Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+:root[lang='zh-CN'] body { font-family: var(--ff-poppins); }
+:root[lang='zh-CN'] .navbar-link { font-weight: 500; letter-spacing: .02em; }
+:root[lang='zh-CN'] .about-text p,
+:root[lang='zh-CN'] .research-intro,
+:root[lang='zh-CN'] .paper-detail-body p,
+:root[lang='zh-CN'] .paper-body p,
+:root[lang='zh-CN'] .pub-abstract p,
+:root[lang='zh-CN'] .lesson-section p,
+:root[lang='zh-CN'] .lesson-section li { line-height: 1.85; font-weight: 400; }
+:root[lang='zh-CN'] .text-overlay h2 { max-width: 26ch; }
+
+[data-language-control] {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 2px;
+  width: 80px;
+  height: 36px;
+  padding: 3px;
+  border: 1px solid var(--jet);
+  border-radius: 11px;
+  background: var(--theme-surface);
+  box-shadow: none;
+}
+[data-language-control] button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  padding: 0;
+  border-radius: 7px;
+  font-family: var(--ff-poppins);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: var(--theme-body);
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+[data-language-control] button[aria-pressed='true'] {
+  background: rgba(var(--theme-accent-rgb), .14);
+  color: var(--theme-accent);
+}
+[data-language-control] button:hover { background: rgba(var(--theme-accent-rgb), .08); }
+[data-language-control] button:focus-visible { outline: 2px solid var(--theme-accent); outline-offset: 2px; }
+.language-status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+:root[lang='zh-CN'] .tutorial-reader .lesson-section p,
+:root[lang='zh-CN'] .pub-abstract p,
+:root[lang='zh-CN'] .about-text .skills-list > p { font-size: 16px; }
+
+@media (min-width: 1024px) {
+  .desktop-nav-anchor .navbar { grid-template-columns: 130px minmax(0, 1fr) 130px; }
+  .navbar-language-slot[data-language-control] { flex: 0 0 auto; height: 36px; }
+  :root[lang='zh-CN'] .tutorial-reader .lesson-section p,
+  :root[lang='zh-CN'] .pub-abstract p { font-size: 17px; }
+  :root[lang='zh-CN'] .about-text .skills-list > p { font-size: 18px; }
+}
+@media (max-width: 1023px) {
+  [data-language-control] {
+    position: absolute;
+    top: 8px;
+    left: 44px;
+    z-index: 6;
+    width: 72px;
+    height: 28px;
+    padding: 2px;
+    border-radius: 9px;
+  }
+  [data-language-control] button { height: 22px; border-radius: 6px; }
+  :root[lang='zh-CN'] .navbar .navbar-link { font-size: clamp(13px, 3.5vw, 15px); padding-inline: 5px; }
+}

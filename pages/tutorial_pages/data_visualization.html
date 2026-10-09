@@ -5,63 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Visualization</title>
-  <style>
-    pre,
-    code {
-      position: relative !important;
-      white-space: pre !important;
-      word-wrap: normal !important;
-      overflow-x: auto !important;
-      font-family: 'Consolas', 'Courier New', monospace !important;
-      border-radius: 5px;
-      background: #0a0707 !important;
-      color: #f8f8f2 !important;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 5px 10px;
-      background: var(--onyx);
-      color: var(--white-2);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .copy-btn:hover {
-      opacity: 1;
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .container img {
-      width: 70%;
-      max-width: 300px;
-      min-width: 200px;
-      height: auto;
-      margin: 5px;
-    }
-  </style>
+  <script src="../../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Python for data visualization | Fujiang Ji</title>
+  
 
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../../assets/css/data_visualization.css">
+  <link rel="stylesheet" href="../../assets/css/data_visualization.css?v=20261006-type2">
+  <link rel="stylesheet" href="../../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
 
   <!--
@@ -71,13 +34,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/monokai-sublime.min.css">
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 
+  <script src="../../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+
+
+
+
+<meta name="description" content="Build clear scientific figures with deliberate subplot layouts, readable axes, and compact legends.">
+<link rel="stylesheet" href="../../assets/css/tutorial-reader.css?v=20261008-reader86">
+<link rel="stylesheet" href="../../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Python for data visualization | Fujiang Ji">
+<meta property="og:description" content="Build clear scientific figures with deliberate subplot layouts, readable axes, and compact legends.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python for data visualization | Fujiang Ji">
+<meta name="twitter:description" content="Build clear scientific figures with deliberate subplot layouts, readable axes, and compact legends.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
-<body>
+<body class="tutorial-document">
 
   <!--
     - #MAIN
@@ -89,17 +68,25 @@
     -->
 
     <aside class="sidebar" data-sidebar>
+<button class="theme-toggle-btn" aria-label="Toggle theme">
+              <span class="icon icon-moon">&#9790;</span>
+              <span class="icon icon-sun">&#9728;</span>
+            </button>
+
+
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -125,7 +112,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -140,7 +128,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -184,7 +172,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -214,50 +202,95 @@
       <!--
         - #NAVBAR
       -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" onclick="window.location.href='../tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-      <article class="tutorial active" data-page="tutorial">
-        <header>
-          <h2 class="h2 article-title">Tutorials</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"> <ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Python for Data Visualization</h3>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" onclick="window.location.href=window.SiteLanguage.href('../tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+            
           </div>
-          <ol class="timeline-list">
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">1. Ways to generate axes</h4>
+        </nav>
+      </div>
+      <article class="tutorial tutorial-reader active" data-page="tutorial">
+<header class="lesson-header"><a class="lesson-back" href="../tutorials.html">← All tutorials</a><p class="lesson-eyebrow">Visualization · Practical guide</p><h2 class="lesson-title">Python for data visualization</h2></header>
+    <div class="lesson-hero"><div class="lesson-hero-copy"><p>Build clear scientific figures with deliberate subplot layouts, readable axes, and compact legends.</p><div class="lesson-tags"><span>Python</span><span>Matplotlib</span><span>Figure design</span></div><a class="lesson-start" href="#lesson-1">Start learning <span aria-hidden="true">↓</span></a></div><figure class="lesson-figure lesson-figure-hero">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.3.png" data-image-caption="Example output" data-image-background="#ffffff" aria-label="Enlarge figure: Example output" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.3.png" width="678" height="203" alt="Example output" fetchpriority="high" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Example output · Click to enlarge</figcaption></figure></div>
+    <div class="lesson-preparation"><details open><summary>What you’ll learn</summary><ul><li>Choose a layout for single and multipanel figures.</li><li>Control axes, ticks, grids, and shared labels.</li><li>Place and customize legends.</li></ul></details><details><summary>Before you begin <span>Python basics</span></summary><ul><li>Python and Matplotlib.</li><li>The layout examples use empty axes; no dataset is needed.</li><li>The legend snippet continues an existing plot with ax and legend handles.</li></ul></details></div>
+    <div class="lesson-layout"><aside class="lesson-toc"><details data-lesson-outline><summary>On this page <span>5 sections</span></summary><nav aria-label="Tutorial chapters"><a href="#lesson-1" data-lesson-toc><span>01</span>Create axes with subplots</a><a href="#lesson-2" data-lesson-toc><span>02</span>Build panels with figure</a><a href="#lesson-3" data-lesson-toc><span>03</span>Arrange panels with GridSpec</a><a href="#lesson-4" data-lesson-toc><span>04</span>Style axes and ticks</a><a href="#lesson-5" data-lesson-toc><span>05</span>Refine the legend</a></nav></details></aside><div class="lesson-content"><section class="lesson-section" id="lesson-1" aria-labelledby="lesson-1-title"><div class="lesson-section-heading"><span class="lesson-step">01</span><h3 id="lesson-1-title">Create axes with subplots</h3></div><p class="lesson-section-intro">Start with a single axis or a regular grid. Shared figure labels are useful when several panels use the same variables.</p><div class="lesson-figures lesson-figures-multiple"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.1.png" data-image-caption="Single axis" data-image-background="#ffffff" aria-label="Enlarge figure: Single axis" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.1.1.png" width="217" height="203" alt="Single axis" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Single axis · Click to enlarge</figcaption></figure><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.2.png" data-image-caption="A 2 × 2 grid" data-image-background="#ffffff" aria-label="Enlarge figure: A 2 × 2 grid" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.1.2.png" width="295" height="280" alt="A 2 × 2 grid" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>A 2 × 2 grid · Click to enlarge</figcaption></figure><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.1.3.png" data-image-caption="Shared figure labels" data-image-background="#ffffff" aria-label="Enlarge figure: Shared figure labels" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.1.3.png" width="301" height="292" alt="Shared figure labels" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Shared figure labels · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.1 plt.subplots
+ fig,ax = plt.subplots(nrows, ncols, figsize=(width, height), dpi, sharex=False, sharey=False, **kwargs)
+ Parameters:
+------------------------------
+  - fig: figure
+  - ax: axes or array of Axes.
+  - dpi: the resolution of figure.
+  - nrows/ncols: number of rows/columns of the subplot grid.
+  - sharex/sharey: bool, default: False.
+                   Controls sharing of properties among x (sharex) or y (sharey) axes:
+  - figsize: the size of the created figure (Width, height) in inches (float, float).
+  - **kwargs: other parameters such as squeeze, width_ratios, height_ratios, subplot_kw, 
+              gridspec_kw, etc. that are passed to the pyplot.figure call</pre></details><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">subplots.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for subplots.py">Wrap</button><button type="button" data-code-copy aria-label="Copy subplots.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/subplots.py" download aria-label="Download subplots.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="subplots.py code"><code class="language-python">import matplotlib.pyplot as plt
+# generate a single axes figure (output 1).
+fig, ax = plt.subplots(1,1, figsize=(2, 2), dpi=100)
+# generate a two rows and two columns axes fugure (output 2). 
+# ax[0] (1st row, 1st coloumn), ax[1] (1st row, 2nd coloumn) (1st row, 1st coloumn), ax[2], ax[3] represent each axes.
+fig, ax = plt.subplots(2,2, figsize=(3, 3), dpi=100)
+# initialize the axes.
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace = 0.1,hspace = 0.1)
+plt.rcParams.update(config)
 
-              <pre><code class="language-python" class="bashScript">"""
+# generate a two rows and two columns axes fugure. 
+# ax1 (1st row, 1st coloumn), ax2 (1st row, 2nd coloumn) (1st row, 1st coloumn), ax3, ax4 represent each axes.
+fig, ([ax1,ax2],[ax3,ax4]) = plt.subplots(2,2, figsize=(3, 3), dpi=100)
+# all the ases share the same x and y label (output 3).
+fig.text(0.5, 0, &#x27;x&#x27;, ha=&#x27;center&#x27;)
+fig.text(0, 0.5, &#x27;y&#x27;, va=&#x27;center&#x27;,rotation=&#x27;vertical&#x27;)</code></pre>
+      <template data-code-source>&quot;&quot;&quot;
 1.1 plt.subplots
  fig,ax = plt.subplots(nrows, ncols, figsize=(width, height), dpi, sharex=False, sharey=False, **kwargs)
  Parameters:
@@ -271,7 +304,7 @@
   - figsize: the size of the created figure (Width, height) in inches (float, float).
   - **kwargs: other parameters such as squeeze, width_ratios, height_ratios, subplot_kw, 
               gridspec_kw, etc. that are passed to the pyplot.figure call
-"""
+&quot;&quot;&quot;
 
 import matplotlib.pyplot as plt
 # generate a single axes figure (output 1).
@@ -280,7 +313,7 @@ fig, ax = plt.subplots(1,1, figsize=(2, 2), dpi=100)
 # ax[0] (1st row, 1st coloumn), ax[1] (1st row, 2nd coloumn) (1st row, 1st coloumn), ax[2], ax[3] represent each axes.
 fig, ax = plt.subplots(2,2, figsize=(3, 3), dpi=100)
 # initialize the axes.
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace = 0.1,hspace = 0.1)
 plt.rcParams.update(config)
 
@@ -288,17 +321,50 @@ plt.rcParams.update(config)
 # ax1 (1st row, 1st coloumn), ax2 (1st row, 2nd coloumn) (1st row, 1st coloumn), ax3, ax4 represent each axes.
 fig, ([ax1,ax2],[ax3,ax4]) = plt.subplots(2,2, figsize=(3, 3), dpi=100)
 # all the ases share the same x and y label (output 3).
-fig.text(0.5, 0, 'x', ha='center')
-fig.text(0, 0.5, 'y', va='center',rotation='vertical')</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img src="./data_visualization_image/1.1.1.png" alt="Image 1">
-                <img src="./data_visualization_image/1.1.2.png" alt="Image 2">
-                <img src="./data_visualization_image/1.1.3.png" alt="Image 3">
-              </div>
-              <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: output 1; Middle: output 2; Right: output
-                3.</figcaption>
+fig.text(0.5, 0, &#x27;x&#x27;, ha=&#x27;center&#x27;)
+fig.text(0, 0.5, &#x27;y&#x27;, va=&#x27;center&#x27;,rotation=&#x27;vertical&#x27;)</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>A 2 × 2 axes array is indexed as ax[row, column]. Use ax.ravel() when you want to iterate over individual panels.</p></aside></section><section class="lesson-section" id="lesson-2" aria-labelledby="lesson-2-title"><div class="lesson-section-heading"><span class="lesson-step">02</span><h3 id="lesson-2-title">Build panels with figure</h3></div><p class="lesson-section-intro">Create the figure first, then add each panel in a loop. This is useful when panel creation is part of an iterative workflow.</p><div class="lesson-figures lesson-figures-multiple"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.2.1.png" data-image-caption="Default figure background" data-image-background="#ffffff" aria-label="Enlarge figure: Default figure background" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.2.1.png" width="291" height="280" alt="Default figure background" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Default figure background · Click to enlarge</figcaption></figure><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.2.2.png" data-image-caption="Custom figure background" data-image-background="#ffffff" aria-label="Enlarge figure: Custom figure background" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.2.2.png" width="291" height="280" alt="Custom figure background" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Custom figure background · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.2 plt.figure
+ fig = plt.figure(figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True, **kwargs)
+ Parameters:
+------------------------------
+  - fig: figure
+  - dpi: the resolution of figure.
+  - figsize: the size of the created figure (Width, height) in inches (float, float).
+  - dpi:the resolution of the figure in dots-per-inch.
+  - facecolorcolor: the background color.
+  - edgecolorcolor: the border color.
+  - frameonbool, default: True. If False, suppress drawing the figure frame.
+  - **kwargs: additional keyword arguments are passed to the Figure constructor.
+------------------------------
+  Useful for iteratively figure plotting.</pre></details><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">figure_panels.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for figure_panels.py">Wrap</button><button type="button" data-code-copy aria-label="Copy figure_panels.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/figure_panels.py" download aria-label="Download figure_panels.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="figure_panels.py code"><code class="language-python">import matplotlib.pyplot as plt
+# plot a 2*2 axes figure with 100 dpi (output 1).
+fig = plt.figure(figsize=(3,3), dpi=100)
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.4,hspace =0.3)
+plt.rcParams.update(config)
+for i in range(4):
+    ax = fig.add_subplot(2,2,i+1)
 
-              <pre><code class="language-python" class="bashScript">"""
+# plot a 2*2 axes figure with 100 dpi, yellow face and edgecolor (output 2).
+fig = plt.figure(figsize=(3,3), dpi=100, facecolor=&quot;y&quot;, edgecolor=&quot;y&quot;)
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.4,hspace =0.3)
+plt.rcParams.update(config)
+for i in range(4):
+    ax = fig.add_subplot(2,2,i+1)</code></pre>
+      <template data-code-source>&quot;&quot;&quot;
 1.2 plt.figure
  fig = plt.figure(figsize=None, dpi=None, facecolor=None, edgecolor=None, frameon=True, **kwargs)
  Parameters:
@@ -313,32 +379,57 @@ fig.text(0, 0.5, 'y', va='center',rotation='vertical')</code><button id="copyBut
   - **kwargs: additional keyword arguments are passed to the Figure constructor.
 ------------------------------
   Useful for iteratively figure plotting.
-"""
+&quot;&quot;&quot;
 
 import matplotlib.pyplot as plt
 # plot a 2*2 axes figure with 100 dpi (output 1).
 fig = plt.figure(figsize=(3,3), dpi=100)
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.4,hspace =0.3)
 plt.rcParams.update(config)
 for i in range(4):
     ax = fig.add_subplot(2,2,i+1)
 
 # plot a 2*2 axes figure with 100 dpi, yellow face and edgecolor (output 2).
-fig = plt.figure(figsize=(3,3), dpi=100, facecolor="y", edgecolor="y")
-config = {"font.family":'Helvetica'}
+fig = plt.figure(figsize=(3,3), dpi=100, facecolor=&quot;y&quot;, edgecolor=&quot;y&quot;)
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.4,hspace =0.3)
 plt.rcParams.update(config)
 for i in range(4):
-    ax = fig.add_subplot(2,2,i+1)</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img src="./data_visualization_image/1.2.1.png" alt="Image 1">
-                <img src="./data_visualization_image/1.2.2.png" alt="Image 2">
-              </div>
-              <figcaption style="margin-bottom: 10px;margin-left: 10px;">Left: output 1; Right: output 2.
-              </figcaption>
-              <pre><code class="language-python" class="bashScript">"""
-1.3 plt.figure & GridSpec
+    ax = fig.add_subplot(2,2,i+1)</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-3" aria-labelledby="lesson-3-title"><div class="lesson-section-heading"><span class="lesson-step">03</span><h3 id="lesson-3-title">Arrange panels with GridSpec</h3></div><p class="lesson-section-intro">Use a grid to make panels span different numbers of rows or columns. The example arranges four panels across a flexible grid.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/1.3.png" data-image-caption="Four panels arranged with GridSpec" data-image-background="#ffffff" aria-label="Enlarge figure: Four panels arranged with GridSpec" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/1.3.png" width="678" height="203" alt="Four panels arranged with GridSpec" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Four panels arranged with GridSpec · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>1.3 plt.figure &amp; GridSpec
+ gs = gridspec.GridSpec(nrows, ncols)
+ A grid layout to place subplots within a figure.
+Parameters:
+------------------------------
+  - nrows/ncols: the number of rows and columns of the grid (int).
+  - other parameters: https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html
+  - detailed tutorial: https://matplotlib.org/3.5.0/tutorials/intermediate/gridspec.html
+------------------------------
+  Useful for plotting irregular axes.
+  Useful for iteratively figure plotting.</pre></details><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">gridspec_layout.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for gridspec_layout.py">Wrap</button><button type="button" data-code-copy aria-label="Copy gridspec_layout.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/gridspec_layout.py" download aria-label="Download gridspec_layout.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="gridspec_layout.py code"><code class="language-python">import matplotlib.pyplot as plt
+from matplotlib import gridspec
+# plot a 1*4 axes figure with 100 dpi using GridSpec
+fig = plt.figure(figsize=(8,2), dpi=100)
+gs = gridspec.GridSpec(2, 8)
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
+plt.subplots_adjust(wspace =0.7,hspace =0.1)
+plt.rcParams.update(config)
+# can also use interative loop to generate axes.
+ax1 = plt.subplot(gs[0:2, 0:2])
+ax2 = plt.subplot(gs[0:2, 2:4])
+ax3 = plt.subplot(gs[0:2, 4:6])
+ax4 = plt.subplot(gs[0:2, 6:8])</code></pre>
+      <template data-code-source>&quot;&quot;&quot;
+1.3 plt.figure &amp; GridSpec
  gs = gridspec.GridSpec(nrows, ncols)
  A grid layout to place subplots within a figure.
 Parameters:
@@ -350,96 +441,142 @@ Parameters:
   Useful for plotting irregular axes.
   Useful for iteratively figure plotting.
 
-"""
+&quot;&quot;&quot;
 
 import matplotlib.pyplot as plt
 from matplotlib import gridspec
 # plot a 1*4 axes figure with 100 dpi using GridSpec
 fig = plt.figure(figsize=(8,2), dpi=100)
 gs = gridspec.GridSpec(2, 8)
-config = {"font.family":'Helvetica'}
+config = {&quot;font.family&quot;:&#x27;Helvetica&#x27;}
 plt.subplots_adjust(wspace =0.7,hspace =0.1)
 plt.rcParams.update(config)
 # can also use interative loop to generate axes.
 ax1 = plt.subplot(gs[0:2, 0:2])
 ax2 = plt.subplot(gs[0:2, 2:4])
 ax3 = plt.subplot(gs[0:2, 4:6])
-ax4 = plt.subplot(gs[0:2, 6:8])</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img style="max-width:100%;" src="./data_visualization_image/1.3.png" alt="Image 1">
-              </div>
-
-
-
-
-            </li>
-
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">2. Axes parameters setting</h4>
-              <pre><code class="language-python" class="bashScript">"""
-2.1 set axes parameters
-"""
-import matplotlib.pyplot as plt
+ax4 = plt.subplot(gs[0:2, 6:8])</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-4" aria-labelledby="lesson-4-title"><div class="lesson-section-heading"><span class="lesson-step">04</span><h3 id="lesson-4-title">Style axes and ticks</h3></div><p class="lesson-section-intro">Set labels and limits, format tick values, control spines, and use a light grid to guide the reader without distracting from the data.</p><div class="lesson-figures"><figure class="lesson-figure">
+      <button type="button" class="lesson-image-button" data-lesson-image data-image-src="./data_visualization_image/2.1.png" data-image-caption="Axis labels, ticks, and grid settings" data-image-background="#ffffff" aria-label="Enlarge figure: Axis labels, ticks, and grid settings" style="--figure-background:#ffffff">
+        <img src="./data_visualization_image/2.1.png" width="547" height="226" alt="Axis labels, ticks, and grid settings" loading="lazy" decoding="async">
+        <span class="lesson-enlarge" aria-hidden="true">↗</span>
+      </button><figcaption>Axis labels, ticks, and grid settings · Click to enlarge</figcaption></figure></div><details class="lesson-parameters"><summary>Parameters &amp; layout notes</summary><pre>2.1 set axes parameters</pre></details><div class="lesson-code is-collapsed" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">axes_style.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for axes_style.py">Wrap</button><button type="button" data-code-copy aria-label="Copy axes_style.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/axes_style.py" download aria-label="Download axes_style.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="axes_style.py code"><code class="language-python">import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
 fig,ax = plt.subplots(figsize=(6,2), dpi=100)
 
 # x-axis, y-axis label.
-ax.set_xlabel('x', fontsize=10, fontweight = 'bold', fontstyle='italic', labelpad = 0.5)
-ax.set_ylabel('y', fontsize=10, fontweight = 'bold', fontstyle='italic', labelpad = 0.5)
+ax.set_xlabel(&#x27;x&#x27;, fontsize=10, fontweight = &#x27;bold&#x27;, fontstyle=&#x27;italic&#x27;, labelpad = 0.5)
+ax.set_ylabel(&#x27;y&#x27;, fontsize=10, fontweight = &#x27;bold&#x27;, fontstyle=&#x27;italic&#x27;, labelpad = 0.5)
 
 
 # tick parameters setting.
-"""
-ax.tick_params(axis='both', **kwargs)
+&quot;&quot;&quot;
+ax.tick_params(axis=&#x27;both&#x27;, **kwargs)
 The parameters include: 
-  (1) axis: {'x', 'y', 'both'}, default: 'both'. The axis to which the parameters are applied.
-  (2) which: {'major', 'minor', 'both'}, default: 'major'. The group of ticks to which the parameters are applied.
-  (3) direction: {'in', 'out', 'inout'}. Puts ticks inside the Axes, outside the Axes, or both.
+  (1) axis: {&#x27;x&#x27;, &#x27;y&#x27;, &#x27;both&#x27;}, default: &#x27;both&#x27;. The axis to which the parameters are applied.
+  (2) which: {&#x27;major&#x27;, &#x27;minor&#x27;, &#x27;both&#x27;}, default: &#x27;major&#x27;. The group of ticks to which the parameters are applied.
+  (3) direction: {&#x27;in&#x27;, &#x27;out&#x27;, &#x27;inout&#x27;}. Puts ticks inside the Axes, outside the Axes, or both.
   (4) length: float. Tick length in points.
   (5) width: float. Tick width in points.
   (6) color: Tick color.
   (7) pad: float. Distance in points between tick and label.
-  (8) labelsize: float or str. Tick label font size in points or as a string (e.g., 'large').
+  (8) labelsize: float or str. Tick label font size in points or as a string (e.g., &#x27;large&#x27;).
   (9) labelcolor: Tick label color.
   (10) colors: Tick color and label color.
   (11) zorder: float. Tick and label zorder.
   (12) bottom, top, left, right: bool. Whether to draw the respective ticks.
   (13) labelbottom, labeltop, labelleft, labelright: bool. Whether to draw the respective tick labels.
   (14) labelrotation: float. Tick label rotation
-"""
+&quot;&quot;&quot;
 # Examples
 ax.tick_params(labelsize=8)
-ax.tick_params(axis = 'x',labelsize=8)
-ax.tick_params(axis='both', which='major', direction='in', length=4, width=2,
-               color='red', pad = 0.1, labelsize=10, labelrotation=45, labelcolor = "blue", 
+ax.tick_params(axis = &#x27;x&#x27;,labelsize=8)
+ax.tick_params(axis=&#x27;both&#x27;, which=&#x27;major&#x27;, direction=&#x27;in&#x27;, length=4, width=2,
+               color=&#x27;red&#x27;, pad = 0.1, labelsize=10, labelrotation=45, labelcolor = &quot;blue&quot;, 
                bottom = True, top = False, left = True, right = False,
                labelbottom = True, labeltop = False, labelleft = True, labelright = False)
 
 # set the visiblity of axis
-ax.spines[['top', 'right']].set_visible(False)
-ax.spines[['bottom','left']].set_linewidth(2)
+ax.spines[[&#x27;top&#x27;, &#x27;right&#x27;]].set_visible(False)
+ax.spines[[&#x27;bottom&#x27;,&#x27;left&#x27;]].set_linewidth(2)
 
 
 # set xlim and ylim and display the same number of decimal places.
 ax.set_xlim(0,10)
 ax.set_ylim(0,10)
-ax.xaxis.set_major_formatter(mtick.FormatStrFormatter('%.1f'))
-ax.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.1f'))
+ax.xaxis.set_major_formatter(mtick.FormatStrFormatter(&#x27;%.1f&#x27;))
+ax.yaxis.set_major_formatter(mtick.FormatStrFormatter(&#x27;%.1f&#x27;))
 
 # set the facecolor and grid.
 ax.set_facecolor((0,0,0,0.03))
-ax.grid(color='gray', linestyle=':', linewidth=0.3)
-              </code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-              <div class="container">
-                <img style="max-width:100%;" src="./data_visualization_image/2.1.png" alt="Image 1">
-              </div>
-            </li>
+ax.grid(color=&#x27;gray&#x27;, linestyle=&#x27;:&#x27;, linewidth=0.3)
+              </code></pre>
+      <template data-code-source>&quot;&quot;&quot;
+2.1 set axes parameters
+&quot;&quot;&quot;
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
 
-            <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">3. Legend setting</h4>
-              <pre><code class="language-python" class="bashScript"># common settings
-ax.legend(loc='upper right',fontsize=12, facecolor= 'none',edgecolor = 'none',bbox_to_anchor=(2.0, 0.7), ncol = 2, columnspacing = 0.4)
+fig,ax = plt.subplots(figsize=(6,2), dpi=100)
+
+# x-axis, y-axis label.
+ax.set_xlabel(&#x27;x&#x27;, fontsize=10, fontweight = &#x27;bold&#x27;, fontstyle=&#x27;italic&#x27;, labelpad = 0.5)
+ax.set_ylabel(&#x27;y&#x27;, fontsize=10, fontweight = &#x27;bold&#x27;, fontstyle=&#x27;italic&#x27;, labelpad = 0.5)
+
+
+# tick parameters setting.
+&quot;&quot;&quot;
+ax.tick_params(axis=&#x27;both&#x27;, **kwargs)
+The parameters include: 
+  (1) axis: {&#x27;x&#x27;, &#x27;y&#x27;, &#x27;both&#x27;}, default: &#x27;both&#x27;. The axis to which the parameters are applied.
+  (2) which: {&#x27;major&#x27;, &#x27;minor&#x27;, &#x27;both&#x27;}, default: &#x27;major&#x27;. The group of ticks to which the parameters are applied.
+  (3) direction: {&#x27;in&#x27;, &#x27;out&#x27;, &#x27;inout&#x27;}. Puts ticks inside the Axes, outside the Axes, or both.
+  (4) length: float. Tick length in points.
+  (5) width: float. Tick width in points.
+  (6) color: Tick color.
+  (7) pad: float. Distance in points between tick and label.
+  (8) labelsize: float or str. Tick label font size in points or as a string (e.g., &#x27;large&#x27;).
+  (9) labelcolor: Tick label color.
+  (10) colors: Tick color and label color.
+  (11) zorder: float. Tick and label zorder.
+  (12) bottom, top, left, right: bool. Whether to draw the respective ticks.
+  (13) labelbottom, labeltop, labelleft, labelright: bool. Whether to draw the respective tick labels.
+  (14) labelrotation: float. Tick label rotation
+&quot;&quot;&quot;
+# Examples
+ax.tick_params(labelsize=8)
+ax.tick_params(axis = &#x27;x&#x27;,labelsize=8)
+ax.tick_params(axis=&#x27;both&#x27;, which=&#x27;major&#x27;, direction=&#x27;in&#x27;, length=4, width=2,
+               color=&#x27;red&#x27;, pad = 0.1, labelsize=10, labelrotation=45, labelcolor = &quot;blue&quot;, 
+               bottom = True, top = False, left = True, right = False,
+               labelbottom = True, labeltop = False, labelleft = True, labelright = False)
+
+# set the visiblity of axis
+ax.spines[[&#x27;top&#x27;, &#x27;right&#x27;]].set_visible(False)
+ax.spines[[&#x27;bottom&#x27;,&#x27;left&#x27;]].set_linewidth(2)
+
+
+# set xlim and ylim and display the same number of decimal places.
+ax.set_xlim(0,10)
+ax.set_ylim(0,10)
+ax.xaxis.set_major_formatter(mtick.FormatStrFormatter(&#x27;%.1f&#x27;))
+ax.yaxis.set_major_formatter(mtick.FormatStrFormatter(&#x27;%.1f&#x27;))
+
+# set the facecolor and grid.
+ax.set_facecolor((0,0,0,0.03))
+ax.grid(color=&#x27;gray&#x27;, linestyle=&#x27;:&#x27;, linewidth=0.3)
+              </template>
+      <button class="lesson-code-expand" type="button" data-code-expand aria-expanded="false">Expand code · 52 lines <span aria-hidden="true">↓</span></button>
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div></section><section class="lesson-section" id="lesson-5" aria-labelledby="lesson-5-title"><div class="lesson-section-heading"><span class="lesson-step">05</span><h3 id="lesson-5-title">Refine the legend</h3></div><p class="lesson-section-intro">Control placement, columns, spacing, and marker appearance. Run this snippet after creating the plotted series and their legend labels.</p><div class="lesson-code" data-code-card>
+      <div class="lesson-code-toolbar"><span class="lesson-code-filename">legend_style.py</span><span class="lesson-code-language">Python</span>
+      <div class="lesson-code-actions"><button type="button" data-code-wrap aria-pressed="false" aria-label="Toggle line wrapping for legend_style.py">Wrap</button><button type="button" data-code-copy aria-label="Copy legend_style.py">Copy</button><a href="../../assets/code/tutorials/data_visualization/legend_style.py" download aria-label="Download legend_style.py">↓</a></div></div>
+      <pre class="lesson-code-scroll" tabindex="0" aria-label="legend_style.py code"><code class="language-python"># common settings
+ax.legend(loc=&#x27;upper right&#x27;,fontsize=12, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(2.0, 0.7), ncol = 2, columnspacing = 0.4)
 # remove legend
 ax.legend_.remove()
 # sometimes we need to re-define the legend as the alpha or other parameter settings in the figure.
@@ -447,23 +584,51 @@ handles, labels = ax.get_legend_handles_labels()
 k = 0
 new_handles = []
 for handle in handles:
-    new_handle = plt.Line2D([], [], ls = "none", marker='o', color = original_handle_colors[k], markersize = 8, alpha = 1)
+    new_handle = plt.Line2D([], [], ls = &quot;none&quot;, marker=&#x27;o&#x27;, color = original_handle_colors[k], markersize = 8, alpha = 1)
     new_handles.append(new_handle)
     k = k+1
-legend = ax.legend(handles=new_handles, labels=labels,loc = 'lower right',fontsize=8.5, facecolor= 'none',edgecolor = 'none',bbox_to_anchor=(1.,0))</code><button id="copyButton" class="copy-btn" onclick="copyText(this)">Copy</button></pre>
-            </li>
-
-            <!-- <li class="timeline-item" style="padding-left: 0px;">
-              <h4 class="h4 timeline-item-title">Version Control Git (CLM as an example):</h4>
-              <ul class="skills-list content-card"
-                style="color: var(--light-gray);font-size: 13px; line-height: 1.7; text-align: justify;">
-
-              </ul>
-            </li> -->
-
-          </ol>
-        </section>
-
+legend = ax.legend(handles=new_handles, labels=labels,loc = &#x27;lower right&#x27;,fontsize=8.5, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(1.,0))</code></pre>
+      <template data-code-source># common settings
+ax.legend(loc=&#x27;upper right&#x27;,fontsize=12, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(2.0, 0.7), ncol = 2, columnspacing = 0.4)
+# remove legend
+ax.legend_.remove()
+# sometimes we need to re-define the legend as the alpha or other parameter settings in the figure.
+handles, labels = ax.get_legend_handles_labels()
+k = 0
+new_handles = []
+for handle in handles:
+    new_handle = plt.Line2D([], [], ls = &quot;none&quot;, marker=&#x27;o&#x27;, color = original_handle_colors[k], markersize = 8, alpha = 1)
+    new_handles.append(new_handle)
+    k = k+1
+legend = ax.legend(handles=new_handles, labels=labels,loc = &#x27;lower right&#x27;,fontsize=8.5, facecolor= &#x27;none&#x27;,edgecolor = &#x27;none&#x27;,bbox_to_anchor=(1.,0))</template>
+      
+      <span class="lesson-code-status" data-code-status role="status" aria-live="polite"></span></div><aside class="lesson-note"><span>Keep in mind</span><p>This example uses ax and original_handle_colors from the surrounding plotting workflow. It is a continuation snippet.</p></aside></section></div></div>
+    <section class="lesson-resources" aria-labelledby="lesson-resources-title"><h3 id="lesson-resources-title">Keep exploring</h3><div><a href="https://matplotlib.org/stable/tutorials/index.html" target="_blank" rel="noopener noreferrer">Matplotlib tutorials <span aria-hidden="true">↗</span></a><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.gridspec.GridSpec.html" target="_blank" rel="noopener noreferrer">GridSpec reference <span aria-hidden="true">↗</span></a></div><a class="lesson-bundle" href="../../assets/code/tutorials/data_visualization/examples.zip" download>Download all examples <span aria-hidden="true">↓</span></a></section>
+    <nav class="lesson-next" aria-label="Adjacent tutorials"><a href="./rs_data_processing.html"><span>← Previous tutorial</span><strong>Read &amp; write GeoTIFF</strong></a><a href="./scatter_line_plot.html"><span>Next tutorial →</span><strong>Scatter &amp; line plots</strong></a></nav>
+<footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../../pages/research.html">Research</a>
+                <a href="../../pages/publications.html">Publications</a>
+                <a href="../../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
 
@@ -484,31 +649,21 @@ legend = ax.legend(handles=new_handles, labels=labels,loc = 'lower right',fontsi
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <script>
-    function copyText(element) {
-      var text = element.previousElementSibling.innerText;
-      var textarea = document.createElement("textarea");
-      textarea.textContent = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      element.textContent = "Copied";
-      // 两秒后恢复原始状态
-      setTimeout(function () {
-        element.textContent = "Copy";
-        element.style.backgroundColor = "";
-      }, 4000);
-    }
-  </script>
+  
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      hljs.highlightAll();
-    });
-  </script>
+  
 
-<script src="../../assets/js/theme-toggle.js"></script>
+
+
+
+
+
+<dialog class="lesson-image-viewer" data-lesson-viewer aria-labelledby="lesson-image-title">
+  <header><h2 id="lesson-image-title">Figure</h2><button type="button" data-image-close aria-label="Close figure viewer">✕</button></header>
+  <div class="lesson-image-tools"><button type="button" data-image-fit>Fit screen</button><button type="button" data-image-read>Zoom in</button><a data-image-original target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
+  <div class="lesson-image-stage" data-image-stage tabindex="0" aria-label="Figure; zoom in and scroll to explore"><img data-image-full alt=""></div>
+</dialog>
+<script src="../../assets/js/tutorial-reader.js?v=20261009-i18n90" defer></script>
 </body>
 
 </html>

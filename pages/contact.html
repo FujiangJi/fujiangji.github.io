@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fujiang Ji's Personal Website</title>
+  <script src="../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Contact | Fujiang Ji</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261006-type2">
+  <link rel="stylesheet" href="../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <link rel="stylesheet" href="../assets/css/contact.css?v=20261008-map68">
+  <script src="../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
   <!--
     - google font link
@@ -23,62 +31,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .video {
-      width: 1000px;
-      max-width: 100%;
-    }
-
-    .text-overlay {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
-    }
-
-    h2 {
-      font-size: 2.2vw;
-    }
-
-    .form-notification {
-      margin-top: 16px;
-      padding: 14px 18px;
-      border-radius: 12px;
-      background: hsla(145, 60%, 40%, 0.15);
-      border: 1px solid hsla(145, 60%, 45%, 0.3);
-      color: hsl(145, 60%, 65%);
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      animation: slideIn 0.3s ease;
-    }
-
-    .form-notification ion-icon {
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .form-notification.error {
-      background: hsla(0, 60%, 40%, 0.15);
-      border-color: hsla(0, 60%, 45%, 0.3);
-      color: hsl(0, 60%, 65%);
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/visitor-map.css?v=20261008-contactonly69">
+  <script src="../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+<meta name="description" content="Contact Fujiang Ji at the University of Arizona for research collaborations, speaking invitations, and questions about imaging spectroscopy and ecosystem function.">
+<link rel="stylesheet" href="../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Fujiang Ji">
+<meta property="og:description" content="Contact Fujiang Ji at the University of Arizona for research collaborations, speaking invitations, and questions about imaging spectroscopy and ecosystem function.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact | Fujiang Ji">
+<meta name="twitter:description" content="Contact Fujiang Ji at the University of Arizona for research collaborations, speaking invitations, and questions about imaging spectroscopy and ecosystem function.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
 <body>
@@ -97,13 +62,15 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -129,7 +96,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -144,7 +112,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -188,7 +156,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -225,36 +193,42 @@
         - #NAVBAR
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='tutorials.html';">Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('tutorials.html');">Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+          </div>
+        </nav>
+      </div>
 
       <!--
         - #CONTACT
@@ -266,67 +240,85 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://maps.google.com/maps?width=400&amp;height=300&amp;hl=en&amp;q=Russell%20Labs%201630%20Linden%20Drive%20Madison%20Madison+()&amp;t=k&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              width="400" height="300" loading="lazy"></iframe>
+        <p class="contact-intro">For research collaborations, speaking invitations, or questions about my work, feel free to get in touch.</p>
 
-          </figure>
-        </section>
-
-
-
-        <h3 class="h3 form-title">Welcome to Fujiang Ji's Webpage</h3>
-
-        <div id="clustrmaps-wrap" style="text-align:center;"></div>
-        <script>
-          (function () {
-            var wrap = document.getElementById('clustrmaps-wrap');
-            var theme = localStorage.getItem('theme');
-            var darkSrc = '//cdn.clustrmaps.com/map_v2.js?cl=fcd86f&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=1e1e20&cmo=ff0404&ct=ffffff';
-            var lightSrc = '//cdn.clustrmaps.com/map_v2.js?cl=d4940a&w=300&t=n&d=BvCy8b6nbC5M9isATdWY_ZUfyKucuXFbQSg5WzogFf8&co=f0f0f0&cmo=ff0404&ct=333333';
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.id = 'clustrmaps';
-            s.src = (theme === 'light') ? lightSrc : darkSrc;
-            wrap.appendChild(s);
-          })();
-        </script>
-
-
-
-
-
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="https://formspree.io/f/mnjgrayd" method="POST" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+        <div class="contact-top-grid">
+          <section class="contact-card contact-email-card" aria-labelledby="contact-email-heading">
+            <p class="contact-kicker"><ion-icon name="mail-outline" aria-hidden="true"></ion-icon>Get in touch</p>
+            <h3 id="contact-email-heading">Email me</h3>
+            <a class="contact-primary-email" href="mailto:fujiang@arizona.edu">fujiang@arizona.edu</a>
+            <div class="contact-email-tools">
+              <button class="contact-copy" type="button" data-copy-email aria-label="Copy email address"><ion-icon name="copy-outline" aria-hidden="true"></ion-icon><span>Copy email</span></button>
             </div>
+            <p class="contact-secondary-label">Alternative email</p>
+            <a class="contact-secondary-email" href="mailto:fujiang.ji@wisc.edu">fujiang.ji@wisc.edu</a>
+            <p class="contact-affiliation">University of Arizona<br>Tucson, Arizona, USA</p>
+            <nav class="contact-profiles" aria-label="Professional profiles">
+              <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+              <a href="https://orcid.org/0000-0003-4623-7487" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/FujiangJi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </nav>
+          </section>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <section class="office-map" aria-label="Office location at the University of Arizona">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6750.233027668037!2d-110.95741608415652!3d32.22802911907945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d67101744a05dd%3A0xd83a65c45dc91119!2sEnvironment%20and%20Natural%20Resources%202%20Building!5e1!3m2!1sen!2sus!4v1586288721621!5m2!1sen!2sus" title="Satellite map of the Environment and Natural Resources 2 Building, University of Arizona" width="600" height="340" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
+        </div>
 
-            <button class="form-btn" type="submit" data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+        <div class="contact-bottom-grid">
+          <section class="contact-card contact-form" aria-labelledby="contact-message-heading">
+            <p class="contact-kicker"><ion-icon name="chatbubble-ellipses-outline" aria-hidden="true"></ion-icon>Start a conversation</p>
+            <h3 id="contact-message-heading">Send a message</h3>
+            <p class="contact-card-note">Share your question or a little about what you have in mind.</p>
+            <form action="https://formspree.io/f/mnjgrayd" method="POST" class="form" data-form>
+              <div class="input-wrapper">
+                <label class="contact-field" for="contact-fullname"><span class="contact-field-label">Full name</span><input id="contact-fullname" type="text" name="fullname" class="form-input" placeholder="Your name" autocomplete="name" required></label>
+                <label class="contact-field" for="contact-email"><span class="contact-field-label">Email address</span><input id="contact-email" type="email" name="email" class="form-input" placeholder="you@example.com" autocomplete="email" required></label>
+              </div>
+              <label class="contact-field" for="contact-message"><span class="contact-field-label">Message</span><textarea id="contact-message" name="message" class="form-input" placeholder="What would you like to discuss?" required></textarea></label>
+              <button class="form-btn" type="submit" data-form-btn disabled><ion-icon name="paper-plane-outline" aria-hidden="true"></ion-icon><span>Send message</span></button>
+            </form>
+            <p class="form-notification" id="formNotification" role="status" aria-live="polite" hidden></p>
+          </section>
 
-          </form>
+          <section class="contact-card contact-visitors" aria-labelledby="contact-visitors-heading">
+            <p class="contact-kicker"><ion-icon name="globe-outline" aria-hidden="true"></ion-icon>A global community</p>
+            <h3 id="contact-visitors-heading">Visitors around the world</h3>
+            <p class="contact-card-note">A geographic overview of visits to this website.</p>
+            <div class="visitor-map-embed" data-visitor-map>
+                <div class="visitor-map-status" data-visitor-status role="status" aria-live="polite">
+                  <svg aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="16" cy="16" r="12"/><ellipse cx="16" cy="16" rx="5.5" ry="12"/><path d="M4 16h24M6 9h20M6 23h20"/></svg>
+                  <p>Loading visitor map…</p>
+                </div>
+              </div>
+            <p class="visitor-caption">Approximate locations · <a href="https://mapmyvisitors.com/" target="_blank" rel="noopener noreferrer">MapMyVisitors</a></p>
+          </section>
+        </div>
 
-          <div class="form-notification" id="formNotification" style="display:none;">
-            <ion-icon name="checkmark-circle-outline"></ion-icon>
-            <span>Message sent successfully! Thank you.</span>
+        <footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../pages/research.html">Research</a>
+                <a href="../pages/publications.html">Publications</a>
+                <a href="../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
           </div>
-
-        </section>
-
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
     </div>
@@ -340,49 +332,7 @@
   -->
   <script src="../assets/js/script.js"></script>
 
-  <script>
-    (function () {
-      var form = document.querySelector('[data-form]');
-      if (!form) return;
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        var btn = form.querySelector('[data-form-btn]');
-        var notification = document.getElementById('formNotification');
-        btn.disabled = true;
-        btn.querySelector('span').textContent = 'Sending...';
-
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        }).then(function (response) {
-          if (response.ok) {
-            notification.style.display = 'flex';
-            notification.classList.remove('error');
-            notification.querySelector('span').textContent = 'Message sent successfully! Thank you.';
-            notification.querySelector('ion-icon').setAttribute('name', 'checkmark-circle-outline');
-            form.reset();
-          } else {
-            notification.style.display = 'flex';
-            notification.classList.add('error');
-            notification.querySelector('span').textContent = 'Something went wrong. Please try again.';
-            notification.querySelector('ion-icon').setAttribute('name', 'alert-circle-outline');
-          }
-          btn.disabled = false;
-          btn.querySelector('span').textContent = 'Send Message';
-        }).catch(function () {
-          notification.style.display = 'flex';
-          notification.classList.add('error');
-          notification.querySelector('span').textContent = 'Network error. Please try again.';
-          notification.querySelector('ion-icon').setAttribute('name', 'alert-circle-outline');
-          btn.disabled = false;
-          btn.querySelector('span').textContent = 'Send Message';
-        });
-      });
-    })();
-  </script>
+  <script src="../assets/js/contact.js?v=20261008-map66" defer></script>
 
   <!--
     - ionicon link
@@ -390,7 +340,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<script src="../assets/js/theme-toggle.js"></script>
+
 </body>
 
 </html>

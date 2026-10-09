@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fujiang Ji's Personal Website</title>
+  <script src="../assets/js/theme-toggle.js?v=20261008-system55"></script>
+  <script src="../assets/js/site-language.js?v=20261009-controls94"></script>
+  <title>Tutorials | Fujiang Ji</title>
+  <meta name="description" content="Explore hyperproc, hyperspectral research workflows, biocrust and plant-trait modeling, and practical guides to geospatial analysis, visualization, and research computing.">
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="../assets/images/about_page/UW_madison.png" type="image/x-icon">
+  <link rel="icon" href="../assets/images/favicon-16.png?v=20261009-favicon96" type="image/png" sizes="16x16">
+  <link rel="icon" href="../assets/images/favicon-32.png?v=20261009-favicon96" type="image/png" sizes="32x32">
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261006-type2">
+  <link rel="stylesheet" href="../assets/css/profile-panel.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/site-footer.css?v=20261007-footer53">
+  <link rel="stylesheet" href="../assets/css/desktop-navigation.css?v=20261008-mobilegap73">
+  <script src="../assets/js/desktop-navigation.js?v=20261007-nav37-final" defer></script>
 
   <!--
     - google font link
@@ -23,32 +31,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .video {
-      width: 1000px;
-      max-width: 100%;
-    }
-
-    .text-overlay {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-      padding: 80px;
-      color: hsl(0, 0%, 100%);
-      font-size: 30px;
-      background-color: rgba(0, 0, 0, 0);
-      box-sizing: border-box;
-    }
-
-    h2 {
-      font-size: 2.2vw;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/tutorials.css?v=20261008-workflows78">
+  <script src="../assets/js/visitor-map.js?v=20261008-contactonly69" defer></script>
+<link rel="stylesheet" href="../assets/css/site-language.css?v=20261009-controls94">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tutorials | Fujiang Ji">
+<meta property="og:description" content="Explore hyperproc, hyperspectral research workflows, biocrust and plant-trait modeling, and practical guides to geospatial analysis, visualization, and research computing.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tutorials | Fujiang Ji">
+<meta name="twitter:description" content="Explore hyperproc, hyperspectral research workflows, biocrust and plant-trait modeling, and practical guides to geospatial analysis, visualization, and research computing.">
+<meta name="twitter:image" content="https://fujiangji.github.io/assets/images/about_page/Fujiang_Ji_image.png">
 </head>
 
 <body>
@@ -67,13 +61,15 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="FUJIANG JI" width="80">
+          <img src="../assets/images/about_page/Fujiang_Ji_image.png" alt="Fujiang Ji" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="FUJIANG JI">FUJIANG JI</h1>
+          <h1 class="name" title="Fujiang Ji">Fujiang Ji</h1>
+          <p class="research-identity">Imaging spectroscopy &amp; ecosystem function</p>
 
           <p class="title">Postdoctoral Associate</p>
+          <p class="institution">University of Arizona</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -99,7 +95,8 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link">fujiang.ji@wisc.edu</a>
+              <a href="mailto:fujiang@arizona.edu" class="contact-link contact-link-primary">fujiang@arizona.edu</a>
+              <a href="mailto:fujiang.ji@wisc.edu" class="contact-link contact-link-secondary">fujiang.ji@wisc.edu</a>
             </div>
 
           </li>
@@ -114,7 +111,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>1630 Linden Drive, Madison WI, U.S.</address>
+              <address>Tucson, Arizona, USA</address>
             </div>
 
           </li>
@@ -158,7 +155,7 @@
           </li>
 
           <li class="social-item">
-            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf" target="_blank" class="social-link">
+            <a href="../assets/cv/Curriculum Vitae_Fujiang Ji.pdf?v=20261009-cv89" target="_blank" class="social-link">
               <i class="ai ai-cv ai-1x"></i>
             </a>
           </li>
@@ -195,232 +192,268 @@
         - #NAVBAR
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='../index.html';">About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='research.html';">Research</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='publications.html';">Publications</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Tutorials</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='blogs.html';">Blogs</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" onclick="window.location.href='contact.html';">Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
+      <div class="desktop-nav-anchor">
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('../index.html');">About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('research.html');">Research</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('publications.html');">Publications</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link  active" data-nav-link>Tutorials</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('blogs.html');">Blogs</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href=window.SiteLanguage.href('contact.html');">Contact</button>
+            </li>
+  
+          </ul>
+  
+          <div class="navbar-tools">
+            <!-- Page language switch; default English. -->
+            <span class="navbar-language-slot" data-language-slot aria-hidden="true"></span>
+          </div>
+        </nav>
+      </div>
 
 
       <!--
         - #Tutorials
       -->
 
-      <article class="tutorials  active" data-page="tutorials">
-
+      <article class="tutorials active" data-page="tutorials">
         <header>
           <h2 class="h2 article-title">Tutorials</h2>
+          <p class="tutorials-intro">Practical guides and research workflows for geospatial analysis, imaging spectroscopy, and scientific computing.</p>
         </header>
-        <div class="modal-container" data-modal-container>
 
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-
+        <section class="tutorial-feature" aria-labelledby="tutorial-feature-heading">
+          <div class="tutorial-feature-copy">
+            <p class="tutorial-feature-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/></svg>Featured package · Python</p>
+            <h3 id="tutorial-feature-heading">hyperproc</h3>
+            <p class="tutorial-feature-description">Search, read, and process airborne and satellite hyperspectral data through a shared Python interface.</p>
+            <div class="tutorial-feature-actions">
+              <a class="tutorial-primary-action" href="https://fujiangji.github.io/hyperproc/" target="_blank" rel="noopener noreferrer">Explore hyperproc <span aria-hidden="true">↗</span></a>
+              <a class="tutorial-research-link" href="https://github.com/FujiangJi/hyperproc" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
             </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>RS Data Processing</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Data Visualization</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>High Throughput Computing</button>
-            </li>
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-              <li class="select-item">
-                <button data-filter-btn>RS Data Processing</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Data Visualization</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>High Throughput Computing</button>
-              </li>
-            </ul>
           </div>
-
-          <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="rs data processing">
-              <a href="./tutorial_pages/rs_data_processing.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/rs_data_processing.jpeg" alt="RS data" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Read and Write GeoTIFF</h3>
-
-                <p class="project-category">RS Data Processing</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="./tutorial_pages/data_visualization.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/data_vis.jpeg" alt="Data Visualization" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Python for data visualization</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="./tutorial_pages/scatter_line_plot.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/scatter_line.jpeg" alt="Data Visualization" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Scatter & Line plots</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="./tutorial_pages/global_forest_edge_mapping.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/foest_edge.jpeg" alt="Data Visualization" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Global Forest edge mapping</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="high throughput computing">
-              <a href="./tutorial_pages/hpc.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/HPC_image.jpeg" alt="HPC" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Command line basics & HPC</h3>
-
-                <p class="project-category">High Throughput Computing</p>
-              </a>
-
-            </li>
-            <li class="project-item  active" data-filter-item data-category="high throughput computing">
-              <a href="./tutorial_pages/vcs.html">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="../assets/images/tutorial_page/VCS.jpeg" alt="VCS" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Git & Github</h3>
-
-                <p class="project-category">High Throughput Computing</p>
-
-              </a>
-            </li>
-
-
-          </ul>
-
+          <figure class="tutorial-feature-preview">
+            <a class="tutorial-package-logo" href="https://fujiangji.github.io/hyperproc/" target="_blank" rel="noopener noreferrer" aria-label="Visit the hyperproc project website">
+              <img class="hyperproc-logo--light" src="../assets/images/hyperproc/wordmark-light.svg" alt="hyperproc" width="1736" height="426" decoding="async">
+              <img class="hyperproc-logo--dark" src="../assets/images/hyperproc/wordmark-dark.svg" alt="hyperproc" width="1736" height="426" decoding="async">
+            </a>
+            <figcaption>Hyperspectral tools for ecosystem monitoring</figcaption>
+          </figure>
         </section>
 
+        <section class="tutorial-library" id="tutorial-library" aria-labelledby="tutorial-library-heading">
+          <div class="tutorial-library-header">
+            <h3 id="tutorial-library-heading">Explore tutorials &amp; workflows</h3>
+            <p class="tutorial-library-summary" data-tutorial-summary>11 guides · All topics</p>
+          </div>
+          <div class="tutorial-filters" role="group" aria-label="Filter tutorials by topic">
+            <button class="tutorial-filter" type="button" data-tutorial-filter="all" aria-pressed="true"><span data-filter-label>All</span><span class="tutorial-filter-count" aria-hidden="true">11</span></button>
+            <button class="tutorial-filter" type="button" data-tutorial-filter="workflows" aria-pressed="false"><span data-filter-label>Research Workflows</span><span class="tutorial-filter-count" aria-hidden="true">5</span></button>
+            <button class="tutorial-filter" type="button" data-tutorial-filter="geospatial" aria-pressed="false"><span data-filter-label>Geospatial Analysis</span><span class="tutorial-filter-count" aria-hidden="true">2</span></button>
+            <button class="tutorial-filter" type="button" data-tutorial-filter="visualization" aria-pressed="false"><span data-filter-label>Data Visualization</span><span class="tutorial-filter-count" aria-hidden="true">2</span></button>
+            <button class="tutorial-filter" type="button" data-tutorial-filter="computing" aria-pressed="false"><span data-filter-label>Research Computing</span><span class="tutorial-filter-count" aria-hidden="true">2</span></button>
+          </div>
+          <p class="tutorial-sr-only" data-tutorial-status role="status" aria-live="polite" aria-atomic="true"></p>
+          <ul class="tutorial-grid">
+            <li class="tutorial-item" data-tutorial-category="workflows">
+              <a class="tutorial-card" href="https://github.com/FujiangJi/Castle_valley_biocrust" target="_blank" rel="noopener noreferrer" aria-labelledby="tutorial-biocrust-title">
+                <div class="tutorial-card-cover tutorial-card-cover--biocrust">
+                  <img src="../assets/images/tutorial_page/repository_workflows/biocrust.png" alt="Castle Valley climate-manipulation plots from the repository study-area figure" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research workflow</p>
+                  <h4 id="tutorial-biocrust-title">Biocrust fractional-cover estimation</h4>
+                  <p class="tutorial-card-description">Estimate biocrust fractional cover with spectral mixtures, Random Forests, and a fine-tuned 1D-CNN.</p>
+                  <ul class="tutorial-tools" aria-label="Methods and tools"><li>Python</li><li>PyTorch</li><li>Random Forest</li></ul>
+                  <span class="tutorial-card-action">View workflow on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="workflows">
+              <a class="tutorial-card" href="https://github.com/FujiangJi/SmallSat_hyperspectral_reconstruction" target="_blank" rel="noopener noreferrer" aria-labelledby="tutorial-smallsat-title">
+                <div class="tutorial-card-cover tutorial-card-cover--figure">
+                  <img src="../assets/images/tutorial_page/repository_workflows/smallsat.jpg" alt="Spatial–spectral fusion architecture from the SmallSat repository" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research workflow</p>
+                  <h4 id="tutorial-smallsat-title">SmallSat hyperspectral reconstruction</h4>
+                  <p class="tutorial-card-description">Pair EMIT and PlanetScope imagery, then train and evaluate a spatial–spectral fusion network.</p>
+                  <ul class="tutorial-tools" aria-label="Methods and tools"><li>PyTorch</li><li>EMIT</li><li>PlanetScope</li></ul>
+                  <span class="tutorial-card-action">View workflow on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="workflows">
+              <a class="tutorial-card" href="https://github.com/FujiangJi/PRISMA_seasonal_traits" target="_blank" rel="noopener noreferrer" aria-labelledby="tutorial-prisma-title">
+                <div class="tutorial-card-cover tutorial-card-cover--figure">
+                  <img src="../assets/images/tutorial_page/repository_workflows/prisma.jpg" alt="PRISMA and NEON seasonal trait-mapping workflow from the repository" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research workflow</p>
+                  <h4 id="tutorial-prisma-title">Seasonal trait mapping with PRISMA</h4>
+                  <p class="tutorial-card-description">Preprocess PRISMA imagery, train trait models with NEON AOP data, and analyze seasonal patterns.</p>
+                  <ul class="tutorial-tools" aria-label="Methods and tools"><li>Python + R</li><li>PRISMA</li><li>PLSR</li></ul>
+                  <span class="tutorial-card-action">View workflow on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="workflows">
+              <a class="tutorial-card" href="https://github.com/FujiangJi/PLSR_trait_models_evaluation" target="_blank" rel="noopener noreferrer" aria-labelledby="tutorial-plsr-title">
+                <div class="tutorial-card-cover tutorial-card-cover--figure">
+                  <img src="../assets/images/tutorial_page/repository_workflows/plsr.png" alt="Workflow for validating PLSR models across sites, plant functional types, and time" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research workflow</p>
+                  <h4 id="tutorial-plsr-title">PLSR model transferability</h4>
+                  <p class="tutorial-card-description">Evaluate leaf-trait models across sites, plant functional types, and seasons using multiple validation schemes.</p>
+                  <ul class="tutorial-tools" aria-label="Methods and tools"><li>Python</li><li>scikit-learn</li><li>PLSR</li></ul>
+                  <span class="tutorial-card-action">View workflow on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="workflows">
+              <a class="tutorial-card" href="https://github.com/FujiangJi/transfer_learning_models" target="_blank" rel="noopener noreferrer" aria-labelledby="tutorial-transfer-title">
+                <div class="tutorial-card-cover tutorial-card-cover--figure">
+                  <img src="../assets/images/tutorial_page/repository_workflows/transfer-learning.png" alt="Radiative-transfer and neural-network workflow from the transfer-learning repository" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research workflow</p>
+                  <h4 id="tutorial-transfer-title">Transfer learning for leaf traits</h4>
+                  <p class="tutorial-card-description">Pretrain neural networks on radiative-transfer simulations, fine-tune with observations, and test transferability.</p>
+                  <ul class="tutorial-tools" aria-label="Methods and tools"><li>PyTorch</li><li>PROSPECT-D</li><li>Leaf-SIP</li></ul>
+                  <span class="tutorial-card-action">View workflow on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="geospatial">
+              <a class="tutorial-card" href="./tutorial_pages/rs_data_processing.html" aria-labelledby="tutorial-geotiff-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/rs_data_processing.jpeg" alt="Satellite image illustrating geospatial raster data" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Geospatial Analysis</p>
+                  <h4 id="tutorial-geotiff-title">Read &amp; write GeoTIFF</h4>
+                  <p class="tutorial-card-description">Read raster data and export GeoTIFF files while preserving spatial metadata.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Python</li><li>GDAL</li><li>NumPy</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="visualization">
+              <a class="tutorial-card" href="./tutorial_pages/data_visualization.html" aria-labelledby="tutorial-visualization-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/data_vis.jpeg" alt="Colorful visualization of scientific data" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Data Visualization</p>
+                  <h4 id="tutorial-visualization-title">Python for data visualization</h4>
+                  <p class="tutorial-card-description">Arrange subplot layouts, customize axes and ticks, and build clear figure legends.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Python</li><li>Matplotlib</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="visualization">
+              <a class="tutorial-card" href="./tutorial_pages/scatter_line_plot.html" aria-labelledby="tutorial-scatter-line-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/scatter_line.jpeg" alt="Illustration of scatter points and a fitted surface" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Data Visualization</p>
+                  <h4 id="tutorial-scatter-line-title">Scatter &amp; line plots</h4>
+                  <p class="tutorial-card-description">Create scientific figures with scatter plots, density shading, and line plots.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Python</li><li>Matplotlib</li><li>Seaborn</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="geospatial">
+              <a class="tutorial-card" href="./tutorial_pages/global_forest_edge_mapping.html" aria-labelledby="tutorial-forest-edge-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/foest_edge.jpeg" alt="Illustration of forests around a globe" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Geospatial Analysis</p>
+                  <h4 id="tutorial-forest-edge-title">Global forest-edge mapping</h4>
+                  <p class="tutorial-card-description">Visualize forest-edge distributions, temporal dynamics, and landscape patterns.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Python</li><li>GDAL</li><li>Cartopy</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="computing">
+              <a class="tutorial-card" href="./tutorial_pages/hpc.html" aria-labelledby="tutorial-hpc-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/HPC_image.jpeg" alt="Computing servers in a data center" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research Computing</p>
+                  <h4 id="tutorial-hpc-title">Command line basics &amp; HPC</h4>
+                  <p class="tutorial-card-description">Navigate remote systems, transfer files, and submit Python jobs on HPC and HTC.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Shell</li><li>Slurm</li><li>HTCondor</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+            <li class="tutorial-item" data-tutorial-category="computing">
+              <a class="tutorial-card" href="./tutorial_pages/vcs.html" aria-labelledby="tutorial-git-title">
+                <div class="tutorial-card-cover">
+                  <img src="../assets/images/tutorial_page/VCS.jpeg" alt="Illustration of a version control workflow" loading="lazy" decoding="async">
+                </div>
+                <div class="tutorial-card-body">
+                  <p class="tutorial-card-category">Research Computing</p>
+                  <h4 id="tutorial-git-title">Git &amp; GitHub</h4>
+                  <p class="tutorial-card-description">Set up a repository, track code changes, and manage large files with Git LFS.</p>
+                  <ul class="tutorial-tools" aria-label="Tools used"><li>Git</li><li>GitHub</li><li>Git LFS</li></ul>
+                  <span class="tutorial-card-action">Read tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <footer class="site-footer" id="site-footer" role="contentinfo" aria-label="Site information">
+          <div class="footer-main">
+            <div class="footer-identity">
+              <a class="footer-name" href="../index.html">Fujiang Ji</a>
+              <p class="footer-statement">Observing ecosystem function from field to space.</p>
+              <p class="footer-affiliation">University of Arizona · Tucson, Arizona</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Footer navigation">
+              <div class="footer-link-row">
+                <a href="../pages/research.html">Research</a>
+                <a href="../pages/publications.html">Publications</a>
+                <a href="../pages/contact.html">Contact</a>
+              </div>
+              <div class="footer-link-row">
+                <a href="https://scholar.google.com/citations?user=c995n2EAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="../assets/cv/Curriculum%20Vitae_Fujiang%20Ji.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+              </div>
+            </nav>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 Fujiang Ji</p>
+            <p>Imaging spectroscopy · Ecosystem function · Global change</p>
+          </div>
+        </footer>
       </article>
 
     </div>
@@ -432,6 +465,7 @@
     - custom js link
   -->
   <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/tutorials.js?v=20261009-i18n90"></script>
 
   <!--
     - ionicon link
@@ -439,7 +473,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<script src="../assets/js/theme-toggle.js"></script>
+
 </body>
 
 </html>

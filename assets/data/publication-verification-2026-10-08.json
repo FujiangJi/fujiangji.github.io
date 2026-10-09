@@ -1,0 +1,319 @@
+{
+  "checked_on": "2026-10-08",
+  "papers": [
+    {
+      "id": "publication-1",
+      "doi": "10.1016/j.rse.2026.115385",
+      "link": "https://doi.org/10.1016/j.rse.2026.115385",
+      "title": "Robust hyperspectral reconstruction from satellite and airborne observations via a deep hierarchical fusion network across heterogeneous scenarios",
+      "citation": "2026, 338, 115385",
+      "journal": "Remote Sensing of Environment",
+      "abstract": "High spatial resolution hyperspectral imagery (HR-HSI) is essential for fine-scale ecological and environmental monitoring, yet current spaceborne sensors are constrained by a trade-off between spectral and spatial resolution. This study develops a deep learning fusion framework that reconstructs HR-HSI by integrating low-resolution hyperspectral imagery from NASA's EMIT with high-resolution multispectral imagery from PlanetScope. The model was evaluated across three ecologically distinct landscapes in the western United States using airborne AVIRIS-NG and AVIRIS-3 imagery as reference data. The proposed framework consistently outperformed seven peer state-of-the-art fusion models, achieving a best spectral angle mapper (SAM) of 2.64 and a root mean squared error (RMSE) of 0.0267. A sensor inter-calibration pipeline ensured radiometric consistency between EMIT and PlanetScope, improving the reliability of the fusion inputs.",
+      "role": "lead",
+      "final_publication_date": "2026-05",
+      "abstract_source": "https://doi.org/10.1016/j.rse.2026.115385",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-2",
+      "doi": "10.1016/j.rse.2025.115149",
+      "link": "https://doi.org/10.1016/j.rse.2025.115149",
+      "title": "Tracking seasonal variability in plant traits from spaceborne PRISMA and NEON AOP across forest types and ecoregions",
+      "citation": "2026, 333, 115149",
+      "journal": "Remote Sensing of Environment",
+      "abstract": "This study combined PRISMA imaging spectroscopy with NEON airborne observations to map seasonal changes in chlorophyll, carotenoids, equivalent water thickness, and nitrogen across 11 forest sites in the contiguous United States. PLSR models first produced 1 m NEON trait maps, which were aggregated to 30 m and used to train site-level models with PRISMA reflectance and PRISMA-derived leaf area index as predictors. Validation yielded R² of 0.78–0.88 and NRMSE of 5.4–8.4%. Chlorophyll and carotenoids followed bell-shaped seasonal patterns, water thickness generally declined, and nitrogen varied less strongly. The analysis also identified regional climatic controls on seasonality and soil-related controls on spatial variation.",
+      "role": "lead",
+      "final_publication_date": "2026-01",
+      "abstract_source": "https://doi.org/10.1016/j.rse.2025.115149",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-6",
+      "doi": "10.3390/rs18081148",
+      "link": "https://doi.org/10.3390/rs18081148",
+      "title": "Multiscale Morphology-Based Detection of Shoreline Change Hotspots from Aerial Imagery Under Fluctuating Water Levels",
+      "citation": "2026, 18(8), 1148",
+      "journal": "Remote Sensing",
+      "abstract": "This study tested whether shoreline shape and displacement can identify erosion and accretion hotspots despite changing lake levels. Along 125 km of southwestern Lake Michigan shoreline, 2010 and 2020 aerial imagery was evaluated with Fréchet, modified Euclidean, and combined Union distances at 100 m, 500 m, and 1 km scales. The combined measure improved hotspot detection over uncalibrated transect-based comparisons at 500 m and 1 km. Performance depended on local shoreline conditions, and the 100 m scale remained sensitive to water-level effects. The framework offers calibration-free regional screening while retaining the need for water-level correction in detailed local assessments.",
+      "role": "lead",
+      "final_publication_date": "2026-04-12",
+      "abstract_source": "https://doi.org/10.3390/rs18081148",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-3",
+      "doi": "10.1016/j.rse.2025.114818",
+      "link": "https://doi.org/10.1016/j.rse.2025.114818",
+      "title": "Leveraging transfer learning and leaf spectroscopy for leaf trait prediction with broad spatial, species, and temporal applicability",
+      "citation": "2025, 326, 114818",
+      "journal": "Remote Sensing of Environment",
+      "abstract": "A hybrid neural network was pretrained with radiative transfer simulations and fine-tuned with measured leaf spectra to estimate chlorophyll, carotenoids, leaf mass per area, and equivalent water thickness. Tests using three datasets from the United States and Europe evaluated prediction across locations, plant functional types, and seasons. The framework improved accuracy and transferability relative to PLSR, Gaussian process regression, and radiative transfer model inversion. Incorporating leaf-optics knowledge before fine-tuning helped the model make effective use of limited observations in new environments.",
+      "role": "lead",
+      "final_publication_date": "2025-08",
+      "abstract_source": "https://doi.org/10.1016/j.rse.2025.114818",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-7",
+      "doi": "10.3390/geomatics6010021",
+      "link": "https://doi.org/10.3390/geomatics6010021",
+      "title": "A Quantitative Assessment of the Inconsistency Between Waterbody Segmentation and Shoreline Positioning in Deep Learning Models",
+      "citation": "2026, 6(1), 21",
+      "journal": "Geomatics",
+      "abstract": "This study evaluates the inconsistency between deep learning-based waterbody segmentation and shoreline positioning using aerial imagery from the Great Lakes region. Despite strong pixel-level segmentation accuracy (>98% accuracy, >90% IoU) across five benchmark models tested on 20,689 NAIP images, shoreline positioning accuracy was substantially lower and varied significantly by landscape type—with poorest results in wetlands and urban areas. The shoreline-to-water ratio emerged as the dominant predictor of positioning accuracy, while shoreline complexity and water color showed weaker, context-dependent effects. These findings highlight the need for shoreline-specific evaluation metrics rather than relying solely on conventional segmentation benchmarks when applying deep learning to coastal and lake boundary detection tasks.",
+      "role": "lead",
+      "final_publication_date": "2026-02-16",
+      "abstract_source": "https://doi.org/10.3390/geomatics6010021",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-4",
+      "doi": "10.1111/NPH.19807",
+      "link": "https://doi.org/10.1111/NPH.19807",
+      "title": "Unveiling the transferability of PLSR models for leaf trait estimation: lessons from a comprehensive analysis with a novel global dataset",
+      "citation": "2024, 243(1), 111–131",
+      "journal": "New Phytologist",
+      "abstract": "Using 47,393 leaf spectral records spanning more than 700 species, eight plant functional types, and 101 sites, this study tested whether PLSR predictions of chlorophyll, carotenoids, water content, and leaf mass per area transfer beyond their training conditions. Prediction accuracy declined for new locations (R² = 0.12–0.49), seasons (0.15–0.42), and plant functional types (0.25–0.56). Random cross-validation therefore gave an overly optimistic picture of performance in new domains. Training samples with greater spectral diversity improved transferability, supporting more representative sampling and explicit out-of-domain validation for large-scale trait mapping.",
+      "role": "lead",
+      "final_publication_date": "2024-07",
+      "abstract_source": "https://doi.org/10.1111/NPH.19807",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-5",
+      "doi": "10.1109/TGRS.2020.3047102",
+      "link": "https://doi.org/10.1109/TGRS.2020.3047102",
+      "title": "Crop Yield Estimation at Field Scales by Assimilating Time Series of Sentinel-2 Data into a Modified CASA-WOFOST Coupled Model",
+      "citation": "2022, 60, 4400914 (pp. 1–14)",
+      "journal": "IEEE Trans. Geosci. Remote Sens.",
+      "abstract": "A modified CASA–WOFOST framework combined Sentinel-2 time series with crop growth modeling to estimate field-scale wheat yield at two adjacent farms in China. CASA, the coupled model, and WOFOST achieved R² values of 0.64, 0.84, and 0.86, respectively, with RMSE of 948.32, 792.11, and 623.64 kg ha⁻¹. The coupled model improved on CASA, particularly under uneven terrain, while retaining accuracy close to WOFOST at much lower computational cost. Processing one wheat season took 48 minutes for the coupled model, compared with 37 minutes for CASA and more than a day for WOFOST.",
+      "role": "lead",
+      "final_publication_date": "2022",
+      "abstract_source": "https://www.researchgate.net/publication/348895056_Crop_Yield_Estimation_at_Field_Scales_by_Assimilating_Time_Series_of_Sentinel-2_Data_Into_a_Modified_CASA-WOFOST_Coupled_Model",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-8",
+      "doi": "10.11873/j.issn.1004-0323.2020.2.0406",
+      "link": "http://www.rsta.ac.cn/CN/Y2020/V35/I2/406",
+      "title": "Study on Soybean Yield Estimation Using the Coupled CASA and WOFOST Model",
+      "citation": "2020, 35(2), 406–415",
+      "journal": "Remote Sensing Technology and Application",
+      "abstract": "At Shuangshan Farm in Heilongjiang, China, this study combined the CASA light-use-efficiency model with dry-matter partitioning from WOFOST to estimate field-scale soybean yield. HJ-1A/B satellite images spanning the growing season were used to reconstruct a daily NDVI time series for continuous crop monitoring. Compared with CASA alone, the coupled framework improved agreement with measured yields, increasing R² from 0.66853 to 0.84472. By replacing a fixed harvest index with mechanistic crop growth and allocation processes, the approach retained the computational efficiency of CASA while improving the accuracy and reliability of yield estimation for precision agriculture.",
+      "role": "lead",
+      "final_publication_date": "2020-04",
+      "abstract_source": "http://www.rsta.ac.cn/CN/Y2020/V35/I2/406",
+      "abstract_status": "verified against publisher abstract and full text via browser on 2026-10-09",
+      "abstract_notes": "The publisher abstract gives RMSE values that conflict with Table 4 and the conclusion. The website summary reports the consistently stated R² values and omits the disputed error metric."
+    },
+    {
+      "id": "publication-10",
+      "doi": "10.1038/s41467-026-78347-6",
+      "link": "https://doi.org/10.1038/s41467-026-78347-6",
+      "title": "Episodic changes in global forest edges in the 21st century",
+      "citation": "2026",
+      "journal": "Nature Communications",
+      "abstract": "Seventy percent of global forests lie within 1 km of an edge, yet their temporal dynamics remain poorly characterized. By developing high spatial-resolution (0.00025°) global forest edge maps for 2000–2020, this study finds a 24 million km (7%) decline in edge length. During 2015–2020, edge length falls while forest area slightly grows, driven by patch merging in temperate and boreal regions and by tropical fragmentation; in contrast, countries such as Laos, Liberia, India, and China gain edges from new forest patches. These episodic changes closely track policy-driven land management, including logging bans, agricultural expansion, and reforestation. Given the critical role of forest edges in biodiversity and microclimate regulation, the results highlight contrasting biome patterns and the need for adaptive policies balancing conservation, carbon storage, and land use.",
+      "role": "coauthor",
+      "final_publication_date": "2026-10-05",
+      "abstract_source": "https://doi.org/10.1038/s41467-026-78347-6",
+      "abstract_status": "verified against primary article abstract or full text",
+      "note": "Publisher and Crossref do not yet supply a volume or article number. Keep year and DOI until assigned."
+    },
+    {
+      "id": "publication-12",
+      "doi": "10.1038/s43247-026-03874-5",
+      "link": "https://doi.org/10.1038/s43247-026-03874-5",
+      "title": "Experimental evidence of a biological soil crust degradation climate warming amplification feedback",
+      "citation": "2026, 7, 775",
+      "journal": "Communications Earth & Environment",
+      "abstract": "Biological soil crusts—photosynthetic communities of cyanobacteria, lichens, and mosses living on soil surfaces—cover roughly 12% of the global land surface, yet their role in climate mitigation remains uncertain. This study integrated multiscale remote sensing observations within a two-decade climate manipulation experiment in Castle Valley, Utah. Sustained warming and altered monsoonal rainfall drove a major shift in biocrust community composition, including a ~27% decrease in the fractional cover of late-successional mosses and a ~36% increase in early-successional, lightly-pigmented cyanobacteria. For every 10% increase in the relative cover of lightly-pigmented cyanobacteria, the authors observed a ~6.3% reduction in photosynthetic potential, a ~14.1% increase in surface brightness, a ~15.2% decrease in surface moisture, and a ~0.3 °C increase in clear-sky daytime surface temperature. These results provide experimental evidence of a biocrust degradation climate warming amplification feedback that is currently missing from process-based models, suggesting current projections may underestimate the rate of warming across global drylands.",
+      "role": "coauthor",
+      "final_publication_date": "2026-09-12",
+      "abstract_source": "https://doi.org/10.1038/s43247-026-03874-5",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-11",
+      "doi": "10.1016/j.rse.2024.114492",
+      "link": "https://doi.org/10.1016/j.rse.2024.114492",
+      "title": "Importance of viewing angle: Hotspot effect improves the ability of satellites to track terrestrial photosynthesis",
+      "citation": "2025, 317, 114492",
+      "journal": "Remote Sensing of Environment",
+      "abstract": "This study examined how viewing geometry affects the relationship between gross primary productivity and NIRvP, the product of near-infrared vegetation reflectance and photosynthetically active radiation. DSCOVR/EPIC observations enabled comparison of near-hotspot geometry, where viewing and illumination directions align, with nadir geometry. Hotspot-based NIRvP tracked productivity variations more closely across ecosystems from diurnal to daily scales. MODIS observations and SCOPE model simulations supported the result. The findings point to sun-tracking observation geometries as a useful way to improve satellite monitoring of terrestrial photosynthesis.",
+      "role": "coauthor",
+      "final_publication_date": "2025-02",
+      "abstract_source": "https://www.osti.gov/servlets/purl/2560684",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-13",
+      "doi": "10.1029/2024EF004588",
+      "link": "https://doi.org/10.1029/2024EF004588",
+      "title": "Projecting Large Fires in the Western US With an Interpretable and Accurate Hybrid Machine Learning Method",
+      "citation": "2024, 12(10), e2024EF004588",
+      "journal": "Earth's Future",
+      "abstract": "A hybrid machine learning model combined fuel availability, fuel flammability, and human suppression to predict large fires in the western United States. Its F1 score was 0.846 ± 0.012, outperforming process-based fire danger indices and four other machine learning models by up to 40% and 9%, respectively. Explainable analysis revealed differences in model structure even when predictive accuracy was similar. Compound influences involving evaporative demand, energy release component, temperature, and wind speed were central to fire dynamics. The study supports evaluating physical consistency alongside prediction accuracy when projecting wildfire risk.",
+      "role": "coauthor",
+      "final_publication_date": "2024-10",
+      "abstract_source": "https://doi.org/10.1029/2024EF004588",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-9",
+      "doi": "10.1038/s41559-023-02187-6",
+      "link": "https://doi.org/10.1038/s41559-023-02187-6",
+      "title": "Structural complexity biases vegetation greenness measures",
+      "citation": "2023, 7(11), 1790–1798",
+      "journal": "Nature Ecology & Evolution",
+      "abstract": "Vegetation indices can show higher greenness in the US Corn Belt than in the Amazon despite the Amazon's greater leaf area. This study traced the discrepancy to canopy structure: complex forests cast more shadows than relatively uniform crops, reducing observed greenness when the viewing direction differs from solar illumination. Converting Amazon forest to cropland could consequently increase vegetation indices while decreasing leaf area. The results show why changes in greenness, and their relationship with solar-induced fluorescence, require attention to structural and viewing-angle effects when interpreting global vegetation trends.",
+      "role": "coauthor",
+      "final_publication_date": "2023-11",
+      "abstract_source": "https://doi.org/10.1038/s41559-023-02187-6",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-15",
+      "doi": "10.1080/10106049.2022.2032387",
+      "link": "https://doi.org/10.1080/10106049.2022.2032387",
+      "title": "Crop classification for UAV visible imagery using deep semantic segmentation methods",
+      "citation": "2022, 37(25), 10033–10057",
+      "journal": "Geocarto International",
+      "abstract": "An encoder–decoder fully convolutional network combined visible-band UAV imagery with the visible-band difference vegetation index to classify crops in Chengdu, China. The study distinguished maize, rice, balsam pear, and Loropetalum chinense using low-cost imagery. Its design reduced model parameters and computational cost while supporting crop classification without additional multispectral sensors. The results demonstrate the potential of visible imagery and semantic segmentation for practical agricultural mapping.",
+      "role": "coauthor",
+      "final_publication_date": "2022-12-13",
+      "abstract_source": "https://doi.org/10.1080/10106049.2022.2032387",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-16",
+      "doi": "10.1007/s11042-021-10735-0",
+      "link": "https://doi.org/10.1007/s11042-021-10735-0",
+      "title": "Research on hyper-spectral remote sensing image classification by applying stacked de-noising auto-encoders neural network",
+      "citation": "2021, 80(14), 21219–21239",
+      "journal": "Multimedia Tools and Applications",
+      "abstract": "A stacked denoising autoencoder learned spectral representations from unlabeled hyperspectral pixels corrupted with random noise. Layer-wise pretraining used L-BFGS optimization, followed by supervised fine-tuning with a Softmax classifier. Tests on HySpex imagery compared the approach with PCA, SVM, PCA–SVM, and MNF–SVM. The autoencoder produced more effective features for classification, showing how unsupervised representation learning can support hyperspectral image analysis when labeled samples are limited.",
+      "role": "coauthor",
+      "final_publication_date": "2021-06",
+      "abstract_source": "https://doi.org/10.1007/s11042-021-10735-0",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-14",
+      "doi": "10.11834/jrs.20200069",
+      "link": "https://doi.org/10.11834/jrs.20200069",
+      "title": "Aboveground biomass estimation of late-stage maize based on the WOFOST model and UAV observations",
+      "citation": "2020, 24(11), 1403–1418",
+      "journal": "Journal of Remote Sensing",
+      "abstract": "To avoid spectral saturation during late maize growth, this study estimated late-season aboveground biomass by assimilating early-season UAV observations into WOFOST with an ensemble Kalman filter, then continuing the crop simulation without late-season image assimilation. Multispectral imagery also supplied spatial information on available soil nutrients to parameterize the model. Against field measurements, the proposed approach achieved R² = 0.86 and RMSE = 2216.79 kg ha⁻¹, compared with R² = 0.45 and RMSE = 4254.30 kg ha⁻¹ for assimilation throughout the growing season. This illustrates how early observations can support biomass estimates after optical signals become less sensitive to crop growth.",
+      "role": "coauthor",
+      "final_publication_date": "2020-11",
+      "abstract_source": "http://dx.doi.org/10.11834/jrs.20200069",
+      "abstract_status": "verified against primary article abstract or full text"
+    },
+    {
+      "id": "publication-17",
+      "doi": "10.3390/app9071459",
+      "link": "https://doi.org/10.3390/app9071459",
+      "title": "Comparison of Machine Learning Regression Algorithms for Cotton Leaf Area Index Retrieval Using Sentinel-2 Spectral Bands",
+      "citation": "2019, 9(7), 1459",
+      "journal": "Applied Sciences",
+      "abstract": "This study compared ANN, SVR, Gaussian process regression, random forest, and gradient-boosted regression trees for cotton leaf area index retrieval from Sentinel-2 bands over three growing seasons in northwestern China. Gradient boosting provided the highest overall accuracy, with an average R² of 0.854, while SVR trained fastest. Experiments varying training sample sizes and the number of input bands showed different sensitivities among the models. Gradient boosting performed best on average across the sample-size tests, and ANN achieved the highest average accuracy across band-reduction tests. The results inform model selection under different data and computing constraints.",
+      "role": "coauthor",
+      "final_publication_date": "2019-04-07",
+      "abstract_source": "https://doi.org/10.3390/app9071459",
+      "abstract_status": "verified against primary article abstract or full text"
+    }
+  ],
+  "journal_metrics": {
+    "Remote Sensing of Environment": {
+      "jif": 11.4,
+      "year": 2024,
+      "source": "https://www.sciencedirect.com/journal/remote-sensing-of-environment/vol/110/issue/1",
+      "quartiles": {
+        "Environmental Sciences": "Q1"
+      },
+      "quartile_year": 2024,
+      "quartile_source": "https://topj.lib.whu.edu.cn/show.asp?cat=zk&id=9",
+      "note": "2025 value not yet confirmed from an accessible publisher record; show the verified 2024 value."
+    },
+    "Remote Sensing": {
+      "jif": 4.3,
+      "year": 2025,
+      "source": "https://www.mdpi.com/journal/remotesensing/stats",
+      "quartiles": {
+        "Geosciences, Multidisciplinary": "Q1",
+        "Remote Sensing": "Q2"
+      }
+    },
+    "Geomatics": {
+      "jif": 3.7,
+      "year": 2025,
+      "source": "https://www.mdpi.com/journal/geomatics/stats",
+      "quartiles": {
+        "Remote Sensing": "Q2",
+        "Geography, Physical": "Q2"
+      }
+    },
+    "New Phytologist": {
+      "jif": 8.7,
+      "year": null,
+      "source": "https://nph.onlinelibrary.wiley.com/journal/14698137",
+      "note": "Current publisher value; metric year not explicitly supplied in the accessible record."
+    },
+    "IEEE Trans. Geosci. Remote Sens.": {
+      "jif": 9.4,
+      "year": null,
+      "source": "https://www.grss-ieee.org/publications/transactions-on-geoscience-remote-sensing/",
+      "note": "Current society value; metric year not explicitly supplied in the accessible record."
+    },
+    "Nature Communications": {
+      "jif": 18.1,
+      "year": 2025,
+      "source": "https://www.nature.com/ncomms/journal-impact"
+    },
+    "Communications Earth & Environment": {
+      "jif": 9.3,
+      "year": 2025,
+      "source": "https://www.nature.com/commsenv/journal-impact"
+    },
+    "Nature Ecology & Evolution": {
+      "jif": 17.1,
+      "year": 2025,
+      "source": "https://www.nature.com/natecolevol/journal-impact"
+    },
+    "Earth's Future": {
+      "jif": 8.5,
+      "year": null,
+      "source": "https://agupubs.onlinelibrary.wiley.com/journal/23284277",
+      "note": "Current publisher value; metric year not explicitly supplied in the accessible record."
+    },
+    "Geocarto International": {
+      "jif": 3.9,
+      "year": 2025,
+      "source": "https://www.tandfonline.com/journals/tgei20/about-this-journal"
+    },
+    "Applied Sciences": {
+      "jif": 2.9,
+      "year": 2025,
+      "source": "https://www.mdpi.com/journal/applsci/stats",
+      "quartiles": {
+        "Engineering, Multidisciplinary": "Q2"
+      }
+    },
+    "Multimedia Tools and Applications": {
+      "source": "https://link.springer.com/journal/11042",
+      "note": "Current publisher page provides no JIF or JCR quartile. Old unverified badges removed."
+    },
+    "Journal of Remote Sensing": {
+      "source": "https://www.ygxb.ac.cn/zh/article/doi/10.11834/jrs.20200069/",
+      "note": "This is the Chinese journal 遥感学报 (ISSN 1007-4619), not the Science Partner Journal of the same English name. No matching official JCR value verified; badges removed."
+    },
+    "Remote Sensing Technology and Application": {
+      "source": "http://www.rsta.ac.cn/CN/Y2020/V35/I2/406",
+      "note": "No matching official JCR value verified for the Chinese journal; badges removed."
+    }
+  },
+  "manuscripts": "Eight unpublished manuscripts have no public publication record; their status is preserved.",
+  "sort": "First/corresponding-author papers first, then co-author papers; each group sorted by final publication year descending (final publication date breaks ties). Applies to both the website and CV."
+}
