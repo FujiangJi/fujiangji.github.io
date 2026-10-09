@@ -21,6 +21,14 @@ article.research {
   line-height: 1.5;
 }
 
+/* Keep automatically detected grant numbers in the heading's text flow. */
+.about .research-project-title a[href^="tel:"],
+.about .research-project-title a[x-apple-data-detectors] {
+  display: inline;
+  color: inherit;
+  font: inherit;
+}
+
 .research .research-vision-question,
 .research .synthesis-title {
   font-size: clamp(20px, calc(1.6vw + 6px), 26px);
