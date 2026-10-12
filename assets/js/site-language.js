@@ -291,7 +291,11 @@
     slot.before(home);
     const placeControl = () => {
       if (desktop.matches || !themeButton) home.after(slot);
-      else themeButton.after(slot);
+      else {
+        const mobileTools = document.querySelector('[data-mobile-profile-tools]');
+        if (mobileTools) mobileTools.append(slot);
+        else themeButton.after(slot);
+      }
     };
     desktop.addEventListener('change', placeControl);
     placeControl();

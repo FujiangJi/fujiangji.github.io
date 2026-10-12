@@ -1,5 +1,6 @@
 /* Shared personal profile panel for main pages and tutorial pages. */
 .sidebar { transition: max-height var(--transition-2); }
+.profile-toolbar { display: none; }
 .sidebar .avatar-box {
   width: 85px;
   height: 85px;
@@ -111,6 +112,86 @@
   .sidebar,
   .sidebar.active { max-height: none; }
   .sidebar:not(.active) .sidebar-info_more { display: none; }
+}
+
+/* A reserved row keeps mobile controls inside the card, above the identity. */
+@media (max-width: 1023px) {
+  .sidebar { padding: 4px 16px 14px; }
+  .sidebar .profile-toolbar:not([hidden]) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+    margin-bottom: 2px;
+  }
+  .profile-toolbar-preferences {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-width: 0;
+  }
+  .profile-toolbar :is(.theme-toggle-btn, .info_more-btn) {
+    position: relative;
+    inset: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--theme-accent);
+    box-shadow: none;
+    isolation: isolate;
+  }
+  .profile-toolbar :is(.theme-toggle-btn, .info_more-btn)::before {
+    content: '';
+    position: absolute;
+    inset: 9px;
+    border-radius: 8px;
+    background: rgba(var(--theme-soft-rgb), .7);
+    z-index: -1;
+  }
+  .profile-toolbar :is(.theme-toggle-btn, .info_more-btn):hover {
+    background: transparent;
+    transform: none;
+  }
+  .profile-toolbar :is(.theme-toggle-btn, .info_more-btn):hover::before {
+    background: rgba(var(--theme-accent-rgb), .12);
+  }
+  .profile-toolbar :is(.theme-toggle-btn, .info_more-btn):focus-visible {
+    outline: 2px solid var(--theme-accent);
+    outline-offset: 0;
+  }
+  .profile-toolbar .theme-toggle-btn .icon {
+    color: var(--theme-accent);
+    font-size: 14px;
+    line-height: 1;
+  }
+  .profile-toolbar .theme-toggle-btn .icon-moon { display: block; }
+  .profile-toolbar .theme-toggle-btn .icon-sun { display: none; }
+  [data-theme='light'] .profile-toolbar .theme-toggle-btn .icon-moon { display: none; }
+  [data-theme='light'] .profile-toolbar .theme-toggle-btn .icon-sun { display: block; }
+  .profile-toolbar .info_more-btn span { display: none; }
+  .profile-toolbar .info_more-btn ion-icon {
+    display: block;
+    font-size: 16px;
+    transition: transform .2s;
+  }
+  .sidebar.active .profile-toolbar .info_more-btn ion-icon { transform: rotate(180deg); }
+}
+
+@media (max-width: 579px) {
+  .sidebar .avatar-box {
+    width: clamp(92px, 26.5vw, 108px);
+    height: clamp(92px, 26.5vw, 108px);
+    border-radius: 18px;
+  }
+  .sidebar .avatar-box img { transform: scale(1.2); }
+  .sidebar .sidebar-info { gap: 12px; }
 }
 
 @media (min-width: 580px) {
