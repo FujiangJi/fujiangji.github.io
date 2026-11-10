@@ -111,14 +111,19 @@
       "doi": "10.1038/s41467-026-78347-6",
       "link": "https://doi.org/10.1038/s41467-026-78347-6",
       "title": "Episodic changes in global forest edges in the 21st century",
-      "citation": "2026",
+      "citation": "2026, 17(1), 11352",
       "journal": "Nature Communications",
       "abstract": "Seventy percent of global forests lie within 1 km of an edge, yet their temporal dynamics remain poorly characterized. By developing high spatial-resolution (0.00025°) global forest edge maps for 2000–2020, this study finds a 24 million km (7%) decline in edge length. During 2015–2020, edge length falls while forest area slightly grows, driven by patch merging in temperate and boreal regions and by tropical fragmentation; in contrast, countries such as Laos, Liberia, India, and China gain edges from new forest patches. These episodic changes closely track policy-driven land management, including logging bans, agricultural expansion, and reforestation. Given the critical role of forest edges in biodiversity and microclimate regulation, the results highlight contrasting biome patterns and the need for adaptive policies balancing conservation, carbon storage, and land use.",
       "role": "coauthor",
       "final_publication_date": "2026-10-05",
       "abstract_source": "https://doi.org/10.1038/s41467-026-78347-6",
       "abstract_status": "verified against primary article abstract or full text",
-      "note": "Publisher and Crossref do not yet supply a volume or article number. Keep year and DOI until assigned."
+      "note": "Publisher and Crossref do not yet supply a volume or article number. Keep year and DOI until assigned.",
+      "citation_checked_on": "2026-11-10",
+      "citation_sources": [
+        "https://api.crossref.org/works/10.1038/s41467-026-78347-6",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13728096/"
+      ]
     },
     {
       "id": "publication-12",
@@ -315,5 +320,5 @@
     }
   },
   "manuscripts": "Eight unpublished manuscripts have no public publication record; their status is preserved.",
-  "sort": "First/corresponding-author papers first, then co-author papers; each group sorted by final publication year descending (final publication date breaks ties). Applies to both the website and CV."
+  "sort": "Website display order follows the CV: first-author papers precede other corresponding-author papers within one First / Corresponding Author group, followed by co-author papers. Manuscripts and presentations retain the CV's explicit sequence."
 }
